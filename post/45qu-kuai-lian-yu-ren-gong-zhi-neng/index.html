@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="记录区块链行业重点文章，前沿技术">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>[45]区块链与人工智能 | 飞来飞去-区块链学习笔记</title>
+<link href="https://flfqbit.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.js"></script>
+
+  </head>
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" alt="logo" style="display:inline-block;" src="https://flfqbit.github.io/images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+
+          <h1 title="飞来飞去-区块链学习笔记" class="weaklink"><a  href="/">飞来飞去-区块链学习笔记</a>
+
+          </h1>
+	  
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+<div class="content">
+<div class="post_page" >
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>[45]区块链与人工智能</a>
+    </h2>
+  </div>
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+  <div class="post_details">
+    <div class="info"><i class="fa fa-calendar"></i>
+<span class="date_info">2020-02-22</span>
+<i class="fa fa-eye"></i>
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+</span>
+<i class="fa fa-anchor"></i>
+<span style="margin-right:15px">
+3380字
+</span>
+<i class="fa fa-clock-o"></i>
+<span style="margin-right:15px">
+12 min read
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</span>
+</div>
+  </div>
+
+    <div class="post_content markdown">
+	
+
+	
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><p>《区块链技术与人工智能有什么关系吗？》<br>
+https://baijiahao.baidu.com/s?id=1591272427577865867&amp;wfr=spider&amp;for=pc</p>
+<blockquote>
+<p>人工智能（Artificial Intelligence），英文缩写为AI。人工智能是计算机科学的一个分支。它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。</p>
+</blockquote>
+<blockquote>
+<p>区块链技术和人工智能中间的渊源可以概括为：区块链技术可以运用到人工智能中，大大的<strong>提高人工智能的安全性和稳定性</strong>。很多人在人工智能的产物——机器人出现后，在担心机器人是否会拥有自己的思维，从而毁灭人类，就像某电影里的那样，但是区块链技术的发展速度非常快速，可运用的范围越来越广，如果真正将二者结合起来，将是一项更安全、不会威胁人类生存安全的伟大发明。</p>
+</blockquote>
+<p>感想：<br>
+有一本科幻小说。介绍<strong>阿西莫夫三定律</strong>（用于防止机器人攻击人类），需要将三定律以硬件写入的形式嵌入机器人的主板中，防止篡改。现有的信息安全攻击案例显示，硬件也不是绝对安全的。采用区块链分布式共识、链式防篡改技术，能够更加安全的保护<strong>阿西莫夫三定律</strong>等重要的指令。</p>
+<blockquote>
+<p>人工智能与区块链技术结合最大的意义在于，区块链技术能够为人工智能提供核心技能——贡献区块链技术的“链”功能，<strong>让人工智能的每一步“自主”运行和发展都得到记录和公开，从而促进人工智能功能的健全和安全、稳定性。</strong></p>
+</blockquote>
+<p>感想：<br>
+可追溯的计算，存储AI计算的中间过程，提升决策的可信度。</p>
+<p>人工智能遇上区块链，比你想像的还有潜力<br>
+https://www.sohu.com/a/219423165_313323</p>
+<blockquote>
+<p>那么为什么ObEN需要区块链？<br>
+ObEN的联合创始人兼COO郑毅给出的第一个答案是信任。比如，在社交中我们都希望每一个人工智能PAI确实能够真实代表ta的主人，这样才能放心交往、搭讪、打赏；如果一位明星想用虚拟形象PAI与粉丝互动，粉丝也希望能确认其背后就是明星官方的人工智能。<br>
+他们尝试了其他的认证方式，但均不具备公信力，而只有区块链作为一个去中心化的共识网络，受到广泛的认可。区块链社区可以看作是一个诚信的社区，通过互相的认证，可以确保每个人的PAI都属于自己，代表自己，是自己在数字世界的映射。这正可以满足ObEN对PAI最核心的基本要求。<br>
+与此同时，用户信任了自己的PAI，就会放心、主动使用，从而贡献更多的个人数据，数据反哺PAI，人工智能得到进步，进而为用户提供更好的人工智能技术，提供更好的服务，形成了一个融合的人工智能区块链体系。在PAI链上，人工智能与区块链是一个整体。</p>
+</blockquote>
+<p>感想：<br>
+区块链为人工智能产品提供可信的身份和可信的数据，促进用户参与AI交互，用真实数据反哺AI产品。</p>
+<blockquote>
+<p>分布式人工智能计算<br>
+要为每个人实现足够强大的人工智能，还有一个问题是解决人工智能计算效率的问题。<br>
+我们知道，人工智能的火热是算法、算力加数据的综合结果，目前的人工智能计算也往往是在云端的服务器上进行。但如果要让每个人都有自己的PAI，显然需要高效的计算能力。好在并不是所有的人工智能计算都需要大量的云端处理能力，有些可以通过分布式算力的贡献来进行计算。<br>
+**区块链必须要融合分布式人工智能技术才能成为真正的去中心化的平台。**在PAI链的首次运行上，人工智能运算任务将由ObEN率先提供。PAI链将随后向所有有数据分析需求的开发者开放算力合作，提高机器学习的效率，提高区块链数据的使用价值，让区块链成为真正的去中心化平台。或许ObEN认定的PAI，比想像中还要来得快。</p>
+</blockquote>
+<p>感想：<br>
+利用区块链网络中丰富的算力资源为AI应用提供分布式算力。</p>
+<p>区块链与人工智能<br>
+http://www.dayqkl.com/48638.html</p>
+<blockquote>
+<p>区块链，本质上是一种去中心化分布式账本数据库。区块链系统中，各节点通过共识机制彼此信任，不再需要中介机构；数据记录以时间线形式同步储存到各个节点，公开透明且难以篡改。<br>
+人工智能是使智能机器和计算机程序能够以通常需要人类智能的方式学习和解决问题的科学和工程，包括自然语言处理和翻译，视觉感知和模式识别、决策等等。<br>
+<strong>区块链重心在于保持记录、认证和执行的准确，而人工智能则助力于决策、评估和理解某些模式和数据集，最终产生自主交互。区块链和人工智能，有以下三个主要共同特点和需求：</strong><br>
+<strong>1数据共享</strong><br>
+各个节点进行高效数据共享，是分布式数据库的一个重要特点。而人工智能需要大数据，尤其依赖数据共享，可供分析的开放数据越多，机器的预测和评估越准确，生成的算法也更可靠。<br>
+<strong>2安全</strong><br>
+区块链承载大规模和高价值交易时，对网络安全性有极高需求，这可以通过相关协议和技术手段不断提升。人工智能对机器自主性控制上也有很高安全需求，尽可能避免意外事件的发生。<br>
+<strong>3信任</strong><br>
+区块链上，信任是各节点间进行交易和记录的前提。人工智能为了使机器间通信更加方便，同样需要设定不同层次的信任级别。而不管是区块链、人工智能还是其他新兴技术，信任都是其发展和进步的必要条件。</p>
+</blockquote>
+<p>感想：<br>
+数据共享、安全、信任主要是区块链对人工智能的贡献。</p>
+<blockquote>
+<p><strong>区块链如何助力人工智能？</strong><br>
+<strong>1、区块链有助于人工智能获取更全面的数据。</strong><br>
+全数字化世界面临的一个根本挑战是：盲人摸象，没有机构可以拿全所有数据。即便是像阿里、腾讯、谷歌、亚马逊这样的互联网巨头，所能获取也只是基于自身业务的有限数据。<br>
+不可否认，巨头企业利用自身有限数据，同样可以维持人工智能运行，但正如上文所说，可供学习、分析的数据越多，人工智能的预测、评估、决策等才能更准确。<br>
+区块链技术则能够帮助各机构打破“数据孤岛”格局，促进跨机构间数据的流动、共享及定价，形成一个自由开放的数据市场，让人工智能可以根据不同用途、需求获取更加全面的数据，真正变得“智能”。<br>
+<strong>2、区块链可以帮助我们理解人工智能的决策</strong><br>
+有时人工智能做出的决定，让人类很难理解。因为它们可以根据掌握的数据评估大量的变量，并且能够自主“学习”，根据变量对实现的总体任务重要性进行决策。而对我们人类而言，很难预见到如此庞大的变量。<br>
+如果将人工智能的决策通过区块链记录下来，那我们就可以对人工智能的决策进行有效追溯和理解，及时洞察它们的“思维”，尽可能避免一些违背设计初衷的决策出现，一旦发生意外也能快速定位原因所在并及时修正。<br>
+同时，由于区块链记录的不可篡改性，也能方便人们对人工智能设备记录进行查询和监督，提升人们对人工智能的信任和接纳度。</p>
+</blockquote>
+<p>感想：<br>
+第1点的角度是，区块链促进数据共享，为AI提供丰富的数据。<br>
+第2点的角度是，利用区块链实现可追溯的计算，提高决策可信度。</p>
+<blockquote></blockquote>
+<p><strong>人工智能如何驱动区块链？</strong><br>
+<strong>1、人工智能帮助区块链降低能耗</strong><br>
+众所周知，区块链系统中，挖矿是一项极其困难的任务，需要大量的电力以及金钱才能完成。人工智能则可以摆脱“蛮力”的挖矿方式，以一种更聪明、更高效的方式管理任务。<br>
+现在，不少手机已经通过人工智能来优化电力消耗、提升系统性能，如果类似方式在区块链系统中实现，将会大大降低矿工挖矿硬件的成本以及挖矿所需电力的消耗。<br>
+<strong>2、人工智能辅助区块链检测欺诈</strong><br>
+人工智能通过大量“学习”，很容易发现并防范欺诈行为，这些目前在银行和电商业务中已经得到广泛应用。当非正常刷卡交易发生时，银行会自动发短信提醒安全风险；当网购遇到假冒客服人员时，电商平台会自动提醒注意防骗。<br>
+而区块链中欺诈交易行为并不少见，如果能将人工智能深度应用到区块链系统中，对保障区块链安全交易会大有裨益。<br>
+感想：<br>
+第1点的角度是，利用人工智能解决矿场（区块链）的电费难题，降低能源消耗。<br>
+第2点的角度是，利用人工智能解决区块链欺诈问题。<br>
+这两点都比较粗糙，牵强。</p>
+<blockquote>
+<p>人工智能所面临的问题，是传统技术无法解决的，转而向同为新兴技术的区块链求助或许是一个明智的选择。<br>
+（区块链促进数据共享）数据中心化的前提下，数据的使用方式也缺乏透明度，当数据提供者无法对自己的数据进行有效管理时，很多人都选择不再进行数据分享。而区块链恰恰可以解决这一问题。在链上，每一份数据的上传者、使用流向和成果都有迹可查用户对数据拥有所有权和自主使用权。数据上传者还会收到使用方提供的数字加密货币作为补偿，当用户能够将自己产生的数据变现，并可控制数据流向，相信会有更多的人愿意提供相关数据。对于AI来说，安全的数据共享意味着更多的数据，然后就会有更好的模型，更好的行动，更好的结果，以及更好的新数据。<br>
+（区块链提供分布式算力）面对高昂的算力成本，AI行业可能束手无策，但是区块链最不缺的恐怕就是算力了，挖矿是一项极其困难的任务，需要大量的电力和金钱来铺设算力才能完成。冗余的算力完全可以为AI节省成本。<br>
+（AI优化电力消耗）反过来，AI已经被证明是优化电力消耗的有效手段，提供类似的解决方案应用在区块链。这也许会导致挖矿硬件方面的投资下降。 区块链能为人工智能行业带来光明的前景，反过来人工智能也可以为区块链加油助威。德勤在2016年估算区块链验证和共享交易的总运行成本大概是每年6亿美元左右。一个智能系统或许实时计算出某个特定节点成为第一个执行特定任务的节点的可能性，从让其他矿工有可以选择放弃针对该特定交易的努力，从而削减总成本。从而减少无用功的付出，以此提高效率。</p>
+</blockquote>
+<blockquote>
+<p>AI和区块链可以说是技术领域的两个极端方面：一个是在封闭数据平台上培育中心化的智能，另一个则是在开放数据环境下促进去中心化的应用。但两者天然优势互补，在人工智能为区块链提供更强大拓展场景与数据分析能力的同时，区块链技术可为人工智能提供高度可信的原始数据以支持其持续的“深度学习”。</p>
+</blockquote>
+</span></p></div><div id = "warn"></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">飞来飞去-区块链学习笔记</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2020-02-22</div>    
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<div style="width:100%;overflow:hidden">
+
+          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
+            下一篇
+            <a href="https://flfqbit.github.io/post/44wen-xian-yue-du-ji-lu-qu-kuai-lian-jin-rong-jian-guan-zhi-jiao-yi-te-zheng-fen-xi-he-shen-fen-shi-bie/">
+              <p class="post-title">
+                <b>[44][文献阅读记录]区块链金融监管之交易特征分析和身份识别</b>
+              </p>
+            </a>
+          </div>
+
+
+
+          <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
+            上一篇
+            <a href="https://flfqbit.github.io/post/46qu-kuai-lian-yu-da-shu-ju-feng-kong/">
+              <p class="post-title">
+                <b>[46]区块链与大数据风控</b>
+              </p>
+            </a>
+          </div>
+
+</div>
+
+<div class="doc_comments">
+
+</div>
+<script>
+var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
+imgList = document.querySelectorAll('.md_block img')
+imgList.forEach(img => {
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
+  let div1 = document.createElement('div')
+  let div = document.createElement('div')
+  div.className='back';
+  div.setAttribute("data-src",img.src)
+  var figuration = document.createElement("figcaption")
+  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
+  img.replaceWith(div1)
+  div1.appendChild(div)
+  div.appendChild(img)
+  div1.appendChild(figuration)}
+})
+$('img').on('error',function(){$(this).prop('src','https://flfqbit.github.io/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于2020-02-22，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="2020-02-22 23:48:43";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+$('#pjax-container').lightGallery({
+    selector: '.back'
+});
+</script>
+  </div>
+</div>
+
+
+      </div>
+<div class="toc">
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/flfqbit" title="github"><i class="fa fa-github"></i></a>
+
+    
+			   
+<a href="fenghao2821@gmail.com" title="envelope"><i class="fa fa-envelope"></i></a>
+
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.write("Copyright © "+year+" " + "飞来飞去-区块链学习笔记");
+		</script>
+		
+		
+	  
+      </div>
+
+    </div>
+
+<script>
+new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
+console.clear();
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+
+</html>

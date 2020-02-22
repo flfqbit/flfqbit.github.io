@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="记录区块链行业重点文章，前沿技术">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>[29][悟空问答]区块账号背后的非对称加密算法 | 飞来飞去-区块链学习笔记</title>
+<link href="https://flfqbit.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.js"></script>
+
+  </head>
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" alt="logo" style="display:inline-block;" src="https://flfqbit.github.io/images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+
+          <h1 title="飞来飞去-区块链学习笔记" class="weaklink"><a  href="/">飞来飞去-区块链学习笔记</a>
+
+          </h1>
+	  
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+<div class="content">
+<div class="post_page" >
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>[29][悟空问答]区块账号背后的非对称加密算法</a>
+    </h2>
+  </div>
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+  <div class="post_details">
+    <div class="info"><i class="fa fa-calendar"></i>
+<span class="date_info">2020-02-22</span>
+<i class="fa fa-eye"></i>
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+</span>
+<i class="fa fa-anchor"></i>
+<span style="margin-right:15px">
+2444字
+</span>
+<i class="fa fa-clock-o"></i>
+<span style="margin-right:15px">
+10 min read
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</span>
+</div>
+  </div>
+
+    <div class="post_content markdown">
+	
+
+	
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><p>  今天在今日头条的问答栏目回答了一个问题：<br>
+  &quot;在密码学里，是如何重新定义私有财产的？&quot;<br>
+  我的答复是：<br>
+  “目前区块链技术的典型应用是数字货币应用，包括比特币、以太坊，以及其他的多种多样的“数字货币”。这些“数字货币”虽然不被认可为货币，但是通常被认为是有价值的虚拟资产（私人财产）。<br>
+  如何证明一个比特币是某个人的私有资产了？简单理解，每一个比特币都隶属于一个“区块链账号”，拥有此“区块链账号”对应密钥的用户就可以使用这个比特币。这种机制类似于银行卡和银行卡对应的密码，持有密码的人可以取出银行卡中的钱。不同之处在于，银行卡的账号和密码是保存在银行的中心服务器上，验证身份时只需要用户输入的密码和数据库中的密码匹配即可。但是在比特币等区块链系统中，不存在中心化机构，即没有地方存储账号和密码的对应关系。这种情况下，如何验证资产所属的身份？<br>
+  这里就是用了密码学中的“非对称加密”技术和“数字签名”技术。比特币的账号本质上是由“非对称加密”算法生成的“公钥”，此账号对应的“密码”是“公钥”对应的“私钥”。验证资产所属身份的方法是：验证者利用公开的“公钥”去验证资产所有者提供的、对应特定比特币的数字签名。只要签名正确，即认可用户是此比特币的所有者。这种模式，不需要验证者知道账号对应的私钥，因此能够从根本上保证私有财产的所有权（传统银行模式中，银行可以冻结任意账号的资金，用户的私有财产的所有权是受限制的）。”<br>
+  上述答复中涉及了区块链账号背后的非对称加密算法和数字签名算法。这里重点介绍目前大多数区块链系统采用的ECC非对称加密算法和ECDSA数字签名算法。<br>
+  <strong>ECC算法</strong>：是目前广泛使用的非对称加密算法（另外一种著名的非对称加密算法RSA，由于安全性较弱，已经逐渐淘汰了）。“非对称”是指此算法中加密和解密所用的密钥不同。此算法中的密钥是成对出现的，即（公钥，私钥）。公钥加密、私钥解密；私钥加密，公钥解密。通常情况下，用户的公钥是公开的，用于代表用户的数字身份；私钥是由用户私密保存，可以用于证明用户对特定公钥的所有权。正式基于这种特征，区块链技术采用ECC算法作为区块链账号的生成技术。我们通常看到的比特币账号、以太坊账号就是在ECC算法生成公钥的基础上，经过格式转换得到的。用户如果想使用某个比特币账号中的比特币资产，就必须使用账号对应的私钥进行身份验证操作。所以，比特币资产的所有权全部依赖于私钥信息，一旦私钥丢失或泄露，用户将永久丧失对应比特币资产的所有权。据报道，比特币系统中已经有20%的比特币的密钥永久丢失，这些资产将成为永久锁定的冰冻资产。<br>
+  <strong>ECDSA算法</strong>:是一种数字签名算法。主要用途是，用户利用私钥对特定数据进行签名，得到签名信息（一种密码学操作）；验证者利用此用户公布的公钥验证签名信息和特定数据是否匹配，如果匹配，就证明用户对公钥具有所有权。数字签名算法在互联网中广泛使用，包括HTTPS协议，银行卡U盾等等。数字签名算法通常用于身份认证和数据完整性认证。在区块链中，用户发起的每笔交易都包含用户的数字签名，网络中的验证节点通过验证签名信息，判断用户是否有权利发起这笔交易。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-c0167245dc731b1a.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1 数字签名算法" loading="lazy"></p>
+<p>  为了更详细介绍ECC算法和ECDSA签名算法，将通过一段代码演示密钥生成过程和签名、验证过程。</p>
+<pre><code>func generateNewPK() (string, error)  {
+	var err error
+	//（1）根据randKey长度，使用相应的加密椭圆参数
+	length := len([]byte(randKey))
+	if length &lt; 224/8 {
+		fmt.Println(&quot;The length of Rand Key is too small, Crypt init failed, Please reset it again !&quot;)
+		return &quot;&quot;, err
+	}
+	if length &gt;= 256/8+8 {
+		curve = *bitelliptic.S256()
+	} else if length &gt;= 224/8+8 {
+		fmt.Println(&quot;Rand length =&quot;, length, &quot;Using 244 level !&quot;)
+		curve = *bitelliptic.S224()
+	}
+	//（2）创建密匙对
+	//私钥是随机生成的
+	prk, err = bitecdsa.GenerateKey(&amp;curve, rand.Reader)
+	if err != nil {
+		fmt.Println(&quot;Crypt init fail,&quot;, err, &quot; need = &quot;, curve.BitSize)
+		return &quot;&quot;, err
+	}
+	//（3）公钥是基于私钥生成的
+	puk = prk.PublicKey
+
+	//ECC中的公钥分为两个部分，通常将部分拼接在一起
+	return puk.X.String()+puk.Y.String(), nil
+}
+</code></pre>
+<p>  上述代码的功能是生成一个基于ECC算法的密钥对（puk,prk），其中“puk”代表公钥，”prk”代表私钥。<br>
+  代码中的第（1）个提示，用于解释此处需要根据参数的长度选择相应的“椭圆曲线参数”。（椭圆曲线是ECC算法依赖的数学基础）。不同的椭圆曲线参数将得到不同的效果的加密算法。比特币等数字货币通常采用256位的椭圆曲线。<br>
+  代码中的第（2）个提示，展示了私钥”prk”的生成过程，可以看到”prk”是利用 ”bitecdsa.GenerateKey”函数，在两个参数(&amp;curve, rand.Reader)的作用下生成的。”bitecdsa”是一个实现了ECDSA算法的开源代码，”GenerateKey”是其中用于生成密钥对的函数；”&amp;curve”是在上部分代码中生成的椭圆曲线；”rand.Reader”是一个随机数。<br>
+  代码中的第（3）个提示展示了，公钥”puk”是有私钥”prk”生成的。<br>
+上述代码与比特币、以太坊中负责账号生成的代码基本一致。区别在于，上述代码只是得到了公钥和私钥。在比特币等区块链系统中，区块链账号是在公钥的基础上进一步加工获得。</p>
+<pre><code>func Sign_t(text string) (string, error) {
+	//（1）签名过程
+        //输入包括：随机数，私钥，待签名数据
+	//输出包括2个参数，r 和 s 。都是签名信息的中间数据
+        r, s, err := bitecdsa.Sign(rand.Reader, prk, []byte(text))
+	if err != nil {
+		return &quot;&quot;, err
+	}
+	rt, err := r.MarshalText()
+	if err != nil {
+		return &quot;&quot;, err
+	}
+	st, err := s.MarshalText()
+	if err != nil {
+		return &quot;&quot;, err
+	}
+	var b bytes.Buffer
+	w := gzip.NewWriter(&amp;b)
+
+	//（2）生成最终的签名信息
+        //输入是r 和 s的格式变换版本 rt 和 st
+       //输出是签名信息 b
+	defer w.Close()
+	_, err = w.Write([]byte(string(rt) + &quot;+&quot; + string(st)))
+	if err != nil {
+		return &quot;&quot;, err
+	}
+	w.Flush()
+
+	return hex.EncodeToString(b.Bytes()), nil
+}
+</code></pre>
+<p>  代码中的第（1）个提示，介绍了签名函数的结构。”bitecdsa.Sign”是ECDSA开源代码的签名函数。输入包括：随机数，私钥”prk”，待签名数据；输出包括2个参数，r 和 s ，这是签名信息的中间数据。<br>
+  代码中的第（2）个提示，介绍最终版签名信息的生成过程。</p>
+<pre><code>func Verify_t(testString string, signString string) (bool, error) {
+	byterun, err := hex.DecodeString(signString)
+	if err != nil {
+		return false, err
+	}
+	//（1）解密出验证所需的两个参数 rint, sint
+	rint, sint, err := getSign_t(byterun)
+	if err != nil {
+		return false, err
+	}
+	//（2）验证签名是否正确
+        //输入包括：公钥、待签名字符串、从签名信息中提取的两个参数”&amp;rint, &amp;sint”
+	result := bitecdsa.Verify(&amp;puk, []byte(testString), &amp;rint, &amp;sint)
+	return result, nil
+}
+</code></pre>
+<p>  代码中的第（1）个提示，介绍了从签名信息中提取出验证所需的两个参数”&amp;rint, &amp;sint”<br>
+  代码中的第（2）个提示，介绍验证签名的过程。”bitecdsa.Verify”是ECDSA开源代码的验证签名的函数。输入包括：公钥，待签名字符串、从签名信息中提取的两个参数”&amp;rint, &amp;sint”。<br>
+  从上述3个代码基本上可以了解所谓的区块链账号生成、区块链交易签名、区块链签名验证的底层逻辑。<br>
+  此处重点介绍的是第一段代码中的这句代码：<br>
+  “curve = *bitelliptic.S256()”<br>
+  这句代码的含义是利用ECDSA开源代码获取“S256”的椭圆曲线参数。通过代码跳转，查看S256()的代码如下：</p>
+<pre><code>func initS256() {
+	// （1）See SEC 2 section 2.7.1
+	secp256k1 = new(BitCurve)
+	secp256k1.P, _ = new(big.Int).SetString(&quot;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F&quot;, 16)
+	secp256k1.N, _ = new(big.Int).SetString(&quot;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141&quot;, 16)
+	secp256k1.B, _ = new(big.Int).SetString(&quot;0000000000000000000000000000000000000000000000000000000000000007&quot;, 16)
+	secp256k1.Gx, _ = new(big.Int).SetString(&quot;79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798&quot;, 16)
+	secp256k1.Gy, _ = new(big.Int).SetString(&quot;483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8&quot;, 16)
+
+	secp256k1.BitSize = 256
+}
+</code></pre>
+<p>  如代码所示，椭圆曲线的参数主要是5个（P,N,B,GX,GY）。这5个参数定位了椭圆曲线的基本特征，决定了上层加密算法的具体操作过程。<br>
+  代码中的第（1）个提示，介绍了此椭圆曲线参数来自于“ SEC 2 section 2.7.1”，这是由Certicom（成立于1998年的密码团体）发布的加密算法参数推荐文档，目前已经被美国国家安全局（National Security Agency，简写为NSA）等众多政府、企业机构认可。<br>
+文档链接：http://www.secg.org/sec2-v2.pdf</p>
+</span></p></div><div id = "warn"></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">飞来飞去-区块链学习笔记</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2020-02-22</div>    
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<div style="width:100%;overflow:hidden">
+
+          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
+            下一篇
+            <a href="https://flfqbit.github.io/post/28zheng-gao-qi-shi-jie-du-ieeeacm-iwqos19ccf-b-lei-hui-yi-blockchain-for-qos/">
+              <p class="post-title">
+                <b>[28][征稿启事解读]-IEEEACM IWQoS&#39;19（CCF B类会议）-BLOCKCHAIN FOR QOS</b>
+              </p>
+            </a>
+          </div>
+
+
+
+          <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
+            上一篇
+            <a href="https://flfqbit.github.io/post/30wu-kong-wen-da-qu-kuai-lian-shi-ru-he-cong-10-tui-jin-zhi-3/">
+              <p class="post-title">
+                <b>[30][悟空问答]区块链是如何从1.0推进至3</b>
+              </p>
+            </a>
+          </div>
+
+</div>
+
+<div class="doc_comments">
+
+</div>
+<script>
+var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
+imgList = document.querySelectorAll('.md_block img')
+imgList.forEach(img => {
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
+  let div1 = document.createElement('div')
+  let div = document.createElement('div')
+  div.className='back';
+  div.setAttribute("data-src",img.src)
+  var figuration = document.createElement("figcaption")
+  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
+  img.replaceWith(div1)
+  div1.appendChild(div)
+  div.appendChild(img)
+  div1.appendChild(figuration)}
+})
+$('img').on('error',function(){$(this).prop('src','https://flfqbit.github.io/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于2020-02-22，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="2020-02-22 23:28:44";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+$('#pjax-container').lightGallery({
+    selector: '.back'
+});
+</script>
+  </div>
+</div>
+
+
+      </div>
+<div class="toc">
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/flfqbit" title="github"><i class="fa fa-github"></i></a>
+
+    
+			   
+<a href="fenghao2821@gmail.com" title="envelope"><i class="fa fa-envelope"></i></a>
+
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.write("Copyright © "+year+" " + "飞来飞去-区块链学习笔记");
+		</script>
+		
+		
+	  
+      </div>
+
+    </div>
+
+<script>
+new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
+console.clear();
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+
+</html>

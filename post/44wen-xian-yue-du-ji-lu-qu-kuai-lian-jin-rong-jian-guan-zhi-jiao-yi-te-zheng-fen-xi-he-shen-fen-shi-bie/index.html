@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="记录区块链行业重点文章，前沿技术">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>[44][文献阅读记录]区块链金融监管之交易特征分析和身份识别 | 飞来飞去-区块链学习笔记</title>
+<link href="https://flfqbit.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.js"></script>
+
+  </head>
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" alt="logo" style="display:inline-block;" src="https://flfqbit.github.io/images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+
+          <h1 title="飞来飞去-区块链学习笔记" class="weaklink"><a  href="/">飞来飞去-区块链学习笔记</a>
+
+          </h1>
+	  
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+<div class="content">
+<div class="post_page" >
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>[44][文献阅读记录]区块链金融监管之交易特征分析和身份识别</a>
+    </h2>
+  </div>
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+  <div class="post_details">
+    <div class="info"><i class="fa fa-calendar"></i>
+<span class="date_info">2020-02-22</span>
+<i class="fa fa-eye"></i>
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+</span>
+<i class="fa fa-anchor"></i>
+<span style="margin-right:15px">
+4661字
+</span>
+<i class="fa fa-clock-o"></i>
+<span style="margin-right:15px">
+19 min read
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</span>
+</div>
+  </div>
+
+    <div class="post_content markdown">
+	
+
+	
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><table>
+<thead>
+<tr>
+<th>序号</th>
+<th>日期</th>
+<th>题目</th>
+<th>关键词</th>
+<th>简述1</th>
+<th>简述2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2016</td>
+<td>Betfunding: A Distributed Bounty-Based Crowdfunding Platform over Ethereum</td>
+<td>&quot;以太坊；众筹项目&quot;</td>
+<td>以太坊</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2016</td>
+<td>Reputation and Reward: Two Sides of the Same Bitcoin</td>
+<td>&quot;比特币；身份识别&quot;</td>
+<td>&quot;基于比特币的隐私保护的移动群感知架构。文章定义了隐私的两个定义：真实身份，多个假名之间的关系；针对真实身份，采用盲签名技术；针对多假名之间的关系，采用tor等加密网络。&quot;</td>
+<td>&quot;这篇论文的缺点。作者的方案利用区块链的匿名性实现方案的隐私保护特性。作者讨论了这种方案面临的安全威胁，分析出基于区块链的方案面临泄露真实身份和泄露假名之间联系的威胁，但是作者给出的解决方案描述很简单，没有深入介绍实现方法，而且给出的方案只涉及了一部分威胁，还有很多面临的威胁无法通过作者的方案解决。&quot;</td>
+</tr>
+</tbody>
+</table>
+<pre><code>| 	3	| 	2016	| 	2016-Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts	| 	&quot;区块链；交易特征；&quot;	| 	现有的智能合约存储在公开的区块链交易中，容易泄漏用户隐私。作者提供一种新型的区块链模型Hawk，可以实现支持隐私保护的智能合约。	| 		| 	
+| 	4	| 	2016	| 	2016-Behind closed doors: measurement and analysis of CryptoLocker ransoms in Bitcoin-加密措施	| 	&quot;比特币；身份识别；交易特征；金融监管&quot;	| 	比特币是一种分散的加密货币，在过去几年中经历了越来越多的普及，是各种网络犯罪的共同特征。我们对2013年9月5日至2014年1月31日在比特币生态系统中对受害者文件进行加密以加密受害者文件的勒索软件CryptoLocker进行测量分析。使用从在线论坛收集的信息，如reddit和BitcoinTalk ，作为初始起点，我们生成一个属于CryptoLocker的968个比特币地址的集群。我们为比特币的CryptoLocker经济提供了下限，并确定795赎金总额为1,128.40比特币（310,472.38美元），但表明在估值最高时收益可能高达110万美元。通过纵向分析CryptoLocker运营期间和横向跨越时段的赎金支付时间戳，我们检测到分布的变化，并在CryptoLocker上形成猜想，证实以前的努力信息。此外，我们构建了一个网络拓扑，以详细说明CryptoLocker的财务基础架构，并获取有关CryptoLocker操作的辅助信息。最值得注意的是，我们发现证据表明与比特币Fog和BTC-e等流行的比特币服务有关，以及与比特币周围其他网络犯罪的微妙联系，例如2013年的羊市场骗局。我们使用我们的研究来强调价值在了解不稳定的网络犯罪格局中的测量分析和威胁情报。	| 		| 	
+| 	5	| 	2015	| 	Research and Challenges on Bitcoin Anonymity	| 	&quot;比特币；匿名&quot;	| 	比特币隐私保护综述	| 	专门研究比特币匿名机制的综述文章，包括反匿名方法，保护方法。很有参考价值	| 	
+| 	6	| 	2015	| 	Graph-based forensic investigation of Bitcoin transactions	| 	&quot;比特币；交易特征；聚类分析&quot;	| 	聚类分析	| 	通过聚合分析发现交易信息	| 	
+| 	7	| 	2015	| 	Identifying Bitcoin users by transaction behavior	| 	&quot;比特币；身份识别；聚类分析&quot;	| 	聚类分析	| 	文献[14]首先对用户的交易规律进行抽象，提出12种参数（时间间隔RTI，资金流向CF， 输入输出数量差IOB等），然后提出一种基于参数的身份识别方法，最后通过对6个月的比特币数据进行实验，发现最佳的参数组能够有效识别地址对应的用户身份（识别精度达到62%，同时错误率低于10.1%）。	| 	
+| 	8	| 	2015	| 	One-Out-of-Many Proofs: Or How to Leak a Secret and Spend a Coin 	| 	&quot;区块链；匿名性&quot;	| 	环签名，零知识证明加强隐私	| 		| 	
+| 	9	| 	2015	| 	Bitcoin: Perils of an Unregulated Global P2P Currency 	| 	&quot;比特币；金融监管&quot;	| 	犯罪用途	| 	调研了比特币犯罪相关的事实，未来可能会怎么样（税收，洗钱）	| 	
+| 	10	| 	2015	| 	Blindcoin: Blinded, Accountable Mixes for Bitcoin 	| 	&quot;比特币；匿名性；混币技术&quot;	| 	&quot;coinjoin使用了盲签名技术，隐藏交易的输入和输出地址。&quot;	| 	Mixcoin is a Bitcoin mixing protocol proposed by Bonneau et al. which provides strong accountability guarantees [13]. However, in the Mixcoin protocol, the mapping from a user's input to output address is visible to the mixing server. We modify the Mixcoin protocol to provide guarantees that the input/output address mapping for any user is kept hidden from the mixing server. In order to achieve this, we make use of a blind signature scheme [14,23] as well as an append-only public log. The scheme is fully compatible with Bitcoin, forces mixes to be accountable, preserves user anonymity even against a malicious mix, is resilient to denial of service attacks, and easily scales to many users.	| 	
+| 	11	| 	2015	| 	A GRAPH-BASED INVESTIGATION OF BITCOIN TRANSACTIONS 	| 	&quot;比特币；身份识别；聚类分析&quot;	| 	比特币全球加密货币系统一直是几个刑事案件的主题。 比特币网络是一个点对点系统，有来自互联网的参与者。 比特币协议要求参与节点保留和更新所有交易记录; 这确保了可以从一致的事务历史数据库访问所有比特币活动。 本章描述了一种基于图形的方法，用于分析比特币交易的身份聚类和货币流量属性。 该方法可扩展到大型比特币图表，侧重于与刑事案件相关的交易，如Mt.GOX。 该分析是根据两年的比特币交易数据进行的，可以深入了解比特币提供的匿名性以及货币在选定用户和用户社区之间的流动方式。	| 		| 	
+| 	12	| 	2015	| 	A Simple Yet Efficient Approach to Combat Transaction Malleability in Bitcoin 	| 	&quot;比特币；交易特征&quot;	| 	比特币已经成为一种流行的加密货币。它是由Satoshi Nakamoto（化名）于2008年推出的。其受欢迎的原因包括其分散性，双重支出预防，应对通货膨胀的明智策略以及提供一定程度的匿名性。 2014年2月，比特币社区震惊地知道一家日本公司名为Mt. Gox当时正在处理70％的比特币交易，他们宣布他们被比特币协议中的一个名为Transaction Malleability的错误所击中。该公司损失了价值数亿美元的比特币。此后不久，另一家公司SilkRoad 2也声称受到同样问题的影响。迄今为止，关于这个问题的研究文献很少，很难理解这个问题。撰写本文的目的有两个方面。我们将详细讨论交易可变性与比特币交易的结构，以使读者正确理解交易可变性是什么以及它是如何工作的。我们还提出了一个解决这个问题的机制。	| 		| 	
+| 	13	| 	2015	| 	2015-SoK: Research Perspectives and Challenges for Bitcoin and Cryptocurrencies	| 	&quot;比特币；交易结构&quot;	| 	比特币已经成为历史上最成功的密码货币。自2009年以后越来越多的文献指出隐藏但重要的系统的属性,被发现的攻击,提出了相应的可选方案,挑出困难的未来挑战。与此同时一个大的和充满活力的开源社区提出和部署大量的修改和扩展。文章提供第一个系统阐述比特币和许多相关加密货币或“altcoins。从分散的知识,我们确定比特币的三个关键组件的设计,可以解耦。这使得比特币的属性和未来的稳定有更为深刻的分析。我们为众多提议的修改设计空间,提供比较分析替代共识机制,货币分配机制,计算难题,和密钥管理工具。我们在比特币匿名调查问题,提供了一个评估框架分析各种注重隐私的建议。最后我们提出非中介化协议,应用程序中免除需要信任的中介机构。我们确定了三个一般的非中介化策略,并提供一个详细的比较。	| 		| 	
+| 	14	| 	2015	| 	2015-Bitcoin over Tor isn't a Good Idea-一种攻击方法	| 	&quot;比特币；匿名性&quot;	| 	针对在tor网上使用比特币的攻击方法	| 		| 	
+| 	15	| 	2014	| 	BitIodine: Extracting Intelligence from the Bitcoin Network	| 	&quot;比特币；交易特征；身份识别&quot;	| 	解决方案	| 	作者是从分析blockchain数据的角度进行反匿名化。发布了一款工具，值得研究。	| 	
+| 	16	| 	2014	| 	CoinShuffle: Practical Decentralized Coin Mixing for Bitcoin	| 	&quot;比特币；混币机制&quot;	| 	CoinShuffle匿名	| 	PPT，一种增强比特币匿名的机制	| 	
+| 	17	| 	2014	| 	Hiding Transaction Amounts and Balances in Bitcoin	| 	&quot;比特币；匿名性&quot;	| 	ZeroCoin?	| 	保护数据隐私	| 	
+| 	18	| 	2014	| 	The Bitcoin P2P Network	| 	&quot;比特币；匿名性；网络层分析&quot;	| 	聚合分析，这一篇详细介绍了搜集比特币服务器IP,推测网络规模的方法	| 	通过聚合分析进行的攻击方法	| 	
+| 	19	| 	2014	| 	Increasing Anonymity in Bitcoin	| 	&quot;比特币；匿名性&quot;	| 		| 	一种保护匿名的机制。	| 	
+| 	20	| 	2014	| 	Analyzing the deployment of Bitcoin's P2P network under an AS-level perspective 	| 	&quot;比特币；匿名性；网络层分析&quot;	| 	比特币P2P从自治网络的视角分析P2P网络的分布，反匿可能性等	| 		| 	
+| 	21	| 	2014	| 	An Analysis of Anonymity in Bitcoin Using P2P Network Traffic	| 	&quot;比特币；匿名性；网络层分析&quot;	| 	这篇文章介绍将比特币地址映射到IP的方法。很有参考价值。	| 		| 	
+| 	22	| 	2014	| 	Rational Zero: Economic Security for Zerocoin with Everlasting Anonymity	| 	&quot;比特币；匿名性；&quot;	| 	改进ZeroCoin的匿名性和性能	| 		| 	
+| 	23	| 	2014	| 	Mixcoin: Anonymity for Bitcoin with Accountable Mixes	| 	&quot;比特币；匿名性；混币技术&quot;	| 	&quot;8号文章的引用文献28号的引用文献文献的英文文献部分详细描述了反匿名的方法和匿名的方法。对综述非常有借鉴价值。&quot;	| 	&quot;介绍了一种混币机制mix的实现mixcoin。特点是增加审计机制，能够帮助用户证明违规操作的中间节点，减少偷窃事件。[x]还重点介绍了每次混币的资金容量的设置问题，连续混币的问题，混币交易费用、混币威胁模型、混币延迟等具体问题，具有很好的参考价值。&quot;	| 	
+| 	24	| 	2014	| 	2014-Zerocash: Decentralized Anonymous Payments from Bitcoin	| 	&quot;比特币；匿名性；&quot;	| 	比特币支付之间的假名,不能提供强大的隐私保证:付款交易都记录在一个公共分散的总账,可以推导出很多的信息。Zerocoin解决其中的一些隐私问题就是从原始交易中删除链接。然而,它仍然显示支付的目的地和数量,以及有限的功能。本文构建一个成熟的总账为基础的具有较强隐私保护的数字货币。构建匿名支付方案，对应交易隐藏支付者的源、目的地和转移数量。并证明了交易速度优于较少匿名的Zerocoin。	| 		| 	
+| 	25	| 	2014	| 	2014-Who Uses Bitcoin? An exploration of the Bitcoin community	| 	&quot;比特币；交易特征；用户分析&quot;	| 	本文提出了一种探索性的分析比特币的用户。虚拟货币和对等支付系统,比特币可能预示着未来的挑战国家监管和金融力量通过其分散结构和提供瞬时相对匿名交易。很少有人了解用户的比特币,然而。利用公开的比特币用户的调查数据,分析探讨了财富积累中比特币基金会的结构,和通过加密货币吸引用户。结果表明,年龄、首次使用时间、地理位置、采矿状态、政治倾向来帮助解释比特币财富、乐观和吸引力。	| 	Many cryptocurrencies have come into existence in recent years, with Bitcoin the most prominent among them. Although its short history has been volatile, the virtual currency maintains a core group of committed users. This paper presents an exploratory analysis of Bitcoin users. As a virtual currency and peer-to-peer payment system, Bitcoin may signal future challenges to state oversight and financial powers through its decentralized structure and offer of instantaneous transactions with relative anonymity. Very little is known about the users of Bitcoin, however. Utilizing publicly available survey data of Bitcoin users, this analysis explores the structure of the Bitcoin community in terms of wealth accumulation, optimism about the future of Bitcoin, and themes that attract users to the cryptocurrency. Results indicate that age, time of initial use, geographic location, mining status, engaging online discourse, and political orientation are all relevant factors that help explain various aspects of Bitcoin wealth, optimism, and attraction	| 	
+| 	26	| 	2013	| 	Evaluating User Privacy in Bitcoin	| 	比特币	| 	&quot;隐私60的引用文献，忠实模仿用户操作47的引用文献，研究比特币上的反匿名45的引用文献，采用K-means和层次凝聚聚合算法。&quot;	| 	对比特币隐私的分析。包含攻击方法	| 	
+| 	27	| 	2013	| 	A fistful of Bitcoins_Characterizing Payments among Men with No Names.	| 	&quot;比特币；分类；交易特征；聚类分析&quot;	| 	&quot;69号文章的引用文献。Transaction graph analysis47的引用文献45的引用文献，建立一些已知的地址列表，然后进行识别，采用流分析。介绍混合操作节点偷取资金的案例。&quot;	| 		| 	
+| 	28	| 	2013	| 	2013-Zerocoin: Anonymous Distributed E-Cash from Bitcoin	| 	&quot;比特币；匿名&quot;	| 	45的引用文献，分析比特币不是真匿名，提出一种方法实现完全的匿名。	| 	比特币事务日志是完全公开的,用户隐私保护只能通过使用假名。在本文中,提出Zerocoin,给比特币增加加密扩展协议允许完全匿名的货币交易。系统使用标准的加密系统假设和不引入新的信任匹配或者改变比特币的安全模型。描述Zerocoin加密的架构,它融入比特币,并检查其性能的计算和对比特币协议的影响。论文贡献：首先定义开源的抽象功能和安全需求,称之为一个分散的电子现金方案。提出一个具体的实例,证明安全标准下加密的假设。最后,我们描述集成所需的结合比特币系统特定扩展协议和评价原型实现的性能来源于最初的开源比特币客户机。	| 	
+| 	29	| 	2011	| 	2011-An Analysis of Anonymity in the Bitcoin System	| 	&quot;比特币；匿名&quot;	| 	&quot;69号文章的引用文献。Transaction graph analysis8号文章的引用文献60号的引用文献63的引用文献47的引用文献45的引用文献，将交易地址聚合到用户上。66的引用文献通过分析区块链上的交易信息攻击匿名性，攻击方法类&quot;	| 	这篇文章介绍了比特币系统的匿名机制，介绍如何结合其他信息进行反匿名化。	| 	
+| 	30	| 	2013	| 	Structure and Anonymity of the Bitcoin Transaction Graph.pdf	| 	&quot;比特币；匿名；交易特征&quot;	| 	&quot;8号文章的引用文献66号文章的引用文献这篇文章实际的隐私包括两个方面:1、K匿名性（从比特币网络整体来看）2、交易相关性（类似于一个用户的不同账户）这篇文章讨论的匿名性是从整体角度对比特币网络的匿名性。我们的匿名性是针对特定用户的匿名性。这貌似是另一个维度的隐私保护。45的引用文献。不研究反匿名，而是从整体的角度研究匿名性。&quot;	| 	&quot;这篇文章是从宏观的角度描述比特币网络的匿名性，提出了影响匿名性的因素，包括：实体越多，匿名性越强；休眠代币降低匿名性。可以作为隐私保护的另一个维度，对于设计和研究区块链的隐私保护有意义。&quot;	| 	
+| 	31	| 		| 	https://bitcointalk.org/index.php?topic=279249	| 	&quot;比特币；混币技术&quot;	| 	coinjoin	| 		| 	
+| 	32	| 	2014	| 	Sybil-Resistant Mixing for Bitcoin	| 	&quot;比特币；混币技术&quot;	| 	8号文章的引用文献	| 		| 	
+| 	33	| 	2013	| 	Quantitative analysis of the full bitcoin transaction graph	| 	&quot;比特币；交易特征；用户分析&quot;	| 	&quot;58的引用文献60的引用文献47的引用文献45的引用文献，研究比特币网络上实体的典型行为，通过分析区块链交易中获得交易统计信息。这正好是项目的第二个方向，对开展研究很有价值。&quot;	| 		| 	
+| 	34	| 	2015	| 	Structure and Anonymity of the Bitcoin Transaction Graph	| 	&quot;比特币；匿名；交易特征&quot;	| 	名字竟然和60一样	| 		| 	
+| 	35	| 	2013	| 	Anonymity of bitcoin transactions: An analysis of mixing services	| 	&quot;比特币；混币技术；匿名性&quot;	| 	&quot;47的引用文献采用mixing方法后，仍然可以通过污点分析发现输入和输出的关系&quot;	| 		| 	
+| 	36	| 		| 	&quot;Beware the Middleman: Empirical Analysisof Bitcoin-Exchange Risk,&quot;	| 	&quot;比特币；混币技术；匿名性&quot;	| 	45的引用文献，混合服务，交换机制以及其他一些基于中心的中介服务会给比特币投资者带来重大威胁。资产丢失。	| 		| 	
+| 	37	| 	2015	| 	Deanonymisation of Clients in Bitcoin P2P Network	| 	&quot;比特币；匿名性；网络层&quot;	| 	P2P溯源	| 		| 	
+| 	38	| 	2015	| 	基于盲签名技术的比特币混币系统设计与实现	| 	&quot;比特币；混币技术；匿名性&quot;	| 	混币	| 		| 	
+| 	39	| 		| 	CoinParty: Secure Multi-Party Mixing of Bitcoins	| 	&quot;比特币；混币技术；匿名性&quot;	| 		| 		| 	
+| 	40	| 		| 	Bitcoin mix system design based on partial blind signature	| 	&quot;比特币；混币技术；匿名性&quot;	| 		| 		| 	
+| 	41	| 		| 	A Blind-Mixing Scheme for Bitcoin based on an Elliptic Curve Cryptography Blind Digital Signature Algorithm	| 	&quot;比特币；混币技术；匿名性&quot;	| 		| 		| 	
+| 	42	| 		| 	Pinocchio coin: building zerocoin from a succinct pairing-based proof	| 	&quot;比特币；匿名性&quot;	| 		| 		| 	
+| 	43	| 	2010	| 	A terminology for talking about privacy by data minimization: Anonymity, Unlinkability, Undetectability, Unobservability, Pseudonymity, and Identity Management	| 	&quot;比特币；匿名性&quot;	| 	&quot;66的引用文献介绍隐私保护相关的名词定义，匿名性，假名，关联性等&quot;	| 		| 	
+| 	44	| 		| 	ZerocashDecentralized Anonymous Payments from Bitcoin	| 	&quot;比特币；匿名性&quot;	| 	Zerocash，PPT	| 		| 	
+| 	45	| 	2002	| 	Failures and Successes: Notes on the Development of Electronic Cash	| 	电子现金的历史	| 		| 		| 	
+| 	46	| 	2016	| 	Blindly Signed Contracts Anonymous On-Blockchain and Off-Blockchain Bitcoin Transactions 	| 	&quot;比特币；匿名性&quot;	| 	比特币链上交易和链下交易的匿名性	| 		| 	
+| 	47	| 		| 	2013-Information propagation in the bitcoin network.pdf	| 	&quot;比特币；网络层&quot;	| 	专门介绍比特币网路中信息传播的知识	| 		| 	
+| 	48	| 	2017	| 	Behavior pattern clustering in blockchain networks	| 	&quot;比特币；交易特征；网络层&quot;	| 	针对区块链网络的行为模式聚类分析	| 		| 	
+</code></pre>
+</span></p></div><div id = "warn"></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">飞来飞去-区块链学习笔记</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2020-02-22</div>    
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<div style="width:100%;overflow:hidden">
+
+          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
+            下一篇
+            <a href="https://flfqbit.github.io/post/43facebook-qu-kuai-lian-xiang-guan-xin-xi-hui-zong/">
+              <p class="post-title">
+                <b>[43]facebook 区块链相关信息汇总</b>
+              </p>
+            </a>
+          </div>
+
+
+
+          <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
+            上一篇
+            <a href="https://flfqbit.github.io/post/45qu-kuai-lian-yu-ren-gong-zhi-neng/">
+              <p class="post-title">
+                <b>[45]区块链与人工智能</b>
+              </p>
+            </a>
+          </div>
+
+</div>
+
+<div class="doc_comments">
+
+</div>
+<script>
+var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
+imgList = document.querySelectorAll('.md_block img')
+imgList.forEach(img => {
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
+  let div1 = document.createElement('div')
+  let div = document.createElement('div')
+  div.className='back';
+  div.setAttribute("data-src",img.src)
+  var figuration = document.createElement("figcaption")
+  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
+  img.replaceWith(div1)
+  div1.appendChild(div)
+  div.appendChild(img)
+  div1.appendChild(figuration)}
+})
+$('img').on('error',function(){$(this).prop('src','https://flfqbit.github.io/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于2020-02-22，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="2020-02-22 23:48:19";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+$('#pjax-container').lightGallery({
+    selector: '.back'
+});
+</script>
+  </div>
+</div>
+
+
+      </div>
+<div class="toc">
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/flfqbit" title="github"><i class="fa fa-github"></i></a>
+
+    
+			   
+<a href="fenghao2821@gmail.com" title="envelope"><i class="fa fa-envelope"></i></a>
+
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.write("Copyright © "+year+" " + "飞来飞去-区块链学习笔记");
+		</script>
+		
+		
+	  
+      </div>
+
+    </div>
+
+<script>
+new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
+console.clear();
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+
+</html>

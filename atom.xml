@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-02-22T14:07:58.444Z</updated>
+    <updated>2020-02-22T16:15:20.809Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -11,410 +11,787 @@
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
     <entry>
-        <title type="html"><![CDATA[[2][文章解读]网信办旗下杂志区块链组稿1-区块链发展是一次长跑]]></title>
-        <id>https://flfqbit.github.io/post/2wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-1-qu-kuai-lian-fa-zhan-shi-yi-ci-chang-pao/</id>
-        <link href="https://flfqbit.github.io/post/2wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-1-qu-kuai-lian-fa-zhan-shi-yi-ci-chang-pao/">
+        <title type="html"><![CDATA[[77]以太坊数据字段（input）解析]]></title>
+        <id>https://flfqbit.github.io/post/77yi-tai-fang-shu-ju-zi-duan-inputjie-xi/</id>
+        <link href="https://flfqbit.github.io/post/77yi-tai-fang-shu-ju-zi-duan-inputjie-xi/">
         </link>
-        <updated>2020-02-22T11:26:44.000Z</updated>
-        <content type="html"><![CDATA[<p>  2018年11月12日，中央网信办主管的《网络传播》杂志发表8篇区块链稿件，从多个角度介绍区块链行业的发展。作为重要主管机构，此次的区块链稿件具有重要参考作用。<br>
-  组稿第1篇是北京航空航天大学教授蔡维德编写，题目是“区块链发展是一次长跑 ”，主要介绍了区块链技术的价值和发展趋势。<br>
-  文章原文可以从以下链接获得：<br>
-[http://www.cac.gov.cn/2018-11/12/c_1123700997.htm)<br>
-  本文对文章中的重点内容进行摘要和分析：</p>
-<blockquote>
-<p>“区块链是由多个独立节点共同参与的分布式数据库系统，也可以理解为一种特别的分布式账本，由这些节点共同维护。它很难修改、很难伪造、可以追溯。区块链记录所有发生交易的信息，过程高效透明，数据高度安全。”</p>
-</blockquote>
-<p>  “独立节点”指出了区块链网络具有分布式、去中心的特点，不存在一个中心机构可以独自影响区块链网路。<br>
-  “很难修改、很难伪造、可以追溯”在修饰词上进行了完善。传统话语中经常用的“不能修改”、“不能伪造”、“高效追溯”不太准确。</p>
-<blockquote>
-<p>“区块链可以说是一个物物交换的平台，或是“去中介化”的平台，而不是“去中心化”。”</p>
-</blockquote>
-<p>  “去中心化”和“去中介化”都体现了区块链技术的一部分特征，并没有明显的优劣、对错之分。以去中介化特征为例：<br>
-  古人类用“物物” 交换，虽然存在物品不等价、物品不适用等问题，但是通过面对面交换解决了信任问题。<br>
-  现代社会使用法币作为中介物实现“物-法币-物” 交换，本质上是将法币作为一种有效的、稳定的价值媒介物。法币的可靠性通过货币当局提供的法偿性和强制性实现。<br>
-  区块链体系中使用加密资产作为中介物实现实现“物-加密资产-物”交换。虽然还是需要中介物，但是作为中介物的加密资产不需要一个中心机构去发行和维护，而是在分布式节点的参与下，靠密码学和共识机制保证安全性。相对于法币模式，区块链模式更接近“去中介化”。</p>
-<blockquote>
-<p>“2018年是区块链元年，今天大部分区块链应用都是在“数字代币”上面，或是所谓的“通证经济”方面。”</p>
-</blockquote>
-<p>  从2016年起，区块链元年的提法每年都会出现。2018年的主要特征是：ICO逻辑的崩溃、导致币价的崩溃，进一步导致大量区块链创业企业进入寒冬。同时，传统行业、互联网头部企业、高校研究机构快速入场。区块链技术似乎进入了一个投机破灭、研究推进的领域。区块链技术是否一定和通证相关，并无明确答案。</p>
-<blockquote>
-<p>“但是，中国发展区块链的优势还是很足的，因为中国仍然有最多的人口、最大的电商、最大的第三方支付系统，这些都没有改变。”</p>
-</blockquote>
-<p>  技术的落地需要好的场景，能否在巨大的中国支付市场中发挥作用，是区块链技术的考验和机会。从目前落地的项目看，无论是区块链发票、区块链溯源，还是区块链跨国转账，似乎都还没有发挥出区块链技术的潜力。</p>
+        <updated>2020-02-22T16:11:10.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-背景">1 背景</h1>
+<p>以太坊系统中默认存储数据的字段的是“input”。<br>
+“input”字段的内容是由用户（创建以太坊交易的人）自行写入，没有固定格式。<br>
+调研显示，“input”字段常见格式类型包括：“ascii”，“utf8”，以及一些变种（utf8,每两个字符之间用\x隔断）。<br>
+本文总结针对以太坊数据字段（input）的解析方法。</p>
+<h1 id="2-提纲">2 提纲：</h1>
+<p>(1)了解互联网行业常用的编码格式(完成)<br>
+(2)统计以太坊数据存储参数常用的格式类型<br>
+(3)设计解析方案<br>
+(4)编写解析程序</p>
+<h1 id="3-内容">3 内容</h1>
+<h2 id="31-了解互联网行业常用的编码格式">3.1 了解互联网行业常用的编码格式</h2>
+<p>2机制(hex)<br>
+16机制(hex)<br>
+ascii<br>
+utf8<br>
+unicode</p>
+<p>1 Byte（B） = 8 bit</p>
+<p>ASCII编码	1B</p>
+<p>GB2312编码</p>
+<p>Unicode编码	2B-4B</p>
+<p>UTF-8编码 1B-6B</p>
+<p>unicode和ascii是一种编码方式，而UTF-8，UTF-16等是一种存储方式，在存储和传输上节约空间、提高性能的一种编码形式。<br>
+在计算机内存中，统一使用Unicode编码，当需要保存到硬盘或者需要传输的时候，就转换为UTF-8编码。</p>
+<p>从存储层面看，字符常用的格式是UTF8</p>
+<p>存储层面</p>
+<h3 id="311-存储容量单位">3.1.1 存储容量单位</h3>
+<p>（1）位（Bit）<br>
+-计算机数据存储基础单位，包含1位的二进制数</p>
+<p>（2）字节（Byte）<br>
+-最常用的字节是八位的字节，即它包含八位的二进制数<br>
+-也可以写为二位的十六机制数</p>
+<h3 id="312-数据表示方法">3.1.2 数据表示方法</h3>
+<p>（1）二进制（binary）<br>
+-逢2进1，[0-1]</p>
+<p>（1）16进制（Hexadecimal）<br>
+-逢16进1，[0-9-A-F]<br>
+-编程语言，使用字首“0x”，例如“0x5A3”。<br>
+-转义序列，使用字首“\x”，例如“\x1abf4”。</p>
+<h3 id="312-数据符合集合">3.1.2 数据符合集合</h3>
+<p>（1）ASCII<br>
+-英文字符<br>
+-1B,128个。高位置0，后7位用于编码，常见的符号和英文字符。</p>
+<p>（2）GB2312<br>
+-英文字符+中文字符<br>
+-2B，“区字节”+“位字节”</p>
+<p>（3）GBK<br>
+-英文字符+中文字符<br>
+-1B-2B。英文使用单字节编码，完全兼容ASCII字符编码，中文部分采用双字节编码。<br>
+-GBK 向下与 GB 2312 编码兼容，向上支持 ISO 10646.1国际标准。</p>
+<p>（4）Unicode（统一码、万国码、单一码）<br>
+-英文字符+中文字符+日文+韩文+其他<br>
+-2B-4B。原有的英文编码从单字节变成双字节，只需要把高字节全部填为0就可以。<br>
+-转义序列，使用字首“u”，例如“uCA”。</p>
+<h3 id="312-数据编码方法">3.1.2 数据编码方法</h3>
+<p>（1）UTF-8<br>
+-1B-4B<br>
+-UTF-8是一种编码方式，根据字符在Unicode字符集中的序号，将字符集分成4种，分别采用1B-4B存储。<br>
+-编码方法（Unicode -&gt; UTF-8）</p>
+<table>
+<thead>
+<tr>
+<th>序号范围</th>
+<th>编码方法</th>
+<th>十六进制特征</th>
+<th>（字符，unicode,utf8）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>000000-00007F</td>
+<td>0XXX XXXX</td>
+<td>[0-7]*</td>
+<td>(a,\u61 ,0x61)</td>
+</tr>
+<tr>
+<td>000080-0007FF</td>
+<td>110xxxxx 10xxxxxx</td>
+<td>[C-D]* [8-B]*</td>
+<td>(ê,\uCA ,0xC38A)</td>
+</tr>
+<tr>
+<td>000800-00FFFF</td>
+<td>1110xxxx 10xxxxxx 10xxxxxx</td>
+<td>E* [8-B]* [8-B]*</td>
+<td>(叶,\u53f6 ,\xE58FB6)</td>
+</tr>
+<tr>
+<td>010000-10FFFF</td>
+<td>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</td>
+<td>F* [8-B]*  [8-B]* [8-B]*</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>编码例子：<br>
+\uCA -&gt;\xC3 8A， 过程如下：<br>
+\uCA(1100 1010)处于0080 ~07FF之间，从上文中的转换表可知对其编码需要2bytes，即两个字节，其对 应 UTF-8格式为： 110X XXXX10XX XXXX。从此格式中可以看到，对其编码还需要11位，而uCA(1100 1010)仅有8位，这时需要在其二进制数前补0凑成11位: 000 1100 1010, 依次填入110X XXXX 10XX XXXX的空位中， 即得 1100 0011 1000 1010（C38A）。</p>
+<h1 id="文献">文献</h1>
+<p>[16进制]<br>
+https://baike.baidu.com/item/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6/4162457?fromtitle=16%E8%BF%9B%E5%88%B6&amp;fromid=8541382&amp;fr=aladdin<br>
+[ASCII]https://baike.baidu.com/item/ASCII<br>
+[ASCII、Unicode和UTF-8等常见字符编码格式介绍]https://www.cnblogs.com/Ladylittleleaf/p/9633993.html<br>
+[UTF-8]https://baike.baidu.com/item/UTF-8<br>
+[Unicode]https://baike.baidu.com/item/Unicode<br>
+[汉字编码]https://bianma.supfree.net/chaye.asp?id=53F6</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[1][报告解读]中国金融稳定报告2018-加密资产相关领域风险及防范]]></title>
-        <id>https://flfqbit.github.io/post/1bao-gao-jie-du-zhong-guo-jin-rong-wen-ding-bao-gao-2018-jia-mi-zi-chan-xiang-guan-ling-yu-feng-xian-ji-fang-fan/</id>
-        <link href="https://flfqbit.github.io/post/1bao-gao-jie-du-zhong-guo-jin-rong-wen-ding-bao-gao-2018-jia-mi-zi-chan-xiang-guan-ling-yu-feng-xian-ji-fang-fan/">
+        <title type="html"><![CDATA[[76]习主席关于区块链技术的讲话]]></title>
+        <id>https://flfqbit.github.io/post/76xi-zhu-xi-guan-yu-qu-kuai-lian-ji-zhu-de-jiang-hua/</id>
+        <link href="https://flfqbit.github.io/post/76xi-zhu-xi-guan-yu-qu-kuai-lian-ji-zhu-de-jiang-hua/">
         </link>
-        <updated>2020-02-22T11:25:24.000Z</updated>
-        <content type="html"><![CDATA[<p>  2018年11月2日，“中国人民银行金融稳定分析小组”发布报告《中国金融稳定报告2018》。本报告的“专题十二　加密资产相关领域风险及防范”部分介绍了针对加密资产的专项研究。<br>
-  文章简短精炼，明确了比特币、以太币等资产的定义，清晰介绍了加密资产的发展情况、面临风险和监管机制。<br>
-  报告原文可以从以下链接获得：<br>
-http://www.gov.cn/xinwen/2018-11/03/content_5337137.htm<br>
-  本文对报告中涉及加密资产的重点内容进行摘要和分析：</p>
-<h1 id="一-定义概念">一、定义概念</h1>
-<p><strong>加密资产是一种民间金融资产，价值来源是密码学和分布式记账技术。</strong><br>
-  上述定义将加密资产定义为一种“民间的”“金融”资产，即肯定了其金融属性，又界定了其“民间”身份。价值来源的判断非常准确，说明了为什么民间发行的数字货币具有金融资产的性质。</p>
-<p><strong>加密资产不由货币当局发行，不具有法偿性和强制性等货币属性，不具有与货币等同的法律地位。</strong><br>
-  上述定义清晰的说明了加密资产和法币之间的区别。之前通常使用的“数字货币”会让普通人感到迷惑。</p>
-<p><strong>ICO通常是区块链项目研发团队通过发行自行创设的数字货币向投资者募集比特币和以太币等加密资产的行为。因其形式类似于首次公开发行（IPO）而得名。</strong><br>
-  ICO的定义强调了3点内容。首先，ICO的数字货币是由区块链团队自行发行的，而不是由货币当局（例如，人民银行）发行。其次，ICO募集的资产是比特币、以太币等加密资产，而不是法币。这是ICO在初始发展前期没有受到监管的主要原因。最后，ICO的取名是参考了IPO，本质上是一种股权募资行为。</p>
-<h1 id="二-加密资产领域的分类">二、加密资产领域的分类</h1>
-<p>  加密资产领域的发展主要分为两类：<br>
-  <strong>（1）发行领域</strong><br>
-  文中介绍加密资产发行过程经历了两个阶段。第一阶段是通过“挖矿”产生的加密资产，以比特币、以太币为例；第二阶段是通过ICO产生的加密资产，以EOS、BNB为例。<br>
-  这种分阶段的介绍方式能够清晰的说明比特币、以太币等**“原生型”<strong>加密资产和</strong>“依附型”<strong>加密资产的区别。</strong>“依附型”**加密资产成本级低，将创造加密资产的过程简化到小时级工作量，使其成为了传销、诈骗活动的有力工具。<br>
-  “工具本身是无罪的”，ICO募资模式，以及这种极低成本、级高可靠性的“代币”发行机制有很多创新优势。如果监管措施到位，这两项技术都能够发挥更多正向作用。</p>
-<p>  <strong>（2）交易领域</strong><br>
-  交易领域主要是指加密资产的交易过程，虽然加密资产可以通过个人之间的链上交易实现，但是交易的绝大部分仍然是依靠传统的交易所实现。加密资产交易所是指在互联网中进行的面相公众的针对比特币、代币等加密资产的电子化撮合、集中连续竞价服务的交易平台。<br>
-  数字货币交易所本质上类似于传统的股票交易所，无论是从事币币交换、还是从事代币与法币的交换，未来肯定需要行业监管和政府监管。未来一定是受到马太效应的影响，只有头部交易平台才能够合规运行。“去中心交易所”、“链上交易所”本质上只能处理币币交易。占主导比例和主要受益的法币与代币交易业务还是会聚集在线下合规交易所。目前出现的万家数字货币交易所现象不会持久，大部分小交易所最终会因为黑客攻击、交易量降低而逐渐淘汰。</p>
-<h1 id="三-加密资产领域存在的问题及挑战">三、加密资产领域存在的问题及挑战</h1>
-<p><strong>（1）行业无序发展，投机色彩浓厚</strong><br>
-  加密资产和ICO本身是为了区块链项目发展提供支持，但是由于加密资产价格飙升，大量区块链项目成为空壳，目的只是为了利用加密资产进行投机。这种情况不利于区块链行业的发展，会激发资金脱实向虚，成为被监管打击的对象。</p>
-<p><strong>（2）投资者合法权益难以保障</strong><br>
-  发行方面存在非法发行证券、非法集资、金融诈骗、传销等违法犯罪活动；交易方面由于不存在涨跌幅和交易时间限制，会导致剧烈的价格波动；加密资产本身集中度高、流动性不足，存在炒作、庄家控盘等问题。<br>
-  在初期，没有涨跌幅和交易时间限制甚至被作为加密资产的一项优势。实际上，金融行业的每一项监管措施都是在大量金融问题出现后提出的解决方案。如果没有这些监管机制，将不可避免的出现炒作、庄家控盘等恶意行为。</p>
-<p><strong>（3）易被违法犯罪活动利用</strong><br>
-  以“区块链”为名，行“传销、诈骗”之实，在当前监管机制还不健全的情况下，利用区块链噱头进行非法集资、诈骗的行为依然有生存空间；加密资产的匿名性导致资金来源、去向不明，为洗钱、非法交易、恐怖融资及逃避资产管制和国际制裁提供了便利。</p>
-<h1 id="四-总结">四、总结</h1>
-<p>  报告中针对加密资产的章节清晰的界定了加密资产的属性，分类和面临的威胁。思路非常清晰。这代表了监管机构对加密资产领域、对区块链行业有清晰的认识。未来，针对加密资产的监管将进一步正规化，试图利用区块链、及加密资产进行诈骗、洗钱的行为将受到更加严厉的打击。<br>
-  另一方面，官方机构对加密资产的定义，从另一个角度说明了加密资产地位的改变，不再是一种非主流的极客技术，而是将被纳入监管的新技术。针对加密资产和区块链技术的有益研究、产品将得到更多发展机会。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://flfqbit.github.io/post/about/</id>
-        <link href="https://flfqbit.github.io/post/about/">
-        </link>
-        <updated>2020-02-22T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！</p>
-</blockquote>
-<h2 id="关于本站">关于本站</h2>
-<p>本站用于记录区块链行业的重要文章、前沿技术、零散知识。</p>
-<h2 id="博主是谁">博主是谁</h2>
-<p>区块链技术爱好者</p>
-<h2 id="兴趣爱好">兴趣爱好</h2>
-<p>区块链；数字货币监管；TOR</p>
-<h2 id="联系我呀">联系我呀</h2>
-<p>fenghao2821@gmail.com</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[9]区块链在安全领域的应用]]></title>
-        <id>https://flfqbit.github.io/post/9qu-kuai-lian-zai-an-quan-ling-yu-de-ying-yong/</id>
-        <link href="https://flfqbit.github.io/post/9qu-kuai-lian-zai-an-quan-ling-yu-de-ying-yong/">
-        </link>
-        <updated>2020-02-22T10:45:08.000Z</updated>
-        <content type="html"><![CDATA[<p>#1 [综述]区块链与网络空间安全<br>
-[文章解读]区块链与网络空间安全<br>
-https://www.jianshu.com/p/cdf1f9f7354d<br>
-【世界国防科技前沿动态】区块链技术及其在网络空间安全领域的应用<br>
-<a href="http://www.sohu.com/a/245530855_802190">http://www.sohu.com/a/245530855_802190</a></p>
-<p>#2 [政策]国家十部门联合发文：探索区块链等新技术提升安全防护水平<br>
-[文章解读]国家十部门联合发文：探索区块链等新技术提升安全防护水平<br>
-https://www.jianshu.com/p/367ae416711d<br>
-<a href="%5Bhttp://www.gov.cn/xinwen/2019-08/28/content_5425389.htm%5D(http://www.gov.cn/xinwen/2019-08/28/content_5425389.htm)">十部门关于印发加强工业互联网安全工作的指导意见的通知</a></p>
-<p>#3 [综述]各国重视区块链技术在网络安全中的应用<br>
-http://finsec.pingan.com/Article/detail/1048</p>
-<p>#4 [论文]2017-基于区块链的数据安全共享网络体系研究_王继业.pdf</p>
-<p>#5 [论文]基于联盟区块链的智能电网数据安全存储与共享系统_吴振铨.pdf</p>
-<p>#6 [论文]能源互联网中基于区块链的电力交易和阻塞管理方法.pdf</p>
-<p>#7 [综述]区块链技术应用在网络安全上的六个案例<br>
-https://www.sohu.com/a/228123848_500665</p>
-<hr>
-<p>-更新时间：20200209<br>
--更新内容：添加7个数据<br>
--数据个数：7</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[8]区块链学术组织]]></title>
-        <id>https://flfqbit.github.io/post/8qu-kuai-lian-xue-zhu-zu-zhi/</id>
-        <link href="https://flfqbit.github.io/post/8qu-kuai-lian-xue-zhu-zu-zhi/">
-        </link>
-        <updated>2020-02-22T10:44:33.000Z</updated>
-        <content type="html"><![CDATA[<p>#IEEE标准协会-区块链标准委员会（CES/BSC）<br>
-美国东部时间2018年12月5日，在IEEE总部举行的IEEE标准协会理事会议上，经过长时间的讨论，最终以理事会决议（resolution）的形式批准成立了区块链标准委员会（CES/BSC）。<br>
-<a href="https://www.jianshu.com/p/15a1ae67bad5">https://www.jianshu.com/p/15a1ae67bad5</a></p>
-<p>#中国计算机学会区块链专委会<br>
-中国计算机学会区块链专委会。成立于2018年4月，隶属于中国计算机学会（CCF）。举办了“2018中国区块链技术大会”等多项重大会议活动。<br>
-<a href="https://www.ccf.org.cn/tcbc/">https://www.ccf.org.cn/tcbc/</a></p>
-<p>#中国电子学会区块链分会<br>
-中国电子学会区块链分会。成立于2018年11月，隶属于中国电子学会。发布了“《中国区块链技术人才培养标准》”。</p>
-<hr>
-<p>-更新时间：20200202<br>
--更新内容：添加3个学术组织<br>
--机构个数：3</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[7]区块链网络资源汇总]]></title>
-        <id>https://flfqbit.github.io/post/7qu-kuai-lian-wang-luo-zi-yuan-hui-zong/</id>
-        <link href="https://flfqbit.github.io/post/7qu-kuai-lian-wang-luo-zi-yuan-hui-zong/">
-        </link>
-        <updated>2020-02-22T10:44:12.000Z</updated>
-        <content type="html"><![CDATA[<p>#1 学术网站<br>
-网站链接：https://blockchain.ieee.org/<br>
-简介：IEEE专门建立了一个区块链网站“IEEE BLOCKCHAIN”,专门介绍区块链标准、区块链文章、区块链技术、区块链培训等内容。网站资源较多，值得挖掘。</p>
-<p>#2 特殊资源网站-区块链账号身份识别<br>
-网站链接：https://www.walletexplorer.com/<br>
-简介：此网站提供比特币账号聚类功能，能够查询指定账号的聚类信息。此外，网站还根据各种辅助信息对大量比特币账号建立了身份标签。此网站的作者目前加入区块链数据公司“Chainalysis”（A轮融资1600万美元）。</p>
-<p>#3 特殊资源网站-区块链热度分析<br>
-网站链接：https://mlab.toutiao.com/keyword/trends?keyword=%E5%8C%BA%E5%9D%97%E9%93%BE,%E4%BB%A5%E5%A4%AA%E5%9D%8A,%E6%AF%94%E7%89%B9%E5%B8%81&amp;start=2018-12-13&amp;end=2018-12-20&amp;region=0&amp;category=0<br>
-简介：今日头条的媒体实验室模块，能够提供针对关键词的热度分析。关键词可自由组合，我填写了“区块链”、“比特币”、“以太坊”三个关键词，从图1可以看出。“区块链”的热度大约是“比特币”的两倍。“以太坊”的热度趋于0。<br>
-<img src="https://upload-images.jianshu.io/upload_images/4794066-573b68e79127acd4.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1 区块链关键词热度对比" loading="lazy"></p>
-<p>#4 官方网站-中国社会科学院金融研究所支付清算研究中心<br>
-网站链接：http://www.rcps.org.cn/ckwx<br>
-简介：此网站是由中国社会科学院批准设立的所级非实体性研究单位，专门从事支付清算理论、政策、行业、技术等方面的重大问题研究。此网站目前紧密关注区块链在金融支付领域的发展，发布内容包括：区块链金融、区块链监管等。</p>
-<p>#5 区块链浏览器<br>
-比特币浏览器<br>
-链接：https://www.blockchain.com/<br>
-简介：以前的域名叫blockchain.info，那时很好用。最近改域名后，网站抽风的厉害、很多页面显示不正常。</p>
-<p>以太坊浏览器<br>
-链接：https://etherscan.io/<br>
-简介：内容齐全，以太坊的相关内容都包括了。交易、合约、统计。</p>
-<p>综合浏览器<br>
-链接：https://blockchair.com/<br>
-简介：内容丰富，功能强大，包括：bitcoin,bitcoin cash,bitcoin sv,ethereum.litecoin</p>
-<p>#6 区块链网络节点查询网站<br>
-比特币网络节点<br>
-链接：https://bitnodes.earn.com/<br>
-简介：运行稳定、功能完善的比特币网络节点展示网站。既有很漂亮的全球图，也有细致的列表数据。<br>
-更重要的是，此网站开源了“比特币节点查看程序源码”，能够基于此代码开发针对性的比特币节点监测程序。<br>
-比特币节点查看程序源码链接：<br>
-https://github.com/ayeowch/bitnodes/wiki/Provisioning-Bitcoin-Network-Crawler</p>
-<p>以太坊网络节点<br>
-链接：http://www.ethernodes.org/<br>
-简介：访问速度较差，功能较少。但是是目前找到的能用的网络节点查看网站。</p>
-<p>#7 数字货币信息服务<br>
-TradeBlock [TradeBlock.com]<br>
-每周都会发布数字货币市场变化信息。</p>
-<p>#8 火币区块链研究院<br>
-https://www.jianshu.com/p/e629dda1e3f1<br>
-每周会发布非常详细的数字货币市场报告。包括价格变化、活跃度变化、节点数变化、新闻等。</p>
-<p>#9 theblock<br>
-https://www.theblockcrypto.com/<br>
-国外的区块链行业信息网站，内容质量较高</p>
-<p>#10 IEEE BLOCKCHAIN<br>
-<a href="https://blockchain.ieee.org/">https://blockchain.ieee.org/</a><br>
-IEEE专门建立了一个区块链网站“IEEE BLOCKCHAIN”,专门介绍区块链标准、区块链文章、区块链技术、区块链培训等内容。网站资源较多，值得挖掘。</p>
-<hr>
-<p>-更新时间：20200202<br>
--更新内容：添加1条信息<br>
--信息个数：10</p>
-<hr>
-<p>-更新时间：2019年<br>
--更新内容：添加9条信息<br>
--信息个数：9</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[6]区块链上存储的特殊数据]]></title>
-        <id>https://flfqbit.github.io/post/6qu-kuai-lian-shang-cun-chu-de-te-shu-shu-ju/</id>
-        <link href="https://flfqbit.github.io/post/6qu-kuai-lian-shang-cun-chu-de-te-shu-shu-ju/">
-        </link>
-        <updated>2020-02-22T10:43:38.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>本文目的</strong><br>
-区块链公链系统通常会提供数据存储的能力。例如，比特币的“OP_RETURN”参数，以太坊的“input_data”参数。用户在公链系统上存储的数据将永久保存和公开访问，因此被用于各种特殊的存储目的。本文记录一些典型的区块链数据，方便查阅。<br>
-<strong>数据查阅方法</strong><br>
-原始数据可以在区块链浏览器网站上根据交易哈希查询：</p>
-<ul>
-<li>比特币浏览器：<a href="https://btc.com/">https://btc.com/</a></li>
-<li>以太坊浏览器：<a href="https://etherchain.org/">https://etherchain.org/</a></li>
-</ul>
-<p>解析数据可以利用在线格式转换工具进行转换：</p>
-<ul>
-<li>“OP_RETURN”参数解析方法（hex-&gt;ascii）：<br>
-<a href="https://www.sojson.com/hexadecimal.html">https://www.sojson.com/hexadecimal.html</a></li>
-<li>“input_data”参数解析方法（hex-&gt;ascii）：<br>
-<a href="https://www.sojson.com/hexadecimal.html">https://www.sojson.com/hexadecimal.html</a></li>
-<li>以太坊智能合约中也能存储数据，可以用etherscan查看数据：<br>
-<a href="https://etherscan.io/address/0x6e46d3ab7335fffb0d14927e0b418cc08fe60505#code">https://etherscan.io/</a></li>
-</ul>
-<p>#1 WannaCry<br>
-<strong>存储方式</strong>：比特币“OP_RETURN”<br>
-<strong>交易哈希</strong>：<br>
-f093bf69f5e85a21d67c6921d71a5abb2cfcb197c8256e39bf7ce033d61e5405<br>
-<strong>原始数据</strong>：“43617574696f6e212057616e6e6143727920416464726573732121”<br>
-<strong>解析数据</strong>：“Caution ! WannaCry Address”<br>
-<strong>内容简介</strong>：“WannaCry”勒索事件发生后，一个研究人员向勒索地址发送一个交易，交易中包含1个特殊输出“OP_RETURN”，内容是“Caution ! WannaCry Address”。这种标签可以用于标注恶意地址，增加这笔资金的使用难度。例如，推选一个具有公信力的组织，负责对地址加标签。然后更新比特币客户，拒绝接受带特殊标签的资金。组织可以采用签名的方式防止伪造。<br>
-内容是英文，解析时需要去除前两个字符的&quot;0x&quot;<a href="http://tool.haooyou.com/code?group=convert&amp;type=hexToStr&amp;charset=UTF-8">十六进制→字符串（UTF-8）在线解析工具</a></p>
-<p>#2 求助信<br>
-<strong>存储方式</strong>：以太坊“input_data”<br>
-<strong>交易哈希</strong>：<br>
-0x5591c1c0ff78f4847e6a7aa121777c7b03be813a2279253033c6f5821f2c4aaa<br>
-<strong>原始数据</strong>：<br>
-&quot;0xe68891e698afe4b880e4b8aae6b996e58c97e4<br>
-......&quot;<br>
-<strong>解析数据</strong>：<br>
-“......<br>
-I born and live in XX”<br>
-<strong>内容简介</strong>：<br>
-2020-02-08，一个以太坊用户通过以太坊交易发布的求助信息（不能判断是否是诈骗）。<br>
-内容是中文+英文，解析时需要去除前两个字符的&quot;0x&quot;<a href="http://tool.haooyou.com/code?group=convert&amp;type=hexToStr&amp;charset=UTF-8">十六进制→字符串（UTF-8）在线解析工具</a></p>
-<p>#3 医生<br>
-<strong>存储方式</strong>：以太坊“智能合约代码”<br>
-<strong>交易哈希</strong>：<br>
-0x6e46d3ab7335fffb0d14927e0b418cc08fe60505<br>
-<strong>原始数据</strong>：<br>
-xxx<br>
-<strong>解析数据</strong>：<br>
-xxx<br>
-<strong>内容简介</strong>：<br>
-记载医生的相关信息。</p>
-<p>#4 板门店宣言<br>
-<strong>存储方式</strong>：以太坊“智能合约代码”<br>
-<strong>交易哈希</strong>：<br>
-0xdc7c743110Ec689d82f050302319AE27aF84f8fa<br>
-<strong>原始数据</strong>：<br>
-“\xED\x95\x9C\xEB\xB0\x98\xEB\x8F\x84\xEC\x9D\x98\x20\xED\x8F\x8<br>
-......”<br>
-<strong>解析数据</strong>：<br>
-한반도의 폀<br>
-<strong>内容简介</strong>：<br>
-著名的《板门店宣言》的韩语版。这笔交易是2018年由韩国的一位开发者Ryu Gi-hyeok记录的。<br>
-内容是韩文，解析时需要去除数据中的&quot;\x&quot;<a href="http://tool.haooyou.com/code?group=convert&amp;type=hexToStr&amp;charset=UTF-8">十六进制→字符串（UTF-8）在线解析工具</a></p>
-<p>#5 疫苗质量<br>
-<strong>存储方式</strong>：以太坊“input_data”<br>
-<strong>交易哈希</strong>：<br>
-0x802a072a303a1bb19a20065a262526f2cfda0d1ea16eeb3db6500d9d06f65963<br>
-<strong>原始数据</strong>：<br>
-&quot;e69d8ee5858be5bcbaefbc9ae796abe88b97e8b4a8e9878fe5ae89e585a8e698afe4b88de58fafe8<br>
-......&quot;<br>
-<strong>解析数据</strong>：<br>
-&quot;疫苗质量安全是不可<br>
-......&quot;<br>
-<strong>内容简介</strong>：<br>
-疫苗质量文章。<br>
-内容是中文，解析时需要去除前两个字符的&quot;0x&quot;<a href="http://tool.haooyou.com/code?group=convert&amp;type=hexToStr&amp;charset=UTF-8">十六进制→字符串（UTF-8）在线解析工具</a></p>
-<hr>
-<p>-更新时间：20200209<br>
--更新内容：添加2个数据<br>
--数据个数：5</p>
-<p>-更新时间：20200208<br>
--更新内容：添加3个数据<br>
--数据个数：3</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[5]区块链科研项目信息汇总]]></title>
-        <id>https://flfqbit.github.io/post/5qu-kuai-lian-ke-yan-xiang-mu-xin-xi-hui-zong/</id>
-        <link href="https://flfqbit.github.io/post/5qu-kuai-lian-ke-yan-xiang-mu-xin-xi-hui-zong/">
-        </link>
-        <updated>2020-02-22T10:42:59.000Z</updated>
-        <content type="html"><![CDATA[<p>#1 国家重点研发计划项目<br>
-(http://service.most.gov.cn/2015tztg_all/20181026/2755.html)<br>
-类别：国家重点研发计划“宽带通信和新型网络”<br>
-题目：1.7新型域名解析系统架构和关键技术<br>
-项目解析：https://www.jianshu.com/p/ad83e10b405d</p>
-<p>#2 2018年“教育部-中国移动科研基金项目”<br>
-(http://www.moe.gov.cn/s78/A16/s8213/A16_sjhj/201812/t20181206_362604.html)<br>
-题目1：面向金融行业的区块链技术及其应用研究，100万，1年。主要研究内容：金融应用；密码学；共识机制。<br>
-题目2：区块链核心技术研究及应用研发，80万，2年。主要研究内容：电信应用；共识机制；隐私保护；数据流通。<br>
-项目解析：https://www.jianshu.com/p/086437c37c0a</p>
-<hr>
-<p>-更新时间：2019年<br>
--更新内容：添加2条信息<br>
--信息个数：2</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[4]区块链军事[待完善]]]></title>
-        <id>https://flfqbit.github.io/post/4qu-kuai-lian-jun-shi-dai-wan-shan/</id>
-        <link href="https://flfqbit.github.io/post/4qu-kuai-lian-jun-shi-dai-wan-shan/">
-        </link>
-        <updated>2020-02-22T10:41:31.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="美国空军加强区块链使用五角大楼还在做什么">美国空军加强区块链使用：五角大楼还在做什么？</h1>
-<p><a href="http://baijiahao.baidu.com/s?id=1643442007745663971&amp;wfr=spider&amp;for=pc">http://baijiahao.baidu.com/s?id=1643442007745663971&amp;wfr=spider&amp;for=pc</a></p>
+        <updated>2020-02-22T16:10:28.000Z</updated>
+        <content type="html"><![CDATA[<p>习近平主持中央政治局第十八次集体学习并讲话<br>
+<a href="http://www.gov.cn/xinwen/2019-10/25/content_5444957.htm">http://www.gov.cn/xinwen/2019-10/25/content_5444957.htm</a></p>
 <blockquote>
-<p>Simba Chain公司的任务是设计一种区块链方法的原型，用于注册和跟踪增材制造(也称为3D打印)组件的整个生命周期。<br>
-“星座公司的技术将有助于安全地解锁传统上孤立的、不可访问的数据和数据源。这通常被称为美国空军的多领域指挥和控制(MDC2)。”</p>
+<p>习近平在中央政治局第十八次集体学习时强调把区块链作为核心技术自主创新重要突破口加快推动区块链技术和产业创新发展</p>
 </blockquote>
 <blockquote>
-<p>辛巴链本身也是2017年由美国国防高级研究计划局(DARPA)资助美国圣母大学(University of Notre Dame)成立的一个项目，最初是为了促进一个不可摧毁的沟通平台。</p>
+<p>新华社北京10月25日电 中共中央政治局10月24日下午就区块链技术发展现状和趋势进行第十八次集体学习。中共中央总书记习近平在主持学习时强调，区块链技术的集成应用在新的技术革新和产业变革中起着重要作用。我们要把区块链作为核心技术自主创新的重要突破口，明确主攻方向，加大投入力度，着力攻克一批关键核心技术，加快推动区块链技术和产业创新发展。</p>
 </blockquote>
+<p>关键词：<br>
+-日期：2019年10月24日<br>
+-机构：中共中央政治局，第十八次集体学习<br>
+-主题：区块链技术发展现状和趋势<br>
+-区块链技术的“集成应用”<br>
+-技术革新和产业变革<br>
+-核心技术自主创新<br>
+-加快推动区块链技术和产业创新发展</p>
 <blockquote>
-<p>分支机构的需求在更广泛的层面上与美军有很多共同之处。也就是说，庞大的数据处理和大量积压的合同，为从战斧导弹到镊子等各种各样的供应链提供便利——所有这些都需要至关重要的安全防范措施。因此，更广泛的美国国防部(DoD)一直在认真研究一系列区块链技术，以增加安全应用。</p>
+<p>习近平在主持学习时发表了讲话。他指出，区块链技术应用已延伸到数字金融、物联网、智能制造、供应链管理、数字资产交易等多个领域。目前，全球主要国家都在加快布局区块链技术发展。我国在区块链领域拥有良好基础，要加快推动区块链技术和产业创新发展，积极推进区块链和经济社会融合发展。</p>
 </blockquote>
+<p>关键词分析：<br>
+-数字金融、物联网、智能制造、供应链管理、数字资产交易<br>
+--数字金融：DCEP，跨境交易<br>
+--物联网：基于区块链的微电网，冷链物流<br>
+--智能制造：<br>
+--供应链管理：金融供应链、军事供应链<br>
+--数字资产交易：资产上链，数字货币，数字货币交易所</p>
+<p>-加快推动区块链技术和产业创新发展<br>
+--强调技术和产业两个方面<br>
+-积极推进区块链和经济社会融合发展<br>
+--融合发展：区块链在法院、税务、政务工作中的应用。</p>
 <blockquote>
-<p>上个月，Cointelegraph报道了国防部最新宣布的四年计划，该计划提出了“区块链网络安全防护”的前景。“该技术的指定用途包括:<br>
-“促进各单位与总部之间的沟通，以及情报官员与五角大楼之间的信息传递。DARPA也一直在努力开发一种不可破解的代码——区块链可以帮助实现这一点——因为这项技术提供了有关试图闯入安全数据库的黑客的情报。”</p>
+<p>习近平强调，要强化基础研究，提升原始创新能力，努力让我国在区块链这个新兴领域走在理论最前沿、占据创新制高点、取得产业新优势。要推动协同攻关，加快推进核心技术突破，为区块链应用发展提供安全可控的技术支撑。要加强区块链标准化研究，提升国际话语权和规则制定权。要加快产业发展，发挥好市场优势，进一步打通创新链、应用链、价值链。要构建区块链产业生态，加快区块链和人工智能、大数据、物联网等前沿信息技术的深度融合，推动集成创新和融合应用。要加强人才队伍建设，建立完善人才培养体系，打造多种形式的高层次人才培养平台，培育一批领军人物和高水平创新团队。</p>
 </blockquote>
+<p>关键词分析：<br>
+-提出6项研究重点。</p>
+<p>-（1）强化基础研究，提升原始创新能力<br>
+--国内在区块链底层技术的贡献较少，目前应用较广的区块链系统（比特币、以太坊、超级账本）几乎都是国外团队、公司首先研究的。国内研究集中在上层应用，<br>
+--基础研究包括那些？共识机制审查和改进，加密算法的安全性研究，基于密码学的隐私保护技术，针对区块链系统的安全攻防，针对区块链应用的监管技术<br>
+-（2）为区块链应用发展提供安全可控的技术支撑<br>
+--系统稳定性、抗攻击性能、隐私保护能力、监管能力<br>
+-（3）要加强区块链标准化研究<br>
+--国内已经陆续推出了多项区块链标准。当前更需要关注的是如何提升标准的价值。只有被使用的标准才是有用的标准。<br>
+--区块链标准<br>
+<a href="https://www.jianshu.com/p/738e92bb0f5a">https://www.jianshu.com/p/738e92bb0f5a</a><br>
+-（4）创新链、应用链、价值链<br>
+--创新链：技术研究<br>
+--应用链：应用实践<br>
+--价值链：DCEP，股票，保险<br>
+-（5）加快区块链和人工智能、大数据、物联网等前沿信息技术的深度融合<br>
+--这几个技术之间的关联是什么？如何融合？<br>
+-（6）建立完善人才培养体系</p>
 <blockquote>
-<p>供应链<br>
-总部位于华盛顿的智库“保卫民主基金会”(Foundation for the Defense of democracy)在2017年发布的一份关于区块链技术的报告中，强调了保护“国家安全工业基地”的必要性。<br>
-“与制造业供应链全球化相关的国家安全挑战是一种攻击现象，在这种攻击中，不合格、假冒或恶意修改的电子元件被引入国家安全工业基地(NSIB)运作的硬件中。”<br>
-著名的《2019年国防授权法案》(National Defense Authorization Act)及其对华为电子产品的禁令，是一个引人注目的例子，表明有必要确保供应链的安全，同时也引发了外国势力使用植入硬件攻击美国国防机构的威胁。</p>
+<p>习近平指出，要抓住区块链技术融合、功能拓展、产业细分的契机，发挥区块链在促进数据共享、优化业务流程、降低运营成本、提升协同效率、建设可信体系等方面的作用。要推动区块链和实体经济深度融合，解决中小企业贷款融资难、银行风控难、部门监管难等问题。要利用区块链技术探索数字经济模式创新，为打造便捷高效、公平竞争、稳定透明的营商环境提供动力，为推进供给侧结构性改革、实现各行业供需有效对接提供服务，为加快新旧动能接续转换、推动经济高质量发展提供支撑。要探索“区块链+”在民生领域的运用，积极推动区块链技术在教育、就业、养老、精准脱贫、医疗健康、商品防伪、食品安全、公益、社会救助等领域的应用，为人民群众提供更加智能、更加便捷、更加优质的公共服务。要推动区块链底层技术服务和新型智慧城市建设相结合，探索在信息基础设施、智慧交通、能源电力等领域的推广应用，提升城市管理的智能化、精准化水平。要利用区块链技术促进城市间在信息、资金、人才、征信等方面更大规模的互联互通，保障生产要素在区域内有序高效流动。要探索利用区块链数据共享模式，实现政务数据跨部门、跨区域共同维护和利用，促进业务协同办理，深化“最多跑一次”改革，为人民群众带来更好的政务服务体验。</p>
 </blockquote>
-<h1 id="美国海军开始研究区块链技术-采用涉及darpa的simba链">美国海军开始研究区块链技术 - 采用涉及DARPA的“SIMBA链”</h1>
-<p><a href="https://www.jianshu.com/p/20cb0aceb223">https://www.jianshu.com/p/20cb0aceb223</a><br>
-根据新闻稿，9月20日公布，海军航空系统司令部（NAVAIR）是“降低成本”通过将块链技术跟踪与飞机和“高效追踪”相关的组件是它应该进行调查，以确定是否可以完成。</p>
-<meta charset="utf-8">
-<p>迄今为止使用的系统中，有人说**“<strong>在部件交付后</strong>使用”纸基“方法<strong>进行</strong>跟踪**，” <strong>手动记录信息</strong> “这是解释。据说这种方法需要大量的资源，并且由于手动麻烦，它增加了军用飞机的运营成本。</p>
-<p>为了解决这些问题，NAVAIR与“印第安纳州技术和制造公司（ITAMCO）”合作。</p>
-<p>**ITAMCO是“ 美国国防高级研究计划局（DARPA）开发了与合作区块链平台”，“SIMBA链”**一直以来，NAVAIR将被测量跟踪的使用这个平台的效率。</p>
-<p>该合作<strong>旨在建立一个</strong>最终<strong>结合透明度和安全性的区块链物流系统的概念框架。</strong></p>
-<p>然而，在新闻发布会上也被描述“的问题，克服点”，**“分散式供应链”是增加从外部攻击的漏洞，特别需要考虑网络安全。</p>
-<p>#美军区块链技术的应用<br>
-<a href="http://www.360doc.com/content/19/0117/23/29551465_809572766.shtml">http://www.360doc.com/content/19/0117/23/29551465_809572766.shtml</a></p>
-<p>#区块链在国防领域中的应用<br>
-<a href="http://www.sohu.com/a/251693688_819742">http://www.sohu.com/a/251693688_819742</a></p>
-<p>美国首次展望6G：基于区块链的动态频段共享<br>
-<a href="https://www.cnbeta.com/articles/tech/768893.htm">https://www.cnbeta.com/articles/tech/768893.htm</a></p>
-<p>区块链技术企业正在为美国军方开发基于区块链技术的军用加密软件<br>
-<a href="https://www.jinse.com/news/blockchain/26122.html">https://www.jinse.com/news/blockchain/26122.html</a></p>
-<p>区块链技术要上天？把比特币发射到月球！<br>
-<a href="http://92wzz.com/post/2163.html">http://92wzz.com/post/2163.html</a></p>
-<p>区块链技术及其潜在的军事价值_廉蔺<br>
-https://wenku.baidu.com/view/2a8f88ce09a1284ac850ad02de80d4d8d15a0130.html<br>
-据中国国防报报道，国防科技大学前沿交叉学科学院国防科技战略研究智库助理研究员廉蔺认为，区块链技术要真正在国防领域获得推广应用，从短期来看，尚存在诸多困难亟待破解。如信息管控同去中心化存在矛盾、竞争机制尚存在安全隐患、新体系同传统体系存在兼容难题。国防科技大学前沿交叉学科学院国家安全与军事战略研究所所长朱启超认为，展望未来，区块链技术也必将在国防领域带来一场技术革命，在军事网络信息安全、武器装备供应链信息管理、军事物流、军事情报等方面提供可靠、可信、安全的技术支撑。</p>
-<p>《中国国防报》专题分析区块链<br>
-http://www.btb8.com/blockchain/1901/28981.html</p>
-<p>  区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式，具有去中心、去信任、集体维护和可靠数据库等特性。<br>
-<img src="https://upload-images.jianshu.io/upload_images/4794066-2348176a47a7bf36.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1 区块链技术的优点" loading="lazy"></p>
-<p>区块链的突出优势，能够在军事领域发挥重大作用。<br>
-<img src="https://upload-images.jianshu.io/upload_images/4794066-1ed70f8654b6f176.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2 区块链在军事领域的作用" loading="lazy"></p>
-<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/4794066-4a6b75c9d627c940.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3 美国国防部高级研究计划局（DARPA）" loading="lazy"></figure>
-<p>  根据美国国防部的需求，美国国防部高级研究计划局（DARPA)正在研究利用区块链技术创建一个安全的消息传输与交易平台，使任何人在任何地方都能够安全的发送信息。<br>
-  DARPA向Guardtime（爱沙利亚区块链公司)授予了180万美元的合同，用于构建其区块链无钥签名基础设施KSI。用于保护关键武器系统的安全性，检测和对抗高持续性威胁（APT）<br>
-<img src="https://upload-images.jianshu.io/upload_images/4794066-149eb55d6b950868.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3 传统的PKI/CA与基于区块链的KSI" loading="lazy"></p>
-<p>REMME项目的目标是通过创建没有任何密码的唯一身份验证系统来解决此问题。基于密码学和分布式分类器技术（DLT），该解决方案设计为过时，同时为普通用户保留了便利性。<br>
-官网：<a href="https://remme.io/">https://remme.io/</a><br>
-介绍：<a href="https://www.zuocoin.com/a/news/experience/2018/1030/3289.html">https://www.zuocoin.com/a/news/experience/2018/1030/3289.html</a><br>
-<a href="https://zhuanlan.zhihu.com/p/33449702">https://zhuanlan.zhihu.com/p/33449702</a></p>
-<p>相关文献：<br>
-[1]廉 蔺, 朱启超, 赵 炤. 区块链技术及其潜在的军事价值[J]. 国防科技, 2016, 37(2).<br>
-[2]DARPA and Advancing Cybersecurity Infrastructure With Blockchain. URL:https://www.nasdaq.com/article/darpa-and-advancing-cybersecurity-infrastructure-with-blockchain-cm783507</p>
-<hr>
-<p>-更新时间：20200222<br>
--更新内容：添加4个书籍<br>
--书籍个数：4</p>
+<p>关键词分析：<br>
+-提出了区块链技术潜在的应用场景，并指出6个具体的应用。</p>
+<p>-（总体）发挥区块链在促进数据共享、优化业务流程、降低运营成本、提升协同效率、建设可信体系等方面的作用<br>
+--数据共享：区块链在互联网法院中的应用。例子多，直接搜索。<br>
+--优化业务流程：区块链在供应链金融中的应用。典型公司“布比区块链”。<br>
+--降低运营成本：区块链在跨境支付中的应用。典型案例“支付宝香港区块链跨境支付”。<br>
+--提升协同效率：区块链在政务中的应用？暂时没发现典型例子。<br>
+--建设可信体系：区块链在保险、政务中的应？暂时没发现典型例子。</p>
+<p>-（1）要推动区块链和实体经济深度融合，解决中小企业贷款融资难、银行风控难、部门监管难等问题。<br>
+--贷款融资难：区块链在供应链金融中的应用。典型公司“布比区块链”。<br>
+--银行风控难：基于区块链的风控数据共享？暂时没发现典型例子。<br>
+--部门监管难：基于区块链的风控数据共享？暂时没发现典型例子。</p>
+<p>-（2）要利用区块链技术探索数字经济模式创新，为打造便捷高效、公平竞争、稳定透明的营商环境提供动力，为推进供给侧结构性改革、实现各行业供需有效对接提供服务，为加快新旧动能接续转换、推动经济高质量发展提供支撑。<br>
+--DCEP？</p>
+<p>-（3）要探索“区块链+”在民生领域的运用，积极推动区块链技术在教育、就业、养老、精准脱贫、医疗健康、商品防伪、食品安全、公益、社会救助等领域的应用，为人民群众提供更加智能、更加便捷、更加优质的公共服务。<br>
+--区块链溯源。冷链物流。</p>
+<p>-（4）要推动区块链底层技术服务和新型智慧城市建设相结合，探索在信息基础设施、智慧交通、能源电力等领域的推广应用，提升城市管理的智能化、精准化水平。<br>
+--区块链基础设施？缺少典型例子。区块链能源方面有一些例子。</p>
+<p>-（5）要利用区块链技术促进城市间在信息、资金、人才、征信等方面更大规模的互联互通，保障生产要素在区域内有序高效流动。<br>
+--基于区块链的数据共享？缺少典型例子。</p>
+<p>-（6）要探索利用区块链数据共享模式，实现政务数据跨部门、跨区域共同维护和利用，促进业务协同办理，深化“最多跑一次”改革，为人民群众带来更好的政务服务体验。<br>
+--基于区块链的数据共享？缺少典型例子。</p>
+<blockquote>
+<p>习近平强调，要加强对区块链技术的引导和规范，加强对区块链安全风险的研究和分析，密切跟踪发展动态，积极探索发展规律。要探索建立适应区块链技术机制的安全保障体系，引导和推动区块链开发者、平台运营者加强行业自律、落实安全责任。要把依法治网落实到区块链管理中，推动区块链安全有序发展。</p>
+</blockquote>
+<p>关键词分析：</p>
+<p>-要加强对区块链技术的引导和规范<br>
+-要探索建立适应区块链技术机制的安全保障体系<br>
+--技术可控<br>
+-要把依法治网落实到区块链管理中<br>
+--法律可管</p>
+<blockquote>
+<p>习近平指出，相关部门及其负责领导同志要注意区块链技术发展现状和趋势，提高运用和管理区块链技术能力，使区块链技术在建设网络强国、发展数字经济、助力经济社会发展等方面发挥更大作用。</p>
+</blockquote>
+<p>关键词分析：<br>
+-建设网络强国<br>
+-发展数字经济<br>
+-助力经济社会发展</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[3]区块链经典书籍]]></title>
-        <id>https://flfqbit.github.io/post/3qu-kuai-lian-jing-dian-shu-ji/</id>
-        <link href="https://flfqbit.github.io/post/3qu-kuai-lian-jing-dian-shu-ji/">
+        <title type="html"><![CDATA[[75]隔离见证概念解析]]></title>
+        <id>https://flfqbit.github.io/post/75ge-chi-jian-zheng-gai-nian-jie-xi/</id>
+        <link href="https://flfqbit.github.io/post/75ge-chi-jian-zheng-gai-nian-jie-xi/">
         </link>
-        <updated>2020-02-22T10:40:39.000Z</updated>
-        <content type="html"><![CDATA[<p>#Mastering Bitcoin(精通比特币)<br>
-作者：Andreas M. Antonopoulos<br>
-主页：<a href="https://bitcoinbook.info/">https://bitcoinbook.info/</a><br>
-[英文-网页版]https://github.com/bitcoinbook/bitcoinbook<br>
-[中文-网页版]https://github.com/inoutcode/bitcoin_book_2nd</p>
-<p>#Mastering Ethereum(精通以太坊)<br>
-作者：Andreas M. Antonopoulos, Gavin Wood<br>
-主页：https://ethereumbook.info/<br>
-[英文-网页版]https://github.com/ethereumbook/ethereumbook<br>
-[英文-PDF版]https://download.csdn.net/download/ruma23/10972247<br>
-[中文-网页版]https://github.com/inoutcode/ethereum_book</p>
-<hr>
-<p>-更新时间：20200208<br>
--更新内容：添加2个书籍<br>
--书籍个数：2</p>
+        <updated>2020-02-22T16:10:07.000Z</updated>
+        <content type="html"><![CDATA[<p>隔离见证是比特币社区为了提高比特币系统交易性能而提出的折中方案。</p>
+<p>#比特币系统交易性能的决定因素<br>
+比特币协议（采用隔离见证之前的版本）规定：<br>
+（1）1个区块的容量小于1MB（大于1M的区块不被其他节点接受）<br>
+（2）1个交易的容量大约是250Byte(待确认)。因此，1个区块最多能装载4194个（近似值）交易<br>
+（3）1个区块的平均出快时间是10分钟（近似值）<br>
+交易性能的计算方式：<br>
+交易性能=区块容量/交易容量/区块生成时间  (1)<br>
+7笔/秒=1MB/250B/(10*60)</p>
+<p>从公示1可知，交易性能与区块容量成正比，与交易容量、区块生成时间成反比。<br>
+因此，提升性能的方法有三种：<br>
+（1）区块扩容。提升区块容量的上限。<br>
+（2）交易压缩。降低单个交易的容量。<br>
+（3）加速区块生成。降低区块生成间隔。</p>
+<p>方法1评估：<br>
+正面：可行性高。<br>
+负面效果：区块增大将增加区块数据的传输延迟，提高分叉风险；区块增大将提升比特币账本的容量，增加普通用户维护比特币服务器的成本，导致区块链网络进一步向中心化发展。</p>
+<p>方法2评估：<br>
+正面：对账本容量影响较小。<br>
+负面效果：实施难度大。交易中存储的参数都有各自的用途，很难进行容量压缩。</p>
+<p>方法3评估：<br>
+正面：可行性高，以太坊将出块时间降低到15秒。<br>
+负面效果：将增加网络中出现分叉的可能性。</p>
+<p>上述三种方法都能够提升比特币系统的性能，只需要所有用户统一升级程序（采用上述任一种方法），即可实现性能升级。然而，由于比特币社区是一个分布式松散组织，每一个比特币节点（运行比特币程序的服务器）都是独立个体，各自都有决策的权利。<br>
+由于上述三种方法各有利弊，比特币社区争论了很久也没有达成统一意见。如果此时一部分选择扩容（升级带有扩容功能的程序），一部分不选择（或者选择其他升级功能），就会导致区块链网咯出现“硬分叉”，产生较大的负面影响。事实上，比特币系统已经由于扩容过程产生过多次硬分叉，导致BCH等分叉代币的产生。</p>
+<p>#隔离见证协议的意义</p>
+<p>隔离见证协议，是在社区针对比特币系统性能提升方法无法达成统一的背景下，提出的一种“软分叉”解决方案，即，采取不同策略的用户仍然在同一个主链运行，升级用户按照新的方式处理账本数据，未升级用户按照老的方式处理账本数据。从而在不造成“硬分叉”的条件下，实现比特币系统性能提升的目的。</p>
+<h1 id="隔离见证协议的具体内容">隔离见证协议的具体内容</h1>
+<p>旧系统：每笔交易包括（交易数据，签名数据）。<br>
+新系统：每笔交易包括（交易数据）+签名数据。</p>
+<p>新系统中，签名数据和交易数据分开，因此轻节点可以只要“交易数据”，不要签名数据。这样能够减少存储空间，计算资源，以及便于新功能的开发。<br>
+隔离方法：见证数据放在交易末尾，用特殊标志位分割。未升级用户遇到标志位就跳过。</p>
+<p>https://blog.csdn.net/sxjinmingjie/article/details/77746180<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-691ff4d76d1e9ce9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="采用隔离见证机制后，比特币数据格式" loading="lazy"></p>
+<p>如图所示，采用隔离见证以后，区块数据已经提升为4M了。升级用户看到的是4M（包括交易和签名）；未升级用户看到的是1M(只包括交易，没有签名)。因此，隔离见证方案能够兼容未升级用户。</p>
+<h1 id="采取隔离见证机制后如何生成交易数据">采取隔离见证机制后，如何生成交易数据</h1>
+<p>（1）已升级节点在生成交易时按照隔离见证格式生成交易数据；<br>
+（2）未升级节点在生成交易时按照原始格式生成交易数据；</p>
+<h1 id="采取隔离见证机制后如何验证交易数据">采取隔离见证机制后，如何验证交易数据</h1>
+<p>(1)已升级节点能够正常验证所有交易（采用隔离验证的交易和没有采用隔离验证的交易）。<br>
+(2)未升级节点只能验证没有采用隔离验证的交易，对采用隔离验证的交易不能直接验证。</p>
+<p>未升级节点无法验证交易的问题解决方案：<br>
+（1）大多数节点对不涉及自己的交易并不是很关心这个签名数据，可以不验证；<br>
+（2）少数节点需要验证时，可以向其他节点请求验证。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[74]区块链数字货币历史]]></title>
+        <id>https://flfqbit.github.io/post/74qu-kuai-lian-shu-zi-huo-bi-li-shi/</id>
+        <link href="https://flfqbit.github.io/post/74qu-kuai-lian-shu-zi-huo-bi-li-shi/">
+        </link>
+        <updated>2020-02-22T16:09:49.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="https://www.walian.cn/news/10367.html">https://www.walian.cn/news/10367.html</a><br>
+密码学激荡40年：“特币白皮书”之前的重要历史与人物<br>
+这篇文章内容最完整。</p>
+<p>#Ecash<br>
+<a href="https://baijiahao.baidu.com/s?id=1617848464234990804&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1617848464234990804&amp;wfr=spider&amp;for=pc</a></p>
+<blockquote>
+<p>大卫 · 乔姆和他于1990年成立的 DigiCash 公司一起登上了历史舞台。起初，他们只专注于所谓的智能卡，通过智能卡，他们建立了收费、打印机使用等的电子支付系统。<br>
+但他们生产的真正具有革命性的东西并非此物。在1993年，eCash来到了这个世界。</p>
+</blockquote>
+<p>1993年，eCash来到了这个世界</p>
+<blockquote>
+<p>DigiCash 很快找到了一些大牌合作伙伴在现实中测试他们的 eCash。1995年与在圣路易斯马克吐温银行合作，1996年与德意志银行合作，随后其他许多银行也纷纷效仿。</p>
+</blockquote>
+<blockquote>
+<p>最终， DigiCash 及其革命性的 eCash 不得不在1998年宣布破产。</p>
+</blockquote>
+<p><a href="https://www.sohu.com/a/191478072_785858">https://www.sohu.com/a/191478072_785858</a><br>
+区块链简史：1976—2017</p>
+<blockquote>
+<p>到了1998年，密码学货币的完整思想终于破茧而出，戴伟（Wei Dai）、尼克·萨博同时提出密码学货币的概念。其中戴伟的B-Money被称为比特币的精神先驱，而尼克·萨博的Bitgold提纲和中本聪的比特币论文里列出的特性非常接近，以至于有人曾经怀疑萨博就是中本聪。有趣的是，这距离后来比特币的诞生又是整整10年时间。</p>
+</blockquote>
+<blockquote>
+<p>中本聪在2008年11月的时候发表了著名的论文《比特币：点对点的电子现金系统》，2009年1月紧接着用他第一版的软件挖掘出了创始区块，包含着这句：“The Times 03/Jan/2009 Chancellor on brink of second bailout forbanks.”，像魔咒一样开启了比特币的时代。</p>
+</blockquote>
+<p>D. Chaum. Blind signatures for untraceable payments. In D. Chaum, R.L. Rivest, and A.T. Sherman, editors, Advances in Cryptology-CRYPTO ‘82, pages 199–203, New York, 1983. Plenum Press.</p>
+<p>1983年发表相关论文</p>
+<p>通过查阅百度学术等网络资料，这篇文章最早是与1982年发表。</p>
+<p><a href="https://www.walian.cn/news/10367.html">https://www.walian.cn/news/10367.html</a></p>
+<blockquote>
+<p>1998年11月，同样是在在密码朋克邮件列表中，戴维发布了B-money白皮书。这是一种匿名的、分布式的电子加密货币系统，强调点对点的交易和不可更改的交易记录。<br>
+B-money是第一种真正意义上的数字加密货币，比特币的去中心化的结算架构、匿名交易、点对点网络，在B-money中已经全部出现，不过它没有真正进入应用领域。<br>
+在比特币白皮书中，第一个被引用的资料是B-money；在以太坊中，ETH的最小单位被命名为Wei，以示对戴伟的敬意。</p>
+</blockquote>
+<p>&quot;B-money是第一种真正意义上的数字加密货币&quot;<br>
+&quot;在比特币白皮书中，第一个被引用的资料是B-money；在以太坊中，ETH的最小单位被命名为Wei，以示对戴伟的敬意。&quot;</p>
+<blockquote>
+<p>2005年，BitTtorrent实现基于 Kademlia 协议的分布式哈希表技术，eMule 也实现了基于 Kademlia的 类似技术。以太坊使用Kademlia作为分布式网络的底层算法。</p>
+</blockquote>
+<p>&quot;以太坊使用Kademlia作为分布式网络的底层算法。&quot;</p>
+<blockquote>
+<p>2004年，Ryan Fugger开发出去中心化货币支付协议Ripplepay，它是Ripple协议的前身。Ryan最初的想法是革新传统交易模式，构建可通过全球网络为用户提供安全快捷支付服务的系统。<br>
+2012年，Chris Larsen 与 Jed McCaleb 向 Ryan 提出数字货币的理念，随后三人共同成立了OpenCoin，开发新的支付协议Ripple，它是一个实时结算系统和货币兑换与汇款网络，基于分布式开源互联网协议、共识总账和原生货币XRP。</p>
+</blockquote>
+<p>&quot;去中心化货币支付协议Ripplepay，它是Ripple协议的前身&quot;</p>
+<blockquote>
+<p>2005 年，Hal Finney设计出了RPoW（Reusable Proofs of Work ，可复用工作量证明），RPoW是PoW的前身。 Finney将Adam Back的哈希现金机制完善成一种可重复利用的工作量证明，并用于数字货币实验中。<br>
+Hal Finney 是一位密码学先锋，PGP（Pretty Good Privacy）计划的核心参与者，PGP旨在使世界各地的人们能够以除接收者之外的任何人都无法阅读的方式进行加密通信。<br>
+Finney是唯一一个立刻关注中本聪提出比特币想法的人，他在Bitcoin发布的当天就下载了，是除中本聪外第一个运行Bitcoin的人，此外，Finney也是第一笔比特币交易的收款人。</p>
+</blockquote>
+<p>&quot;RPoW是PoW的前身&quot;<br>
+“Hal Finney 是一位密码学先锋，PGP（Pretty Good Privacy）计划的核心参与者，”<br>
+“Finney也是第一笔比特币交易的收款人。”</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[73]区块链在冷链物流中的应用]]></title>
+        <id>https://flfqbit.github.io/post/73qu-kuai-lian-zai-leng-lian-wu-liu-zhong-de-ying-yong/</id>
+        <link href="https://flfqbit.github.io/post/73qu-kuai-lian-zai-leng-lian-wu-liu-zhong-de-ying-yong/">
+        </link>
+        <updated>2020-02-22T16:09:32.000Z</updated>
+        <content type="html"><![CDATA[<p>冷链物流本质上属于溯源领域的应用。利用区块链数据公开共享、安全可靠的特性保护冷链过程中的数据，以及提升自动化支付水平。</p>
+<p>但是，根据和实际使用冷链物流的用户（基因测序企业）沟通，发现与实际需求有出入。<br>
+#业务背景：<br>
+企业A（基因测序企业）主要采用顺丰的冷链物流服务，运送货物是生物样本（疫苗、试剂），有国内业务，也有跨国业务，每年运送货物数量约为10万量级。<br>
+#业务流程：</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[72]2月待阅读文章目录]]></title>
+        <id>https://flfqbit.github.io/post/722-yue-dai-yue-du-wen-zhang-mu-lu/</id>
+        <link href="https://flfqbit.github.io/post/722-yue-dai-yue-du-wen-zhang-mu-lu/">
+        </link>
+        <updated>2020-02-22T16:09:09.000Z</updated>
+        <content type="html"><![CDATA[<p>此文章记录2月份将阅读分析的区块链文章。</p>
+<h1 id="1-tracing-transactions-across-cryptocurrency-ledgers">1 Tracing Transactions Across Cryptocurrency Ledgers</h1>
+<p>期刊名称：usenix<br>
+发表时间：2019</p>
+<blockquote>
+<p>Abstract<br>
+One of the defining features of a cryptocurrency is that its ledger, containing all transactions that have ever taken place, is globally visible. As one consequence of this degree of transparency, a long line of recent research has demonstrated that—even in cryptocurrencies that are specifically designed to improve anonymity—it is often possible to track money as it changes hands, and in some cases to de-anonymize users entirely. With the recent proliferation of alternative cryptocurrencies, however, it becomes relevant to ask not only whether or not money can be traced as it moves within the ledger of a single cryptocurrency, but if it can in fact be traced as it moves across ledgers. This is especially pertinent given the rise in popularity of automated trading platforms such as ShapeShift, which make it effortless to carry out such cross-currency trades. In this paper, we use data scraped from ShapeShift over a thirteen-month period and the data from eight different blockchains to explore this question. Beyond developing new heuristics and creating new types of links across cryptocurrency ledgers, we also identify various patterns of cross-currency trades and of the general usage of these platforms, with the ultimate goal of understanding whether they serve a criminal or a profit-driven agenda.</p>
+</blockquote>
+<p>“even in cryptocurrencies that are specifically designed to improve anonymity—it is often possible to track money as it changes hands, and in some cases to de-anonymize users entirely.”<br>
+加密货币能够被追踪，在某些情况下能够使用户完全去匿名。</p>
+<p>“not only whether or not money can be traced as it moves within the ledger of a single cryptocurrency, but if it can in fact be traced as it moves across ledgers”<br>
+不仅能够实现当个账本的追踪，而且能够实现跨账本的追踪。</p>
+<p>“This is especially pertinent given the rise in popularity of automated trading platforms such as ShapeShift, which make it effortless to carry out such cross-currency trades”<br>
+“考虑到ShapeShift等自动交易平台越来越受欢迎，这一点尤其重要，因为它们使得进行这种跨货币交易变得轻而易举。”</p>
+<p>“Beyond developing new heuristics and creating new types of links across cryptocurrency ledgers, we also identify various patterns of cross-currency trades and of the general usage of these platforms, with the ultimate goal of understanding whether they serve a criminal or a profit-driven agenda.”<br>
+“除了开发新的启发式方法和创建跨加密货币账本的新型链接外，我们还确定了各种跨货币交易模式和这些平台的一般用法，最终目的是了解它们是为犯罪还是为利润驱动的议程服务。”</p>
+<p>这篇论文描述了“加密货币追踪”领域的新进展-分析跨账本之间的加密货币追踪。<br>
+“单个账本中的加密货币追踪”已经有很多研究，典型的启发式算法“heuristics”没有太多的挖掘之处（算法固定，准确率低，实用性较差）。<br>
+作者提出了一个新的研究思路：分析跨账本之间的货币追踪。这个思路抓住了当前加密货币场景的典型业务（不同加密货币之间的兑换）和实际的应用需求（打击犯罪）。</p>
+<p>表1 分析我之前的思路和这篇文章的差距</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>以前的论文</th>
+<th>当前论文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>技术</td>
+<td>heuristics</td>
+<td>heuristics,links,patterns</td>
+</tr>
+<tr>
+<td>目的</td>
+<td>de-anonymize</td>
+<td>criminal</td>
+</tr>
+<tr>
+<td>数据</td>
+<td>全部账本</td>
+<td>13个月</td>
+</tr>
+</tbody>
+</table>
+<p>我之前也在此方向做了多篇论文，但是没有取得较好的效果（学术和实用性）。<br>
+技术层面，我将重点关注在启发式算法（heuristics）上，由于这种算法准确率不高、角度太小，很难做出新的改进，所以陷入死胡同。后来，将注意力转移到网络层溯源了。这篇论文不光采用heuristics，还加入了跨账本关联技术links，以及交易模式patterns的研究，扩展了研究空间。</p>
+<p>目的层面，我将研究点聚焦在去匿名de-anonymize，这个点很有意义，但是难度太大，最后做出来的研究并不能取得较好的去匿名效果。这篇论文将关注点放在交易模式识别和犯罪活动检测上，这对准确性的要求降低，提升了实用价值，更贴近实际需求。</p>
+<p>数据层面，我之前的研究在考虑数据处理能力上（全部数据太大）浪费了很多时间，实际上从论文研究上并不需要全部数据。作者利用爬虫爬取了一个程序13月的数据，有效规避了”数据量大“这个边缘问题，从而能够将精力集中在核心问题上。</p>
+<p>这篇文章将在2月阅读，了解以下内容：<br>
+（1）heuristics算法有何进展？<br>
+（2）跨账本关联是如何实现的？<br>
+（3）交易模式有哪些？<br>
+（4）ShapeShift的数据如何获取?<br>
+（5）把加密货币追踪的论文整理一下。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[71]区块链技术发展与产业融合创新趋势]]></title>
+        <id>https://flfqbit.github.io/post/71qu-kuai-lian-ji-zhu-fa-zhan-yu-chan-ye-rong-he-chuang-xin-qu-shi/</id>
+        <link href="https://flfqbit.github.io/post/71qu-kuai-lian-ji-zhu-fa-zhan-yu-chan-ye-rong-he-chuang-xin-qu-shi/">
+        </link>
+        <updated>2020-02-22T16:08:17.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>区块链技术发展与产业融合创新趋势</strong></p>
+<h1 id="1-区块链技术概述">1. 区块链技术概述</h1>
+<p>区块链（Blockchain）是基于密码学的分布式数据库系统，具有泛中心化、开放性、匿名性、信息不可篡改等特点。区块链这一概念最早来源于2008年11月中本聪发表的一篇题为《比特币：一种点对点的电子现金系统》的论文，文中提出区块链技术是构建比特币数据结构与交易信息加密传输的基础。比特币也是区块链技术的第一个应用。</p>
+<p>区块链的主要技术优势包括：一是解决传统中心化的信任机制问题。网络中没有中心节点，所有节点都是平等的，通过点对点传输协议达成整体共识。二是数据安全且无法篡改。每个区块的数据都会通过密码算法加密，并分布式同步到所有节点，确保任一节点停止工作都不影响系统的整体运作。三是以智能合约方式驱动业务应用。系统由代码组成的智能合约自动运行，无需人工干预。</p>
+<p>区块链的诞生，标志着人类开始构建真正的信任互联网。区块链提供了一种新型的社会信任机制，为数字经济的发展奠定了新基石，“区块链+”应用创新，昭示着产业创新和公共服务的新方向。</p>
+<p>目前，区块链已经引起世界主要国家政府和机构的重视，已经从金融行业延伸到供应链、征信、产品溯源、电子证据等领域，推动着“信息互联网”向“价值互联网”变迁，很可能在全球范围引起一场新的技术革新和产业变革。</p>
+<h1 id="2-区块链国外发展现状及趋势">2. 区块链国外发展现状及趋势</h1>
+<p>发达国家已从战略层面开展区块链的研究和应用。2018年3月，美国国会发布了《2018年联合经济报告》，该报告旨在对国家经济状况和对即将到来一年的建议进行评估，报告专门有部分内容讨论加密货币和区块链，指出“区块链技术可以作为打击网络犯罪和保护国家经济和基础设施的潜在工具”。美联储发布区块链报告《支付、清算与结算中的分布式账本技术（DLT）》，强调区块链技术在银行交易结算中的突出价值。美国国土安全部、食品药品监督管理局、国防部等均参与了区块链技术与应用实施探索中。英国政府于2016年发布了《分布式账本技术：超越区块链》白皮书，立足国家层面对区块链技术的发展进行了全面分析并给出了研究建议。2017年英国上议院发布报告再次强调跨政府服务的分布式账本技术（DLT）的采用机会，敦促政府对DLT在政府服务部门中的潜力进行研究，希望能够获得技术创新优势，同时更好地保障公民的权益。2018年初，英国技术发展部门宣布，将加倍支持区块链技术发展，投资1900万英镑用于新兴市场的新产品研发，以及支持包括分布式账本技术在内的新兴技术发展。2017年6月，俄罗斯总统普京会见了以太坊创办人Vitalik Buterin，谈到了区块链技术在俄罗斯联邦中的潜在用例。俄罗斯最大的国有银行—俄罗斯联邦储蓄银行 (Sberbank) 宣布，与联邦反垄断署 (FAS) 合作，通过区块链实现了文件的传输和储存，此举代表了俄国政府已经完成首个政府级区块链应用实例。日本鼓励支持虚拟货币的发展，2017年4月，日本政府修订了《资金结算法》，承认比特币是一种合法的支付方式，并为交易所制定了一系列标准和规则。日本金融服务局FSA颁发了虚拟货币的交易所牌照。日本金融厅于2018年6月1日又颁布了《部分银行法施行令修订法案》，规定电子支付代理业者全部实行登录制，有望推动虚拟货币接入银行系统。新加坡政府则试图抓住区块链发展机遇大步转型成为国际金融科技中心。澳大利亚政府专注区块链金融监管、区块链国际标准等，力争在金融领域管理及国际标准方面挖掘区块链潜力。</p>
+<p>跨国巨头企业纷纷布局区块链的技术研发和应用。国外互联网巨头谷歌、微软、甲骨文、IBM等纷纷布局研究区块链技术，推出了技术解决方案和应用。谷歌宣布了该公司开展的两项独立区块链项目：“防篡改”审计系统以及云操作平台。微软发布了Azure区块链工作平台，为开发人员运用区块链技术提供了新的应用工具。甲骨文在2018年5月推出区块链即服务(BaaS)平台，并在6月份发布区块链App。IBM于2015年参与了由Linux基金会领头的开源区块链项目开放式账本项目，推出了Hyperledger fabric项目，目前已经在全球拥有至少 400 家与区块链相关的客户。其它各行业巨头如马士基、高盛、万事达卡等已开展了区块链技术在本行业领域应用的研究。航运巨头马士基集团和IBM宣布将成立合资公司，通过区块链技术为开展全球贸易及供应链数字化提供更为高效、安全的端到端数字化服务。高盛发布了《区块链：从理论走向实践》的报告，对七个典型案例进行了分析。万事达卡宣布推出以区块链技术为基础的支付解决方案，以帮助客户改善跨境支付中日益凸显的速度、透明性和成本问题。</p>
+<p>国外开源组织大力推进区块链技术的创新与发展。任何一个成功的开源项目，都离不开一个健康繁荣的社区。比特币基金会、以太坊基金会、Hyperledger社区等不断在创新区块链技术，有力的促进了区块链技术的迭代发展。通过成熟的开源社区发展和运营，能够提升技术的协同效率以及从业者的能力。比特币基金会参照Linux基金的模式建立，致力于为全球用户标准化、推广和保护比特币。以太坊基金会是一个在瑞士注册的非营利机构，主要目标是开发、孕育、推广和维护开放的去中心化技术，专注于以太坊协议以及相关技术的推广发展，同时以各种形式支持和推动互联网的去中心化，获得了摩根大通、微软、英特尔等近30家巨头的支持。Hyperledger社区包括技术委员会、管理董事会、Linux基金会，获得IBM、思科、英特尔、摩根大通、百度、万达等50多家企业的支持。</p>
+<p>全球区块链应用生态覆盖经济与社会的各个方面。经过近几年的积累，全球区块链迎来了爆发式发展，在金融服务、供应链管理、文化娱乐、智能制造、社会公益、医疗健康等领域开展了一系列应用，取得了良好的示范效果，应用前景喜人，未来发展任重道远。在金融服务方面，瑞波提供一个无阻碍的利用区块链技术的全球支付网络，是世界上第一个开放的支付网络，通过加入瑞波全球支付网络可以转账任意一种货币，包括美元、欧元、人民币、日元或者比特币，简便易行快捷，交易确认在几秒以内完成，交易费用几乎是零，没有所谓的跨行异地以及跨国支付费用。供应链管理方面，马士基和IBM推出首个基于区块链的行业级跨境供应链解决方案，将端到端的供应链流程数字化，帮助企业管理和跟踪全球数千万个船运集装箱的书面记录，提高贸易伙伴之间的信息透明度并实现高度安全的信息共享，大规模应用后有望为该行业节省数十亿美元。在文化娱乐方面，总部位于欧洲的非营利性组织DECENT基于区块链开展数字内容的发布、保护等，如文字、音乐、软件和视频内容，并允许第三方开发商在其开源协议之上构建自己的应用程序。</p>
+<p>国外知名高校均加强区块链理论研究和人才培养。斯坦福大学、加州大学伯克利分校、麻省理工大学、普林斯顿大学等在共识算法、密码学等区块链关键技术方面投入资源进行研究，处于领先水平。全球对于区块链人才的需求量从2015年开始出现增长，并且在2016-2017年经历了爆发式的显著增长，但目前来看，其占全球人才市场需求总量的比重还非常低。</p>
+<p>总体来看，在区块链领域，欧美是区块链产业的领头羊，区块链产业分布密集，区块链技术应用偏重于数字货币、跨境支付等领域；亚洲范围内日韩对区块链持较为开放态度，成为了数字货币交易主战场。</p>
+<h1 id="3-区块链国内发展现状及趋势">3. 区块链国内发展现状及趋势</h1>
+<p>国家及各级政府已全面布局区块链创新和产业促进。2018年5月，习近平主席在中国科学院第十九次院士大会、中国工程院第十四次院士大会上指出“以人工智能、量子信息、移动通信、物联网、区块链为代表的新一代信息技术加速突破应用”。今年来人民日报、新华社、解放军报等国家媒体纷纷发文探讨区块链，引发了全民关注热潮。国家及各地方结合区块链应用发展实际情况，出台了区块链技术和产业发展指导意见和扶持政策。截止2018年11月，北京、上海、广东、江苏、浙江、贵州、湖南、山东等全国超过22个省市地区发布政策指导信息，开展区块链产业链布局，就区块链发布了共55条政策(不含监管政策)。出台的政策形式多样，涵盖了规划、扶持计划和监督类等方面的政策。国务院发布的《国务院关于印发“十三五”国家信息化规划的通知》、《国务院办公厅关于积极推进供应链创新与应用的指导意见》等均提到研究利用区块链技术。北京市给予区块链企业资金支持，最高支付金额不超过200万元；雄安新区规划报告中提高要超前布局区块链技术；广东省广州市提出以政策加持构筑区块链产业生态链，广州市黄埔区、广州开发区发布区块链10条，以专项扶持政策的方式，引导区块链发展；江苏是国内在政府文件中提及区块链最多的省份之一，南京市、苏州市等大力营造区块链技术发展应用良好环境；山东省青岛市出台设立了区块链产业发展年度专项资金；浙江省杭州市力争把区块链产业打造成未来产业，杭州将区块链写入2018政府工作报告，成立区块链产业园，旨在打造区块链第一城；贵州省贵阳市将区块链技术入政府工作报告，并制定了区块链发展战略规划，下发《关于支持区块链发展和应用的若干政策措施(试行)》，主要在主体、平台、创新、金融和人才五方面对区块链产业提供政策扶植；湖南省长沙市特别注重参与产学研合作平台的搭建，对重点实验室、研究中心给予最高200万奖励，对新迁入的院士专家、博士后流动站给予最高100万元的奖励。据清华大学互联网产业研究院统计，截至2018年11月，全国有8个省(市)政府发行的总基金规模将近400亿元。其中，杭州雄岸全球区块链创新基金是全国最早的区块链产业基金，杭州、南京、河南发起的基金项目规模均达到100亿元。从以上具有代表性的省份和地区的规划和指导意见中可以看出，区块链正成为各个地方政府关注热点和支持重点，区块链的价值已显现并被继续挖掘。</p>
+<p>国内区块链产业发展迅速，涌现了一批具有国际影响力的代表性企业、联盟，在技术研发、产业应用、标准制定等方面取得了一系列成果。北京、上海、深圳等地先后成立了一系列联盟，促进区块链的发展，例如中国区块链技术和产业发展论坛、中国区块链应用研究中心、上海区块链技术研究中心、上海区块链技术应用协会、陆家嘴区块链金融发展联盟等。国内互联网巨头提前布局区块链发展，2018年6月蚂蚁金服宣布全球首个基于区块链的电子钱包跨境汇款服务在香港上线，2017年3月阿里巴巴与与普华永道合作区块链跨境食品供应链、8月阿里健康在常州推出区块链医联体试点项目、11月承接雄安区块链实施平台；腾讯发布了《区块链方案白皮书》、推出区块链TrustSQL平台，2016年9月与上海华瑞银行共同开发区块链银行间联合贷款清算平台、2017年4月发布《区块链方案白皮书》、2017年11月发布区块链金融级BaaS开放平台；百度2015成立区块链团队，2016年投资Circle，2017年7月发布区块链BaaS项目，2018年上线了莱茨狗区块链宠物游戏、百度图腾、超级连XuperChain等区块链应用，华为、京东、联想集团都先后发布了区块链白皮书，促进区块链的产业应用。产业界经过几年的研究和探索，区块链技术已经在银行、保险、供应链、食品安全等领域得到了应用验证，对领域发展起到较大促进作用。招商银行、众安保险、万向区块链等行业核心企业纷纷将区块链技术应用于业务中，解决了传统业务面临的一些问题。其它如证券交易清结算、股权众筹、版权保护等领域都有了区块链技术应用探索的成功案例，随着技术及产业融合的不断推进，未来将会涌现出更多更广的区块链应用案例，为经济的发展和社会的进步起到不可或缺的作用。</p>
+<p>国内高校及研发咨询机构区块链研究和服务基础坚实。截止2018年4月，我国目前有62家区块链研究院（中心、实验室），分布在15个城市。截止2018年底，国内已有10所高校开展了区块链课程，包括清华大学、北京大学、浙江大学、同济大学、武汉大学、中国财经大学、北京邮电大学、西安电子交通大学、上海财经大学和上海交大等高校。</p>
+<p>国内区块链技术创新蓬勃发展。中国区块链专利申请数量全球居首，根据IPRdaily发布的2017全球区块链企业专利排行榜显示，中国企业占比达49%、美国占比33%，前10名中中国企业占7席，三家“央行系”金融机构的总数达68件、位居世界第一，阿里巴巴申请区块链专利数量达49件。截至2018年8月，2018年国内公司、单位与个人公开专利数量总计达到1001件，远超过2017年全年专利数量860件。从城市格局来看，专利优势集中于头部城市，北京(277)、深圳(212)、上海(125)、杭州(80)和广州(47)分列今年区块链专利公开数量前五位，北深上专利数量占全国区块链专利数61.3%。</p>
+<p>区块链标准研制已走在世界前列。中国作为ISO/TC 307的积极成员，深度参与国际标准化工作，在一些关键性成果上贡献了中国的技术力量，尤其是主导和实质性参与两项基础性国际标准，为我国相关企业参与区块链领域的国际竞争奠定重要基础。在国内，中国电子技术标准化研究院牵头研制的国内首个区块链领域的国家标准《信息技术 区块链和分布式账本技术 参考架构》正式立项。</p>
+<p>中国区块链研究和应用更偏于实际应用，聚焦在政务、商务、民生等方面。从国内的分布上看，区块链企业区域的分布主要集中在北京、上海、广东、杭州以及香港等发达地区，中西部地区较少。</p>
+<h1 id="4-区块链产业融合创新">4. 区块链产业融合创新</h1>
+<p>（1）区块链+大数据。研发区块链数据管理软件、区块链数据共享交换软件、区块链数据交易软件等区块链软件产品，推动大数据领域区块链应用，发挥区块链在大数据领域中数据确权、数据追溯、数据保真、数据保护等价值，为大数据分布式存储、处理等支撑机制，突破信息孤岛，建立数据横向流通机制，推动大数据交易发展，形成“社会化大数据”。</p>
+<p>（2）区块链+物联网。开展物联网区块链芯片、智能网关、传感器等物联网硬件产品和嵌入式软件、传感网智能管理软件等物联网软件产品的研发工作，提升区块链虚、实空间结合能力。针对区块链电子商务、现代物流、产品溯源等领域应用，大力研发低功耗、低成本区块链芯片，实现区块链虚拟空间物品标识与物流空间物品的锚定和追踪。推动部署窄带物联网（NB-IOT）、5G通信网，建设NB-IOT公共接入平台，支持本地企业面向定位/跟踪/导航、安全/监控、计量/检测、智能化管理、远程医疗、移动支付及管理等领域发展基于区块链的物联网产品和服务。</p>
+<p>（3）区块链+云计算。基于电子政务数据库，推动人口信息、法人单位等基础数据库以及电子政务信息系统向云平台迁移，推动政务信息交换与共享及电子证照领域的区块链应用，加速电子政务数字化和云端化发展。推动成都现有通信网络、计算资源、数据中心和存储备灾等传统信息服务向云计算模式转型，支持各类云计算平台拓展大数据服务，促进BaaS等区块链公共云服务发展。引导大数据企业、互联网企业和行业龙头企业共同建设面向特色细分领域的区块链平台，开发相关区块链软件产品，为行业应用提供技术支撑。</p>
+<p>（4）区块链+智能制造。针对制造业从确定需求到生产交付过程复杂、中间灰色地带多，先进制造装备技术与传统制造业存在沟通不畅、信息不互通、信任缺失等问题，将区块链和生产网络进行融合，解决多方协作中的信任问题。例如，联动优势与北汽福田达成战略合作，依托联动优势的区块链、大数据及云服务等技术资源优势，从汽车产品的研发、制造到客户应用全方位搜集、存储、分析及共享相关信息，实现智能制造。</p>
+<p>（5）区块链+品牌管理。针对知名品牌培养与保护需求，基于区块链技术构建商品防伪溯源平台，既有效打击假冒伪劣商品出现，保护品牌利益，同时又帮助品牌企业掌握营销渠道、防止窜货，推动企业品牌创新与营销创新，为加快建设全国重要的食品饮料生产基地建设提供有力支撑。</p>
+<p>（6）区块链+金融科技。针对供应链上下游企业融资难、融资贵，金融服务机构信息不对称、跨机构协作难等问题，充分利用区块链技术公开透明、不可篡改的属性，面向金融领域重点推进区块链技术在供应链金融、保险理赔、跨境支付、票据管理等领域的应用，搭建基于区块链的金融安全数字化信息平台。</p>
+<p>（7）区块链+民生保障。针对用户医疗健康数据分散、共享困难等问题，建设基于区块链的医疗健康数据共享平台，推动医疗健康数据的价值流动；基于区块链技术实现医院处方信息、医保结算信息与药品信息实时共享，支撑处方院外流转；针对食品、药品、农产品等商品生产和流通过程中的安全问题，探索区块链技术在食品药品监管等方面的应用。</p>
+<p>（8）区块链+社会服务。构建基于区块链的政务、信用数据存证及共享平台，有效支撑数据确权、数据溯源、利益分配、安全隐私等，降低数据共享成本，提高数据使用效能，加强数据安全性；针对网络空间身份管理分散、互信困难、安全隐私等问题，构建基于区块链的统一身份管理与服务平台。</p>
+<p>（9）区块链+监管治理。基于区块链实现对惠农、慈善等资金监管，杜绝资金申报弄虚作假、违规发放和截留挪用等行为；将区块链技术应用于安全生产监管、环境保护、政务服务监管等领域，对涉及政府、企业、个人等行为进行可靠记录，构建“数据铁笼”，提高监管的有效性与威慑力。</p>
+<p>（9）区块链+征信。针对征信行业存在的数据伪造、数据篡改、数据窃取等问题，利用区块链技术去中心化、高可靠性等优势技术特性，解决征信数据共享过程中面临的隐私安全问题。通过在征信行业内部建立基于联盟链的共享数据存储平台，使个体机构能够利用链上共享数据完成特定征信活动，同时避免征信数据被篡改和泄漏。</p>
+<h1 id="5-区块链前沿技术研究">5. 区块链前沿技术研究</h1>
+<h2 id="1针对区块链数字货币的监管技术">（1）针对区块链数字货币的监管技术</h2>
+<p>基于区块链技术的数字货币发展迅速，截止到2018年10月，数字货币市场市值超过2000亿美元，每日交易金额超过96亿美元，数字货币的快速发展在国内外引起广泛关注。尤其是2018年10月，美国纽约金融批准发布的特殊数字货币-区块链稳定币GUSD和PAX的横空出世，让各界惊呼“以稳定币为代表的区块链数字货币将世界经济格局，甚至将引起世界级金融灾难”。区块链数字货币不再仅仅是涉及暗网等灰色产业链的癣疥之疾，而是有可能影响全球经济的、急需可靠监管技术的心腹大患。因此，研究比特币、以太币、稳定币以及其他基于区块链技术的数字货币的运行机制，设计针对性的监管方案对于区块链技术、乃至数字经济的发展都至关重要。</p>
+<p>“数字稳定代币”（Stable Coin，也称稳定币）是使用区块链技术实现的一种特殊数字货币，通过和法币（或其他现实资产）保持相对稳定的价值关系，能够被用于作为法币和数字货币以及数字货币之间进行兑换的中介物，有效降低由于市场波动带来的交易风险，简化数字货币之间的兑换过程，在数字货币领域具有重要作用。稳定币在底层架构上依托于区块链技术，使其具有去中心的特点，很多传统的监管机制无法试用。但是，由于稳定币项目为了维持价格稳定属性，对公信力的需求很高，会主动公布大量的项目信息，甚至会主动接受监管，这给有效监管带来了机遇。如果能够充分利用稳定币的技术特点和区块链技术具有的突出优点，将能够避免传统监管中面临的很多问题，获得更强的监管能力。</p>
+<p>通过研究针对稳定币的监管机制，不仅有助于控制稳定币带来的风险，也将为其它数字货币监管提供有益参考。因此，非常有必要研究稳定币的监管需求、挑战和机遇，提出针对稳定币的监管框架，进而设计出适合稳定币以及其他数字货币的监管机制。</p>
+<h2 id="2基于区块链的隐蔽数据传输技术">（2）基于区块链的隐蔽数据传输技术</h2>
+<p>现代社会，网络通信技术的快速发展使得信息传输更加快捷、方便，信息已经成为国家军事、政治、经济、科技和文化发展中的重要战略资源，信息传输的安全性越来越受到关注。其中，信息隐藏是解决信息保密的一项新兴技术，它将需要保密传递的信息隐藏到数字载体中，让第三方难以察觉秘密信息的存在，能够更好实现数据隐蔽传输的目的，在商业和军事领域有重要用途。</p>
+<p>随着隐蔽通信对抗技术的发展，传统的网络隐蔽信道存在信道被监管、流量容易被追踪、通信者身份信息容易被识别的风险，很难满足数据隐蔽传输的需求。首先，传统的网络隐蔽信道通常建立在基于中心服务器的网络服务之上，一旦隐蔽信道被发现，敌手很容易通过攻击中心服务器的方式关闭隐蔽信道；其次，传统的网络隐蔽信道中信息在网络层传输过程容易被追踪，敌手可以通过分析网络流量中源IP和目的IP的方式识别出包含隐蔽数据的交易信息；最后一旦隐蔽信道被敌手发现，敌手很容易根据数据报文推测出通信者的身份信息。</p>
+<p>区块链是一种基于密码学算法的去中心化账本技术，被认为是下一代互联网技术，具有广阔的应用前景。区块链技术在网络层采用P2P组网模式和信息泛洪传播机制，与隐蔽传输的需求非常契合，适合作为隐蔽传输的环境。相比传统的数据隐蔽传输技术，区块链技术在隐蔽传输领域有突出的优势，包括：</p>
+<p>n **稳定的去中心化自组织网络。**区块链技术的核心思想是实现一个高可靠性的分布式账本。为了实现这个目标，区块链技术设计多种机制促进区块链网络的稳定性和分布式特性。例如比特币系统中设计特殊的挖矿机制，在鼓励用户稳定运行比特币服务器的同时，防止少量用户占据大量份额。这种稳定的去中心化自组织网络有利于实现可靠的隐蔽传输。</p>
+<p>n **非定向信息传递机制。**相比传统的隐蔽传输机制，基于区块链的数据隐蔽传输方案的最大优势在于利用区块链隐蔽传输数据时不需要指定接收者的账号，接收者可以通过收听广播信息，或者查看区块链账本的模式接收数据，即信息发送者和信息接收者之间不需要直接联系。这能够显著降低隐蔽通信过程被敌手发现的风险。特别是当隐蔽通信信道已被发现，或者出现泄密者（发送者叛变，或者部分接收者叛变），敌手很难发现其他的通信者。</p>
+<p>n **匿名账号机制。**区块链中用户使用自行生成的假名作为交易账号，没有任何第三方可以直接获得区块链账号对应的身份信息。而且，区块链中用户通常能够生成无限个账号，将交易规律分散在众多不同账号中，显著增加通过分析交易数据推测账号身份信息的难度。这种匿名账号机制有利于保护通信者的身份信息。</p>
+<p>区块链网络提供了良好的隐蔽通信渠道，区块链技术契合隐蔽通信的需求，然而现有的区块链系统在实现隐蔽通信时还存在一些待解决问题。首先，区块链中所有交易数据一旦写入区块链，就会永久保存在所有的节点中，不能删除和篡改，这使得敌手可以轻易地获取和分析全部交易数据，显著增加隐蔽信道被发现的风险。其次，区块链交易数据中的字段数量有限，而且每个字段的格式都是公开的，直接在字段中写入秘密数据很容易被发现。最后，区块链系统为了保证系统可靠性，效率通常较低，在设计基于区块链的数据隐蔽传输机制时需要考虑这些限制因素。</p>
+<p>区块链隐蔽传输技术将以服务于国家重要需求为目标，研究基于区块链环境的数据隐蔽传输技术。目的是利用现有的区块链网络实现高隐蔽性、高可靠性的数据传输机制，达到内容隐蔽、身份隐蔽、行为隐蔽的效果，满足多种隐蔽传输业务的需求。本项目的主要研究点包括：研究基于区块链的数据隐蔽传输原理和基本技术；研究区块链交易账号的匿名技术，隐藏消息发布者、接收者的身份信息；研究基于密码学的可变标签技术，在满足接收者高效筛选的前提下，增加敌手发现隐蔽信道的难度，提高抗检测性和抗攻击性；研究多种常用隐蔽传输业务在区块链环境中的实现技术，并在比特币等典型区块链数字货币系统中验证方案可行性。</p>
+<h2 id="3针对区块链系统的隐私保护技术">（3）针对区块链系统的隐私保护技术</h2>
+<p>随着区块链技术不断发展和广泛应用，其面临的隐私泄露问题越来越突出，必须得到充分重视。相对于传统的中心化架构，区块链机制不依赖特定中心节点处理和存储数据，因此能够避免集中式服务器单点崩溃和数据泄露的风险．但是为了在分散的区块链节点中达成共识，区块链中所有的交易记录必须公开给所有节点，这将显著增加隐私泄露的风险。例如，在数字货币应用中，分析人员通过分析交易记录可以获得用户的交易规律，甚至能够推测出用户的身份信息和位置信息．在金融应用中，如果分析人员获得全部的交易记录，既可以追溯个体账户的交易细节，也可以分析宏观的金融趋势，这些信息既属于用户的隐私信息，也属于公司的核心数据。在能源行业中，区块链技术通常被用于实现点对点的能源交换，这种情况下区块链交易数据有可能泄露能源传输等敏感信息，对个人安全和国家安全造成威胁．因此，区块链技术在走向实用之前，必须解决隐私泄露问题。</p>
+<p>根据区块链技术的特点，可以将区块链中的隐私保护机制分为三类：</p>
+<p>1）、网络层的隐私保护。网络层包含底层通信的整个过程，包括区块链节点设置模式，节点通信机制，数据传输机制等。在区块链最早的应用比特币系统中，节点不需要审批，任何用户都可以通过运行比特币程序成为区块链的节点．节点之间利用 P2P 协议进行相互通信和数据传输。这种机制导致攻击者不仅可以监听整个网络的通信信息，还可以主动和其他节点通信获取隐私数据。因此，网络层隐私保护的侧重点是限制节点的权利，对抗被动监听和主动攻击。</p>
+<p>2）、交易层的隐私保护。交易层包含区块链中数据产生、验证、存储和使用的整个过程。区块链技术为了保证交易的可靠性、不可篡改性和分布式一致性，设计了特殊的数据结构和共识机制．这些机制保证了在分布式不可信的网络节点间维护统一的高公信力的账本。但是，这些机制也导致了隐私泄露风险．完整的公开的交易账本不仅会泄漏数据隐私，还会泄露数据背后的交易者之间的关系，从而泄漏身份隐私。因此，交易层隐私保护的侧重点是满足区块链基本共识机制的条件下，尽可能隐藏数据信息和数据背后的知识。</p>
+<p>3）、应用层的隐私保护。应用层包含区块链技术被外部使用的过程。外部使用即包括普通用户使用区块链程序，也包括其他应用程序调用区块链的接口。区块链被外部使用的过程存在泄漏数据隐私和身份隐私的威胁。例如，用户在论坛等社交网站公布自己的比特币地址。因此，应用层隐私保护的侧重点包括提升用户的安全意识，提高区块链服务商的安全防护水平。</p>
+<h2 id="4针对区块链系统的安全防护技术">（4）针对区块链系统的安全防护技术</h2>
+<p>区块链是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式，具有去中心、去信任、集体维护、可靠数据库等多项优点，被认为是实现信息互联网向价值互联网转变的关键技术，在医疗行业、能源行业、金融行业、军事行业等领域具有广阔的应用前景。</p>
+<p>然而，区块链系统的安全性存在缺陷。频繁的攻击案例表明区块链技术在数据机密性、完整性和可用性方面面临多种安全威胁。而且，区块链技术还处于初始阶段，目前只在数字货币领域有较为成熟的应用，在其他领域是否能够保证系统的安全性还需要进一步研究。</p>
+<p>随着区块链技术逐步被应用到越来越多的领域，区块链系统的安全性逐渐成为制约区块链技术进一步发展的重要因素。因此，有必要深入研究区块链技术的安全性，设计基于区块链技术的安全攻防模型，研究针对区块链系统的防护技术。</p>
+<p>本研究将从算法安全性、协议安全性、数据安全性、应用安全性等角度研究区块链技术的安全防护技术。算法安全性层面重点分析密码算法缺陷对区块链系统安全性的影响，研究基于密码算法缺陷的攻击原理和防御机制；协议安全性层面重点研究共识机制的安全边界，设计检测和防御机制；数据安全性层面重点分析区块链用户面临的隐私泄露缺陷；应用安全性层面重点分析区块链应用程序存在的漏洞威胁以及针对区块链秘钥的保护方法。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[70]区块链科普资料搜集-面向非技术人员]]></title>
+        <id>https://flfqbit.github.io/post/70qu-kuai-lian-ke-pu-zi-liao-sou-ji-mian-xiang-fei-ji-zhu-ren-yuan/</id>
+        <link href="https://flfqbit.github.io/post/70qu-kuai-lian-ke-pu-zi-liao-sou-ji-mian-xiang-fei-ji-zhu-ren-yuan/">
+        </link>
+        <updated>2020-02-22T16:07:42.000Z</updated>
+        <content type="html"><![CDATA[<p>准备编写一份针对非技术人员的区块链科普PPT。考虑到用户对象的认知背景，此PPT将重点介绍技术在实际生活中的应用场景。<br>
+此文用于记录编写PPT期间的思路和灵感。</p>
+<h1 id="区块链应用的3个关键问题">区块链应用的3个关键问题</h1>
+<p>（<br>
+研究区块链应用时需要回答的3个问题：<br>
+（1）这个应用是否解决了传统不能解决的问题？<br>
+（2）这个应用是否必须使用区块链技术？<br>
+（3）当前的区块链技术能否满足此应用的实际业务需求？<br>
+）</p>
+<p>(1) DCEP 法定数字货币-数字资产的发行和流通</p>
+<p>(2) 互联网法院-跨组织数据共享</p>
+<p>(3) 冷链物流-跨组织数据共享<br>
+<a href="https://www.jianshu.com/p/63292ec0f6a9">https://www.jianshu.com/p/63292ec0f6a9</a></p>
+<p>通过结合“分布式可信数据存储”和“分布式协作程序执行”的优点，区块链技术将解决跨组织数据共享领域存在的“数据公信力低”、“数据伪造和抵赖”、“缺乏共享激励”等诸多核心痛点。目前火热的区块链医疗、区块链信用管理、区块链保险等应用领域都是基于这种需求。</p>
+<p>(4) 供应链金融-跨组织数据共享</p>
+<p>(5)军事应用特辑</p>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/63292ec0f6a9">https://www.jianshu.com/p/63292ec0f6a9</a><br>
+但是，仔细分析提到的3个场景，本质上都属于“跨越组织边界的数据共享”。溯源场景中，如果溯源需求不需要跨组织，那么就没有必要使用区块链技术；数字资产场景中，如果积分不需要跨组织，那么Q币就是运行良好的数字资产。这两类区块链应用场景都属于第三类应用场景“跨组织的数据共享”的一个分支。<br>
+??书籍中第3个场景提到的区块链具备的“分布式协作程序执行”特征可以单独拎出来作为一个独立的应用场景。区块链智能合约能够实现公开透明、公正可信的程序自动执行，将解决传统合约（法律条文、合同协议）存在的执行难度高、执行成本高的痛点。当前区块链应用中一个普遍看好的行业“区块链供应链金融”就是基于这种需求。</p>
+</blockquote>
+<h1 id="区块链的核心特点">区块链的核心特点</h1>
+<blockquote>
+<p>“区块链技术的核心优势在于能够在跨越组织边界的条件下，解决机构间信任问题，减少摩擦、减少成本”。在单一机构内部，利用传统的中心化架构实现信任交互、保证数据安全已经有大量成熟方案和经过实践检验的机制（例如，银行、军事机构等安全敏感机构采用的信息安全方案）。然而在跨组织边界的场景下，如何实现去中介的低成本信任交互，这是传统技术方案不能解决的痛点。</p>
+</blockquote>
+<p>跨越组织<br>
+（1）“跨越组织边界的数据共享”</p>
+<blockquote>
+<p>一种直观的办法是将此数据存储在第三方可信机构，例如牛奶牧场、或者第三方监管机构。这种做法也是目前大多数类似场景实际使用的模式。然而，这种模式面临两个弊端：首先，引入中介机构将增加直接成本，而且成本将随着中介层级的增多不断提升；其次，由于面临实际利益（惩罚导致的经济损失和声誉损失），第三方中介机构是否公正可信，也是需要支付的间接成本。<br>
+如果采用区块链技术，各个物流公司以及其他相关方（牛奶牧场、食品物理场、仓库、零售商）都作为区块链网络中的节点，共同维护存储物流信息的账本，就能够在所有组织之间形成公开透明、可靠可信的物流信息，保证物流的各个环节有序进行。</p>
+</blockquote>
+<p>（2）“分布式协作程序执行”</p>
+<blockquote>
+<p>区块链智能合约能够实现公开透明、公正可信的程序自动执行，将解决传统合约（法律条文、合同协议）存在的执行难度高、执行成本高的痛点。当前区块链应用中一个普遍看好的行业“区块链供应链金融”就是基于这种需求。</p>
+</blockquote>
+<p>（3）自维护安全体系<br>
+数据安全-时间戳和散列链<br>
+运维安全-共识协议<br>
+决策安全-最长链原则</p>
+<p>区块链是什么？</p>
+<p>区块链和传统的技术有什么区别？</p>
+<p>区块链</p>
+<p>20200202<br>
+PPT提纲<br>
+1 技术定位<br>
+2 核心原理<br>
+3 应用实践<br>
+4 发展趋势</p>
+<p>技术定位：当前新技术层出不穷，云计算、大数据、物联网、区块链等众多新科技层出不穷，区块链技术处于什么地位？与其他技术有什么关联？这一章将从宏观层面介绍区块链技术的定位。</p>
+<p>核心原理：从技术层面了解区块链技术的核心原理，有助于理解区块链技术的优势和应用背景。本章将从区块链优势如何构成的角度介绍区块链体系中的核心技术。</p>
+<p>应用实践：将围绕“区块链应用的3个关键问题”，介绍典型区块链应用。DCEP，互联网法院，冷链物流，供应链金融。</p>
+<p>发展趋势：共性趋势，不同行业的特殊趋势。</p>
+<p>（1）技术定位<br>
+第一页，引用主席讲话，为区块链技术定调。<br>
+-主席关于区块链技术的讲话<a href="https://www.jianshu.com/u/1f24f759ab66">https://www.jianshu.com/u/1f24f759ab66</a><br>
+核心技术自主创新重要突破口，加快推动区块链技术和产业创新发展</p>
+<p>区块链技术应用已延伸到数字金融、物联网、智能制造、供应链管理、数字资产交易等多个领域。</p>
+<p>发挥区块链在促进数据共享、优化业务流程、降低运营成本、提升协同效率、建设可信体系等方面的作用。</p>
+<p>区块链和实体经济深度融合<br>
+数字经济模式创新<br>
+“区块链+”在民生领域的运用<br>
+新型智慧城市建设<br>
+生产要素在区域内有序高效流动<br>
+区块链政务</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[69][论文]稳定代币研究进展]]></title>
+        <id>https://flfqbit.github.io/post/69lun-wen-wen-ding-dai-bi-yan-jiu-jin-zhan/</id>
+        <link href="https://flfqbit.github.io/post/69lun-wen-wen-ding-dai-bi-yan-jiu-jin-zhan/">
+        </link>
+        <updated>2020-02-22T16:06:24.000Z</updated>
+        <content type="html"><![CDATA[<p>笔者关于稳定币的研究论文,于2019年11月5日发表于《南京信息工程大学学报》。<br>
+http://nxdxb.cnjournals.org/ch/reader/view_abstract.aspx?file_no=20190501&amp;flag=1</p>
+<p>本文内容是介绍区块链稳定代币的技术原理和研究进展，摘录于此处。</p>
+<h1 id="稳定代币研究进展">稳定代币研究进展</h1>
+<p>摘要： 作为一种具有价值稳定属性的特殊加密货币，稳定代币不仅能够成为链接区块链加密资产和现实世界资产的桥梁，而且有潜力降低金融行业的中介成本、提高资金转移的效率。自摩根大通、Facebook等国际知名企业宣布其稳定代币计划后，稳定代币成为监管机构、企业界和科研机构的研究热点。本文通过对比法币、加密货币与稳定代币，深入分析了稳定代币的特征，然后从区块链基础设施、价值稳定机制、运营机制3个方面详细介绍了稳定代币的系统架构和运行机制。最后结合稳定代币的技术特点，分析了稳定代币系统面临的缺陷和可能的解决方案。<br>
+关键词：区块链;加密货币;稳定代币;共识机制;隐私保护</p>
+<h1 id="0-引言">0. 引言</h1>
+<p>自从中本聪发表论文《Bitcoin: A peer-to-peer electronic cash system》[1]以来，一种新型的去中心化技术范式-区块链得到快速发展和推广，成为学界、企业界、甚至普通民众耳熟能详的热点话题。比特币作为区块链技术的第一个成功应用受到广泛关注，随之产生了以太币、门罗币等大量基于区块链技术的加密货币。之后，为加密货币项目提供融资的ICO、STO等新机制更是将加密货币行业变成大众关注的热点，被认为是改革传统融资模式、变革世界经济体系的新技术。然而，从2017年开始，由于ICO导致的加密货币泡沫带来了巨大的金融风险，各国颁布了严厉的监管政策，导致加密货币行业陷入寒冬时期。区块链技术的研究重点从加密货币领域转移到以“无币区块链”为口号的其他行业。然而，随着著名跨国互联网公司Facebook推出了基于区块链技术的稳定代币项目Libra，全世界的目光重新聚焦到区块链加密货币领域。<br>
+稳定代币是一种基于区块链技术的特殊的加密货币。相比比特币等典型的加密货币，稳定代币不仅具备了区块链技术去中介信任、安全可靠的核心优势，而且具备与现实资产稳定挂钩的特点。例如，GUSD、PAX稳定代币与美元保持1:1的兑换比例，DGD稳定代币与1 g黄金保持1:1的兑换比例，此外还存在与日元、人民币、石油等多类型现实资产保持稳定兑换比例的稳定代币项目。通过与现实资产挂钩，稳定代币解决了传统加密货币价值剧烈波动、市场操控严重的问题，不仅可以作为加密货币与现实世界的纽带，推进加密货币领域的发展。而且稳定代币具备了解决现实世界资产流动问题的潜力，能够减少中介环节、提高流动效率，有望成为推动金融行业改革的核心技术。<br>
+稳定代币最早的目的是解决加密货币领域的兑换问题。随着加密货币的快速发展，加密货币的种类快速增加，截止到2019年7月，全球加密货币种类超过2 391种。这些加密货币之间存在大量的交换需求。如果直接使用法币作为交换的中间媒介，则会受限于现实金融业务的性能瓶颈，造成严重的性能延迟和巨大的中介费用。因此，一种基于区块链技术并且和法币锚定的加密货币应运而生。2014年，Tether 公司推出了基于比特币架构、和美元挂钩的稳定代币USDT[2-3]，迅速占据了加密货币交换领域的市场，目前市值超过40亿美元，占据稳定代币市场的80%以上的份额。2018 年，世界上首批受到地方政府授权的稳定代币GUSD和PAX诞生，使稳定代币这一特殊的加密货币项目走向大众视野。截止到2019年7月，稳定代币市场价值49亿美元，虽然整体市值在整个加密货币行业比例较小，但是稳定代币对加密货币行业的发展有举足轻重的作用。<br>
+随着稳定代币在加密货币兑换业务中的有效应用，稳定代币的潜在价值得到更多关注。稳定代币具备的减少交易中介、提高交换效率的特征不仅可以运用在加密货币行业，同样可以运用在传统金融领域。这种潜力使得稳定代币的应用范围从价值千亿美元的加密货币市场推广到价值数十万亿美元的跨国金融贸易行业。摩根大通公司首先推出了针对公司内部全球业务的稳定代币项目摩根币（JPM Coin），利用基于区块链的稳定代币技术，能够优化摩根大通在全球范围内的金融交易，减少中介消耗。阿里巴巴公司在香港推出的跨境支付业务，虽然没有直接使用稳定代币的概念，但是也采用了稳定代币相同的交易模式。Facebook公司推出的Libra项目则是希望依托Facebook公司在全世界范围内20亿用户规模，建设遍布全球的金融服务，提供跨越国界的、高效便捷的资金交换。<br>
+作为一种具有重大影响力的区块链应用，稳定代币将给区块链技术落地实践、区块链金融监管等领域带来重大机遇和挑战。因此，非常有必要调研稳定代币的研究进展，分析稳定代币存在的缺陷，展望稳定代币的技术发展趋势。</p>
+<h1 id="1-稳定代币的特征">1. 稳定代币的特征</h1>
+<p>“稳定代币”是区块链行业产生的一个新词。其中“币”代表这是一种基于区块链技术的加密货币，这限定了其主要的技术特征。“稳定”体现了其不同与其他加密货币的特征，即通过锚定现实世界的资产保持相对稳定的价值。通过结合加密货币与现实资产的优势，稳定代币与现有的法币、电子货币、加密货币有明显区别。</p>
+<h2 id="11-稳定代币的加密货币特性">1.1 稳定代币的加密货币特性</h2>
+<p>加密货币是一个历史悠久的名词，早在1988年就出现了Ecash、B-money等一系列基于密码技术的电子货币（也称为数字货币，密码货币）。但是，由于当时的技术条件难以解决双花问题、伪造支付问题，这些加密货币都只在少量密码极客圈子内部流通。2008年，中本聪首次提出了一种能够解决双花问题的密码货币机制“比特币”，并很快开发、运行了首个比特币客户端，开启了比特币系统的运行。截止到2019年7月，比特币系统作为一种没有实体机构运维的去中心化系统，仅仅依靠全球范围的自愿者，稳定运行了10年之久。目前（2019年7月28日）比特币系统已经产生58万个区块，约150亿条交易数据，创造的比特币市值超过1 700亿美元[4-5]。随着比特币系统的成功，逐步出现了以太币、门罗币、EOS 等不同类型、不同特征的加密货币。加密货币的技术架构、功能性能、应用范围都得到极大的扩展。但是，从本质上看，加密货币系统遵循了以下主要原则：<br>
+1）高冗余存储：指所有已经发生的交易记录将在大量节点中冗余存储。例如，比特币系统在全球范围内的活跃节点维持在9 585个节点左右（2019年7月数据，https://bitnodes.earn.com/），即比特币系统运行10年的所有交易记录在全球范围内大约有10 000个完整备份。这种高度冗余机制使得加密货币的交易记录具有“不可篡改”的特性（任意篡改都将被正常节点发现），使得所有维护账本的节点能够在不需要信任单一节点的条件下，对交易数据产生较高的公信力。<br>
+2）分布式执行：指交易的验证和记录操作由分布式节点各自独立完成。在传统的金融结算系统中，交易的执行过程是由具有特殊权限的中心节点完成的，其他节点不能参与执行过程。在基于区块链的加密货币系统中，交易的验证和记录过程由经过共识机制挑选的记账节点（也被称为“矿工节点”）负责执行，理论上任意节点都有被挑选到的机会。通过选取非固定的节点执行区块链交易的验证和记录过程，能够提高系统稳定性，减少部分节点失效或恶意操作的风险。<br>
+3）多数决策：指当区块链系统中出现分歧时，采用少数服从多数的原则对分歧进行仲裁。在分布式场景中，由于受到网络延迟、节点偏好等多方面的影响，不同节点之间在数据同步、策略选择等过程容易产生分歧。加密货币所依赖的区块链系统通常采用多数决策的机制解决此类分歧。例如，比特币系统中，当存储交易记录的数据结构“链”出现分叉时，比特币网络中的节点将按照“最长链”原则选择其中一个分叉作为同步数据源。最终，被大多数节点选择的分叉将成为合法的数据源。通过采用多数决策原则，加密货币系统能够在无人监管的条件下实现稳定的运行，并取得较高的公信力。<br>
+加密货币所具备的上述特征使其能够构造一种不依赖可信机构的可信交易系统，与传统的法币、电子货币有明显区别。相比法币，加密货币不需要国家机构提供信任背书，不需要传统银行体系提供复杂的管理流程，甚至不需要传统的IT运维机构提供设备维护、安全防护等基本服务。仅仅依靠全球志愿者提供的分布式节点，比特币系统成功抵抗了各种网络攻击事件和频繁的市场波动，已经稳定运行了10年。相比传统的电子货币（例如Q币），加密货币不需要依赖公司提供的信任体系，不会受到单个公司的操控，而是能够建立一种跨越公司、跨越国界的可信交易市场。<br>
+稳定代币作为一种特殊的加密货币，自动继承了加密货币“高冗余存储”、“分布式执行”和“多数决策”的核心特征。例如，USDT稳定代币的交易数据直接内嵌在比特币交易的OP_RETURN参数中，和普通的比特币交易一样被所有节点冗余存储。GUSD稳定代币利用以太坊的智能合约技术实现，每一笔交易的执行过程都被所有节点共同执行。Libra稳定代币虽然是采用独立的许可链技术实现，但是依然按照多数决策的原则实现。虽然Libra稳定代币项目是由Facebook公司发起，但是对于Libra稳定代币的管理工作是由Libra 协会负责，协会的每个参与方能够从技术底层对Libra稳定代币进行状态监测和管理。<br>
+由于稳定代币具备了加密货币的特征，这使得稳定代币具备了跨国界运行、低成本运行的特点。首先，稳定代币的交易过程不经过传统的交易体系，目前针对法币的管理体系无法发挥作用，任何人都可以通过自行创建区块链账号参与稳定代币的全球交易，这使得稳定代币具备了跨国界运行的潜力。其次，稳定代币建立在去中心的区块链系统之上，能够减少中间环节，实现快速、高效、可信的价值转移。相比传统复杂的金融体系（例如swift），稳定代币的运行成本更低，效率更高。</p>
+<h2 id="12-稳定代币的价值稳定特性">1.2 稳定代币的价值稳定特性</h2>
+<p>稳定代币具备价值稳定的特性是指通过锚定法币货币体系（或者其他现实世界资产，例如黄金），使稳定代币与特定法币的汇率保持稳定。稳定代币的这种特性与加密货币和法币都不相同。<br>
+在现实货币金融环境中，法币的价值建立各国的经济基础之上，依赖黄金储备、外汇储备等实体资产作为价值支撑，由各国政府提供信任背书。各国的法币也需要保持相对稳定的汇率，但是现代中央银行追求的货币稳定目标，大多旨在维持货币跨期购买力的稳定，与国际收支、外汇储备、利率有密切关系，而不是仅仅保持数值的稳定[6]。<br>
+在加密货币环境中，加密货币的价值不依赖任何实体资产，而是建立在加密货币系统的整体价值之上，依靠分布式算法和开源代码提供信任背书。以比特币为例，比特币的生产过程是为了奖励为系统提供安全保证的矿工，矿工收获的比特币的价值越高，矿工提高“挖矿”性能的动机就越强，比特币系统的性能和安全性就越强。另一方面，比特币的系统的性能和安全性越强，使用比特币系统的用户就越多，比特币系统的价值就越高，这将促进比特币价值的提升。理论上，随着比特币系统的性能和安全性接近理论峰值，比特币的价值将跟随比特币系统的整体价值，趋于稳定状态。但是，实际上由于比特币等密码货币系统面临严重的市场操控风险[7]、网络攻击风险[8-9]和政策调控风险[10-11]，比特币目前的价值更多的是依赖参与者的信心，跟随投资环境剧烈波动。<br>
+不同于法币和普通的加密货币，稳定代币的价值既不依赖政府提供信任背书，也不依赖虚拟的系统价值，而是通过人为设定的机制，与特定的法币资产保持固定的兑换比例。为了实现稳定代币的价值稳定性，必须满足3个具体要求：<br>
+1）健康的买入和退出渠道。作为一种虚拟的加密货币，稳定代币的运维机构本身必须提供兜底的代币买入和退出机制，这是保持币值稳定的基础措施。此外，由于稳定代币项目通常涉及全球大量用户，很难由运维机构提供全部兑换业务，在实际运行中通常是由全球各地的加密货币交易所（例如币安、bitrelix）承担面向终端用户的代币交易。在这些交易所中，稳定代币的兑换比例将根据稳定代币的市场信誉、退出难度进行动态调整。稳定代币的运维机构必须与主流交易所建立价格稳定机制，确保终端用户在代币买入和退出时能够享受相对稳定的兑换比例。<br>
+2）高效可靠的交易过程。稳定代币的核心作用是充当价值交换的媒介。为了满足这种需求，稳定代币系统的性能和可靠性必须满足实际业务的需求。目前稳定代币主要是运用在加密货币行业中，市场规模和交易频率相对较低，现有稳定代币采用的技术架构还能够满足业务需求。但是，随着稳定代币技术走向现实金融业务，交易过程的效率和可靠性将成为稳定代币系统必须重点研究的问题。<br>
+3）满足监管机构的监管需求。由于稳定代币直接和法币体系挂钩，这使得稳定代币更容易对金融秩序造成影响。相对于普通的加密货币，监管机构将对稳定代币提出更高的监管需求。如何满足监管机构的监管需求，将成为稳定代币系统能否稳定运行的关键问题。</p>
+<h2 id="13-稳定代币与其他货币的对比">1.3 稳定代币与其他货币的对比</h2>
+<p>表1 稳定代币与其他货币的对比<br>
+Table 1 Comparison of stable coins and other currencies<br>
+种类	运维机构	信任机制	数据存储机制	交易执行机制	价格变化机制	信任范围<br>
+法币	政府	实体资产+政府信誉	集中存储	中心化执行	政府调控	国界范围<br>
+Q币	公司	公司信誉	集中存储	中心化执行	公司调控	公司范围<br>
+比特币	无	算法+开源代码	冗余存储	去中心执行	市场调控	世界范围<br>
+稳定<br>
+代币	公司	算法+开源代码+公司信誉	冗余存储	去中心执行	算法维持	设定范围<br>
+表1对法币、Q币、比特币、稳定代币的特征进行了对比分析。其中，法币对应各国发行的法定货币（例如美元、人民币），Q币（腾讯公司运行的电子积分系统）代表了利用中心化技术构建的电子货币，比特币代表了典型的加密货币，稳定代币是指基于区块链技术并具备价值稳定属性的特殊加密货币。<br>
+从运维机构和信任机制的角度看，法币主要是由政府机构运行，依靠政府持有的实体资产作为价值担保，政府提供法偿保证。以Q币为代表的电子代币通常是由公司运营，主要在公司业务范围内充当价值媒介，此类代币系统通常只提供单向买入功能，不提供反向兑换服务。类似的产品还包括游戏公司的游戏币，以及各种类型的电子积分。比特币系统运行在由全世界范围内的志愿者提供的分布式服务器节点之上，依靠可信的分布式算法和开源的代码提供信任机制，不存在一个实体的机构负责系统的日常维护。比特币的算法升级和代码更新依赖于整个比特币开源社区的集体贡献。目前比特币核心代码部署在GitHub上，任何人都可以推送新的代码方案。虽然代码在整合到主版本时依赖少数几个核心开发人员和维护者的操作，但是本质上算法和代码更新的决定权依然是由社区决定，不会受到个别机构或者个人的控制[12]。<br>
+从技术层面，法币和类似Q币的电子货币都采用了中心化的数据存储机制和交易执行机制，建立了一套高度依赖中心机构的交易体系。在体系内部，这种机制能够提供足够的公信力和超高的性能。但是，当交易超过体系范围时，就必须依赖额外的机制保证交易的可靠性。比特币、稳定代币等加密货币采用了去中心化的数据存储机制和交易执行机制，建立了一套不依赖中心机构的交易体系。在这种机制下，加密货币的信任范围可以根据参与者的增加动态提升。<br>
+从价值层面，法币的价值（汇率）是由中央银行根据国家的国际收支、外汇储备、利率等情况动态调控，体现了国家的经济状况。Q币等电子货币的价值则是由公司根据自身业务特点自行设定的，公司具有绝对的解释权。例如，2019年7月，腾讯公司的Q币就进行了全面的涨价。比特币等加密货币的价格则是根据市场自发调控的。由于不存在实体机构负责日常维护，此类加密货币的价格主要来源于全球主要数字货币交易所实时变化的价格数据。当市场买入需求提升时，兑换比例将提升，当市场抛售需求提升时，兑换比例将下降。这种完全受控于市场需求的价格变化机制使得比特币等加密货币的价格长期处于剧烈变化的状态，而且很容易受到市场操控、负面消息的影响。</p>
+<h1 id="2-稳定代币系统架构">2. 稳定代币系统架构</h1>
+<h2 id="21-系统架构">2.1 系统架构</h2>
+<p>[图片上传失败...(image-8fcefb-1579428197119)]</p>
+<p>图1 稳定代币系统架构</p>
+<p>Figure 1 System architecture for stable coins</p>
+<p>作为一种特殊的加密货币，稳定代币不仅需要依赖区块链技术构建系统运行所必须的底层基础设施，而且需要复杂的运营机制来保证价值稳定的特性。此外，还需要一套价值稳定机制来协调底层区块链基础设施和上层的运行机制。如图1所示，稳定代币系统架构主要包含3个方面：</p>
+<p>1）区块链基础设施：指用于构建稳定代币系统核心功能的技术模块。此模块是稳定代币系统能够正常运转的基础保证，将实现交易功能、管理功能和数据记录功能。此模块的设计与系统的性能、安全性、可扩展性密切相关，是稳定代币技术革新的主要区域。</p>
+<p>2）运营机制：指用于维持稳定代币系统健康运行的管理模块。此模块是稳定代币系统能够正常提供服务的关键，将涉及稳定代币运维管理、代币分销、资金存储、审计公证、监督监管等工作。此模块的设计与系统的合规性、易用性、资金安全性密切相关。</p>
+<p>3）价值稳定机制：指用于调节稳定代币价值的策略模块。此模块通过对区块链基础设施模块和运营机制模块进行调控，保证稳定代币价值趋于稳定。此模块的设计是稳定代币分类的主要依据。</p>
+<p>这3个方面从不同角度描述了稳定代币系统运行的整体架构，三者之间既有各自负责的功能，也有密切联系。其中，“区块链网络”是连接区块链基础设施和运营机制的桥梁。一方面，区块链网络代表了稳定代币系统的技术模式，即利用区块链的组网机制、信息传输机制和数据共享机制，构建一个去中心化的数据交互系统。另一方面，区块链网络体现了运营机制中不同实体的参与模式，即每个实体通过运行一个区块链客户端程序成为稳定代币系统的一个节点，进而参与稳定代币交易、管理、数据查询等业务。价值稳定机制通过链上调控和链下调控手段，对区块链基础设施和运营机制进行管理，调节稳定代币的价值。</p>
+<h2 id="22-区块链基础设施">2.2 区块链基础设施</h2>
+<p>区块链是一种分布式技术架构，通常被分为数据层、网络层、共识层、激励层、合约层和应用层<sup>[13-14]</sup>。其中，网络层涉及组网模式、通信机制等网络层的协议；数据层描述区块链的块链结构；共识层介绍不同区块链节点之间如何进行公平可信的数据交互；激励层介绍激励区块链节点参与维护区块链网络的机制；合约层描述区块链系统支持的脚本技术；应用层介绍区块链技术为应用提供的接口及技术方案。</p>
+<p>本文为了介绍稳定代币系统的架构，从稳定代币系统实现模式的角度对区块链基础设施进行分类：</p>
+<p>1）区块链网络：负责实现稳定代币系统基础的组网、通信、交互功能。涵盖传统区块链架构的网路层、共识层、激励层。</p>
+<p>2）区块链账本：负责存储稳定代币系统的交易记录和操作记录。主要涉及区块链架构的数据层。此处重点介绍稳定代币系统的数据如何存储在区块链账本中。</p>
+<p>3）区块链脚本：负责实现稳定代币系统的交易功能和管理功能。主要涉及区块链架构的合约层。此处重点介绍稳定代币系统的核心代码如何存储、如何执行。</p>
+<h3 id="221-区块链网络">2.2.1 区块链网络</h3>
+<p>稳定代币本质上是一个基于区块链技术的应用。不同于传统的基于中心化架构的应用系统，稳定代币系统运行在去中心化的区块链网络之上。区块链网络中的每一个节点（指运行了区块链客户端程序的服务器）都参与稳定代币的交易过程，并存储稳定代币的交易记录。因此，稳定代币系统的特性与其采用的区块链网络的特性密切相关。考虑到稳定代币系统的实际特点，本文从组网模式和共识机制两个方面介绍区块链网络的特性。</p>
+<p>组网模式描述了区块链网络中节点的选取机制，这与区块链网络的去中心化程度、系统公信力密切相关。根据区块链网络组网模式的区别，区块链技术体系被分为公链和许可链。其中，公链对参与节点没有身份限制，任何用户都可以通过运行区块链客户端程序自由加入或退出区块链网络。这种特性使得公链的去中心化程度较高，更容易获得公信力。但是这种特性也使得很难控制区块链网络的规模、性能和复杂程度，导致区块链系统整体的交易性能较低，延迟较高。典型的公链包括比特币、以太坊<sup>[15]</sup>。许可链对参与者节点有身份限制，只允许经过身份认证的用户参与区块链网络的运行。这种特性使得许可链能够控制区块链网络的规模和单个节点的性能，使区块链系统能够拥有较高的交易性能和隐私保护能力。但是许可链的去中心化程度较低，系统的可靠性建立在少数区块链节点的可靠性之上，公信力较低。典型的许可链技术包括超级账本技术<sup>[16]</sup>。</p>
+<p>共识机制描述了区块链网络中不同节点进行数据交互的协商机制，这与区块链网络的交易性能、交易可靠性密切相关<sup>[17-18]</sup>。根据共识机制的使用场景，共识机制可以分为针对公链的共识机制和针对许可链的共识机制。公链场景中，节点数量较多，网络环境复杂，很难在有效时间内使所有节点达成一致性状态。因此，针对公链的共识机制通常采用弱一致性的设计，即允许网络中的部分节点出现不一致的情况，使大部分节点快速达成一致性状态，然后在利用最长链机制逐渐使不一致状态消失。典型的算法包括POW<sup>[19]</sup>,POS<sup>[20]</sup>等。许可链场景中，节点数量少、性能高，能够高效的实现数据一致性，所以针对许可链的共识机制通常采用了强一致性的设计，一旦数据写入区块，就不会被篡改。典型的算法包括PBFT<sup>[21-22]</sup>。</p>
+<p>公链和许可链技术有各自的优势，在不同的场景中能够发挥不同的价值。因此，目前稳定代币系统的区块链网络在公链和许可链两种技术路线上都有探索。表2介绍当前典型稳定代币采用的区块链网络的类型。</p>
+<p>USDT是利用比特币系统的OMNI协议建立的稳定代币，目前在稳定代币市场中占据主流地位。PAX是首批获得政府（纽约金融服务局NYSDF）批准的稳定代币。DAI是一种与黄金锚定的稳定代币。USDT、PAX、DAI由于采用了公链技术，其交易性能严重受限于公链的性能瓶颈，每秒只能处理十几笔交易。这导致此类稳定代币很难支撑高频小额的交易。另一方面，由于公链普遍建立在大规模的分布式节点之上，此类稳定代币系统的公信力很高，很容易借助公链将影响力扩展到全球范围。</p>
+<p>Libra是由Facebook公司计划开发的依托许可链技术的稳定代币。Libra项目的创始成员目前包括Uber，PayPal，Visa和硅谷投资巨头Andreessen Horowitz，最终将拥有100名地域多元化的创始成员。通过支付1 000万美元的初始最低投资，这些创始公司将获得加入Libra网络的许可，负责运营区块链网络节点。Libra网络采用了HotStuff共识机制，这是一种基于BFT机制的改进协议，能够取得更好的交易性能和安全性，Libra网络的交易性能预计能达到每秒1 000笔交易 <sup>[23]</sup>。</p>
+<p>稳定代币项目对区块链网络的选择取决于实际需求。USDT、GUSD虽然交易性能较低，但这些稳定代币由于建立在典型公链系统之上，与这些公链系统的交互更加方便。因此，此类稳定代币更适合作为连接加密货币和现实世界的桥梁，充当加密货币市场的价值中介物。Libra稳定代币的设计用途是解决现实世界金融需求，因此对性能的要求是第一位的。此外，Libra稳定代币将面临更强的金融监管，监管需求也使得此类稳定代币必须采用许可链的模式加强对节点的监管能力。</p>
+<h3 id="222-区块链账本">2.2.2 区块链账本</h3>
+<p>稳定代币系统建立在区块链网络之上，没有单独运维数据库服务器，所有的交易数据和操作数据都是以区块链交易的形式存储在每一个区块链节点中。区块链交易是不同区块链节点进行交互的基本数据格式，也是区块链系统中数据存储的基本数据单元。一段时间的多个区块链交易将被打包成一个区块（区块链中基本的数据存储结构），并按照时间顺序串联起来，构成基于时间排序的区块链条。这种区块链条被称为区块链账本，在功能上类似于中心化架构系统中的“数据库”。区别在于：首先，区块链账本通常只支持存储、查询，不支持修改和删除；其次，区块链账本是由所有节点冗余存储。</p>
+<p>稳定代币系统的数据主要分为两类：交易数据和操作数据。交易数据是指稳定代币系统的用户之间进行稳定代币的交易记录；操作数据是指系统管理员或特定用户对稳定代币系统的操作记录。本质上，稳定代币系统是区块链上的应用，交易数据和操作数据其实都是用户调用稳定代币系统的API实现的。因此，从区块链数据层的角度，稳定代币系统的交易数据和操作数据都是一种特殊的区块链交易，存储方式都是一致的。</p>
+<p>根据稳定代币系统采用区块链网络的区别，可以将稳定代币分为基于公链的附属稳定代币和基于许可链的独立稳定代币。</p>
+<p>1）基于公链的附属稳定代币：指稳定代币系统建立在已有公链之上，没有单独运维区块链网络。这种稳定代币和其他区块链应用共享公链的存储空间和通信带宽，在性能和扩展性上受到公链的限制。</p>
+<p>2）基于许可链的独立稳定代币：指稳定代币系统建立在单独运维的区块链网络之上。这种稳定代币独享区块链网络的存储空间和通信带宽，在性能和扩展性上有更高的潜力。但是，由于许可链在去中心化程度的劣势，这种稳定代币的公信力较低，需要借助实体机构提供信任保证。</p>
+<p>[图片上传失败...(image-a21ab8-1579428197119)]</p>
+<p>图2 区块链账本结构</p>
+<p>Figure 2 Data structure in the blockchain ledger</p>
+<p>针对基于公链的附属稳定代币，稳定代币的交易记录和操作记录主要以数据参数的形式存储在区块链交易中。典型的公链系统通常有原生的代币机制，例如比特币系统中的比特币，以太坊系统中的以太币。在这些公链系统中，区块链交易的本质就是不同区块链地址（区块链系统中的账号）之间进行代币转移的过程。区块链交易中必须包括发送方地址、接收方地址、交易金额3个参数。此外，为了扩展区块链交易的功能，通常还涉及了专门用于存储数据的参数，例如比特币交易中的OP_RETURN参数，以太坊交易中的Input参数。图2介绍了区块链账本的数据结构。稳定代币系统的数据就存储区块链账本的“数据存储参数”中。</p>
+<p>[图片上传失败...(image-8394e2-1579428197119)]</p>
+<p>图3 稳定代币GUSD的交易数据</p>
+<p>Figure 3 Trading data of stable coins GUSD</p>
+<p>图3展示了稳定代币GUSD（建立在以太坊网络中的稳定代币应用）的真实交易数据，其中From,To,Value参数描述的是以太坊交易的发送方地址、接收方地址和以太币的交易金额。稳定代币的交易数据存储在Input Data参数中，根据代码中的注释可以看出，Input参数中编码了稳定代币交易的接收方和交易金额。</p>
+<h3 id="223-区块链脚本">2.2.3 区块链脚本</h3>
+<p>稳定代币系统本质上是一个基于区块链技术的加密货币应用，除了基础的交易功能之外，稳定代币系统还需要实现代币增发、代币销毁、代币冻结等管理功能。不同于传统的中心化架构应用，稳定代币的核心功能不是通过部署在中心化节点的代码实现，而是通过运行在所有区块链节点上的区块链脚本实现。</p>
+<p>区块链脚本是区块链系统为了实现多样化应用需求而设计的编程语言。脚本的数据存储在区块链账本中，脚本的运行过程由所有节点共同参与。在第1代区块链技术中，典型区块链比特币系统就已经支持脚本技术(OMNI协议<sup>[24]</sup>)，此阶段的脚本技术仅支持顺序执行和少量的API，主要用于延时交易等简单功能。第2代区块链技术体系中，区块链脚本已经成为核心创新技术，典型代表以太方系统提出了支持图灵完备的脚本技术，被称为“智能合约”<sup>[25]</sup>。相对于区块链1.0比特币系统的脚本，智能合约功能更加强大，不仅支持循环等复杂操作，还可以调用外部API。这使得区块链脚本能够实现更加复杂的功能，解决复杂的实际问题。正是由于智能合约技术的巨大潜力，区块链技术不在局限于金融业务，而是将应用范围向能源、电信、版权保护等众多行业扩展。在正在演进的第3代区块链技术体系中，区块链脚本技术仍然是创新的热点，如何让区块链脚本技术更高效、更安全成为解决区块链技术落地的关键问题。Facebook的Libra项目中采用的新型区块链架构就专门设计了新的脚本语言MOVE，在灵活性、安全性和可验证性方面有较大提升<sup>[23]</sup>。</p>
+<p>相对传统的编程语言，区块链脚本在公信力方面有特殊优势。首先，区块链脚本的代码存储在区块链账本中，基于区块链账本不可篡改的特点，区块链脚本也具有安全可靠的特点，避免了因黑客攻击导致的代码篡改问题。其次，基于区块链账本公开透明的特点，区块链脚本的代码可以被公众验证，这使得区块链应用的算法和安全性受到公众监管，比黑盒程序更容易获得用户信任。最后，区块链脚本的执行过程是由全体节点参与，执行结果由全体节点存储和维护，这使得区块链脚本的执行过程是安全可信的。综上所述，区块链脚本能够降低传统程序面临的代码篡改、代码后门、代码恶意操作等风险，实现高公信力的分布式应用。</p>
+<h2 id="23-价值稳定机制">2.3 价值稳定机制</h2>
+<p>加密货币的价值一直处于剧烈波动的状态。自从比特币诞生以来，加密货币的种类、市值都出现爆炸式增长。截止到2019年7月，全球加密货币市场的市值超过2 638 亿美元，其中比特币的市值超过1 701亿美元。从市值看，加密货币市场已经是相当庞大。但是，从价值稳定性的角度看，加密货币市场非常不成熟，加密货币的价格随着市场剧烈变动，甚至频频出现一夜之间价值归零的极端现象。从本质上分析，加密货币价值剧烈变动的原因来自于其底层依赖的区块链技术。区块链技术的核心特点是去中心化信任体系，即不依赖中心节点的信任，而是依赖分布式节点治自治、开源代码、加密技术来实现去中心化的信任。在这种信任机制体系中，没有任何机构为系统网络的运维负责，没有任何个体为代码的安全性负责，参与者只能依靠对架构、算法的信任来对比特币建立信任。因此，比特币等加密货币的价格实际上是建立在用户群体的信任之上。这就导致加密货币的价格将随着用户群体观念的变化而剧烈波动。</p>
+<p>作为一种特殊的加密货币，稳定代币系统同样建立在去中心的区块链网络之上，在技术架构层面缺乏中心化的信任体系。为了保持价格稳定，稳定代币系统在区块链架构之外，必须设计独立的价值稳定机制。目前常见的机制主要分为3类<sup>[26]</sup>:</p>
+<p>1）基于法币抵押的稳定代币。利用同等价值的法币储备为稳定代币的价值背书。根据法币储备数量来发行或者销毁稳定代币，确保在市场上运行的每一个稳定代币都对应储备机构中的一个法币。代表产品有USDT<sup>[27]</sup>、TUSD<sup>[28]</sup>、PAX<sup>[29]</sup>、GUSD<sup>[30]</sup>和Digix<sup>[31]</sup>。</p>
+<p>2）基于数字资产抵押的稳定代币。利用超额的数字资产储备为稳定代币价值背书。根据数字资产的价值变化，动态调整储备比例，确保在任意时刻，储备的数字资产的价值超过发行的稳定代币的价值。代表产品有Bitshares<sup>[32]</sup>，MakerDAO<sup>[33]</sup>，Havven<sup>[34]</sup> 和DUO Network<sup>[35]</sup>。</p>
+<p>3）无抵押的稳定代币。利用供需平衡模型为稳定代币价值背书。此模式中稳定代币没有任何价值抵押物，而是根据市场形势动态发行或者销毁稳定代币，通过调控代币的供应数量，来维持代币的价值稳定。代表产品有Basis<sup>[36]</sup>，Carbon<sup>[37]</sup>，Terra<sup>[38]</sup>和Reserve<sup>[39]</sup>。</p>
+<p>这3种模型中，法币抵押模型对价格稳定性的保证最强，面临的主要风险包括：法币本身的价值波动，法币储备的安全性。这两项风险都可以利用现有的金融管控手段解决。数字资产抵押模式的关键在于抵押物的调控策略能否有效应对抵押物的价值波动。当抵押物的价值小幅波动时，调控策略可以通过追加抵押物、清仓抵押物的方式保持价值稳定。但是，一旦抵押物价值波动幅度超过调控能力，价值平衡机制就面临失败风险。当前以加密货币为代表的数字资产面临政府监管、黑客攻击等多重风险，本身就处于价值剧烈波动的状态，所以数字资产抵押模式很难有效保证价值稳定性。无抵押模式利用纯粹的调控算法解决价值稳定问题，其价值完全取决于市场和用户对其他模式的信心，本质上与传统加密资产的价值模式是一样的，将面临相同的价值波动风险。针对这种模式，姚前等<sup>[6]</sup>认为如果稳定代币价格突然大幅低于宣示价格，市场参与者信心可能被打破，价格调控有可能陷入所谓“死亡螺旋”的周期循环。</p>
+<p>[图片上传失败...(image-2db306-1579428197119)]</p>
+<p>图4 采用3种不同价值稳定机制的稳定代币运行情况</p>
+<p>Figure 4 Running state of stable coins using three different value stability mechanisms</p>
+<p>图4从市值和单价2个角度展示了8种稳定代币运行情况。其中红色实线条代表采用法币抵押模式的稳定代币，包括USDT,TUSD,PAX。绿色点线条代表采用数字资产抵押模式的稳定代币，包括BTIUDS（Bitshares）,DAI（MakerDAO）,XHV（Havven）。紫色短线条代表采用无抵押模式的稳定代币，包括：CARBON（Carbon）,RSR（Reserve）。图中的市值数据和单价数据来自coinmarket网站，抽取了从2018年1月到2019年7月的数据。</p>
+<p>图4a展示市值变化情况。USDT作为最早出现的稳定代币，占据了稳定代币市场80% 以上的市值。TUSD和PAX两种采用法币抵押模式的稳定代币的市值也处于快速增长的状态。采用数字资产抵押模式的3种稳定代币中，只有DAI稳定代币的市值超过了0.5亿美元。采用无抵押模式的2种稳定代币的市值都非常小。</p>
+<p>图4b展示稳定代币单价的变化情况。此案例中8种稳定代币的单价都是锚定美元的。作为稳定代币，在设计层面，他们的单价应该稳定在1美元。但是在运行中，由于受到市场信心、购买渠道等因素的干扰。各种稳定代币在交易所的价值是波动的。一种优秀的稳定代币的单价应该保持尽量小的波动。从图中可以看出，3种采用法币抵押模式的稳定代币（红色实线条）的波动是最小的。采用数字资产抵押模式的稳定代币（绿色点线条）在1美元附近剧烈波动。采用无抵押模式的稳定代币（紫色短线条）的价值则始终远低于1 美元。</p>
+<p>从市值和单价2个角度结合分析，可以看出目前采用法币抵押模式的稳定代币技术最为成熟，被市场接受程度最高，在稳定代币行业占据统治地位。采用数字资产抵押模式的稳定代币在价值稳定性方面仍存在显著缺陷，市场认可度处于缓慢提升的状态。采用无抵押模式的稳定代币完全无法实现价值稳定的特性，在稳定代币行业处于边缘状态。</p>
+<p>表3 4种稳定代币的运维机制<br>
+Table 3 Maintenance mechanism of four stable coins<br>
+（ 空缺，请查阅原文）</p>
+<p>如3.3节所示，基于法币的价值稳定模型较为实用，而且只有这种模式需要较多的外部实体机构为稳定代币系统提供额外的信任能力。因此，本小节重点介绍法币抵押模式稳定币的运营机制。表3介绍了4种典型稳定代币的运营机制。</p>
+<p>为了保证稳定代币系统能够健康运转，需要一套完善的运营机制。运营机制的主要目标包括：</p>
+<p>1）确保系统核心功能的正常运行。指用户能够正常的购买、出售、自由交易稳定代币。</p>
+<p>2）确保价格稳定性。指稳定代币的价格稳定机制能够有效运行，防止稳定代币的价值剧烈波动。</p>
+<p>为了确保系统核心功能的正常运行，需要运维机构、分销机构和用户的参与。运维机构负责对稳定代币的发行、销毁和相关管理操作。稳定代币的发行过程是利用稳定代币系统的程序接口实现。不同于比特币等加密货币，稳定代币的发行不需要额外的“挖矿”操作，只要运维机构拥有合法的权限，就可以发行任意数量的代币。但是，为了保证价格的稳定性，运维机构在发行代币时通常会遵循价格稳定机制，例如，在区块链上每发行一个稳定代币，就要向指定的存储机构存储1美元。同理，销毁和其他管理操作也将按照设定进行。分销机构是指承担稳定代币销售任务的数字货币交易所。在实际运行中，由于受到地域、语言、监管政策的影响，运维机构很难面向全球用户提供服务。因此，运维机构需要和数字货币交易所合作，扩展稳定代币的服务范围。一种稳定代币的分销机构越多，证明其运行状态越健康。用户可以从分销机构的网站中购买和出售稳定代币，也可以利用支持稳定代币的区块链客户端实现用户之间的交易。</p>
+<p>为了确保价格稳定性，需要运维机构、储备机构、公证机构和监管机构的参与。针对法币抵押模式的稳定代币，价值稳定的关键是保证储备的法币能够足额偿付市场中存在的稳定代币。为了达到这一目标，运维机构在发行代币时，将向储备机构存储等值的法币，当用户卖出稳定代币时，运维机构将从储备机构提取法币支付给用户，同时将稳定代币销毁。通过将稳定代币的发行/销毁与法币储备的增减挂钩，就能够从理论上保证价值的稳定性。为了保证上述模式的可靠运行，稳定代币系统中的储备机构和公证机构通常会选择世界知名的金融机构和律师事务所承担储备和公证业务。例如，表3中的Nobel银行[41]、道富银行[42]是世界知名的银行，FSS律师事务所[40]、BPM会计师事务所[43]、Withum会计师事务所[45]是世界知名的律师事务所。储备机构将按照各国的金融法规对法币资产进行可靠管理，保证资产存储过程的安全性。公证机构将基于稳定代币系统的运维规则，从稳定代币系统获取代币运行数据（例如，代币发行量，交易统计数据等），从储备机构获得资产储备的数据，然后定期出具公证报告，证明稳定币系统是按照运维规则运行。监管机构负责定期检测稳定代币系统的链上运行情况和链下运维情况，及时发现违规问题。储备机构、公证机构和监管机构的引入，本质上是利用实体机构的信誉为稳定代币系统提供信誉保证，帮助普通用户监督运维机构的操作。</p>
+<h1 id="3-稳定代币面临的问题及发展方向">3. 稳定代币面临的问题及发展方向</h1>
+<p>稳定代币的出现使区块链技术有机会解决实际的金融问题，将对金融行业带来巨大影响。但是，受限于当前区块链技术、监管机制的限制，稳定代币系统还面临众多缺陷。</p>
+<h2 id="31-监管和隐私保护的矛盾">3.1 监管和隐私保护的矛盾</h2>
+<p>稳定代币系统在实际应用过程中间面临监管需求和隐私保护需求的矛盾。</p>
+<p>一方面，支持监管是金融行业各项业务得以正常进行的基础条件。特别是在稳定代币涉及的跨境支付、资金转移领域，目前已经有多种监管需求。例如KYC政策（了解你的客户），反洗钱政策等。由于稳定代币采用的区块链技术与传统的金融IT架构不一致，已经给现有的监管机制带来了巨大的挑战。目前采用的监管机制主要是要求数字货币交易所等区块链服务商对用户信息进行备案。这种方法对恶意用户的防控能力较弱，恶意用户可以通过其他国家的交易所及假身份绕过监管。目前已经有一些针对加密货币系统的监管方案<sup>[46-47]</sup>，但是这些方案实施的前提是监管者必须有权查看区块链网络上的详细交易数据。</p>
+<p>另一方面，区块链技术采用的账本公开的机制，虽然能够提升系统公信力，但是带来了显著的隐私泄漏隐患。例如，比特币系统建议用户采用频繁更换区块链地址（区块链系统中的账号）的方式增强匿名性，但是现有的研究表明比特币地址的匿名性是一种“假匿名”<sup>[48-49]</sup>，攻击者可以通过网络溯源<sup>[50-51]</sup>、交易数据分析<sup>[52-53]</sup>等多种方式推测比特币地址背后的用户身份信息。因此，目前出现了众多聚焦隐私保护的区块链系统，例如门罗币（Monero）<sup>[54]</sup>、零币（Zcash）<sup>[55-56]</sup>。通过采用环签名、零知识证明等密码学技术，这些系统能够在满足分布式共识机制的条件下，隐藏区块链交易的发送地址、接收地址和交易金额。但是，这种高度隐藏的技术将进一步增加监管难度。目前门罗币已经代替比特币，成为犯罪活动首选的支付方式。</p>
+<p>对稳定代币系统来说，支持监管和保护用户隐私都是其必须解决的问题。如何平衡监管需求和隐私保护需求，为合法的监管机构提供数据处理的权限，同时增加攻击者分析数据的难度，是未来稳定代币研究的一个方向。</p>
+<h2 id="32-高性能和高公信力的矛盾">3.2 高性能和高公信力的矛盾</h2>
+<p>USDT、PAX等稳定代币系统建立在比特币、以太坊等非许可链网络之上，任何人都可以自由加入网络，参与数据的维护和交易的验证工作。这种机制充分实现了去中心化的思想，具有较高的公信力。但是，这种机制也导致系统的性能很难提高，难以满足现实金融业务的性能需求。当前公链系统虽然推出了众多提高性能的机制，包括增大区块容量，降低出块时间。但是这些方案对区块链系统交易性能提升的幅度有限，而且有可能增加中心化的风险<sup>[57]</sup>。</p>
+<p>Facebook的Libra稳定代币系统建立在许可链网络之上，通过采用高可信、高性能的服务器组建小规模的分布式网络，许可链的响应速度和交易性能得到显著提高。但是，这种机制弱化了去中心化的思想，不能完全实现区块链技术去中心化信任的潜力。而且，当前的许可链系统的性能虽然远超过公链系统，但是相对于传统金融系统的性能仍有较大差距。例如，Libra稳定代币系统底层的许可链网络预计能达到每秒1 000笔交易，而visa、MasterCard等传统金融系统的交易性能通常能够达到万笔交易每秒。因此，许可链系统很难通过继续降低去中心化程度的方式来提高性能指标。</p>
+<p>未来随着稳定代币系统应用到业务量更加复杂的行业，这种矛盾将更为突出。例如，Facebook的Libra项目计划向遍及全球的20亿用户提供金融服务，这种金融场景不仅需要巨大的性能支撑，也需要一套能够满足全世界范围不同用户的信任需求。Libra项目采用了渐进式的发展方式，目前采用了基于BFT协议的改进版共识协议，首先实现大约100个节点的许可链网络，然后随着技术的革新，在逐渐过渡到非许可链网络。目前，在非许可链共识机制上，已经出现了一些兼具高性能和去中心化的技术，包括DAG<sup>[58]</sup>, AGLAND<sup>[59]</sup>。随着共识机制的不断发展。稳定代币系统有望逐渐在性能和公信力方面达到平衡状态。</p>
+<h1 id="4-结论">4. 结论</h1>
+<p>稳定代币通过将去中心区块链技术的优势与中心化信任体系的优势相结合，使区块链技术能够在现实金融业务中发挥其减少中介、降低沟通成本的能力。这不仅将对现有的金融业务产生重要影响，也将对区块链技术在其他领域的应用有促进和启发作用。本文首先详细介绍了稳定代币的特征，分析稳定代币与法币、加密货币之间的关系。然后从区块链基础设施、价值稳定机制、运营机制3个角度详细介绍了稳定代币系统的架构和运行机制。最后分析了稳定代币面临的问题和可能的解决方案。</p>
+<h1 id="参考文献">参考文献</h1>
+<p>[1] Nakamoto S.Bitcoin: a peer-to-peer electronic cash system[EB/OL].[2019-07-28]. http://www.bitcoin.org/bitoin.pdf</p>
+<p>[2]百度百科.泰达币[EB/OL].[2019-07-28].</p>
+<p><a href="https://baike.baidu.com/item/%E6%B3%B0%E8%BE%BE%E5%B8%81/22415301">https://baike.baidu.com/item/%E6%B3%B0%E8%BE%BE%E5%B8%81/22415301</a></p>
+<p>BAIKE.USDT[EB/OL].[2019-07-28].</p>
+<p>https://baike.baidu.com/item/%E6%B3%B0%E8%BE%BE%E5%B8%81/22415301</p>
+<p>[3] Wikicryptocoins.Tether[EB/OL].[2019-07-28].</p>
+<p>https://www.wikicryptocoins.com/currency/Tether</p>
+<p>[4] BTC.COM.比特币区块[EB/OL].[2019-07-28].https://btc.com/</p>
+<p>BTC.COM. Bitcoin Block [EB/OL].[2019-07-28].https://btc.com/</p>
+<p>[5] CoinMarketCap. Top 100 cryptocurrencies by market capitalization[EB/OL].[2019-07-28]. https://coinmarketcap.com/</p>
+<p>[6] 姚前, 孙浩. 数字稳定代币的试验与启示[J]. 中国金融, 2018(19): 49-50</p>
+<p>YAO Qian, SUN Hao. Experiment and Enlightenment of stable coins[J]. China Finance, 2018(19): 49-50</p>
+<p>[7] 邓伟. 比特币价格泡沫: 证据、原因与启示[J]. 上海财经大学学报, 2017, 19(2): 50-62.</p>
+<p>DENG Wei. Price bubbles in bitcoin: evidence, causes and implications[J]. Journal of Shanghai University of Finance and Economics, 2017, 19(2): 50-62</p>
+<p>[8] Heilman E, Kendler A, Zohar A, et al. Eclipse attacks on Bitcoin's peer-to-peer network[C]//Proceedings of the 24th USENIX Conference on Security Symposium, 2015: 129-144</p>
+<p>[9] Fedorov A K, Kiktenko E O, Lvovsky A I. Quantum computers put blockchain security at risk[J]. Nature, 2018, 563(7732): 465-467</p>
+<p>[10] 尹振涛. ICO监管的国际经验[J]. 中国金融, 2017(20): 87-89</p>
+<p>YIN Zhentao. International experience in ICO regulation [J]. China Finance, 2017(20): 87-89</p>
+<p>[11] 任哲. ICO国际监管与趋势[J]. 中国金融, 2018(5): 81-83</p>
+<p>REN Zhe. The international regulation and trend of ICO[J]. China Finance, 2018(5): 81-83</p>
+<p>[12] 8btc.谁在控制比特币Core软件[EB/OL].[2019-07-28].</p>
+<p><a href="https://www.8btc.com/article/330348">https://www.8btc.com/article/330348</a></p>
+<p>8BTC. Who controls Bitcoin core software? [EB/OL].[2019-07-28].</p>
+<p><a href="https://www.8btc.com/article/330348">https://www.8btc.com/article/330348</a></p>
+<p>[13] 袁勇, 王飞跃. 区块链技术发展现状与展望[J]. 自动化学报, 2016, 42(4): 481-494</p>
+<p>YUAN Yong, WANG Feiyue. Blockchain: the state of the art and future trends[J]. Acta Automatica Sinica, 2016, 42(4): 481-494</p>
+<p>[14] Bonneau J, Miller A, Clark J, et al. SoK: research perspectives and challenges for bitcoin and cryptocurrencies[C]//2015 IEEE Symposium on Security and Privacy, May 17-21, 2015. San Jose, CA. New York, USA: IEEE, 2015</p>
+<p>[15]?<a href="https://genius.com/artists/Mihai-alisie">Mihai Alisie</a>,?<a href="https://genius.com/artists/Charles-hoskinson">Charles Hoskinson</a>.Ethereum:a next-generation smart contract and decentralized application platform[EB/OL].[2019-07-28]. https://genius.com/Ethereum-ethereum-whitepaper-annotated</p>
+<p>[16] Androulaki E , Barger A , Bortnikov V , et al. Hyperledger fabric: a distributed operating system for permissioned blockchains[EB/OL].[2019-07-28].</p>
+<p>https://arxiv.org/pdf/1801.10228.pdf</p>
+<p>[17] 袁勇, 倪晓春, 曾帅, 等. 区块链共识算法的发展现状与展望[J]. 自动化学报, 2018, 44(11): 2011-2022</p>
+<p>YUAN Yong, NI XiaoChun, ZENG Shuai, et al. Blockchain consensus algorithms: the state of the art and future trends[J]. Acta Automatica Sinica, 2018, 44(11): 2011-2022</p>
+<p>[18] Xiao Y, Zhang N, Lou W, et al. A survey of distributed consensus protocols for blockchain networks[J]. arXiv e-print, arXiv:1904.04098</p>
+<p>[19] Andrychowicz M, Dziembowski S. PoW-based distributed cryptography with No trusted setup[M]//Lecture Notes in Computer Science. Berlin, Heidelberg: Springer Berlin Heidelberg, 2015: 379-399. DOI:10.1007/978-3-662-48000-7_19</p>
+<p>[20] Proof of stake[EB/OL].[2018-4-04-11].https://en.bitcoin.it/wiki/Proof of Stake</p>
+<p>[21] Sousa, Joao, Bessani A , Vukolic, Marko. A byzantine fault-tolerant ordering service for the hyperledger fabric blockchain platform[J]. arXiv e-print, arXiv: 1709.06921</p>
+<p>[22] Sukhwani H, Martinez J M, Chang X L, et al. Performance modeling of PBFT consensus process for permissioned blockchain network (hyperledger fabric)[C]//2017 IEEE 36th Symposium on Reliable Distributed Systems (SRDS), September 26-29, 2017. Hong Kong, China. New York, USA: IEEE, 2017</p>
+<p>[23] Libra,Libra白皮书[EB/OL].[2019-07-28].</p>
+<p><a href="https://Libra.org/zh-CN/white-paper/#the-Libra-currency-and-reserve">https://Libra.org/zh-CN/white-paper/#the-Libra-currency-and-reserve</a></p>
+<p>Libra, Libra white paper [EB/OL].[2019-07-28].</p>
+<p><a href="https://Libra.org/zh-CN/white-paper/#the-Libra-currency-and-reserve">https://Libra.org/zh-CN/white-paper/#the-Libra-currency-and-reserve</a></p>
+<p>[24] Github,OMNI layer[EB/OL].[2019-07-28].https://github.com/OMNILayer/OMNIcore</p>
+<p>[25] Atzei N, Bartoletti M, Cimoli T. A survey of attacks on ethereum smart contracts (SoK)[M]//Lecture Notes in Computer Science. Berlin, Heidelberg: Springer Berlin Heidelberg, 2017: 164-186. DOI:10.1007/978-3-662-54455-6_8</p>
+<p>[26] 火币区块链研究院.合规基础设施系列（上）:稳定代币[EB/OL].[2019-07-28]. <a href="https://www.jianshu.com/p/3277d9cd58cb">https://www.jianshu.com/p/3277d9cd58cb</a></p>
+<p>HUOBI Research. Compliance Infrastructure Series (Part 1): Stable coins[EB/OL].[2019-07-28]. https://www.jianshu.com/p/3277d9cd58cb</p>
+<p>[27] tether.to.USDT[EB/OL].[2019-07-28].https://tether.to/</p>
+<p>[28] trusttoken.TUSD [EB/OL].[2019-07-28]. https://www.trusttoken.com/</p>
+<p>[29] PAXos.PAX[EB/OL].[2019-07-28].https://www.PAXos.com/PAX/</p>
+<p>[30] Gemini.GUSD[EB/OL].[2019-07-28].https://gemini.com/dollar/</p>
+<p>[31] digix.Digix[EB/OL].[2019-07-28].https://digix.global/dgd/</p>
+<p>[32] bitshares.bitUSD[EB/OL].[2019-07-28].https://bitshares.org/</p>
+<p>[33] MakerDAO.DAI[EB/OL].[2019-07-28].https://makerdao.com/zh-CN/</p>
+<p>[34] Havven.XHV[EB/OL].[2019-07-28].https://www.havenprotocol.com/</p>
+<p>[35] DUO Network.DUO Network Token(DUO) [EB/OL].[2019-07-28].</p>
+<p>https://duo.network/</p>
+<p>[36] Basis.Basis[EB/OL].[2019-07-28].https://www.basis.io/</p>
+<p>[37] Carbon. Carboncoin (CARBON) [EB/OL].[2019-07-28].https://carboncoin.cc/</p>
+<p>[38] Terra.Terra (LUNA)[EB/OL].[2019-07-28].https://terracoin.io/</p>
+<p>[39] Reserve.Reserve Rights (RSR) [EB/OL].[2019-07-28]. https://reserve.org/</p>
+<p>[40] Freeh Sporkin &amp; Sullivan.LLP[EB/OL].[2019-07-28].</p>
+<p>https://www.freehsporkinsullivan.com/</p>
+<p>[41] noblebank[EB/OL].[2019-07-28]. https://www.noblebank.pl/</p>
+<p>[42] statestreet [EB/OL].[2019-07-28]. http://www.statestreet.com/home.html</p>
+<p>[43] BPM LLP [EB/OL].[2019-07-28].https://www.bpmcpa.com/</p>
+<p>[44] fdic.Federal Deposit Insurance Corporation [EB/OL].[2019-07-28].</p>
+<p>https://www.fdic.gov/</p>
+<p>[45] withum [EB/OL].[2019-07-28].https://www.withum.com/</p>
+<p>[46] 高峰, 祝烈煌, 刘胜,等.区块链数字货币监管技术研究:以区块链稳定币为例[C]//金融科技青年论文选集(2018),北京, 2018</p>
+<p>GAO Feng,ZHU Liehuang,LIU Sheng,et al. A study on Blockchain Digital Currency Regulatory Technology –a case study of Stable Coins[C]. Intelligence Finance(2018),Beijing,2018</p>
+<p>[47] 李文红, 蒋则沈. 分布式账户、区块链和数字货币的发展与监管研究[J]. 金融监管研究, 2018(6): 1-12</p>
+<p>LI Wenhong, JIANG Zeshen. A study of the development and supervision of distributed ledger technology, blockchain and digital currencies[J]. Financial Regulation Research, 2018(6): 1-12</p>
+<p>[48] 祝烈煌, 高峰, 沈蒙, 等. 区块链隐私保护研究综述[J]. 计算机研究与发展, 2017, 54(10): 2170-2186</p>
+<p>ZHU Liehuang, GAO Feng, SHEN Meng, et al. Survey on privacy preserving techniques for blockchain technology[J]. Journal of Computer Research and Development, 2017, 54(10): 2170-2186</p>
+<p>[49] Reid F , Harrigan M . An analysis of anonymity in the bitcoin system[M]// <a href="https://link.springer.com/book/10.1007/978-1-4614-4139-7">Security and Privacy in Social Networks</a>. New York: Springer,2012:197-223</p>
+<p>[50] 高峰, 毛洪亮, 吴震, 等. 轻量级比特币交易溯源机制[J]. 计算机学报, 2018, 41(5): 989-1004.</p>
+<p>GAO Feng, MAO Hongliang, WU Zhen, et al. Lightweight transaction tracing technology for bitcoin[J]. Chinese Journal of Computers, 2018, 41(5): 989-1004</p>
+<p>?[51] Biryukov A, Khovratovich D, Pustogarov I. Deanonymisation of clients in bitcoin P2P network[C]//Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security - CCS '14, November 3-7, 2014. Scottsdale, Arizona, USA. New York, USA: ACM Press, 2014</p>
+<p>?[52] Meiklejohn S, Pomarole M, Jordan G, et al. A fistful of bitcoins[C]//Proceedings of the 2013 conference on Internet measurement conference - IMC '13, October 23-25, 2013. Barcelona, Spain. New York, USA: ACM Press, 2013</p>
+<p>[53] Monaco J V. Identifying Bitcoin users by transaction behavior[C]// SPIE SPIE Defense, Security and Sensing. Baltimore, USA, 2015:33-47.</p>
+<p>[54] Monero. A note on chain reactions in traceability in cryptoNote 2.0 [EB/OL].[2019-07-28]. https://web.getmonero.org/resources/research-lab/pubs/MRL-0001.pdf</p>
+<p>?[55] Miers I, Garman C, Green M, et al. Zerocoin: anonymous distributed E-cash from bitcoin[C]//2013 IEEE Symposium on Security and Privacy, May 19-22, 2013. Berkeley, CA. New York, USA: IEEE, 2013</p>
+<p>?[56] Sasson E B, Chiesa A, Garman C, et al. Zerocash: decentralized anonymous payments from bitcoin[C]//2014 IEEE Symposium on Security and Privacy, May 18-21, 2014. San Jose, CA. New York, USA: IEEE, 2014</p>
+<p>[57] 喻辉, 张宗洋, 刘建伟. 比特币区块链扩容技术研究[J]. 计算机研究与发展, 2017, 54(10): 2390-2403.</p>
+<p>YU Hui, ZHANG Zongyang, LIU Jianwei. Research on scaling technology of bitcoin blockchain[J]. Journal of Computer Research and Development, 2017, 54(10): 2390-2403</p>
+<p>[58] Li C , Li P , Zhou D , et al. Scaling nakamoto consensus to thousands of transactions per second[J]. arXiv e-print, arXiv: 1805.03870</p>
+<p>?[59] Gilad Y, Hemo R, Micali S,et al. Algorand: scaling byzantine agreements for cryptocurrencies [EB/OL].[2018-04-10].http://eprint.iacr.org/2017/454</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[68]大咖论道之畅谈区块链“纵与横” -内容整理]]></title>
+        <id>https://flfqbit.github.io/post/68da-ka-lun-dao-zhi-chang-tan-qu-kuai-lian-zong-yu-heng-nei-rong-zheng-li/</id>
+        <link href="https://flfqbit.github.io/post/68da-ka-lun-dao-zhi-chang-tan-qu-kuai-lian-zong-yu-heng-nei-rong-zheng-li/">
+        </link>
+        <updated>2020-02-22T16:05:58.000Z</updated>
+        <content type="html"><![CDATA[<p><a href="http://www.sohu.com/a/366736654_451991">http://www.sohu.com/a/366736654_451991</a><br>
+大咖论道之畅谈区块链“纵与横”</p>
+<blockquote>
+<p>1月13日，由普华集团主办的“执掌财富 共赢未来|2020普华数字经济领袖峰会”进入最后一天议程。普华集团董事长翟山鹰先生，赛迪区块链研究院院长、中国电子信息产业发展研究院研究员刘权先生，国家信息中心中经网管理中心副主任朱幼平先生，北京理工大学计算机学院副院长、中国计算机协会（CCF）秘书长祝烈煌先生，中国传媒大学计算机学院教授姜正涛先生，CSDN副总裁、数字资产研究院副院长孟岩先生，通证思维实验室CTO王玮先生，普华集团副总裁郭东风先生等众多行业专家交流论道，理论和观点在现场碰撞与交融，畅谈区块链的“纵与横”。</p>
+</blockquote>
+<blockquote>
+<p>祝烈煌先生表示：DCEP作为法定数字货币有三大关键点：首先，DCEP是一种法定稳定币，无监管的数字货币风险很大，央行会主导设计自己的数字货币，在设计之初就留好监管接口；第二是隐私安全问题，在当前证券化体系下，企业的数据只会被银行、相关第三方审计机构等共享，而在区块链时代，数据会被大家共享，因此现有的区块链技术还存在隐私的安全隐患亟待解决；最后是国际化问题，要促进DCEP在国家和国家之间不同法定数字货币的交互性操作，实现法定数字币的国际化。</p>
+</blockquote>
+<p>央行研发的法定数字货币本质上是区块链稳定代币的一种衍生和发展。相比比特币等典型的区块链加密货币，稳定代币不仅具备了区块链技术去中介信任、安全可靠的核心优势，而且具备与现实资产稳定挂钩的特点。这使得法定数字货币具备了解决现实世界资产流动问题的潜力，能够减少中介环节、提高流动效率，有望成为推动金融行业改革的核心技术。</p>
+<p>法定数字货币的核心技术来源于区块链技术，受限于当前区块链技术、监管机制的限制，法定数字货币系统还面临众多待解决问题。</p>
+<h1 id="1-监管和隐私保护的矛盾">1 监管和隐私保护的矛盾</h1>
+<p>法定数字货币在实际应用过程中间面临监管需求和隐私保护需求的矛盾。<br>
+一方面，支持监管是金融行业各项业务得以正常进行的基础条件。特别是在现有的稳定代币涉及的跨境支付、资金转移领域，目前已经有多种监管需求。例如KYC政策（了解你的客户），反洗钱政策等。然而，由于法定数字货币将采用的区块链技术与传统的金融IT架构不一致，现有的监管机制很难采取有效监管。例如，目前针对区块链数字货币的监管机制措施主要是要求数字货币交易所等区块链服务商对用户信息进行备案。这种方法对恶意用户的防控能力较弱，恶意用户可以通过其他国家的交易所及假身份绕过监管。在交易追踪、身份识别、交易管制等监管领域，目前尚缺乏针对区块链数字货币的有效监管机制。<br>
+另一方面，区块链技术采用的账本公开的机制，虽然能够提升系统公信力，但是带来了显著的隐私泄漏隐患。例如，比特币系统建议用户采用频繁更换区块链地址（区块链系统中的账号）的方式增强匿名性，但是现有的研究表明比特币地址的匿名性是一种“假匿名”[48-49]，攻击者可以通过网络溯源[50-51]、交易数据分析[52-53]等多种方式推测比特币地址背后的用户身份信息。目前出现了众多聚焦隐私保护的区块链系统，例如门罗币（Monero）[54]、零币（Zcash）[55-56]。通过采用环签名、零知识证明等密码学技术，这些系统能够在满足分布式共识机制的条件下，隐藏区块链交易的发送地址、接收地址和交易金额。但是，这种高度隐藏的技术将进一步增加监管难度。目前门罗币已经代替比特币，成为犯罪活动首选的支付方式。<br>
+针对对法定数字货币，支持监管和保护用户隐私都是其必须解决的问题。如何平衡监管需求和隐私保护需求，为合法的监管机构提供数据处理的权限，同时增加攻击者分析数据的难度，是必须解决的课题。</p>
+<h1 id="2-高性能和高公信力的矛盾">2 高性能和高公信力的矛盾</h1>
+<p>USDT、PAX等稳定代币系统建立在比特币、以太坊等非许可链网络之上，任何人都可以自由加入网络，参与数据的维护和交易的验证工作。这种机制充分实现了去中心化的思想，具有较高的公信力。但是，这种机制也导致系统的性能很难提高，难以满足现实金融业务的性能需求。当前公链系统虽然推出了众多提高性能的机制，包括增大区块容量，降低出块时间。但是这些方案对区块链系统交易性能提升的幅度有限，而且有可能增加中心化的风险[57]。<br>
+Facebook的Libra稳定代币系统建立在许可链网络之上，通过采用高可信、高性能的服务器组建小规模的分布式网络，许可链的响应速度和交易性能得到显著提高。但是，这种机制弱化了去中心化的思想，不能完全实现区块链技术去中心化信任的潜力。而且，当前的许可链系统的性能虽然远超过公链系统，但是相对于传统金融系统的性能仍有较大差距。例如，Libra稳定代币系统底层的许可链网络预计能达到每秒1 000笔交易，而visa、MasterCard等传统金融系统的交易性能通常能够达到万笔交易每秒。因此，许可链系统很难通过继续降低去中心化程度的方式来提高性能指标。<br>
+未来随着稳定代币系统应用到业务量更加复杂的行业，这种矛盾将更为突出。例如，Facebook的Libra项目计划向遍及全球的20亿用户提供金融服务，这种金融场景不仅需要巨大的性能支撑，也需要一套能够满足全世界范围不同用户的信任需求。Libra项目采用了渐进式的发展方式，目前采用了基于BFT协议的改进版共识协议，首先实现大约100个节点的许可链网络，然后随着技术的革新，在逐渐过渡到非许可链网络。</p>
+<p>针对对法定数字货币，高性能和高公信力是其得以推广应用、在全世界范围内与其他国家、公司的稳定币竞争的核心优势，如何在性能和公信力方面得到平衡，是必须解决的课题。<br>
+目前，在非许可链共识机制上，已经出现了一些兼具高性能和去中心化的技术，包括DAG[58], AGLAND[59]。通过借鉴区块链领域最新的技术发展方向，法定数字货币一定能在性能和公信力方面取得突破，逐渐满足实用化需求。</p>
 ]]></content>
     </entry>
 </feed>

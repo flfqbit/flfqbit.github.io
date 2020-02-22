@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="记录区块链行业重点文章，前沿技术">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>[50]区块链稳定币-监管技术 | 飞来飞去-区块链学习笔记</title>
+<link href="https://flfqbit.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.js"></script>
+
+  </head>
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" alt="logo" style="display:inline-block;" src="https://flfqbit.github.io/images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+
+          <h1 title="飞来飞去-区块链学习笔记" class="weaklink"><a  href="/">飞来飞去-区块链学习笔记</a>
+
+          </h1>
+	  
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+<div class="content">
+<div class="post_page" >
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>[50]区块链稳定币-监管技术</a>
+    </h2>
+  </div>
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+  <div class="post_details">
+    <div class="info"><i class="fa fa-calendar"></i>
+<span class="date_info">2020-02-22</span>
+<i class="fa fa-eye"></i>
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+</span>
+<i class="fa fa-anchor"></i>
+<span style="margin-right:15px">
+12696字
+</span>
+<i class="fa fa-clock-o"></i>
+<span style="margin-right:15px">
+44 min read
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</span>
+</div>
+  </div>
+
+    <div class="post_content markdown">
+	
+
+	
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><p>近期，facebook稳定币项目Libra，再次将区块链技术暴露在大众视野。在2017年空气币崩盘导致的区块链寒冬的背景下,这一事件给监管机构、区块链创业者、普通民众带来了巨大的心理震动。<br>
+<strong>（1）数字货币到底有无价值？</strong><br>
+<strong>（2）无币区块链的提法是取其精华去其糟粕，还是买椟还珠的现实翻版？</strong><br>
+<strong>（3）区块链技术能否脱离代币，独自发展？</strong></p>
+<p>无论如何，Libra项目令区块链数字货币再次吸引了各方的关注。这对于数字货币研究人员是一个好机会。<br>
+恰逢其时，作者在2017年发表的文章“区块链数字货币监管技术研究-以区块链稳定币为例”在《金融科技青年论文选集(2018)》出版，可以作为研究者的入门材料。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-c1017369c5492665.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图 金融科技青年论文选集(2018)" loading="lazy"><br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-dd1ad56323a2939c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图 区块链数字货币监管技术研究-以区块链稳定币为例" loading="lazy"></p>
+<p>这里，摘录本篇文章。</p>
+<hr>
+<h1 id="区块链数字货币监管技术研究-以区块链稳定币为例">区块链数字货币监管技术研究-以区块链稳定币为例</h1>
+<h2 id="摘要">摘要：</h2>
+<p>基于区块链技术的稳定币是数字货币领域中的热点研究对象。由于稳定币既具备区块链技术去中心、数据可信的优点，又能够和现实资产实现稳定关联，被认为是连接虚拟资产和现实资产的桥梁，有望促进区块链技术落地。另一方面，稳定币和现实资产关联的属性不仅使其很容易成为洗钱、勒索病毒等犯罪活动的资金渠道，而且可能导致现实资产通过稳定币实现跨越国境的、无监管的转移，对金融秩序造成严重危害。因此，非常有必要研究针对稳定币的监管机制。本文将首先介绍稳定币的基本特征，分析稳定币面临的监管需求和挑战。然后将提出一种面向稳定币全周期的监管框架。最后详细介绍稳定币监管的核心机制。本文研究内容不仅有利于推进针对稳定币的有效监管，而且对其他区块链数字货币的监管工作也有参考作用。<br>
+##关键词：<br>
+区块链；数字货币；稳定币；监管技术</p>
+<h1 id="一-绪论">一、绪论</h1>
+<p>基于区块链技术的数字货币发展迅速，在国内外引起重大影响。截止到2018年10月，数字货币市场市值超过2000亿美元，每日交易金额超过96亿美元[1]。“数字稳定代币”（Stable Coin，也称稳定币）是使用区块链技术实现的一种特殊数字货币，通过和法币（或其他现实资产）保持相对稳定的价值关系，能够被用于作为法币和数字货币以及数字货币之间进行兑换的中介物，有效降低由于市场波动带来的交易风险，简化数字货币之间的兑换过程，在数字货币领域具有重要作用。</p>
+<p>然而，稳定币的出现使数字货币的负面作用越发严重。一方面，稳定币不仅继承了数字货币账号匿名、交易过程去中心的特点，而且还能够和现实资产稳定兑换，这为洗钱、病毒勒索等犯罪活动提供了一条安全稳定的资金渠道，促进了地下黑市的运行。另一方面，稳定币与特定法币的绑定，使跨国境的资金转移变得更为简单，将有可能损害各国的金融主权，影响金融市场的稳定。因此，非常有必要研究区块链稳定币的技术特征，设计可行的监管机制，控制稳定币及其它数字货币带来的危害。</p>
+<p>稳定币在底层架构上依托于区块链技术，使其具有去中心的特点，很多传统的监管机制无法试用。但是，由于稳定币项目为了维持价格稳定属性，对公信力的需求很高，会主动公布大量的项目信息，甚至会主动接受监管，这给有效监管带来了机遇。如果能够充分利用稳定币的技术特点和区块链技术具有的突出优点，将能够避免传统监管中面临的很多问题，获得更强的监管能力。</p>
+<p>通过研究针对稳定币的监管机制，不仅有助于控制稳定币带来的风险，也将为其它数字货币监管提供有益参考。本文将首先研究稳定币的监管需求、挑战和机遇，然后提出一种针对稳定币的监管框架，最后详细介绍稳定币监管的核心机制。</p>
+<h1 id="二-背景知识">二、背景知识</h1>
+<h2 id="一区块链技术核心优势">（一）区块链技术核心优势</h2>
+<p>区块链技术是目前大多数数字货币的底层技术，通过结合P2P网络、共识机制、密码学等已有技术，能够在分布式网络中实现一致性的数据同步，获得去中介的信任，具备数据不可篡改、不可伪造、公开透明的优良特征，能够解决中心化机制面临的很多问题[2-3]。</p>
+<p>区块链技术的优点：<br>
+?	数据公开且不可篡改，具有较强的可靠性。区块链技术采用块链结构、默克尔树等机制保证数据完整性，并采用分布式冗余存储的模式防止数据篡改。一旦数据写入区块链账本，即使网络中个别节点遭到攻击，也无法破坏数据的可靠性。<br>
+?	数据记录过程采用数字签名技术，具有不可否认的特点。区块链中每一笔交易都包含交易发起者的数字签名，这使得区块链上的数据不能够伪造和抵赖，有利于实现可信数据审计。<br>
+?	数据操作过程公开透明，具有较高的公信力。区块链系统中的数据操作过程是公开透明的，任意数据操作都将通过协议规定的方式在区块链网络中传播，并被所有节点验证和确认。只有经过大多数节点确认的操作才能够被认可，避免了少数节点的恶意操作。</p>
+<h2 id="二区块链数字货币">（二）区块链数字货币</h2>
+<p>数字货币是区块链技术第一个成熟应用，发展至今，基于区块链技术的数字货币已经产生了很多分类。从发行方式上分类，主要分为原生币和附属代币。原生币是指在区块链系统的共识过程中产生，在区块链系统的运行过程中使用的数字货币，例如比特币[4]和以太币[5]。附属代币是指依附在某一种区块链系统，并利用区块链交易的存储空间创建和使用的代币，例如比特币中的彩色币，以太坊中基于智能合约的ERC20代币（ERC20是以太坊中针对数字货币的标准，目前基于ERC20的代币有2000多种，占数字货币的主要地位）。数字货币实现方式各异，种类繁多，但是具有统一的特征，都能够在区块链系统内自由交易，且交易过程公开透明。</p>
+<p>“稳定币”是一种具有价格稳定属性的基于区块链技术的数字货币，目前大多数是以附属代币的形式出现。稳定币继承了区块链技术数据透明、去中心信任的优点，能与其他区块链数字货币进行便捷兑换。稳定币具备价格稳定的属性，能够与现实世界的资产保持较为稳定的关系，避免常规数字货币剧烈的价格波动，因此经常被用于作为虚拟资产和现实资产之间的桥梁。</p>
+<h1 id="三-稳定币基本特征">三、稳定币基本特征</h1>
+<h2 id="一稳定币发展情况">（一）稳定币发展情况</h2>
+<p>“稳定币”在区块链数字货币领域有重要作用，能够有效降低交易风险，简化交易过程。首先，数字货币市场目前市值超过2000亿美元，有1993种有价值数字货币，存在频繁的兑换需求。利用稳定币作为价值媒介，能够有效降低由于市场波动带来的交易风险。其次 ，由于法币的特殊性，数字货币在和法币兑换时将受到多种监管政策的管理，兑换效率很低。稳定币既具备法币稳定的价值特征，又能够与数字货币便捷兑换，可以在一定程度上取代法币的避险功能，简化交易过程。</p>
+<p>由于稳定币具备的优良属性，稳定币被认为是区块链行业最重要的基础设施。数字货币交易所创始人李林认为如同互联网支付对互联网行业的重要性一样，稳定币将极大的促进区块链技术及区块链数字货币的发展。王华庆和李良松[6]认为，稳定币的发展有可能改变现有的金融中介体系，冲击中央银行制度，影响国际货币体系，影响各国金融主权。姚前和孙浩[7]认为虽然稳定币目前尚不足以对金融稳定性产生影响，但是稳定代币产品的流通总市值在稳步增长，产品种类不断增加，产品创新活跃度高，流转速度可能快速增加，有可能对宏观金融管理造成影响。</p>
+<p>稳定币是区块链数字货币快速发展过程的必然产物。目前已经产生了大量基于不同锚定物、不同信任机制、不同技术架构的稳定币。表1介绍部分主流稳定币的情况。</p>
+<p>表1 主流稳定币数据</p>
+<table>
+<thead>
+<tr>
+<th>稳定币名称</th>
+<th>市值（美元）</th>
+<th>锚定物</th>
+<th>底层区块链</th>
+<th>价格稳定机制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USDT[8]</td>
+<td>19.1亿</td>
+<td>美元</td>
+<td>比特币</td>
+<td>法币抵押</td>
+</tr>
+<tr>
+<td>TUSD[9]</td>
+<td>1.2亿</td>
+<td>美元</td>
+<td>以太坊</td>
+<td>法币抵押</td>
+</tr>
+<tr>
+<td>DigixDAO[10]</td>
+<td>0.7亿</td>
+<td>黄金</td>
+<td>以太坊</td>
+<td>实物抵押</td>
+</tr>
+<tr>
+<td>DAI[11]</td>
+<td>0.6亿</td>
+<td>美元</td>
+<td>以太坊</td>
+<td>数字资产抵押</td>
+</tr>
+<tr>
+<td>Bitcny[12]</td>
+<td>0.2亿</td>
+<td>人民币</td>
+<td>比特股</td>
+<td>数字资产抵押</td>
+</tr>
+<tr>
+<td>GUSD[13]</td>
+<td>0.1亿</td>
+<td>美元</td>
+<td>以太坊</td>
+<td>法币抵押</td>
+</tr>
+<tr>
+<td>PAX[14]</td>
+<td>0.1亿</td>
+<td>美元</td>
+<td>以太坊</td>
+<td>法币抵押</td>
+</tr>
+<tr>
+<td>STASIS EURS[15]</td>
+<td>0.1亿</td>
+<td>欧元</td>
+<td>以太坊</td>
+<td>法币抵押</td>
+</tr>
+<tr>
+<td>Nubits[16]</td>
+<td>0.1亿</td>
+<td>美元</td>
+<td>自行开发</td>
+<td>算法央行</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二稳定币系统架构">（二）稳定币系统架构</h2>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/4794066-9f7d8ee9daf26b96.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1 稳定币系统架构" loading="lazy"></figure>
+<p>稳定币是一种基于区块链技术的特殊数字货币。如图1所示，稳定币在系统架构层面分为数据层、逻辑层和界面层，分别对应底层区块链节点、稳定币管理员和稳定币用户三种重要角色，共同协助实现稳定币的主要功能，包括代币生成、代币交易和代币监管。</p>
+<p>数据层是稳定币可靠性的保证，负责存储稳定币的操作记录。通过将所有的操作记录保存在公开、可信的区块链账本中，从根本上保证了稳定币的代币生成、代币交易过程是透明可信的，为代币监管奠定了可信基础。目前稳定币主要是建立在知名的区块链公链上，例如比特币和以太坊。比特币是目前最成功的区块链公链，具有先发优势，基于比特币开发的USDT稳定币占据了90%以上的稳定币市场。以太坊是目前市值第二的区块链公链，由于其支持图灵完备的智能合约，能够开发更复杂的功能，因此目前大部分稳定币都是基于以太坊开发（例如，GUTD,PAX,DAI）。未来随着其他公链的发展，稳定币也可能向其它公链迁移。值得注意的是目前各国正在推进的法定数据货币通常是基于自行开发的底层区块链，由于政府先天的公信力，政府背景的公链也有可能成为稳定币的底层公链。</p>
+<p>逻辑层负责实现稳定币的核心业务，包括：代币生成、代币交易和代币监管。由于稳定币的操作记录存储在区块链账本，因此稳定币逻辑层的主要功能是根据触发的指令（例如，稳定币管理员发起的代币增发、销毁、管理等指令）构造针对性的操作记录，并将操作记录写入区块链账本。Omni协议[17]和智能合约协议[18]是稳定币逻辑层通常使用的编程语言。Omni协议主要用在比特币网络中，通过在比特币交易中的op_return参数上构造特殊数据，记录代币发行、代币交易等操作数据。智能合约协议是以太坊、EOS等新一代区块链技术的核心组件。相比传统的脚本技术，智能合约协议具有图灵完备的特性，能够实现更复杂的交易功能和监管功能。</p>
+<p>界面层是用户使用稳定币的操作接口，通常包括专用界面、通用界面和针对交易所等机构的接口。专用界面是指针对稳定币项目专门开发的客户端程序。例如，基于omni协议的USDT稳定币需要使用专用程序（omnicore程序）实现稳定币的相关功能。通用界面是指兼容多种稳定币应用和其他应用的客户端程序。例如基于以太坊智能合约开发的稳定币GUSD不仅能够运行在以太坊官方开发的wallet、mist客户端中，还能够运行在第三方开发的imtoken[19]、metamask[20]、钱包圈APP[21]等程序中。此外，稳定币通常还需要实现针对交易所等机构的接口程序，以便实现针对普通用户的代币购买、代币兑换等功能。</p>
+<h2 id="三稳定币价格稳定机制">（三）稳定币价格稳定机制</h2>
+<p>通过采用三层架构，稳定币能够实现代币发行、代币交易等数字货币通用的功能。相比普通的数字货币，稳定币的独特优点是价格的稳定性。如何保证稳定币的价格趋于稳定，是稳定币的核心机制。常用的价格稳定机制可以分为3类，如图2所示。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-c26ccd37c025f680.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2 稳定币价格稳定机制" loading="lazy"></p>
+<p>法币储备抵押模式是指利用法币储备直接为代币价格背书。发行方根据账户中存储的美元数量发行代币，并承诺每一个代币可以赎回1个美元。这种模式下，发行方通常会引入合法法币托管机构、审计机构、甚至是政府监督机构为发行方的承诺提供信任背书。此模式的发展趋势是不断寻找更有公信力的组织机构和运作模式来为稳定币的价格提供担保，可以预测随着稳定币市场的逐渐扩大，更多在传统金融领域具有重要地位的组织机构会加入到此领域，最终产生由国家提供信任的法定稳定币。</p>
+<p>数字资产抵押模式是指利用数字资产间接为代币价格背书。发行方根据抵押的数字资产发行代币，并通过超额抵押以及强制清算等风控机制保证每一个代币对应1美元的价值。当数字资产的价格在临界值内变化时，稳定币的价格将保持稳定。例如，MakerDao发行的稳定币为 DAI，其兑换比例为 4：1，即兑换价值 100 美元的 DAI 稳定币需要质押 400 美元的 ETH。此时的临界值是25%，只要ETH 价格没有跌到原价值的25%，稳定币系统都可以通过将抵押物清仓，保证稳定币的价值不受损失。但是，目前数字资产仍处于蛮荒阶段，资产价值的变化非常剧烈，在这种背景下，数字资产抵押模式很难维持价格稳定。</p>
+<p>算法央行模式是指利用算法机制为代币价格背书。项目方在发行代币时没有任何抵押物，而是根据市场的需求来控制发行代币的数量，并通过负反馈机制调节稳定币供给数量使稳定币价格与法币锚定。稳定币的初衷是为了缓解由于用户信心频繁变动导致的数字货币价格剧烈变动的问题。在此模式下，利用基于算法的稳定币来解决由于用户不信任算法产生的价格波动问题，似乎是一个悖论。</p>
+<p>稳定币价格调控机制是稳定币的核心特征，与稳定币系统架构和监管机制有密切关系。目前占主流的监管机制是基于法币抵押的模式，本文将重点围绕此类模式研究监管技术，对其他类型的稳定币也有参考意义。</p>
+<h1 id="四-稳定币监管需求和挑战">四、稳定币监管需求和挑战</h1>
+<h2 id="一监管需求">（一）监管需求</h2>
+<p>稳定币通过和现实资产进行绑定，成为了数字货币市场和现实资产的桥梁，这种特性使稳定币面临很多危机。一方面稳定币能够实现更便捷、更稳定的价值转移，很容易成为犯罪活动的资金渠道。另一方面，稳定币具备的跨国自由流动的特点，使得被稳定币绑定的法币成为了跨越国界的超主权法币，将对各国的金融主权造成损害。因此，稳定币的继续发展必须满足现实的监管需求。</p>
+<p>首先，稳定币必须满足对价值稳定的监管需求。稳定币的核心价值在于价值的稳定性，如果这种稳定性不能保证，稳定币将失去价值媒介的作用，给数字货币市场、甚至是现实金融市场造成危害。</p>
+<p>其次，稳定币必须满足合规性的监管需求。为了避免稳定币成为洗钱、违法资产转移以及其他犯罪活动的资金渠道，稳定币必须满足合规性的监管需求（例如KYC（用户背景调查）政策、AML（反洗钱）政策等），使监管方能够对稳定币系统内的违法违规行为进行有效管控。</p>
+<h2 id="二挑战和机遇">（二）挑战和机遇</h2>
+<p>相对于现实资产，基于区块链技术的数字货币很难受到单一机构的有效监管，一直被广泛应用在黑市交易、洗钱、病毒勒索等犯罪领域。这种缺乏监管的特性不仅使数字货币在众多国家成为被严厉监管的对象，也遏制了区块链技术的推广。区块链数字货币的监管难题主要是由于区块链的去中心化特征导致，包括去中心化的账号注册机制、去中心化操作机制和去中心化系统运维。图3介绍了区块链数字货币的技术特点以及导致的监管难题。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-e540e35a5fb2e654.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3 数字货币面临的监管难题" loading="lazy"></p>
+<p>去中心化账号注册机制是指区块链中账号的注册不需要实名信息，任意用户都可以在无需身份信息的条件下，利用开源算法自由创建无限个账号，并在全球范围内使用，不受国界限制。去中心化注册机制使得监管方很难掌握账号的身份信息和归属信息，使KYC（了解用户身份）政策、AML（反洗钱）政策等监管措施缺乏有效数据。</p>
+<p>去中心化操作机制是指区块链系统中用户的操作只要满足协议规范，就可以在分布式网络中自动运行，不存在中心化管理机构。在此基础上，可以实现不受监管的资金跨国境转移，不受监管的程序部署和运行（例如，在区块链上发行数字货币），不受监管的程序访问（例如，用户可以在全球范围内任意访问数字货币）。去中心化操作机制使得数字货币项目方成为现代社会中逐水而居的游牧民族，可以通过将项目方甚至是项目团队成员迁移到世界上监管薄弱的地区来规避监管。</p>
+<p>去中心化系统运维是指区块链底层基础设施是基于分布式共识自发维护的，监管方很难找到具体的监管对象。首先，区块链网络依赖的核心程序虽然是由项目核心团队开发和发布，但是用户可以根据自己的意愿选择是否支持软件更新。当核心团队不能代表社区共识时，会出现分叉现象产生新的开发团队。其次，区块链网络中的基础节点是由分布在全球的自愿者自发维护的，避免了单一机构、单一地区出现问题导致区块链网络的崩溃。以上特点使得监管机构很难找到单一的主体作为监管对象。</p>
+<p>基于数字货币技术的稳定币虽然也具有上述监管难题，但是由于稳定币必须维持价格稳定，其对公信力具有更高的需求。为了使普通用户认可稳定币的价值，提升稳定币的市场信心，相对其他数字货币项目，稳定币项目必须公开更多内容，甚至主动接受监管。这种特点为针对稳定币的有效监管带来了重要机遇。</p>
+<p>首先，为了获取信任，稳定币的发行方更有意愿公开自己的身份，这使得监管方能够直接找到责任人。大多数数字货币的发行方不需要暴露在真实世界的身份，有些甚至是以匿名形式出现（例如比特币的创始人中本聪）。而稳定币项目的发行方为了获得更多的信任，不仅会以注册公司的形式获得合理法律身份，甚至会申请政府的批准，成为合法的服务提供商。例如，稳定币GUSD的发行方Gemini公司是在美国纽约州获得许可的数字货币交易所，并获得纽约金融服务局（NYSDF）批准，发行接受政府监管的稳定币。一旦稳定币的发行方暴露了在真实世界的法律身份，所在地的监管机构就可以对发行方提出监管政策，使发行方在设计稳定币机制时就考虑监管需求。</p>
+<p>其次，虽然稳定币的账号注册和交易过程是去中心化的，但是稳定币的运行周期中仍然存在一些中心化的环节，监管方可以针对这些中心化环节开展监管，实现监管目标。以GUSD稳定币为例，这种稳定币建立在以太坊智能合约之上，账号创建过程和代币交易过程不需要接受任何第三方的监管。然而，GUSD代币的产生过程和销毁过程是由中心化的Gemini公司负责，凡是通过Gemini公司购买和出售GUSD稳定币的用户都需要实名注册账号，并进行严格的身份审查和资金审查。由于GUSD的生产和销毁过程是稳定币系统中涉及法币资产的总入口和总出口，对这两个过程进行监管，即可覆盖全部的稳定币交易过程。</p>
+<p>最后，虽然稳定币是运行在去中心化的区块链网络中，但是由于稳定币对信任的强烈需求，未来稳定币依赖来的区块链基础设施可能会根据监管需求进行调整。在现有主流的区块链公链中（例如比特币、以太坊），区块链核心程序是根据社区共识修改完善的，任何一方都不能擅自修改核心程序，这是区块链网络很难受到单一监管方控制的主要原因。但是，随着区块链逐渐从极客技术走向更广阔的应用场景，为了促进区块链项目在竞争中获得优势，代表区块链社区主要利益的共识有可能偏向监管，甚至主动在核心代码中添加支持监管的模块。例如，阿里巴巴在美国专利局提交了一份专利，使区块链系统能够接受行政干预，当智能合约出现安全问题或者攻击事件时，受政府机构掌控的特殊账号可以通过发送干预指令，是区块链系统中的共识节点拒绝验证特定交易，从而达到撤销不安全操作、锁定涉嫌犯罪账号的监管目的[22]。</p>
+<h1 id="五-稳定币监管框架">五、稳定币监管框架</h1>
+<p>有效监管是稳定币推广发展的前提，也有利于维持价格稳定。通过分析稳定币的业务特征以及底层区块链的技术特征，我们设计一套全流程监管框架，能够针对稳定币项目开展全面、实时、有效的监管。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-9833cc98081e0534.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4 稳定币监管框架" loading="lazy"></p>
+<p>如图4所示，监管流程分为3个阶段：<br>
+?	事前审核：指稳定币项目正式运行前需要得到监管机构的审核。通过审核的项目将在安全性、可行性、稳健性方面得到基本保证，同时也能够提升项目的公信力。<br>
+?	事中监控和干预：指稳定币在运行期间，针对稳定币交易的实时监控和针对违规操作的实时干预。事中监控能够最大限度的避免违规事件的发生，保证稳定币项目健康、合规运行。<br>
+?	事后审计和处理：指针对稳定币运行状况定期进行的审核以及相应的处理机制。事后审计能够有效约束项目方的行为、及时发现和处理不合规的操作，最大程度保证投资人的利益。持续有效的事后审计是稳定币项目长久运行的关键保障因素。</p>
+<h2 id="一事前审核">（一）事前审核</h2>
+<p>事前审核的主要目的是保证稳定币项目在设计层面具备健康运行的基础条件。通过审核项目方资质，能够了解项目团队在人力、技术以及合规性方面的能力，这是项目顺利进行的前提条件。通过审核白皮书，可以了解项目的运行模式、审计模式和监管模式，这些内容体现了项目的核心运行机制，能够用于检验方案是否具备可行性。通过审核项目代码，能够了解项目方是否按照白皮书的设计实现了预期功能，同时也能够检测代码是否存在安全漏洞，提升项目的健壮性。</p>
+<h2 id="二事中监控和干预">（二）事中监控和干预</h2>
+<p>事中监控和干预是指在稳定币项目运行期间，通过实时监控及时发现异常交易，并及时阻止恶意操作。<br>
+实时监控是进行干预的前提条件。通过监控供应量的变化，能够掌握稳定币的市场变化情况，为其他监管措施提供依据。通过监测涉嫌犯罪活动的特殊交易和特殊账号，能够给监管机构提供数据预警服务，使监管机构能够及时处理各种违法、违规的交易活动。<br>
+稳定币中的干预机制是指项目管理员或者指定的监管机构能够对稳定币的运行状态进行干预操作。在普通的数字货币交易中（例如比特币、以太币），用户创建的交易无需审批，即可被矿工节点验证和写入区块。而稳定币项目可以在代码中设计针对交易的审批机制，阻止非法交易被确认。即使非法交易在检查时未被发现，已经发出到区块链网络，监管方也可以利用区块链特定技术（例如，手续费攻击技术，分叉技术）将已经发出的非法交易进行撤销。此外，稳定币项目还可以设置更加多样化的管理功能，以便应对各种突发事件。常见管理功能包括：暂停稳定币合约，锁定特定账号，销毁代币等。</p>
+<h2 id="三事后审计和处理">（三）事后审计和处理</h2>
+<p>事后审计是指非实时的、针对历史数据的合规审计和违规处理机制。事后审计可以分为3个阶段：数据采集、数据审计和违规处理。数据采集是指将稳定币运行过程中链上、链下的重要数据采集到第三方可信存储区域，作为日后审计、处理的原始数据。数据审计是指通过综合分析链上、链下的数据，深入了解稳定币项目运行的情况，包括：稳定币的供应量与储备价值是否匹配？是否具有有效的稳定币兑换机制？项目方是否遵循白皮书中制定的各项承诺？稳定币系统中的交易是否满足各项监管需求。违规处理是指监管方根据相关法律法规对违规行为进行处理。通过采用通知、告警、处罚等方式，督促项目方合规运营。事后审计和处理机制是对稳定币项目健康运行的额外保障，也是完善监管机制，提升监管效果的重要途径。</p>
+<h1 id="六-稳定币监管核心机制">六、稳定币监管核心机制</h1>
+<p>稳定币项目在底层架构上采用区块链技术实现，在价值属性上又和现实世界密切关联，这种特殊结构使其兼具了区块链数字货币和现实金融的优势。如果监管机构对这些优势善加利用，有可能避免传统金融监管面临的问题，显著提升监管效果。首先，稳定币系统建立在区块链技术之上，所有针对稳定币系统的交易数据和操作数据都将公开、可靠的存储，任意监管机构和普通投资者都可以获得完整的原始数据进行审计和分析，能够避免传统监管中面临的数据窜改、数据伪造的问题。其次，虽然稳定币建立在去中心的区块链系统之上，给传统基于中心机构的监管方式增加难度，但是由于稳定币项目对公信力的需求非常高，有可能主动接受第三方监管。在这种背景下，通过充分利用区块链技术特点，有可能在去中心化网络中获得类似中心化的管理能力，实现从全局到微观的违规处理机制。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-31540ce9ee54ef02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图5稳定币监管核心机制" loading="lazy"></p>
+<p>图5介绍了针对稳定币架构特点而设计的多维度监测机制和违规处理机制。通过实现基于可信数据的多维度监测，监管机构能够清晰、全面的获得稳定币系统的各项相关数据，从而能够准确了解稳定币的运行状态、及时发现稳定币项目存在的问题，为开展针对性管理提供异常预警及数据支撑。通过实现基于透明操作过程的违规处理机制，监管方可以从项目方现实实体、稳定币核心程序和区块链基础设施三个层面进行间接或直接管理，具备从全局范围的项目暂停、资金冻结到微观层面的账号锁定、交易控制等多种管理权限，能够实时处理各种违规操作，保障稳定币项目健康运行。</p>
+<h2 id="一基于可信数据的多维监测机制">（一）基于可信数据的多维监测机制</h2>
+<p>稳定币项目具有数据可信的特点，有利于实现深层次、多维度的数据监测。一方面，类似于普通数字货币，稳定币项目的所有交易操作和管理操作都将记录到区块链账本。由于区块链技术优势，这些链上数据具有较高的数据可信度。另一方面，为了增加项目公信力、维持价格稳定，稳定币项目方将公布大量的项目数据，并主动采用多种机制增加数据可信度，保证链下数据可信。基于链上、链下大量的可信数据，多种类型的监管机构能够从不同维度对稳定币运行状态进行全面监控，及时发现各种异常、违规现象。图6介绍了针对稳定币的多维度监测架构。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-903be4a839acea0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图6稳定币数据监测架构" loading="lazy"></p>
+<p>如图6所示，针对稳定币项目的监控数据源来自于两个方面：链上数据和链下数据。</p>
+<p>链上数据是指稳定币项目存储在区块链账本中的数据，包括：程序代码，交易操作（指代币在用户之间的转移过程），管理操作（例如，代币的增发和销毁操作，账号锁定操作等），项目状态信息等。由于区块链技术采用的分布式冗余存储机制和数字签名机制，这些链上数据具有不可篡改、不可伪造的特点，非常适合作为审计的原始素材。</p>
+<p>链下数据是指没有存储在区块链账本中，但是与稳定币项目相关的数据，包括：价格信息、白皮书、审计报告、运行报告、社群信息、新闻信息等。此类数据从侧面反映了稳定币项目的运行状态，是保证价格稳定、维持用户信心的重要数据。相对于链上数据，此类数据的来源复杂，存储方式各异，存在伪造数据、篡改数据的可能性。针对此类数据，稳定币的项目方通常会主动采取多种机制保证数据的可信度，包括外部增信、内部增信和技术增信机制。<br>
+?	外部增信：指利用外部机构的公信力为数据增信。例如稳定币项目主动接受政府监管，获得监管机构的审核，邀请律师事务所审计项目运行情况等。<br>
+?	内部增信：指通过官方渠道发布项目相关信息为数据增信。例如，稳定币项目方在官方网站公开稳定币对应的法币储备账号，定期发布运行情况等。<br>
+?	技术增信：指采用技术手段为链下数据提供完整性、可靠性保证。例如，杨东[23]提出的“以链制链”思想，通过定期采集的方式将稳定币相关的链下数据上传到具有公信力的“监管链”中永久保存，提升数据可信度。</p>
+<p>针对稳定币数据的监控人员主要包含三类：主管机构，特殊监管机构，投资方。主管机构是指针对稳定币项目的主管政府机构，主要负责监控稳定币是否合规运行。目前，世界上首批受政府监管的稳定币是GUSD和PAX，他们受美国纽约金融局的监管。其他国家虽然目前还没有正式授权稳定币项目，但是也都在逐渐将区块链及数字货币纳入监管渠道。特殊监管机构是指对稳定币项目的某一个方面具有监管权的机构，例如负责反洗钱和犯罪调查的结构。此类机构可能针对稳定币中涉及的特殊账号和特殊交易开展监管。投资方是指持有稳定币资产的机构或者个人用户。此类用户最关心稳定币的价值变化，将对稳定币供应量、价格变化趋势、社交媒体信息进行持续关注。</p>
+<p>监测内容主要包括三类：合规性监测、特殊需求监测和价格稳定性监测。<br>
+（1）合规性监测：是指主管机构基于相关政策对稳定币项目进行的监测，包括：稳定币项目在运行过程中是否符合白皮书设计模式？稳定币项目的账号是否满足KYC政策？稳定币项目募集的资金是否符合托管要求。白皮书是介绍稳定币项目运行机制的官方文档，主管机构会通过检测白皮书的内容判断项目能否健康运行，普通投资者会通过查看白皮书了解项目的可信度。因此，稳定币项目按照白皮书运行不仅是项目健康运行的保证，也体现了项目方对普通用户的承诺；KYC政策是现实世界中金融业务必须满足的监管策略。稳定币项目如果希望得到政府机构的批准，必然要对稳定币中的账号实现身份检查，保证相关账号是具备实名信息的；无论是基于法币抵押模式，还是基于数字货币抵押或者算法银行模式，稳定币项目都会募集大量的现实资产，这些资产如何保存将直接影响稳定币项目的可靠性。因此，监管机构通常会对稳定币项目提出资金合规托管的需求，包括公开储备账号的信息，定期监测资产变化情况等。<br>
+（2）特殊需求监测：是指根据特殊监管机构的需求对稳定币项目开展监测。例如金融监管机构可能需要监测稳定币中涉及的跨境交易，反洗钱机构可能需要监测稳定币交易中是否存在洗钱活动。公安机关可能需要对稳定币交易中的账号进行身份画像，以便追查涉嫌犯罪的账号。<br>
+以跨境交易监测为例，监管方可以从多个方面获取监测数据。一方面，监管方可以采用行政手段，要求管辖范围内数字货币交易所、稳定币项目方提供账号KYC信息。由于稳定币在兑换法币时必须通过交易所或者稳定币项目方的兑换渠道，因此任何一笔稳定币最终都能够和实名KYC信息关联。即使用户采用多个账号中转交易，由于所有交易记录是公开的，依然有迹可循。另一方面，可以采用技术手段，综合利用数据分析技术、网络追踪技术发现匿名区块链地址的身份信息。<br>
+（3）价格稳定性监测：是针对稳定币具备的价格恒定的属性进行专项监测。价格数据反映了稳定币在市场中真实的价值变化情况，具有重要的监测价值。理论上，稳定币的价值将与法币（或者其他资产）保持恒定价值，但是真实市场中，由于官方兑换渠道手续复杂，大量的稳定币购买和赎回操作是基于第三方数字货币交易所实现的。在这些非官方兑换渠道中，稳定币的价值将根据市场信心进行波动。以PAX稳定币为例，项目方Paxos信托公司承诺其发行的PAX稳定币可以在其自营的itBit数字货币交易实现与美元1：1的兑换。但是在其他交易所，PAX和美元的兑换比例在1美元上下浮动。</p>
+<h2 id="二基于透明操作过程的违规处理机制">（二）基于透明操作过程的违规处理机制</h2>
+<p>稳定币项目具有操作过程公开透明的特点，监管方能够根据稳定币项目的运行情况实现针对性的违规处理。首先，稳定币在现实世界依赖的信任机制是透明的，项目方通常会公布储备金管理机构、审计机构和公司运行信息，监管机构可以根据项目方公布的运行机制进行审核和处理。其次，稳定币的核心程序运行在区块链之上，程序代码及所有操作信息都是公开的，监管机构能够及时发现恶意操作，并在操作被确认之前进行针对性处理。最后，稳定币的所有交易数据和操作数据都将在区块链共识机制的指导下存储到区块链账本，监管机构可以利用共识机制将已发出的恶意交易拦截、撤销。通过多方面干预机制的结合使用，监管方能够有效遏制针对稳定币项目的恶意行为，保障项目健康运行。图7介绍针对稳定币项目的违规处理机制。<br>
+<img src="https://upload-images.jianshu.io/upload_images/4794066-4014fe051258cfc7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图7：稳定币项目违规处理机制" loading="lazy"></p>
+<p>如图7所示，监管机构可以从现实世界信任机制、稳定币核心程序、区块链基础设施三个层面开展监管，有效应对各种违规事件。</p>
+<p>现实世界信任机制是稳定币项目获得用户公信力的核心手段。不同于普通数字货币项目，稳定币项目方不仅会公布公司信息、法人信息，还会邀请律师事务所等公证机构为项目运行情况背书，甚至会主动申请政府主管部门的监管。在这种情况下，监管方能够轻易找到具体责任人，实现冻结银行储备金、撤销项目批准、处罚公司及法人等常规的监管手段。利用行政权力直接管理稳定币项目是监管的底线手段，能够有效督促项目方合规运行，减少违规行为造成的损失。</p>
+<p>稳定币核心程序是指用于实现稳定币核心业务功能，并在区块链上存储和运行的程序。理论上，区块链程序从底层架构到上层业务可以不接受中心节点控制，任何人都不能单方面干预区块链程序的运行情况。但是，为了使项目满足合规性，获得更大的发展空间，稳定币项目不得不让渡一些去中心化特点，给项目方及监管方提供一些中心化的管理功能。通过在稳定币核心程序中内置管理员功能，项目方及监管方能够实现暂停/重启项目程序，锁定/解锁特定账号，开启/关闭特定功能等管理操作，从技术层面阻止恶意交易的发生。例如，为了打击洗钱和其他基于数字货币的犯罪活动，监管方可以要求稳定币核心程序实现黑名单管理功能，凡是涉及黑名单地址的交易都将被稳定币程序视为非法交易。监管机构可以通过稳定币核心程序提供的API接口更新黑名单列表，实现直接管理。</p>
+<p>区块链基础设施是指稳定币项目依赖的运行环境，包括区块链网络及数据同步更新机制。在区块链环境中，数据同步是基于矿工群体、用户群体之间的共识实现的，单个机构无法随意修改数据。但是，通过利用共识机制的特点，监管机构有可能在共识机制允许的范围内实现数据修改、数据撤销等操作，阻止已经发出的恶意交易。常见的手段包括两种：<br>
+?	利用手续费攻击撤销交易：区块链网络中，用户创建交易后，交易信息将在区块链网络中泛洪传播，等待所有节点的确认。只有经过大部分节点的确认，交易才能够被系统认可为已确认交易。如果在同一时间内，出现两个互相矛盾的交易，区块链网络中的节点将出现分歧，最终将根据确认次数的多少决定哪一个交易被认可，另外一个交易则将被撤销。在目前大多数区块链网络中，节点选择待确认交易的共识策略包括两个：交易手续费和交易到达时间。利用这种普遍认可的交易确认共识，监管方可以在发现恶意交易后，立刻创建相矛盾的、高手续费的交易，人工在区块链网络中造成节点分歧，使恶意交易被撤销。<br>
+?	利用分叉攻击撤销数据：区块链网络中一旦数据写入区块链账本就很难被篡改，这是由于账本数据由分布式节点共同维护，并采用最长链机制保证数据一致性，这使得单一机构修改本地数据对区块链账本无效。然而，如果出现特殊情况，使大多数区块链节点认可数据更改，则区块链账本维护的共识就会发生改变，不遵循最长链机制，而是根据共识结果选择指定的区块位置继续更新，抛弃原本最长链中的部分数据。这种机制被称为分叉现象，能够撤销已经写入区块链账本的数据。例如：2016年，以太坊最大的众筹项目DAO遭受黑客攻击，丢失了360万个以太币，价值6000万美元，在以太坊核心开发人员的号召下，以太坊主网实现硬分叉，撤销了被黑客攻击的交易数据。在稳定币系统运行中，如果出现严重违规事件，监管机构也可以利用分叉机制实现间接管理。</p>
+<p>通过上述分析，可知针对稳定币项目，监管方有多种机制实现不同维度的管理。基于行政权力的管理操作将直接作用在现实世界的公司及法人，能够从根本上起到威慑、惩戒的作用，是监管的底线操作。基于稳定币核心程序的管理操作将使得监管机构具有直接管理具体业务的能力，能够在交易发生前进行有效遏制，减少攻击威胁。基于区块链基础设施的管理操作从底层出发，在共识机制许可的范围内实现数据撤销功能，能够在交易发生后进行纠偏降损，为应对非预期、非常规的攻击留下最终解决办法。</p>
+<h1 id="七-结论">七、结论</h1>
+<p>区块链稳定币是区块链数字货币实验中的重要研究对象，本文针对稳定币的技术特征，详细分析了稳定币面临的监管需求、挑战和机遇，提出了一种围绕稳定币生命周期的监管框架，详细介绍了稳定币监管的核心技术。通过研究稳定币监管技术，不仅展示了区块链数据公开、操作透明的特征在监管领域的重要优势，也充分体现了传统金融领域中各种监管机制对区块链项目健康运行的重要作用。区块链数字货币以及区块链技术的发展必须建立在拥有健全监管机制的基础之上，只要充分利用区块链技术特点，一定能够从根本上提高监管效果，使区块链技术真正落地。</p>
+<h1 id="引用文献">引用文献</h1>
+<p>[1] coinmarketcap. https://coinmarketcap.com/. 2018<br>
+[2] 袁勇, 王飞跃. 区块链技术发展现状与展望[J]. 自动化学报, 2016, 42(4):481-494.<br>
+[3] 祝烈煌, 高峰, 沈蒙,等. 区块链隐私保护研究综述[J]. 计算机研究与发展, 2017, 54(10):2170-2186.<br>
+[4] Bitcoin. https://bitcoin.org/zh_CN/. 2018<br>
+[5] ethereum. https://www.ethereum.org/. 2018<br>
+[6]王华庆,李良松.数字稳定代币的兴起及缺陷[J].中国金融,2018-10-09<br>
+[7]姚前,孙浩. 数字稳定代币的试验与启示[J].中国金融,2018-10-09<br>
+[8]USDT. https://tether.to/.2018<br>
+[9]TUSD. <a href="https://www.trusttoken.com/trueusd/.2018">https://www.trusttoken.com/trueusd/.2018</a><br>
+[10] DigixDAO. <a href="https://digix.global/dgd/.2018">https://digix.global/dgd/.2018</a><br>
+[11] Dai. <a href="https://makerdao.com/.2018">https://makerdao.com/.2018</a><br>
+[12] Bitcny. https://bitshares.org/. 2018<br>
+[13] GUSD. https://gemini.com/. 2018<br>
+[14] PAX. <a href="http://www.baidu.com/link?url=RuQV26UxtqNVPkHTPt43Dl3uc7WnVIOK5TUyCt2rv07">https://www.paxos.com/</a>. 2018<br>
+[15] STASIS EURS. <a href="https://www.baidu.com/link?url=0k3p5ylWeN5qcGSABd6QKPdAR4alyuZOV_xQIzmv_IW&amp;wd=&amp;eqid=bdc220d60000ab93000000035bd8a1db">https://stasis.net/</a>. 2018<br>
+[16] Nubits. https://nubits.com/. 2018<br>
+[17] Omni协议. <a href="https://www.jinse.com/bitcoin/215074.html.2018">https://www.jinse.com/bitcoin/215074.html.2018</a><br>
+[18] Smart contract. https://en.wikipedia.org/wiki/Smart_contract.2018<br>
+[19] Imtoken. <a href="https://token.im/.2018">https://token.im/.2018</a><br>
+[20] Metamask. https://metamask.io/<br>
+[21]钱包圈APP. http://www.qianbaoquan.com/index.html<br>
+[22] 阿里巴巴公司.BLOCKCHAIN-BASED TRANSACTION PROCESSING METHOD AND APPARATUS. <a href="http://appft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PG01">http://appft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PG01</a><br>
+&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.html&amp;r=1&amp;f=G&amp;l=50&amp;s1=%2220180285837%22.PGNR.&amp;OS=DN/20180285837&amp;RS=DN/20180285837.2018<br>
+[23] 杨东.区块链+监管=法链（RegChain）.人民出版社. 2018</p>
+</span></p></div><div id = "warn"></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">飞来飞去-区块链学习笔记</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2020-02-22</div>    
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<div style="width:100%;overflow:hidden">
+
+          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
+            下一篇
+            <a href="https://flfqbit.github.io/post/49qu-kuai-lian-shu-ju-cun-chu-xiang-guan-zi-liao/">
+              <p class="post-title">
+                <b>[49]区块链数据存储相关资料</b>
+              </p>
+            </a>
+          </div>
+
+
+
+          <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
+            上一篇
+            <a href="https://flfqbit.github.io/post/51qu-kuai-lian-wen-ding-bi-zi-liao-zheng-li/">
+              <p class="post-title">
+                <b>[51]区块链稳定币-资料整理</b>
+              </p>
+            </a>
+          </div>
+
+</div>
+
+<div class="doc_comments">
+
+</div>
+<script>
+var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
+imgList = document.querySelectorAll('.md_block img')
+imgList.forEach(img => {
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
+  let div1 = document.createElement('div')
+  let div = document.createElement('div')
+  div.className='back';
+  div.setAttribute("data-src",img.src)
+  var figuration = document.createElement("figcaption")
+  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
+  img.replaceWith(div1)
+  div1.appendChild(div)
+  div.appendChild(img)
+  div1.appendChild(figuration)}
+})
+$('img').on('error',function(){$(this).prop('src','https://flfqbit.github.io/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于2020-02-22，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="2020-02-22 23:52:18";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+$('#pjax-container').lightGallery({
+    selector: '.back'
+});
+</script>
+  </div>
+</div>
+
+
+      </div>
+<div class="toc">
+<ul class="markdownIt-TOC">
+<li><a href="#%E5%8C%BA%E5%9D%97%E9%93%BE%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E7%9B%91%E7%AE%A1%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6-%E4%BB%A5%E5%8C%BA%E5%9D%97%E9%93%BE%E7%A8%B3%E5%AE%9A%E5%B8%81%E4%B8%BA%E4%BE%8B">区块链数字货币监管技术研究-以区块链稳定币为例</a>
+<ul>
+<li><a href="#%E6%91%98%E8%A6%81">摘要：</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%80-%E7%BB%AA%E8%AE%BA">一、绪论</a></li>
+<li><a href="#%E4%BA%8C-%E8%83%8C%E6%99%AF%E7%9F%A5%E8%AF%86">二、背景知识</a>
+<ul>
+<li><a href="#%E4%B8%80%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E6%A0%B8%E5%BF%83%E4%BC%98%E5%8A%BF">（一）区块链技术核心优势</a></li>
+<li><a href="#%E4%BA%8C%E5%8C%BA%E5%9D%97%E9%93%BE%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81">（二）区块链数字货币</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89-%E7%A8%B3%E5%AE%9A%E5%B8%81%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81">三、稳定币基本特征</a>
+<ul>
+<li><a href="#%E4%B8%80%E7%A8%B3%E5%AE%9A%E5%B8%81%E5%8F%91%E5%B1%95%E6%83%85%E5%86%B5">（一）稳定币发展情况</a></li>
+<li><a href="#%E4%BA%8C%E7%A8%B3%E5%AE%9A%E5%B8%81%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84">（二）稳定币系统架构</a></li>
+<li><a href="#%E4%B8%89%E7%A8%B3%E5%AE%9A%E5%B8%81%E4%BB%B7%E6%A0%BC%E7%A8%B3%E5%AE%9A%E6%9C%BA%E5%88%B6">（三）稳定币价格稳定机制</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B-%E7%A8%B3%E5%AE%9A%E5%B8%81%E7%9B%91%E7%AE%A1%E9%9C%80%E6%B1%82%E5%92%8C%E6%8C%91%E6%88%98">四、稳定币监管需求和挑战</a>
+<ul>
+<li><a href="#%E4%B8%80%E7%9B%91%E7%AE%A1%E9%9C%80%E6%B1%82">（一）监管需求</a></li>
+<li><a href="#%E4%BA%8C%E6%8C%91%E6%88%98%E5%92%8C%E6%9C%BA%E9%81%87">（二）挑战和机遇</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%94-%E7%A8%B3%E5%AE%9A%E5%B8%81%E7%9B%91%E7%AE%A1%E6%A1%86%E6%9E%B6">五、稳定币监管框架</a>
+<ul>
+<li><a href="#%E4%B8%80%E4%BA%8B%E5%89%8D%E5%AE%A1%E6%A0%B8">（一）事前审核</a></li>
+<li><a href="#%E4%BA%8C%E4%BA%8B%E4%B8%AD%E7%9B%91%E6%8E%A7%E5%92%8C%E5%B9%B2%E9%A2%84">（二）事中监控和干预</a></li>
+<li><a href="#%E4%B8%89%E4%BA%8B%E5%90%8E%E5%AE%A1%E8%AE%A1%E5%92%8C%E5%A4%84%E7%90%86">（三）事后审计和处理</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%AD-%E7%A8%B3%E5%AE%9A%E5%B8%81%E7%9B%91%E7%AE%A1%E6%A0%B8%E5%BF%83%E6%9C%BA%E5%88%B6">六、稳定币监管核心机制</a>
+<ul>
+<li><a href="#%E4%B8%80%E5%9F%BA%E4%BA%8E%E5%8F%AF%E4%BF%A1%E6%95%B0%E6%8D%AE%E7%9A%84%E5%A4%9A%E7%BB%B4%E7%9B%91%E6%B5%8B%E6%9C%BA%E5%88%B6">（一）基于可信数据的多维监测机制</a></li>
+<li><a href="#%E4%BA%8C%E5%9F%BA%E4%BA%8E%E9%80%8F%E6%98%8E%E6%93%8D%E4%BD%9C%E8%BF%87%E7%A8%8B%E7%9A%84%E8%BF%9D%E8%A7%84%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6">（二）基于透明操作过程的违规处理机制</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%83-%E7%BB%93%E8%AE%BA">七、结论</a></li>
+<li><a href="#%E5%BC%95%E7%94%A8%E6%96%87%E7%8C%AE">引用文献</a></li>
+</ul>
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/flfqbit" title="github"><i class="fa fa-github"></i></a>
+
+    
+			   
+<a href="fenghao2821@gmail.com" title="envelope"><i class="fa fa-envelope"></i></a>
+
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.write("Copyright © "+year+" " + "飞来飞去-区块链学习笔记");
+		</script>
+		
+		
+	  
+      </div>
+
+    </div>
+
+<script>
+new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
+console.clear();
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+
+</html>

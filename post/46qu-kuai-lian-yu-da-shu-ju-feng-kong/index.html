@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="记录区块链行业重点文章，前沿技术">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>[46]区块链与大数据风控 | 飞来飞去-区块链学习笔记</title>
+<link href="https://flfqbit.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.js"></script>
+
+  </head>
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" alt="logo" style="display:inline-block;" src="https://flfqbit.github.io/images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+
+          <h1 title="飞来飞去-区块链学习笔记" class="weaklink"><a  href="/">飞来飞去-区块链学习笔记</a>
+
+          </h1>
+	  
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+<div class="content">
+<div class="post_page" >
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>[46]区块链与大数据风控</a>
+    </h2>
+  </div>
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+  <div class="post_details">
+    <div class="info"><i class="fa fa-calendar"></i>
+<span class="date_info">2020-02-22</span>
+<i class="fa fa-eye"></i>
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+</span>
+<i class="fa fa-anchor"></i>
+<span style="margin-right:15px">
+4777字
+</span>
+<i class="fa fa-clock-o"></i>
+<span style="margin-right:15px">
+17 min read
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</span>
+</div>
+  </div>
+
+    <div class="post_content markdown">
+	
+
+	
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><p>解读大数据与区块链的关系<br>
+https://blog.csdn.net/linuxprobe2017/article/details/79765289</p>
+<blockquote>
+<p>大数据，需要应对海量化和快增长的存储，这要求底层硬件架构和文件系统在性价比上要大大高于传统技术，能够弹性扩张存储容量。谷歌的GFS和Hadoop的HDFS奠定了大数据存储技术的基础。另外，大数据对存储技术提出的另一个挑战是多种数据格式的适应能力，因此现在大数据底层的存储层不只是HDFS，还有HBase和Kudu等存储架构。<br>
+区块链，是比特币的底层技术架构，它在本质上是一种去中心化的分布式账本。区块链技术作为一种持续增长的、按序整理成区块的链式数据结构，通过网络中多个节点共同参与数据的计算和记录，并且互相验证其信息的有效性。从这一点来说，区块链技术也是一种特定的数据持久化技术。由于去中心化在安全、便捷方面的特性，很多业内人士看好其发展，认为它是对现有互联网技术的升级与补充。</p>
+</blockquote>
+<p>感想：<br>
+大数据技术侧重于对数据的分析。数据是基础，分析是关键。数据是得到正确分析结果的前提条件。“大”体现了对数据种类、数量的要求。<br>
+区块链技术侧重于对数据的一致性存储。数据安全性和公信力是关键。由于采用多冗余存储机制，区块链技术本身的数据存储能力较弱。目前扩展存储能力的方法主要包括：链上、链下结合存储；侧链存储。基本思路还是链上存储少量散列，然后通过映射、锚定技术关联到链外、链下的大容量数据。</p>
+<blockquote>
+<p>分布式计算：MapReduce vs. 共识机制<br>
+大数据的分析挖掘是数据密集型计算，需要巨大的分布式计算能力。节点管理、任务调度、容错和高可靠性是关键技术。Google和Hadoop的MapReduce是这种分布式计算技术的代表，通过添加服务器节点可线性扩展系统的总处理能力(Scale Out)，在成本和可扩展性上都有巨大的优势。现在，除了批计算，大数据还包括了流计算、图计算、实时计算、交互查询等计算框架。<br>
+区块链的共识机制，就是所有分布式节之间怎么达成共识，通过算法来生成和更新数据，去认定一个记录的有效性，这既是认定的手段，也是防止篡改的手段。区块链主要包括四种不同的共识机制，适用于不同的应用场景，在效率和安全性之间取得平衡。以比特币为例，采用的是“工作量证明”(Proof Of Work，简称POW)，只有在控制了全网超过51%的记账节点的情况下，才有可能伪造出一条不存在的记录。</p>
+</blockquote>
+<p>感想：<br>
+MapReduce是相同算法处理不同数据，强调数据处理的高效；<br>
+共识机制是相同算法处理相同数据，强调数据处理的公信力。</p>
+<p>融合？重构？区块链和大数据关系竟如此简单！<br>
+https://baijiahao.baidu.com/s?id=1597555647609629386&amp;wfr=spider&amp;for=pc</p>
+<blockquote>
+<p>“要弄清区块链和大数据的关系，首先要从两者的不同开始。”从事互联网技术研究20余年，人称互联网技术相面师的中国信息通信研究院云计算与大数据研究所所长何宝宏抛出了这一观点。他认为，区块链和大数据技术存在一定的共性，但是两者在技术处理方式上，更多的是不同。<br>
+何宝宏 中国信息通信研究院云计算与大数据研究所所长<br>
+何宝宏表示，区块链技术是分布式数据存储、点对点传输、共识机制、加密算法等计算机技术的新型应用模式，区块链处理的数据更小，是细致的处理方式。而大数据管理的是海量数据，要求广度和数量，处理方式上也会粗糙，重点是统计分析（如下图）。<br>
+<img src="http://upload-images.jianshu.io/upload_images/4794066-05fc41fd1bbed42f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image" loading="lazy"></p>
+</blockquote>
+<p>区块链和大数据的关系<br>
+https://blog.csdn.net/m0_37683086/article/details/77476854</p>
+<blockquote>
+<p>一、数据安全：区块链让数据真正“放心”流动起来<br>
+区块链以其可信任性、安全性和不可篡改性，让更多数据被解放出来。（用区块链实现支持访问控制的数据访问）<br>
+二、数据开放共享：区块链保障数据私密性<br>
+数据开放是大势所趋，将对整个经济社会的发展产生不可估量的推动力。然而，数据开放的 主要难点和挑战是如何在保护个人隐私的情况下开放数据。基于区块链的数据脱敏技术能保证数据私密性，为隐私保护下的数据开放提供了解决方案。<br>
+（用区块链实现支持隐私保护的数据共享）<br>
+三、数据存储：区块链是一种不可篡改的、全历史的、强背书的数据库存储技术<br>
+基于全网共识为基础的数据可信的区块链数据，是不可篡改的、全历史的、也使数据的质量获得前所未有的强信任背书。<br>
+（用区块链保证数据的可靠性）<br>
+四、数据流通：区块链保障数据相关权益<br>
+对于个人或机构有价值的数据资产，可以利用区块链对其进行注册，交易记录是全网认可的、透明的、可追溯的，明确了大数据资产来源、所有权、使用权和流通路径，对数据资产交易具有很大价值。<br>
+（用区块链实现数据确权）<br>
+另一方面，区块链提供了可追溯路径，能有效破解数据确权难题。区块链通过网络中多个参与计算的节点来共同参与数据的计算和记录，并且互相验证其信息的有效，既可以进行信息防伪，又提供了可追溯路径。<br>
+（用区块链实现可溯源的数据使用过程）</p>
+</blockquote>
+<p>区块链技术应用在金融领域之大数据风控<br>
+https://blog.csdn.net/tiandiwuya/article/details/74586996</p>
+<blockquote>
+<p>风险控制是金融领域必不可少的一环。近些年，为了实现更精准、更高效的风控，金融机构纷纷引进了大数据技术。然而，大数据风控并非十全十美，其尚存数据孤岛、数据低质和数据泄露等有效性不足问题，由此引发的风险事件层出不穷。区块链技术的横空出世，为大数据风控带来了些许曙光。那么，大数据+区块链，是否真的能在风险控制领域擦出不一样的火花？</p>
+</blockquote>
+<blockquote>
+<p>大数据风控存在的问题<br>
+**首先，大数据风控技术无法解决数据孤岛问题，即数据的开放和共享问题。**目前，政府、银行、券商、互联网企业和第三方征信公司掌握的信息难以在短时间内互联互通，从而形成一个个信息孤岛。当交易在不同金融机构之间进行时，数据孤岛导致了信息的不对称、不透明，带来了大量的多头债务风险和欺诈风险。金融信贷行业若想利用大数据风控技术提升风控水平，就必须打破数据孤岛，解决信息不对称和信息获取不及时的问题。<br>
+**其次，数据低质的问题也从一定程度上影响了大数据风控的质量，特别是来源于互联网的半结构化和非结构化数据，其真实性和利用价值很低。**举例来说，在美国，Lending club和Facebook曾经合作获取并利用社交数据；在中国，宜信也曾大费周章地采集借款人的社交数据，以期实现对借款人信用的全面评定。但是两者得出的结论如出一辙，由于社交网络中的数据主观随意性很强，这些在网上提取的社交数据根本不具有利用价值或者利用价值十分低，错误率高达50%。电商平台上的交易数据也由于一些刷单现象而失真。这些信息的收集与利用就如同垃圾的运进运出，几乎没有任何意义。基于这些低质数据的风控效果也会大打折扣。<br>
+**最后，大数据风控过程中存在数据泄漏问题。**近年来，数据泄漏风险事件屡见报端。2015年2月12日，汇丰银行大量秘密银行账户文件被曝光，显示其瑞士分支帮助富有客户逃税，隐瞒数百万美元资产，提取难以追踪的现金，并向客户提供如何在本国避税的建议等。这些文件覆盖的时间为2005年至2007年，涉及约3万个账户，这些账户总计持有约1200亿美元资产，堪称史上最大规模银行泄密。Verizon发布的全球调研报告《Data Breach Investigations Report 2015》显示，2015年网络安全事件共有79790起，确认的数据泄露事件超过2千个(2122个)。这些都降低了大数据风控的有效性和应用价值。</p>
+</blockquote>
+<blockquote>
+<p>区块链对大数据风控的重要意义<br>
+**首先，区块链去中心化、开放自治的特征可有效解决大数据风控的数据孤岛问题，使得信息公开透明地传递给所有金融市场参与者。**设想以下情况：一位客户同时向A银行和B银行各申请一百万的房屋抵押贷款，但其房屋价值只有一百万。如果两家银行加入了同一区块链，就能即时辨别出客户的交易行为和风险，避免放贷总额超过抵押值。除了交易主体外，监管部门也可以作为一个用户节点加入区块链，实时监控其他用户节点的交易信息，防范风险事件的发生，无需再等到事后申报。利用区块链中全部数据链条进行预测和分析，监管部门可以及时发现和预防可能存在的系统性风险，从而更好地维护金融市场秩序和提高金融市场效率。可见，区块链去中心化的特征，可以消除大数据风控中的信息孤岛，通过信息共享完善风险控制。<br>
+**其次，区块链的分布式数据库可改善大数据风控数据质量不佳的问题。使得数据格式多样化、数据形式碎片化、有效数据缺失和数据内容不完整等问题得到解决。**在区块链中，数据由每个交易节点共同记录和存储，每个节点都可以参与数据检查并共同为数据作证，这提高了数据的真实性。而由于没有中心机构，单个节点不能随意进行数据增减或更改，从而降低了单一节点制造错误数据的可能性。举例来说，在银行或交易平台内部建立私有链，一位客户构成一个节点，一方面可以避免大量数据由单一信息中心集中录入和存储，降低操作风险；另一方面，卖方单方面的刷单行为可以通过买方的验证得到遏制，从而保证数据的真实有效。伪造的数据若想通过区块链网络的验证，必须掌握该私有链中超过50%的计算能力，当节点足够多的时候，该私有链的控制成本急剧上升。另外，区块链中每个节点都有完整的数据副本，只有当整个区块链系统发生宕机时数据才会丢失，并且数据记录一旦写入就不能修改。因此，区块链具备公开、透明和安全的特点，可以从源头上提高数据质量，增强数据的检验能力。<br>
+**最后，区块链可以防范数据泄漏问题。**由于区块链数据库是一个去中心化的数据库，任何节点对数据的操作都会被其他节点发现，，从而加强了对数据泄漏的监控。另外，区块链中节点的关键身份信息以私钥形式存在，用于交易过程中的签名确认。私钥只有信息拥有者才知道，就算其他信息被泄漏出去，只要私钥没有泄漏，这些被泄漏的信息就无法与节点身份进行匹配，从而失去利用价值。对于来自数据库外部的攻击，黑客必须要掌握50%以上的算力才能确保攻破区块链，节点数量越多，所需的算力也就越大，当节点数达到一定规模时，进行一次这样的攻击所花费的成本是巨大的。因此，通过区块链对信息存储进行加密，保证数据安全，防范大数据风控中可能出现的数据泄露问题，是区块链的重要应用之一。</p>
+</blockquote>
+<p>感想：<br>
+“首先，区块链去中心化、开放自治的特征可有效解决大数据风控的数据孤岛问题，使得信息公开透明地传递给所有金融市场参与者。”<br>
+这一条基本无疑义。利用区块链解决数据共享过程存在的不愿共享、不敢共享、不能共享的问题，有利于吸引多方主动提供高质量的数据，促进大数据生态环境的优化。</p>
+<p>“其次，区块链的分布式数据库可改善大数据风控数据质量不佳的问题。”<br>
+这一条也能说通。区块链的本质是形成一个多方共识、不可篡改、不可抵赖的高公信力数据库。任何数据的上链存储都意味着成本和永久期限的追溯，这将促使用户上传高质量的数据。</p>
+<p><strong>最后，区块链可以防范数据泄漏问题。</strong><br>
+这一条基本上说不通，区块链不仅不能解决数据泄露问题，而且其数据公开的设计特点将显著增加数据泄露的风险。数据隐私保护是区块链技术走向实用必须解决的问题。</p>
+<p>区块链在金融风险数据共享中的应用实践<br>
+https://blog.csdn.net/yjjnls/article/details/83374523</p>
+<blockquote>
+<p>大数据风控业务场景介绍<br>
+很多金融机构在开展 C 端业务的时候，时常需要甄别来自于 C 端用户的交易风险，身份伪造，营销欺诈等等。 简单举例：营销或者支付业务中，甄别某位个人用户是否有过欺诈行为就属于这一类风控识别措施。这些金融机构随着业务的开展，往往已经收集并沉淀积累了很多 黑名单，黄名单，灰名单等。简单来说，金融机构通过使用这些名单数据，做一些用户过滤处理就能达到一定的业务风险控制的目标。<br>
+业务开展过程中，金融机构或许要面临一个显而易见的问题：<strong>已有的黑名单数据并不足以控制业务风险，时常需要借助其他机构的名单数据进行补充，才能达 到一定的业务风控效果</strong>。而基于 C 端用户的风控数据，基本上都属于金融机构的核心数据，并不能无偿共享。这就衍生出了一个<strong>关于 C 端用户风控数据的买卖市场</strong>。传统的风控数据查询方式，往往通过卖方机构提供一个收费的数据查询接口的形式来实现。买方机构通过预付费或者后付费的方式向卖 方机构支付数据查询的相关费用。而关于费用的计价维度多种多样，但相同之处是所有数据计价完全由数据卖方主导设定。<br>
+<img src="http://upload-images.jianshu.io/upload_images/11336404-ca947e7324745598?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image" loading="lazy"></p>
+</blockquote>
+<blockquote>
+<p>业务痛点如下：<br>
+1、基本上属于完全的卖方市场，数据的定价权和计价账单都由卖方来制定，对买方机构而言，并<strong>不足够公平</strong>。解决方案?分布式账本<br>
+2、买方机构开展业务时一般需要对接多家卖方机构，每次接入都需要重新按照卖方的数据接口来开发对接，<strong>接入成本较高</strong>。解决方案?联盟共识<br>
+3、买方机构查询获取的数据，可能会出现<strong>二次售卖</strong>的情况。解决方案?隐私保护<br>
+4、缺乏公开公平公正的账户体系为<strong>数据的质量</strong>负责。解决方案?智能合约</p>
+</blockquote>
+<blockquote>
+<p>业务痛点主要来源于两个原因：<br>
+一、缺乏联盟性质的中介服务。<br>
+二、金融机构之间缺乏相互信任。<br>
+数据共享联盟目前已经有很多实践，但是大部分效果不佳，原因还是金融机构之间缺乏信任和共识。如果采用技术的手段，建立数据共享细分领域的行业共识，将能够极大地促进行业的发展，提高整体行业的业务风控水平。<br>
+区块链技术中的联盟链恰好适用于当前这样的业务场景，能够在联盟参与方之间通过技术的手段达成业务共识。换言之，各家金融机构加入联盟之后，并不需 要信任联盟组织方，也不需要信任其他联盟参与方，只需要信任来自于底层的区块链技术以及技术之上的行业约定即可。联盟链的几个重要组成部分：分布式账本， 共识机制，智能合约和隐私保护，可以为联盟业务开展提供坚实的技术基础。<br>
+<img src="http://upload-images.jianshu.io/upload_images/11336404-26b025de7f9fcb4b?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image" loading="lazy"></p>
+</blockquote>
+<p>区块链+大数据:传统风控的变革利器（知网论文）<br>
+http://www.cnki.com.cn/Article/CJFDTotal-DJRJ201609029.htm</p>
+<p>基于“区块链+”的互联网金融大数据双通道征信技术研究（知网论文）(http://www.cnki.com.cn/Article/CJFDTotal-HNJG201706007.htm)<br>
+http://xueshu.baidu.com/usercenter/paper/show?paperid=c544c3c1dbc60fb32a9b01368fde58f1</p>
+</span></p></div><div id = "warn"></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">飞来飞去-区块链学习笔记</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2020-02-22</div>    
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<div style="width:100%;overflow:hidden">
+
+          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
+            下一篇
+            <a href="https://flfqbit.github.io/post/45qu-kuai-lian-yu-ren-gong-zhi-neng/">
+              <p class="post-title">
+                <b>[45]区块链与人工智能</b>
+              </p>
+            </a>
+          </div>
+
+
+
+          <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
+            上一篇
+            <a href="https://flfqbit.github.io/post/47qu-kuai-lian-wen-ding-bi-xiang-guan-zi-liao/">
+              <p class="post-title">
+                <b>[47]区块链稳定币相关资料</b>
+              </p>
+            </a>
+          </div>
+
+</div>
+
+<div class="doc_comments">
+
+</div>
+<script>
+var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
+imgList = document.querySelectorAll('.md_block img')
+imgList.forEach(img => {
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
+  let div1 = document.createElement('div')
+  let div = document.createElement('div')
+  div.className='back';
+  div.setAttribute("data-src",img.src)
+  var figuration = document.createElement("figcaption")
+  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
+  img.replaceWith(div1)
+  div1.appendChild(div)
+  div.appendChild(img)
+  div1.appendChild(figuration)}
+})
+$('img').on('error',function(){$(this).prop('src','https://flfqbit.github.io/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于2020-02-22，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="2020-02-22 23:49:13";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+$('#pjax-container').lightGallery({
+    selector: '.back'
+});
+</script>
+  </div>
+</div>
+
+
+      </div>
+<div class="toc">
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/flfqbit" title="github"><i class="fa fa-github"></i></a>
+
+    
+			   
+<a href="fenghao2821@gmail.com" title="envelope"><i class="fa fa-envelope"></i></a>
+
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.write("Copyright © "+year+" " + "飞来飞去-区块链学习笔记");
+		</script>
+		
+		
+	  
+      </div>
+
+    </div>
+
+<script>
+new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
+console.clear();
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+
+</html>

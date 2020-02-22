@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="记录区块链行业重点文章，前沿技术">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>[13][文章解读]自然期刊-量子计算机使区块链安全面临威胁 | 飞来飞去-区块链学习笔记</title>
+<link href="https://flfqbit.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.js"></script>
+
+  </head>
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" alt="logo" style="display:inline-block;" src="https://flfqbit.github.io/images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+
+          <h1 title="飞来飞去-区块链学习笔记" class="weaklink"><a  href="/">飞来飞去-区块链学习笔记</a>
+
+          </h1>
+	  
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+<div class="content">
+<div class="post_page" >
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>[13][文章解读]自然期刊-量子计算机使区块链安全面临威胁</a>
+    </h2>
+  </div>
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+  <div class="post_details">
+    <div class="info"><i class="fa fa-calendar"></i>
+<span class="date_info">2020-02-22</span>
+<i class="fa fa-eye"></i>
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+</span>
+<i class="fa fa-anchor"></i>
+<span style="margin-right:15px">
+3141字
+</span>
+<i class="fa fa-clock-o"></i>
+<span style="margin-right:15px">
+12 min read
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</span>
+</div>
+  </div>
+
+    <div class="post_content markdown">
+	
+
+	
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><p>  2018年11月19日，自然期刊的官方网站发表了一批关于区块链的评论文章“Quantum computers put blockchain security at risk”（量子计算机使区块链安全面临威胁）。文章链接：https://www.nature.com/articles/d41586-018-07449-z<br>
+  这篇文章发表在自然期刊（世界上历史悠久的、最有名望的科学杂志之一）官网的comment栏目，属于自然期刊的一种评论文章，通常在4页以内3000字一下，不属于SCI论文。但是nature期刊的comment评选很严，也具有较高的影响力。<br>
+  量子计算机对区块链安全造成威胁的论调已经出现很久了。这片在顶级期刊上的介绍性文章对此问题说的很清楚，值得区块链从业者参考。<br>
+  本文对文章中的重点内容进行摘抄、翻译和分析。</p>
+<h1 id="摘要-翻译-分析">摘要、翻译、分析</h1>
+<blockquote>
+<p>By 2025, up to 10% of global gross domestic product is likely to be stored on blockchains.<br>
+翻译：截止到2025年，超过10%的全世界经济生成总值将存储在区块链上。</p>
+</blockquote>
+<p>分析：这个论断最早出现在福布斯网站在2016年3月27日发表的一篇文章中，作者对这句话表示认可，进行了引用。引用文章题目“How Blockchain Technology Could Change The World”，链接是：<br>
+https://www.forbes.com/sites/bernardmarr/2016/05/27/how-blockchain-technology-could-change-the-world/#74fe78fe725b</p>
+<blockquote>
+<p>Blockchain-related products are used everywhere from finance and manufacturing to health care, in a market worth more than US$150 billion.<br>
+翻译：区块链相关产品将广泛应用于金融、制造业和医疗保健领域，市场价值将超过1500亿美元。</p>
+</blockquote>
+<p>分析：上述两个论调都体现了作者以及自然杂志的评审人员对区块链前景的认可。</p>
+<blockquote>
+<p>But within a decade, quantum computers will be able to break a blockchain’s cryptographic<br>
+codes. Here we highlight how quantum technology makes blockchains vulnerable — and how it could render them more secure.<br>
+翻译：但是，量子计算机将在十年之内摧毁区块链使用的加密技术。本文将重点介绍量子技术如何使区块链的安全性受到威胁，以及如何使区块链技术更安全。</p>
+</blockquote>
+<p>分析：作者提出了自己的论断。一方面，量子计算机将在十年之内对现有的区块链安全性造成威胁；另一方面，通过使用量子计算机，将使区块链技术变得更安全。</p>
+<blockquote>
+<p>Blockchain security relies on ‘one-way’ mathematical functions.<br>
+翻译：区块链技术的安全性依赖于“单向函数”。</p>
+</blockquote>
+<p>分析：单向函数 (One-way function)是一种具有下述特点的单射函数：对于每一个输入，函数值都容易计算（多项式时间），但是给出一个随机输入的函数值，算出原始输入却比较困难（无法在多项式时间内使用确定性图灵机计算）。单向函数是现代密码学的一个重要工具。散列函数、数字签名算法都依赖于单向函数。<br>
+  简单来说，区块链中的账号安全（公钥、私钥）、数据安全（区块链账本中的散列函数）都是基于单向函数的原理而设计的。如果“单向函数”出现问题，区块链的账号和数据安全都将崩溃。</p>
+<blockquote>
+<p>Yet, within ten years, quantum computers will be able to calculate the one-way functions, including blockchains, that are used to secure the Internet and financial transactions.<br>
+翻译：然而，在十年内，量子计算机将能够计算单向函数。这些单向函数被广泛用于互联网和金融交易中，也包括区块链技术。</p>
+</blockquote>
+<p>分析：单向函数是现代密码学中的重要工具，被广泛应用在互联网通信安全和金融交易安全之中。所以，一旦单向函数被攻破，很多领域都会面临重大威胁。区块链技术只是其中的一个受害者。</p>
+<blockquote>
+<p>A blockchain is particularly at risk from this because oneway functions are its sole line of defence — a user’s only protection is their digital signature, whereas bank clients are protected by plastic cards, security questions, identity checks and human cashiers.<br>
+翻译：区块链特别容易受此影响，因为单向功能是区块链技术唯一的安全防线。在区块链系统中，用户唯一的保护是他们的数字签名；而在传统银行产业总，客户受到银行卡、安全问题、身份检查和人工收银员等多重保护。</p>
+</blockquote>
+<p>分析：此论断说明了为什么区块链技术对量子威胁更加敏感。因为，区块链技术的安全性全部建立在密码学基础之上，如果现有的密码技术出现问题，区块链系统很难进行补救。<br>
+  一个很典型的例子，在传统银行中，如果用户丢失了银行卡，或者忘记银行卡密码，可以前往柜台进行密码恢复或者银行卡补办。<br>
+  <strong>而在区块链系统中，一旦用户丢失了账户密钥（账号对应的私钥），则用户将永久失去账号对应资产的所有权，任何机构都无法帮助此用户恢复资产。</strong></p>
+<blockquote>
+<p>Most specialists think that this feat would require a universal quantum computer (one capable of performing a wide variety of calculations), which is more than a decade away. Yet some researchers suggest that this could happen sooner, using emerging quantum computational devices that have more limited capabilities, such as those being developed by the computing firms D-Wave, Google and others.<br>
+翻译：大多数专家认为，实现此类攻击需要一台通用的量子计算机，大约需要十年时间。还有一些研究人员表示，通过使用一些已经出现的专用量子计算设备，能够加速这个过程。</p>
+</blockquote>
+<p>分析：无论是哪种情况，量子威胁将在10年之内出现，这确实值得区块链社区立刻进行相关研讨。</p>
+<blockquote>
+<p>An international team of researchers has highlighted the possible impacts of such attacks, with a report earlier this year charting the threats and suggesting a possible workaround.<br>
+翻译：(2017年)一个国际研究团队强调了这种攻击（利用量子攻击实现双花攻击）的可能性，绘制了威胁图，并提出了一种可行的应对机制。</p>
+</blockquote>
+<p>分析：据查，这个团队的研究成果已经通过论文的形式发表在在线论文发布网站arxiv.or，论文链接是https://arxiv.org/abs/1710.10377<br>
+  通过查看这篇论文的摘要，了解到这个团队的主要工作包括：首先，通过分析量子计算机的发展趋势，估计比特币使用的椭圆曲线签名方案将在2027年被打破；其次，团队分析了一种名为“Momentum”的工作量证明机制，这种机制能够有效抵抗量子计算机的破解威胁，可以作为比特币的替代共识机制；最后，团队对目前可用的后量子签名方案的安全性和效率进行审查，希望找到最适合比特币的签名方案。</p>
+<blockquote>
+<p>Fortunately, quantum technologies also offer opportunities to enhance the security and performance of blockchains.<br>
+翻译：幸运的是，量子技术也提供了增强区块链安全性和性能的机会。</p>
+</blockquote>
+<p>分析：相对于文章前半部分介绍的量子技术对区块链安全的威胁，后半部分将主要介绍如何利用量子技术提高区块链安全性和性能。</p>
+<blockquote>
+<p>Quantum-safe encryption. Quantum communications are inherently authenticated — no user can impersonate another. Such technologies use states of individual particles of light (photons) to encode bits and communicate them. Fundamental physics stipulates that quantum states cannot be copied or measured without being altered. Any eavesdropper will be immediately uncovered.<br>
+翻译：量子安全加密。 量子通信本身就是经过身份验证的 - 没有用户可以冒充他人。 这些技术使用单个光粒子（光子）的状态来编码比特并进行通信。 基础物理学规定量子态不能被复制或测量而不被改变。 任何窃听者都会立即被发现。</p>
+</blockquote>
+<p>分析：使用量子加密技术能够有效解决区块链中存在的隐私泄漏问题。</p>
+<blockquote>
+<p>Quantum internet. Using quantum technology for communicating as well as for the computational processing of blockchain data would further enhance security and enable blockchains to become faster and more efficient.<br>
+翻译：量子互联网。使用量子技术实现区块链中的通信和计算过程，将进一步增强安全性并使区块链变得更快，更高效。</p>
+</blockquote>
+<p>分析：更安全的通信信道、更快速的计算能力，这将解决现有区块链系统存在的隐私保护和扩展性问题。看到这里，更加增强了我对区块链技术的信息。目前，受制于网络带宽和计算性能的限制，区块链技术在扩展性、隐私保护方面还存在种种问题，但是这些问题都是可以通过技术的升级换代解决掉。区块链具备的核心优势-去中介信任，具有不可替代的优势。当其他缺陷解决后，区块链技术将具有更大的发挥空间。</p>
+<blockquote>
+<p>In the interim, one-way functions should be tightened. Some alternative encryption functions have been proposed9 that should be equally difficult to reverse using conventional or quantum computers.<br>
+翻译：在此期间，应加强“单向函数”。目前已经出现了一些替代加密函数，能够抵抗传统或量子计算机的攻击。<br>
+The quantum internet is several decades away, so ‘blind quantum computation’ is an interim step.<br>
+翻译：量子互联网还需要数十年才能走向实用，因此可以将“盲量子计算”作为暂时的解决方案。</p>
+</blockquote>
+<p>分析：由于量子加密和量子互联网都还需要一段时间去完善。因此，目前需要研究一些增强方案，先行应对量子威胁。例如，研究能够抵抗量子攻击的“单向函数”；研究“盲量子计算”算法，实现轻量级的量子计算模型。</p>
+<blockquote>
+<p>The blockchain business needs to update its existing software to use one-way cryptographic functions that are equally hard to reverse using conventional or quantum computers. Until these post-quantum solutions are established or standardized, platforms must be flexible and capable of changing cryptographic algorithms on the fly.<br>
+翻译：区块链行业需要更新其现有软件，使用能够抵抗量子攻击的&quot;单向函数&quot;。在后量子解决方案建立或标准化之前，平台必须具有灵活性并能够即时更改加密算法。</p>
+</blockquote>
+<p>分析：这句话给区块链行业抵抗量子攻击提供了一个明确的思路。首先，使用抵抗量子攻击的&quot;单向函数&quot;替代现有的加密机制；其次，在设计平台架构时支持灵活的、可操作的底层密码更新机制。</p>
+<h1 id="总结">总结</h1>
+<p>  本文清晰、简洁的介绍了量子计算对区块链安全的威胁和机遇。我最大的收获是解决了以下认知问题：</p>
+<p><strong>（1）量子攻击带来的威胁具体是什么？</strong><br>
+  区块链安全依赖的“单向函数”将在10年内被量子计算机攻破。这意味着基于公钥加密算法的区块链账号将被攻击，比特币账号、以及所有区块链数字货币账号中的资金都面临被窃取的风险；这也意味着基于哈希函数和链式结构实现的区块链数据不可更改的优势也将被打破。</p>
+<p><strong>（2）量子攻击为何对区块链威胁最大？</strong><br>
+  虽然各个行业普遍都在使用基于”单向函数“的密码技术，都面临量子威胁。但是传统行业的安全通常是建立在多种安全机制之上，例如，银行不仅依赖数字签名等密码技术，还依赖基于”银行卡“的硬件认证、基于操作人员的人工检查等多种检测机制。<br>
+  但是区块链的去中心架构导致其所有安全性都依赖于密码技术。这在一定程度上使得区块链技术避免了中心节点的攻击，但是这也导致一旦区块链安全依赖的密码技术被攻破，区块链账号及整个区块链体系都将彻底崩溃。</p>
+<p><strong>（3）量子技术将给区块链带来什么机会？</strong><br>
+  使用量子技术的加密通信机制将能够从根本上防止窃听，提高区块链的隐私保护能力。<br>
+  使用量子技术的高性能计算机，将提升区块链的性能和易用性。</p>
+</span></p></div><div id = "warn"></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">飞来飞去-区块链学习笔记</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2020-02-22</div>    
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<div style="width:100%;overflow:hidden">
+
+          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
+            下一篇
+            <a href="https://flfqbit.github.io/post/12wen-zhang-jie-du-cong-liang-pian-wen-zhang-kan-qu-kuai-lian-de-han-dong-he-xi-wang/">
+              <p class="post-title">
+                <b>[12][文章解读]从两篇文章看区块链的寒冬和希望</b>
+              </p>
+            </a>
+          </div>
+
+
+
+          <div style="float:left;text-align:left;color:#ccc;font-size:18px;width:50%;">
+            上一篇
+            <a href="https://flfqbit.github.io/post/14zheng-gao-qi-shi-jie-du-ieee-acm-iwqos19-cfpccf-c-lei-hui-yi-qu-kuai-lian-he-an-quan-ji-chu-she-shi/">
+              <p class="post-title">
+                <b>[14][征稿启事解读]-IEEE-ACM IWQoS&#39;19 CFP（CCF C类会议）-区块链和安全基础设施</b>
+              </p>
+            </a>
+          </div>
+
+</div>
+
+<div class="doc_comments">
+
+</div>
+<script>
+var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
+imgList = document.querySelectorAll('.md_block img')
+imgList.forEach(img => {
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
+  let div1 = document.createElement('div')
+  let div = document.createElement('div')
+  div.className='back';
+  div.setAttribute("data-src",img.src)
+  var figuration = document.createElement("figcaption")
+  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
+  img.replaceWith(div1)
+  div1.appendChild(div)
+  div.appendChild(img)
+  div1.appendChild(figuration)}
+})
+$('img').on('error',function(){$(this).prop('src','https://flfqbit.github.io/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于2020-02-22，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="2020-02-22 23:17:46";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+$('#pjax-container').lightGallery({
+    selector: '.back'
+});
+</script>
+  </div>
+</div>
+
+
+      </div>
+<div class="toc">
+<ul class="markdownIt-TOC">
+<li><a href="#%E6%91%98%E8%A6%81-%E7%BF%BB%E8%AF%91-%E5%88%86%E6%9E%90">摘要、翻译、分析</a></li>
+<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
+</ul>
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/flfqbit" title="github"><i class="fa fa-github"></i></a>
+
+    
+			   
+<a href="fenghao2821@gmail.com" title="envelope"><i class="fa fa-envelope"></i></a>
+
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.write("Copyright © "+year+" " + "飞来飞去-区块链学习笔记");
+		</script>
+		
+		
+	  
+      </div>
+
+    </div>
+
+<script>
+new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
+console.clear();
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+
+</html>
