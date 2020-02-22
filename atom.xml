@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-02-22T14:01:16.439Z</updated>
+    <updated>2020-02-22T14:06:47.921Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -81,6 +81,25 @@ http://www.gov.cn/xinwen/2018-11/03/content_5337137.htm<br>
 <h1 id="四-总结">四、总结</h1>
 <p>  报告中针对加密资产的章节清晰的界定了加密资产的属性，分类和面临的威胁。思路非常清晰。这代表了监管机构对加密资产领域、对区块链行业有清晰的认识。未来，针对加密资产的监管将进一步正规化，试图利用区块链、及加密资产进行诈骗、洗钱的行为将受到更加严厉的打击。<br>
   另一方面，官方机构对加密资产的定义，从另一个角度说明了加密资产地位的改变，不再是一种非主流的极客技术，而是将被纳入监管的新技术。针对加密资产和区块链技术的有益研究、产品将得到更多发展机会。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于]]></title>
+        <id>https://flfqbit.github.io/post/about/</id>
+        <link href="https://flfqbit.github.io/post/about/">
+        </link>
+        <updated>2020-02-22T11:09:48.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>欢迎来到我的小站呀，很高兴遇见你！</p>
+</blockquote>
+<h2 id="关于本站">关于本站</h2>
+<p>本站用于记录区块链行业的重要文章、前沿技术、零散知识。</p>
+<h2 id="博主是谁">博主是谁</h2>
+<p>区块链技术爱好者</p>
+<h2 id="兴趣爱好">兴趣爱好</h2>
+<p>区块链；数字货币监管；TOR</p>
+<h2 id="联系我呀">联系我呀</h2>
+<p>fenghao2821@gmail.com</p>
 ]]></content>
     </entry>
     <entry>
@@ -396,52 +415,6 @@ http://www.btb8.com/blockchain/1901/28981.html</p>
 <p>-更新时间：20200208<br>
 -更新内容：添加2个书籍<br>
 -书籍个数：2</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[2]区块链技术的安全问题]]></title>
-        <id>https://flfqbit.github.io/post/2qu-kuai-lian-ji-zhu-de-an-quan-wen-ti/</id>
-        <link href="https://flfqbit.github.io/post/2qu-kuai-lian-ji-zhu-de-an-quan-wen-ti/">
-        </link>
-        <updated>2020-02-22T10:38:22.000Z</updated>
-        <content type="html"><![CDATA[<p>#1 量子计算机带来的安全问题<br>
-[nature]“Quantum computers put blockchain security at risk”（量子计算机使区块链安全面临威胁）<br>
-https://www.nature.com/articles/d41586-018-07449-z<br>
-[文章解读]自然期刊-量子计算机使区块链安全面临威胁<br>
-https://www.jianshu.com/p/ce55df2f011b</p>
-<p>#2 ECC算法的安全性<br>
-[文章解读]ECC算法的安全性<br>
-https://www.jianshu.com/p/2346349f021d</p>
-<p>#3 区块链安全TOP 10<br>
-区块链安全事故案例-OWASP区块链安全TOP 10 2019_RC1<br>
-https://www.jianshu.com/p/9f462ffd91af<br>
-[文章解读][区块链安全TOP10 2019_RC1]<br>
-http://www.owasp.org.cn/owasp-project/copy_of_TOP102019_RC1.pdf</p>
-<p>#4 带宽对区块链安全的影响<br>
-[文章解读]带宽对区块链安全的影响<br>
-https://www.jianshu.com/p/8dc7a07b76a0</p>
-<p>#5 比特币系统的自我调节机制<br>
-[文章解读]比特币系统的自我调节机制<br>
-https://www.jianshu.com/p/067041366b76</p>
-<p>#6 比特币和以太坊网络规模<br>
-[文章解读]比特币和以太坊网络规模<br>
-https://www.jianshu.com/p/0ed9142cd994</p>
-<p>#7 区块链发展过程值得研究的安全问题<br>
-[文章解读]区块链发展过程值得研究的安全问题<br>
-https://www.jianshu.com/p/d1454ad44d63</p>
-<p>#8 区块链安全论文<br>
-[论文汇总]区块链安全<br>
-https://www.jianshu.com/p/ff8f6b4846da</p>
-<p>#8 51%攻击的解决办法[待阅读]<br>
-[技术文章]Vitalik最新演讲：覆巢式51%攻击成PoW区块链致命威胁，PoS或是唯一出路<br>
-https://www.8btc.com/article/558562</p>
-<hr>
-<p>-更新时间：20200220<br>
--更新内容：添加1个数据<br>
--数据个数：9</p>
-<p>-更新时间：20200209<br>
--更新内容：添加8个数据<br>
--数据个数：8</p>
 ]]></content>
     </entry>
 </feed>
