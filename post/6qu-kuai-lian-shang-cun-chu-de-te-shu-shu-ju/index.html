@@ -1,0 +1,249 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>[6]区块链上存储的特殊数据 | 区块链技术笔记</title>
+<link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1582368323934">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="[6]区块链上存储的特殊数据 | 区块链技术笔记 - Atom Feed" href="https://flfqbit.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="本文目的
+区块链公链系统通常会提供数据存储的能力。例如，比特币的“OP_RETURN”参数，以太坊的“input_data”参数。用户在公链系统上存储的数据将永久保存和公开访问，因此被用于各种特殊的存储目的。本文记录一些典型的区块链数据，方..." />
+    <meta name="keywords" content="资料整理" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://flfqbit.github.io">
+  <img class="avatar" src="https://flfqbit.github.io/images/avatar.png?v=1582368323934" alt="">
+  </a>
+  <h1 class="site-title">
+    区块链技术笔记
+  </h1>
+  <p class="site-description">
+    记录区块链行业重点文章，前沿技术
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              [6]区块链上存储的特殊数据
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-02-22
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://flfqbit.github.io/tag/tkwMj61kn/" class="post-tag">
+                  # 资料整理
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p><strong>本文目的</strong><br>
+区块链公链系统通常会提供数据存储的能力。例如，比特币的“OP_RETURN”参数，以太坊的“input_data”参数。用户在公链系统上存储的数据将永久保存和公开访问，因此被用于各种特殊的存储目的。本文记录一些典型的区块链数据，方便查阅。<br>
+<strong>数据查阅方法</strong><br>
+原始数据可以在区块链浏览器网站上根据交易哈希查询：</p>
+<ul>
+<li>比特币浏览器：<a href="https://btc.com/">https://btc.com/</a></li>
+<li>以太坊浏览器：<a href="https://etherchain.org/">https://etherchain.org/</a></li>
+</ul>
+<p>解析数据可以利用在线格式转换工具进行转换：</p>
+<ul>
+<li>“OP_RETURN”参数解析方法（hex-&gt;ascii）：<br>
+<a href="https://www.sojson.com/hexadecimal.html">https://www.sojson.com/hexadecimal.html</a></li>
+<li>“input_data”参数解析方法（hex-&gt;ascii）：<br>
+<a href="https://www.sojson.com/hexadecimal.html">https://www.sojson.com/hexadecimal.html</a></li>
+<li>以太坊智能合约中也能存储数据，可以用etherscan查看数据：<br>
+<a href="https://etherscan.io/address/0x6e46d3ab7335fffb0d14927e0b418cc08fe60505#code">https://etherscan.io/</a></li>
+</ul>
+<p>#1 WannaCry<br>
+<strong>存储方式</strong>：比特币“OP_RETURN”<br>
+<strong>交易哈希</strong>：<br>
+f093bf69f5e85a21d67c6921d71a5abb2cfcb197c8256e39bf7ce033d61e5405<br>
+<strong>原始数据</strong>：“43617574696f6e212057616e6e6143727920416464726573732121”<br>
+<strong>解析数据</strong>：“Caution ! WannaCry Address”<br>
+<strong>内容简介</strong>：“WannaCry”勒索事件发生后，一个研究人员向勒索地址发送一个交易，交易中包含1个特殊输出“OP_RETURN”，内容是“Caution ! WannaCry Address”。这种标签可以用于标注恶意地址，增加这笔资金的使用难度。例如，推选一个具有公信力的组织，负责对地址加标签。然后更新比特币客户，拒绝接受带特殊标签的资金。组织可以采用签名的方式防止伪造。<br>
+内容是英文，解析时需要去除前两个字符的&quot;0x&quot;<a href="http://tool.haooyou.com/code?group=convert&amp;type=hexToStr&amp;charset=UTF-8">十六进制→字符串（UTF-8）在线解析工具</a></p>
+<p>#2 求助信<br>
+<strong>存储方式</strong>：以太坊“input_data”<br>
+<strong>交易哈希</strong>：<br>
+0x5591c1c0ff78f4847e6a7aa121777c7b03be813a2279253033c6f5821f2c4aaa<br>
+<strong>原始数据</strong>：<br>
+&quot;0xe68891e698afe4b880e4b8aae6b996e58c97e4<br>
+......&quot;<br>
+<strong>解析数据</strong>：<br>
+“......<br>
+I born and live in XX”<br>
+<strong>内容简介</strong>：<br>
+2020-02-08，一个以太坊用户通过以太坊交易发布的求助信息（不能判断是否是诈骗）。<br>
+内容是中文+英文，解析时需要去除前两个字符的&quot;0x&quot;<a href="http://tool.haooyou.com/code?group=convert&amp;type=hexToStr&amp;charset=UTF-8">十六进制→字符串（UTF-8）在线解析工具</a></p>
+<p>#3 医生<br>
+<strong>存储方式</strong>：以太坊“智能合约代码”<br>
+<strong>交易哈希</strong>：<br>
+0x6e46d3ab7335fffb0d14927e0b418cc08fe60505<br>
+<strong>原始数据</strong>：<br>
+xxx<br>
+<strong>解析数据</strong>：<br>
+xxx<br>
+<strong>内容简介</strong>：<br>
+记载医生的相关信息。</p>
+<p>#4 板门店宣言<br>
+<strong>存储方式</strong>：以太坊“智能合约代码”<br>
+<strong>交易哈希</strong>：<br>
+0xdc7c743110Ec689d82f050302319AE27aF84f8fa<br>
+<strong>原始数据</strong>：<br>
+“\xED\x95\x9C\xEB\xB0\x98\xEB\x8F\x84\xEC\x9D\x98\x20\xED\x8F\x8<br>
+......”<br>
+<strong>解析数据</strong>：<br>
+한반도의 폀<br>
+<strong>内容简介</strong>：<br>
+著名的《板门店宣言》的韩语版。这笔交易是2018年由韩国的一位开发者Ryu Gi-hyeok记录的。<br>
+内容是韩文，解析时需要去除数据中的&quot;\x&quot;<a href="http://tool.haooyou.com/code?group=convert&amp;type=hexToStr&amp;charset=UTF-8">十六进制→字符串（UTF-8）在线解析工具</a></p>
+<p>#5 疫苗质量<br>
+<strong>存储方式</strong>：以太坊“input_data”<br>
+<strong>交易哈希</strong>：<br>
+0x802a072a303a1bb19a20065a262526f2cfda0d1ea16eeb3db6500d9d06f65963<br>
+<strong>原始数据</strong>：<br>
+&quot;e69d8ee5858be5bcbaefbc9ae796abe88b97e8b4a8e9878fe5ae89e585a8e698afe4b88de58fafe8<br>
+......&quot;<br>
+<strong>解析数据</strong>：<br>
+&quot;疫苗质量安全是不可<br>
+......&quot;<br>
+<strong>内容简介</strong>：<br>
+疫苗质量文章。<br>
+内容是中文，解析时需要去除前两个字符的&quot;0x&quot;<a href="http://tool.haooyou.com/code?group=convert&amp;type=hexToStr&amp;charset=UTF-8">十六进制→字符串（UTF-8）在线解析工具</a></p>
+<hr>
+<p>-更新时间：20200209<br>
+-更新内容：添加2个数据<br>
+-数据个数：5</p>
+<p>-更新时间：20200208<br>
+-更新内容：添加3个数据<br>
+-数据个数：3</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://flfqbit.github.io/post/5qu-kuai-lian-ke-yan-xiang-mu-xin-xi-hui-zong/">
+              <h3 class="post-title">
+                [5]区块链科研项目信息汇总
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://flfqbit.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
