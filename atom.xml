@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>区块链技术笔记</title>
-    <updated>2020-02-22T10:46:02.840Z</updated>
+    <updated>2020-02-22T12:53:39.433Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -10,6 +10,79 @@
     <logo>https://flfqbit.github.io/images/avatar.png</logo>
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 区块链技术笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[[2][文章解读]网信办旗下杂志区块链组稿1-区块链发展是一次长跑]]></title>
+        <id>https://flfqbit.github.io/post/2wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-1-qu-kuai-lian-fa-zhan-shi-yi-ci-chang-pao/</id>
+        <link href="https://flfqbit.github.io/post/2wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-1-qu-kuai-lian-fa-zhan-shi-yi-ci-chang-pao/">
+        </link>
+        <updated>2020-02-22T11:26:44.000Z</updated>
+        <content type="html"><![CDATA[<p>  2018年11月12日，中央网信办主管的《网络传播》杂志发表8篇区块链稿件，从多个角度介绍区块链行业的发展。作为重要主管机构，此次的区块链稿件具有重要参考作用。<br>
+  组稿第1篇是北京航空航天大学教授蔡维德编写，题目是“区块链发展是一次长跑 ”，主要介绍了区块链技术的价值和发展趋势。<br>
+  文章原文可以从以下链接获得：<br>
+[http://www.cac.gov.cn/2018-11/12/c_1123700997.htm)<br>
+  本文对文章中的重点内容进行摘要和分析：</p>
+<blockquote>
+<p>“区块链是由多个独立节点共同参与的分布式数据库系统，也可以理解为一种特别的分布式账本，由这些节点共同维护。它很难修改、很难伪造、可以追溯。区块链记录所有发生交易的信息，过程高效透明，数据高度安全。”</p>
+</blockquote>
+<p>  “独立节点”指出了区块链网络具有分布式、去中心的特点，不存在一个中心机构可以独自影响区块链网路。<br>
+  “很难修改、很难伪造、可以追溯”在修饰词上进行了完善。传统话语中经常用的“不能修改”、“不能伪造”、“高效追溯”不太准确。</p>
+<blockquote>
+<p>“区块链可以说是一个物物交换的平台，或是“去中介化”的平台，而不是“去中心化”。”</p>
+</blockquote>
+<p>  “去中心化”和“去中介化”都体现了区块链技术的一部分特征，并没有明显的优劣、对错之分。以去中介化特征为例：<br>
+  古人类用“物物” 交换，虽然存在物品不等价、物品不适用等问题，但是通过面对面交换解决了信任问题。<br>
+  现代社会使用法币作为中介物实现“物-法币-物” 交换，本质上是将法币作为一种有效的、稳定的价值媒介物。法币的可靠性通过货币当局提供的法偿性和强制性实现。<br>
+  区块链体系中使用加密资产作为中介物实现实现“物-加密资产-物”交换。虽然还是需要中介物，但是作为中介物的加密资产不需要一个中心机构去发行和维护，而是在分布式节点的参与下，靠密码学和共识机制保证安全性。相对于法币模式，区块链模式更接近“去中介化”。</p>
+<blockquote>
+<p>“2018年是区块链元年，今天大部分区块链应用都是在“数字代币”上面，或是所谓的“通证经济”方面。”</p>
+</blockquote>
+<p>  从2016年起，区块链元年的提法每年都会出现。2018年的主要特征是：ICO逻辑的崩溃、导致币价的崩溃，进一步导致大量区块链创业企业进入寒冬。同时，传统行业、互联网头部企业、高校研究机构快速入场。区块链技术似乎进入了一个投机破灭、研究推进的领域。区块链技术是否一定和通证相关，并无明确答案。</p>
+<blockquote>
+<p>“但是，中国发展区块链的优势还是很足的，因为中国仍然有最多的人口、最大的电商、最大的第三方支付系统，这些都没有改变。”</p>
+</blockquote>
+<p>  技术的落地需要好的场景，能否在巨大的中国支付市场中发挥作用，是区块链技术的考验和机会。从目前落地的项目看，无论是区块链发票、区块链溯源，还是区块链跨国转账，似乎都还没有发挥出区块链技术的潜力。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[1][报告解读]中国金融稳定报告2018-加密资产相关领域风险及防范]]></title>
+        <id>https://flfqbit.github.io/post/1bao-gao-jie-du-zhong-guo-jin-rong-wen-ding-bao-gao-2018-jia-mi-zi-chan-xiang-guan-ling-yu-feng-xian-ji-fang-fan/</id>
+        <link href="https://flfqbit.github.io/post/1bao-gao-jie-du-zhong-guo-jin-rong-wen-ding-bao-gao-2018-jia-mi-zi-chan-xiang-guan-ling-yu-feng-xian-ji-fang-fan/">
+        </link>
+        <updated>2020-02-22T11:25:24.000Z</updated>
+        <content type="html"><![CDATA[<p>  2018年11月2日，“中国人民银行金融稳定分析小组”发布报告《中国金融稳定报告2018》。本报告的“专题十二　加密资产相关领域风险及防范”部分介绍了针对加密资产的专项研究。<br>
+  文章简短精炼，明确了比特币、以太币等资产的定义，清晰介绍了加密资产的发展情况、面临风险和监管机制。<br>
+  报告原文可以从以下链接获得：<br>
+http://www.gov.cn/xinwen/2018-11/03/content_5337137.htm<br>
+  本文对报告中涉及加密资产的重点内容进行摘要和分析：</p>
+<h1 id="一-定义概念">一、定义概念</h1>
+<p><strong>加密资产是一种民间金融资产，价值来源是密码学和分布式记账技术。</strong><br>
+  上述定义将加密资产定义为一种“民间的”“金融”资产，即肯定了其金融属性，又界定了其“民间”身份。价值来源的判断非常准确，说明了为什么民间发行的数字货币具有金融资产的性质。</p>
+<p><strong>加密资产不由货币当局发行，不具有法偿性和强制性等货币属性，不具有与货币等同的法律地位。</strong><br>
+  上述定义清晰的说明了加密资产和法币之间的区别。之前通常使用的“数字货币”会让普通人感到迷惑。</p>
+<p><strong>ICO通常是区块链项目研发团队通过发行自行创设的数字货币向投资者募集比特币和以太币等加密资产的行为。因其形式类似于首次公开发行（IPO）而得名。</strong><br>
+  ICO的定义强调了3点内容。首先，ICO的数字货币是由区块链团队自行发行的，而不是由货币当局（例如，人民银行）发行。其次，ICO募集的资产是比特币、以太币等加密资产，而不是法币。这是ICO在初始发展前期没有受到监管的主要原因。最后，ICO的取名是参考了IPO，本质上是一种股权募资行为。</p>
+<h1 id="二-加密资产领域的分类">二、加密资产领域的分类</h1>
+<p>  加密资产领域的发展主要分为两类：<br>
+  <strong>（1）发行领域</strong><br>
+  文中介绍加密资产发行过程经历了两个阶段。第一阶段是通过“挖矿”产生的加密资产，以比特币、以太币为例；第二阶段是通过ICO产生的加密资产，以EOS、BNB为例。<br>
+  这种分阶段的介绍方式能够清晰的说明比特币、以太币等**“原生型”<strong>加密资产和</strong>“依附型”<strong>加密资产的区别。</strong>“依附型”**加密资产成本级低，将创造加密资产的过程简化到小时级工作量，使其成为了传销、诈骗活动的有力工具。<br>
+  “工具本身是无罪的”，ICO募资模式，以及这种极低成本、级高可靠性的“代币”发行机制有很多创新优势。如果监管措施到位，这两项技术都能够发挥更多正向作用。</p>
+<p>  <strong>（2）交易领域</strong><br>
+  交易领域主要是指加密资产的交易过程，虽然加密资产可以通过个人之间的链上交易实现，但是交易的绝大部分仍然是依靠传统的交易所实现。加密资产交易所是指在互联网中进行的面相公众的针对比特币、代币等加密资产的电子化撮合、集中连续竞价服务的交易平台。<br>
+  数字货币交易所本质上类似于传统的股票交易所，无论是从事币币交换、还是从事代币与法币的交换，未来肯定需要行业监管和政府监管。未来一定是受到马太效应的影响，只有头部交易平台才能够合规运行。“去中心交易所”、“链上交易所”本质上只能处理币币交易。占主导比例和主要受益的法币与代币交易业务还是会聚集在线下合规交易所。目前出现的万家数字货币交易所现象不会持久，大部分小交易所最终会因为黑客攻击、交易量降低而逐渐淘汰。</p>
+<h1 id="三-加密资产领域存在的问题及挑战">三、加密资产领域存在的问题及挑战</h1>
+<p><strong>（1）行业无序发展，投机色彩浓厚</strong><br>
+  加密资产和ICO本身是为了区块链项目发展提供支持，但是由于加密资产价格飙升，大量区块链项目成为空壳，目的只是为了利用加密资产进行投机。这种情况不利于区块链行业的发展，会激发资金脱实向虚，成为被监管打击的对象。</p>
+<p><strong>（2）投资者合法权益难以保障</strong><br>
+  发行方面存在非法发行证券、非法集资、金融诈骗、传销等违法犯罪活动；交易方面由于不存在涨跌幅和交易时间限制，会导致剧烈的价格波动；加密资产本身集中度高、流动性不足，存在炒作、庄家控盘等问题。<br>
+  在初期，没有涨跌幅和交易时间限制甚至被作为加密资产的一项优势。实际上，金融行业的每一项监管措施都是在大量金融问题出现后提出的解决方案。如果没有这些监管机制，将不可避免的出现炒作、庄家控盘等恶意行为。</p>
+<p><strong>（3）易被违法犯罪活动利用</strong><br>
+  以“区块链”为名，行“传销、诈骗”之实，在当前监管机制还不健全的情况下，利用区块链噱头进行非法集资、诈骗的行为依然有生存空间；加密资产的匿名性导致资金来源、去向不明，为洗钱、非法交易、恐怖融资及逃避资产管制和国际制裁提供了便利。</p>
+<h1 id="四-总结">四、总结</h1>
+<p>  报告中针对加密资产的章节清晰的界定了加密资产的属性，分类和面临的威胁。思路非常清晰。这代表了监管机构对加密资产领域、对区块链行业有清晰的认识。未来，针对加密资产的监管将进一步正规化，试图利用区块链、及加密资产进行诈骗、洗钱的行为将受到更加严厉的打击。<br>
+  另一方面，官方机构对加密资产的定义，从另一个角度说明了加密资产地位的改变，不再是一种非主流的极客技术，而是将被纳入监管的新技术。针对加密资产和区块链技术的有益研究、产品将得到更多发展机会。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[9]区块链在安全领域的应用]]></title>
         <id>https://flfqbit.github.io/post/9qu-kuai-lian-zai-an-quan-ling-yu-de-ying-yong/</id>
@@ -369,102 +442,6 @@ https://www.8btc.com/article/558562</p>
 <p>-更新时间：20200209<br>
 -更新内容：添加8个数据<br>
 -数据个数：8</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[1]区块链标准]]></title>
-        <id>https://flfqbit.github.io/post/1qu-kuai-lian-biao-zhun/</id>
-        <link href="https://flfqbit.github.io/post/1qu-kuai-lian-biao-zhun/">
-        </link>
-        <updated>2020-02-22T10:33:39.000Z</updated>
-        <summary type="html"><![CDATA[<p>记录区块连相关标准</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>记录区块连相关标准</p>
-<!-- more -->
-<p>#1 [国际标准][ref 1-2].  ISO/AWI 22739 Blockchain and distributed ledger technologies–Terminology andconcepts |区块链和分布式记账技术——术语和概念<br>
-#2 [国际标准][ref 1-2].  ISO/NP TR 23244 Blockchain and distributed ledger technologies — Overview ofprivacy and personally identifiable information (PII) protection |区块链和分布式记账技术——隐私和个人可识别信息(PII)保护概述<br>
-#3 [国际标准][ref 1-2].  | ISO/NP TR 23245 Blockchain and distributed ledger technologies — Securityrisks and vulnerabilities |区块链和分布式记账技术——安全风险和漏洞<br>
-#4 [国际标准][ref 1-2].  | ISO/NP TR 23246 Blockchain and distributed ledger technologies — Overview ofidentity |区块链和分布式记账技术——身份概览<br>
-#5 [国际标准][ref 1-2].  | ISO/AWI 23257 Blockchain and distributed ledger technologies — Referencearchitecture |区块链和分布式记账技术——参考架构（<strong>中国承担联合编辑职务</strong>）<br>
-#6 [国际标准][ref 1-2].  | ISO/AWI TS 23258 Blockchain and distributed ledger technologies — Taxonomyand Ontology |区块链和分布式记账技术——分类和本体（<strong>中国承担联合编辑职务</strong>）<br>
-#7 [国际标准][ref 1-2].  | ISO/AWI TS 23259 Blockchain and distributed ledger technologies — Legallybinding smart contracts |区块链和分布式记账技术——合规性智能合约<br>
-#8 [国际标准][ref 1-2].  | ISO/NP TR Blockchain and distributed ledger technologies — Overview of andinteractions between smart contracts in blockchain and distributed ledgertechnology systems |区块链和分布式记账技术——区块链和分布式记账技术系统中智能合约的交互概述</p>
-<p>#9 [国内标准][ref 1-2]《区块链参考架构》-团体标准-中国区块链技术和产业发展论坛<br>
-#10 [国内标准][ref 1-2]《区块链数据格式规范》-团体标准-中国区块链技术和产业发展论坛<br>
-#11 [国内标准][ref 1-2]《信息技术区块链和分布式账本技术 参考架构》-国家标准-中国电子技术标准化研究院</p>
-<p>#引用文献<br>
-[1]国际标准化组织（ISO）正在制定8项关键区块链标准<a href="https://www.chainnews.com/articles/931414525448.htm">https://www.chainnews.com/articles/931414525448.htm</a>）<br>
-[2][文章解读]网信办旗下杂志区块链组稿7-加快研制区块链相关标准<a href="https://www.jianshu.com/p/ce3342de0dc7">https://www.jianshu.com/p/ce3342de0dc7</a></p>
-<hr>
-<p>-更新时间：2019年<br>
--更新内容：添加11条信息<br>
--信息个数：11</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[比特币 0 确认交易解决办法-交易加速]]></title>
-        <id>https://flfqbit.github.io/post/bi-te-bi-0-que-ren-jiao-yi-jie-jue-ban-fa-jiao-yi-jia-su/</id>
-        <link href="https://flfqbit.github.io/post/bi-te-bi-0-que-ren-jiao-yi-jie-jue-ban-fa-jiao-yi-jia-su/">
-        </link>
-        <updated>2020-02-22T10:19:22.000Z</updated>
-        <summary type="html"><![CDATA[<p>比特币交易拥堵是一个常见问题。随着并发交易数量增加，很多矿池会对内存池中的交易按照手续费高低排列，优先处理高手续交易。理想情况下，高手续费 交易先解决，低手续费交易后解决。但是在实际中，由于新的交易不断出现，低手续费交易可能永远得不到处理，长时间甚至甚至永久处于0确认状态。这种情况 下，这笔资金相当于被锁定了，发送者和接收者都不能使用这笔资金。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>比特币交易拥堵是一个常见问题。随着并发交易数量增加，很多矿池会对内存池中的交易按照手续费高低排列，优先处理高手续交易。理想情况下，高手续费 交易先解决，低手续费交易后解决。但是在实际中，由于新的交易不断出现，低手续费交易可能永远得不到处理，长时间甚至甚至永久处于0确认状态。这种情况 下，这笔资金相当于被锁定了，发送者和接收者都不能使用这笔资金。</p>
-<!-- more -->
-<p><strong>背景</strong></p>
-<hr>
-<p>比特币交易拥堵是一个常见问题。随着并发交易数量增加，很多矿池会对内存池中的交易按照手续费高低排列，优先处理高手续交易。理想情况下，高手续费 交易先解决，低手续费交易后解决。但是在实际中，由于新的交易不断出现，低手续费交易可能永远得不到处理，长时间甚至甚至永久处于0确认状态。这种情况 下，这笔资金相当于被锁定了，发送者和接收者都不能使用这笔资金。</p>
-<p>本文作者近期遇到这种情况，一共有26笔交易处于0确认状态，已经过了10天都没有处理，不得已，只能自己寻求解决方案。<br>
-<img src="http://upload-images.jianshu.io/upload_images/4794066-9c80f49111448d67.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1 26笔未确认交易" loading="lazy"></p>
-<figure data-type="image" tabindex="1"><img src="http://upload-images.jianshu.io/upload_images/4794066-e9d0a3ed80ecb67c.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2 0确认交易状态&quot;0/未确认&quot;，在内存池中" loading="lazy"></figure>
-<p>处于0确认状态的交易，相当于通过邮局汇款，汇款方已经将钱交给邮局，但是邮局的汇款单没有送到接收方。在0确认期间，这笔资金相当于被冻结了，汇款方和接收方都无法使用这笔资金。</p>
-<p>为了解冻这种资金，必须采用一定的措施，在比特币中，这种措施被称为“交易加速”。</p>
-<p>通过查阅网络资料，找到一些有用资料。主要包括：<br>
-<a href="http://www.8btc.com/bitcoin-transaction-stuck">http://www.8btc.com/bitcoin-transaction-stuck</a>“交易拥堵太闹心？试试这些方法吧”<br>
-<a href="http://8btc.com/thread-46298-1-1.html">http://8btc.com/thread-46298-1-1.html</a>“技术加速已经发出的比特币交易”</p>
-<p>上述两个网址介绍的方法比较详细，本文作者就是通过这两篇文章解决了问题。但是这两篇文章写的比较简单，在实际操作时有许多“坑”需要跳过，本文将详细介绍具体的解决步骤。</p>
-<p>#解决办法</p>
-<hr>
-<p>根据上述两个网址和其他网络资料，找到许多解决办法，经过尝试，有两种方法确实可行。我将依次介绍。</p>
-<h2 id="1-利用网站提供的交易加速服务">1、利用网站提供的“交易加速”服务。</h2>
-<p>目前已经有一些网站提供交易加速服务，可以通过百度搜索“比特币交易加速”。目前能找到的网址包括：<br>
-<a href="https://pool.viabtc.com/tools/txaccelerator/">https://pool.viabtc.com/tools/txaccelerator/</a>(只有内部会员可用)<br>
-<a href="https://xueqiu.com/7317078788/66175852">https://xueqiu.com/7317078788/66175852</a> (只能加速BTCC)<br>
-<a href="https://bitcoinworld.com/accelerate?s=btc123">https://bitcoinworld.com/accelerate?s=btc123</a>（花钱即可，支付比特币）</p>
-<p>上述3个网站中，第一个viabtc只为内部会员服务，代价比较高，第二个雪球只能加速BTCC。。第3个网站“bitcoinworld”比较实用，直接使用微信、支付宝充值，就可以使用服务。<br>
-<img src="http://upload-images.jianshu.io/upload_images/4794066-957148a8ca1f622c.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3 bitcoinworld上的交易加速服务" loading="lazy"></p>
-<p>在图中的搜索框中输入0确认交易的哈希值，点击“估价”就可以查询加速这条交易所需的费用。只要支付手续费，就可以享受加速服务。图3中显示了我的一个交易已经通过这种加速服务得到确认。</p>
-<p>对于一般的同学，直接使用这种网站的加速服务就可以了，通常可以在较短时间内（我的交易经过2.5个小时得到确认）。</p>
-<p>这种交易加速方法的实质是：网站控制的矿池手动的将您的交易从交易池中取出，打包到待挖矿区块中，只要矿池挖到新的区块，您的交易就得到确认了。交易加速的时间取决于矿池的挖矿能力。<br>
-这种交易加速方法的缺陷是收费较高。尤其是对有较多子交易的交易，手续费会直线提升。我的25个交易的手续费接近0.03个比特币。这是我不能承受的。因此，我继续寻找其他方法。</p>
-<h2 id="2-利用轻钱包手动创建双花实现交易加速">2、利用轻钱包手动创建“双花”，实现交易加速</h2>
-<p>0确认交易得不到确认的原因是比特币网络中不断有新的交易产生，因此手续费低的交易始终在队列尾部，不能被打包。理论上，一个比特币客户端所在服务 器的交易内存池会定期清理未处理的交易（常规说法是3天），这样0确认交易可以被撤销，即解冻，发送方可以重新发送交易。但是，实际上，由于比特币网络中 某些节点会设置“不清理内存池中的交易”，因此，0确认交易很可能永远不会撤销。例如，本文作者的26笔交易已经过了10天依然处于“0/未确认，在内存 池中”状态。</p>
-<p>针对这个问题，另外一种解决办法是使用“轻节点”对0确认交易中的比特币重新创建交易，花掉这些被“冻结”的比特币。这种办法的理论依据是：“全节 点”在创建交易时，会去比特币网络中检查交易的输入资金是否已经被用过，从而避免“双花”。因此，凡是使用过的资金不能用于输入，包括“0确认”交易。</p>
-<p>但是，在“轻节点”中，“轻节点”不需要询问比特币网络，而只需要询问“轻节点”连接的节点，只要这些节点的内存池中没有“0确认”交易，&quot;轻节 点”就可以使用“0确认”交易中的资金创建新的交易。轻节点创建的交易一旦被比特币网络确认，这笔被“锁定”的资金就被成功使用了。原来的“0确认”交易 会因为交易冲突而被所有节点抛弃。</p>
-<p>下面先展示这种方案的结果，然后在介绍操作步骤。</p>
-<p>结果：<br>
-<img src="http://upload-images.jianshu.io/upload_images/4794066-7b9b0d2a882323f8.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图4 通过使用“轻节点”Electrum软件，人工造成交易冲突" loading="lazy"></p>
-<figure data-type="image" tabindex="2"><img src="http://upload-images.jianshu.io/upload_images/4794066-614ef8e883fd6e48.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图5 26条交易被认为冲突，所有“锁定”的资金被使用" loading="lazy"></figure>
-<p>下面介绍使用轻节点解决“0确认”交易的步骤：<br>
-<em>1、在bitcoin-qt软件中输入指令“listaddressgroupings”查找包含资金的比特币地址。</em><br>
-<img src="http://upload-images.jianshu.io/upload_images/4794066-5edf1df3f7479088.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图 6 查找包含资金的地址。" loading="lazy"></p>
-<p>“0确认”交易相当于把交易中输入的资金给锁定了，因此，解锁的第一步是找到资金所在的地址。<br>
-使用“listaddressgroupings”指令是一种办法，还可以想起他办法，例如查询比特币交易网站。</p>
-<p><em>2、获取包含资金的比特币地址的私钥</em><br>
-<img src="http://upload-images.jianshu.io/upload_images/4794066-b0fece316e39da95.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图7 获取包含资金的比特币地址的私钥" loading="lazy"></p>
-<p>获取私钥的目的是将这笔资金转移到“轻节点”中去。既然在bitcoin-qt这种全节点中无法使用被锁定的资金，那么就将资金转移到“轻节点”去执行。</p>
-<p><em>3、利用私钥在轻节点中执行交易</em><br>
-<img src="http://upload-images.jianshu.io/upload_images/4794066-b51eef3ac874835f.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图8 利用私钥在轻节点中执行交易" loading="lazy"></p>
-<p>图中的界面是轻节点Electrum程序中利用私钥创建交易的界面。窗口调出操作：wallet-private keys-sweep 。这一步操作的本质是在轻节点中创建交易，花掉被“0确认”交易锁定的资金。本文中使用私钥创建交易，应该还有其他创建交易的办法，例如钱包导入等等。<br>
-本文使用的轻节点是Electrum，官方网址是“<a href="https://electrum.org/#download">https://electrum.org/#download</a>”。</p>
-<p><em>4、资金被转移到轻节点的地址</em><br>
-<img src="http://upload-images.jianshu.io/upload_images/4794066-a7b8954d2eb05b77.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图9 资金被转移到轻节点的地址中" loading="lazy"></p>
-<p>经过第3部操作，被“锁定”的资金将转移到“轻节点”的地址中去，实际上已经完成了解锁操作。之后就可以正常使用这笔资金了。</p>
-<p><strong>结论</strong></p>
-<hr>
-<p>1、比特币系统处理“0确认”交易的机制非常不友好，一般用户很难找到解决办法。而且，由于比特币系统去中心化的特点，也没有一个中心机构能够提供技术支持。普通用户使用比特币的门槛还是很高，未来应该会出现公司专门提供比特币交易技术支持服务。<br>
-2、利用网站提供的交易加速服务最简单，风险最小。但是，需要支付一笔加速费用。<br>
-3、利用“轻节点”人工创建冲突交易能够解决“0确认”交易问题，但是过程繁琐，需要使用不同的钱包和指令，还涉及“私钥”，如果操作不当，有可能丢失比特币。</p>
 ]]></content>
     </entry>
 </feed>
