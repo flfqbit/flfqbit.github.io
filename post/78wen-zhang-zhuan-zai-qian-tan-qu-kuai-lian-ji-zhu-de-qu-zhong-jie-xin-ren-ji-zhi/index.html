@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+  <head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
+<meta name="description" content="记录区块链行业重点文章，前沿技术">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+<title>[78][文章转载]浅谈区块链技术的去中介信任机制 | 飞来飞去-区块链学习笔记</title>
+<link href="https://flfqbit.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.js"></script>
+
+  </head>
+  <body>
+     <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" alt="logo" style="display:inline-block;" src="https://flfqbit.github.io/images/avatar.png"/>
+<script>
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
+</script>
+
+          <h1 title="飞来飞去-区块链学习笔记" class="weaklink"><a  href="/">飞来飞去-区块链学习笔记</a>
+
+          </h1>
+	  
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+<div class="content">
+<div class="post_page" >
+<div class="post">
+  <div class="post_title sm_margin">
+    <h2><a>[78][文章转载]浅谈区块链技术的去中介信任机制</a>
+    </h2>
+  </div>
+<script>
+function lan(){
+	if (document.getElementById("lan").innerText == "繁"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_tw.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "简"
+	}
+	else if(document.getElementById("lan").innerText == "簡"){
+		var s=document.getElementById("tongwenlet_cn");
+		if(s != null){
+		document.body.removeChild(s);
+		}
+		var s = document.createElement("script");
+		s.language = "javascript";
+		s.type = "text/javascript";
+		s.src = "https://git.oschina.net/runningcheese/JiathisQR.js/raw/master/bookmarklet_cn.js";
+		s.id = "tongwenlet_cn";
+		document.body.appendChild(s);
+		document.getElementById("lan").innerHTML = "繁"
+		}
+}
+
+function change(){	
+    var rand = Math.random()*1+1;
+    var num = window.getComputedStyle(document.getElementsByName("show")[0],undefined).fontSize;
+	num = num.slice(0,-2); 
+    document.getElementById("show").style.fontSize = num - rand +'px';
+}
+</script>
+  <div class="post_details">
+    <div class="info"><i class="fa fa-calendar"></i>
+<span class="date_info">2020-02-23</span>
+<i class="fa fa-eye"></i>
+<span class="date_info"><span id="busuanzi_value_page_pv"></span> Views</span>
+<i class="fa fa-bookmark-o"></i>
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+</span>
+<i class="fa fa-anchor"></i>
+<span style="margin-right:15px">
+3039字
+</span>
+<i class="fa fa-clock-o"></i>
+<span style="margin-right:15px">
+11 min read
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+</span>
+<span style="margin-right:15px">
+<a id="lan" href="javascript:void(0);" onclick="lan();" title="调整简繁体">繁</a>
+</span>
+</div>
+  </div>
+
+    <div class="post_content markdown">
+	
+
+	
+    <div name="show" id="show">
+	<p class="md_block"><span class="md_line md_line_start md_line_end"><p>文章转载URL: https://mp.weixin.qq.com/s/osDV0FCKm-WVGKOZNK5p0w</p>
+<p>浅谈区块链技术的去中介信任机制<br>
+原创 祝烈煌 中国保密协会科学技术分会 2018-12-06</p>
+<h1 id="1-前言">1 前言</h1>
+<p>基于中介的信任机制是人类社会交往及商业活动广泛使用的信任机制。通过选定合适的中介机构，两个互不信任的用户能够实现有效互动，解决违规、抵赖等问题。这种机制实现简单，一直是广泛使用的信任机制，然而基于中介的信任机制存在流程复杂、成本高、中介不可信等多种问题，制约了信任机制的适用场景。随着物联网、人工智能等新技术的发展，信任的场景将从人与人的交互扩展到人与机器、机器与机器的更广阔场景，传统的基于中介的信任机制很难满足性能、成本、安全等要求，将成为信息化社会进一步发展的瓶颈。</p>
+<p>基于中介的信任机制是一种成熟的信任模型，在现代社会被广泛使用。但是这种机制面临成本高、中心依赖等问题。如果能够不依靠中介机构实现信任，将能够重塑信任模型，简化交互过程，降低交互成本，从根本上提升社会交互效率[1-2]。</p>
+<p>区块链技术的出现使得去中介信任机制成为可能。2008年，随着中本聪发表《一种点对点的电子现金系统》[3]，一种不需要依赖第三方机构的可信数字货币系统“比特币”走上历史舞台。截止到2018年11月，比特币系统已经稳定运行10年，市值超过1100亿美元，每天约产生25万笔交易，成为世界范围内具有较高公信力的数字货币。比特币系统没有任何政府背书，也没有中心化的实体机构负责网络维护、交易审计等工作，它的成功运行宣告了一种无需中介的信任机制具备了现实可操作性。</p>
+<p>受到比特币系统的启发，从比特币底层技术中抽取、衍生的区块链技术成为去中介信任机制的热点研究技术。区块链技术不仅仅聚焦在数字货币领域，而是迅速扩展到金融、物联网、医疗等众多行业，被认为是解决各个行业普遍存在的中介问题，提升交互效率的革命性技术[4]。</p>
+<p>目前区块链技术在性能、扩展性和安全性方面还存在待解决问题，但是其具备的去中介信任的特点为信任场景提供了一种新的解决方案，将在众多行业发挥重要作用。</p>
+<h1 id="2-基于区块链技术的去中介信任机制">2 基于区块链技术的去中介信任机制</h1>
+<p>基于中介的信任机制建立在对中介机构的信任之上，中介机构将承担事前担保、事中协调、事后追责等功能。只要中介机构公正可信，就能够避免交互过程出现的大部分纠纷。</p>
+<p><img src="https://flfqbit.github.io/post-images/1582473116013.png" alt="图1 基于区块链技术的去中介信任机制" loading="lazy"><br>
+图1 基于区块链技术的去中介信任机制</p>
+<p>如何在不依赖中介机构的情况下，让互不信任的双方实现可信交互，是区块链技术解决的难题。区块链技术通过将P2P网络、非对称加密、共识机制等多种已有技术巧妙组合，实现了一套去中介的信任机制，如图1所示。这套机制的核心在于：</p>
+<p>首先，在任意时间点，不同用户在区块链系统中看到的数据初始状态是一致可信的，这使得双方有了继续沟通的基础。区块链采用P2P技术搭建分布式网络，任意用户都可以从不同数据源获取区块链数据，而且区块链存储数据的账本采用哈希链结构，任意用户都可以轻易验证数据的准确性。这两个特点使得交互双方能够在没有第三方参与的情况下对初始状态达成一致。</p>
+<p>其次，用户通过区块链系统进行的每一次交互操作都将由分布式节点协同处理，这使得双方的沟通过程透明公正。区块链中每一个操作都将由所有参与节点独立验证，并在共识机制的作用下通过协同验证达成数据多数一致性，杜绝了个别节点违规操作的可能性。同时，每一个操作内容都将包含发起者的数字签名，杜绝了伪造和抵赖的可能性。</p>
+<p>最后，用户通过区块链系统进行的交互操作将永久记录在分布式账本中可靠保存，这使得双方的沟通内容支持长效的事后审计和追责。区块链账本采用分布式冗余存储机制和基于散列函数的链式结构保证数据完整性，试图窜改数据的攻击者必须具备接近全网整体的算力能力，并且耗费账本建立过程的等价资源，这使得篡改攻击成为不理智、不可行的行为。</p>
+<p>区块链技术采用多种机制使数据在初始状态、操作过程和操作记录阶段都保持透明可信，能够让互不信任的双方相信区块链账本具有可信特征，从而在此基础上开展各种实际业务。由于区块链账本是由分布式节点自发维护，不依赖单一用户或者单一机构，因此实现了无需第三方中介的信任机制。</p>
+<h1 id="3-应用及案例">3 应用及案例</h1>
+<p>去中介信任能够显著简化交互流程，提高交互效率，在众多领域都能够发挥作用。区块链技术在我国一直受到学术界、企业界的重点关注，目前以及出现了一批落地项目。</p>
+<p>人民银行的法定数字货币项目是区块链技术在货币领域的重要应用[5]。人民银行在2014年成立发行数字货币的专门研究小组，论证央行发行数字货币的可行性，2016年成立数字货币研究所，启动了基于区块链和数字货币的数字票据交易平台原型研发工作，2017年中国人民银行推动的基于区块链的数字票据交易平台测试成功，法定数字货币形态、总体架构、应用架构、数据架构和技术架构等设计工作正在快速开展。通过利用区块链技术开发法定数字货币，能够减少货币运营中的诸多中间环节,降低发行成本，提高经济效益。同时，数字法币将解决传统法币在发行之后难以监管的难题，实现更加有效的货币监管和更加智能的货币政策。中央银行发行零售端数字货币, 对于健全社会支付体系、维护金融稳定以及加强央行的货币地位, 具有重大而深远的意义。</p>
+<p>2018年6月5日，阿里巴巴公司旗下的香港版支付宝Alipay HK上线基于区块链的电子钱包跨境汇款服务[6]。首笔汇款业务从香港转账到菲律宾，耗时仅3秒。如图2所示，在此项业务出现之前，从香港到菲律宾的转账需要经过众多中介机构的繁琐操作，通常需要花费几天不等的时间。通过采用区块链技术，原来的中介机构不再需要单独承担转账业务，只需要作为区块链中的一个节点，并行参与记账即可，从而将转账过程精简为两个步骤，显著降低时间成本和经济成本。</p>
+<p><img src="https://flfqbit.github.io/post-images/1582473129698.png" alt="图2 区块链跨境支付应用" loading="lazy"><br>
+图2 区块链跨境支付应用</p>
+<p>2018年8月，腾讯公司在深圳推出全国首张区块链电子发票，能够实现发票开具、流转、报销等全流程业务[7]。区块链电子发票本质上是利用区块链技术将发票开具与线上支付相结合，实现“交易数据即发票”，减少传统发票业务中的发票开具、发票流转、发票报销等中介机构，从而有效解决开具发票填写不实、不开、少开等问题，保障税款及时、足额入库。通过减少中介环节，税务总局能够实时监控发票开具、流转、报销全流程的状态，对发票实现全方位管理。</p>
+<p>2017年5月，布比公司在贵阳发布了旗下首款“区块链+供应链金融”产品——壹诺供应链金融平台[8]，并与中金支付、贵阳银行等多家资方、核心企业及供应商开展合作。 如图3所示，在传统供应链体系中，由于核心企业信用无法跨级传递、体系内消息无法共享，很难找到合适的中介机构为供应链末端的中小企业提供融资担保。通过采用区块链技术，可以实现可拆分、可流转和可融资的付款承诺，从而将核心企业的信用传递至多级供应商，在没有中介的情况下使中小企业和融资机构达成信任共识，缓解融资难问题。</p>
+<p><img src="https://flfqbit.github.io/post-images/1582473156759.png" alt="图3 区块链供应链应用" loading="lazy"><br>
+图3 区块链供应链应用</p>
+<p>除了上述3种落地应用之外，区块链技术在溯源追踪、医疗数据共享、绿色能源等领域也有大量落地或者正在落地的应用案例[9-11]。纵观区块链落地应用，可以发现区块链技术的最大优势在于能够在没有中介或者减少中介的条件下实现有效信任，不仅能够降低成本，提高交互效率，而且还能够扁平化管理流程，使垂直管理成为可能。</p>
+<h1 id="4-结束语">4 结束语</h1>
+<p>随着区块链技术在多个行业逐渐落地，我国在区块链技术和区块链应用研究上已进入国际第一方阵。未来，区块链将不仅仅是一种数字货币技术，而是信息互联网向价值互联网转移的重要推手，将成为越来多领域中信任机制的关键技术，成为保障未来信息社会可信交互的重要基础之一。</p>
+<h1 id="5-参考文献">5 参考文献</h1>
+<p>[1]黄晓艳.区块链创建信任——访中国工程院院士陈纯. 高科技与产业化,2017<br>
+[2] 秦谊.区块链重塑信任 . 《新经济》 2017<br>
+[3] Nakamoto, S.: Bitcoin: A peer-to-peer electronic cash system, https://bitcoin.org/bitcoin.pdf,2008<br>
+[4] 袁勇 ， 王飞跃 . 区块链技术发展现状与展望. 《自动化学报》,2016<br>
+[5]姚前 .理解央行数字货币 一个系统性框架. 中国科学:信息科学 , 2017<br>
+[6]严凯，费子。马云的区块链“阳谋” . 2018中国企业家, 2018<br>
+[7]新华网. 深圳开出区块链电子发票, 2018<br>
+[8]张明裕.布比区块链：区块链在供应链金融领域的应用之道. https://baijiahao.baidu.com/s?id=1602693894434032717&amp;wfr=spider&amp;for=pc,2018<br>
+[9]Meng Li, Liehuang Zhu(*), Xiaodong Lin, Efficient and Privacy-preserving Carpooling using Blockchain-assisted Vehicular Fog Computing, IEEE Internet of Things Journal, 2018<br>
+[10] Feng Gao, Liehuang Zhu, Meng Shen, Kashif Sharif, Zhiguo Wan, and Kui Ren. Blockchain-based Privacy-Preserving Payment Mechanism for Vehicle-to-Grid Networks [J]. IEEE Network Magazine, 2018<br>
+[11]Liehuang Zhu, Yulu Wu, Keke Gai, Kim-Kwang Raymond Choo, Controllable and Trustworthy Blockchain-based Cloud Data Management, Future Generation Computer Systems, 2018</p>
+<p>附<br>
+<img src="https://flfqbit.github.io/post-images/1582473180900.PNG" alt="图4 银行跨国转账手续费和时间" loading="lazy"><br>
+图4 银行跨国转账手续费和时间</p>
+</span></p></div><div id = "warn"></div>
+	<br>
+	<hr>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-user"></i>本文由<a rel="license" href="/">飞来飞去-区块链学习笔记</a>创作</div>	
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-cc"></i>该文章采用<a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处！</div>
+<div style="color: #ccc;font-size:14px;"><i class="fa fa-clock-o"></i>发布时间为：2020-02-23</div>    
+</div>
+</div>
+
+<style type="text/css">
+#mememe {
+	border:3px;
+	border-radius:5px;
+    background-repeat: no-repeat;
+    height: 100%;
+	width: 100%;
+	display: inline-block;
+	border-radius:5px; 
+}
+</style>
+
+<div style="width:100%;overflow:hidden">
+
+          <div style="float:right;text-align:right;color:#ccc;font-size:18px;width:50%;">
+            下一篇
+            <a href="https://flfqbit.github.io/post/77yi-tai-fang-shu-ju-zi-duan-inputjie-xi/">
+              <p class="post-title">
+                <b>[77]以太坊数据字段（input）解析</b>
+              </p>
+            </a>
+          </div>
+
+
+
+</div>
+
+<div class="doc_comments">
+
+</div>
+<script>
+var link="";$("img").each((i,o)=>{var o=$(o);if(o.attr("src").indexOf("sinaimg")>0||o.attr("src").indexOf("qpic")>0||o.attr("src").indexOf("baidu")>0||o.attr("src").indexOf("sinaimg")>0){o.attr("referrerpolicy","no-referrer");link=o.attr("src");o.attr("src",link);}});
+imgList = document.querySelectorAll('.md_block img')
+imgList.forEach(img => {
+  if (img.alt !== "logo" && img.alt !== "featureimg"){
+  let div1 = document.createElement('div')
+  let div = document.createElement('div')
+  div.className='back';
+  div.setAttribute("data-src",img.src)
+  var figuration = document.createElement("figcaption")
+  figuration.innerHTML = '<a href="' + img.src + '">' + img.alt + '</a>'
+  img.replaceWith(div1)
+  div1.appendChild(div)
+  div.appendChild(img)
+  div1.appendChild(figuration)}
+})
+$('img').on('error',function(){$(this).prop('src','https://flfqbit.github.io/media/images/broken.jpg')});$(".md_block a").attr("rel","external nofollow");$("a[rel='external nofollow']").attr("target","_blank");$("a[href^='#']").removeAttr("target");$("a.ex").removeAttr("rel");$("a.ex").removeAttr("target");
+content="<div class='warn'>本文最后更新于2020-02-23，已超过 1 年没有更新，涉及的内容可能已经失效！</div>";var date1="2020-02-23 23:36:20";date1=date1.replace("-","/");var date2=new Date();var date3=date2.getTime()-new Date(date1).getTime();var days=Math.floor(date3/(24*3600*1000));if(days>=365){document.getElementById("warn").innerHTML=content};
+$('#pjax-container').lightGallery({
+    selector: '.back'
+});
+</script>
+  </div>
+</div>
+
+
+      </div>
+<div class="toc">
+<ul class="markdownIt-TOC">
+<li><a href="#1-%E5%89%8D%E8%A8%80">1 前言</a></li>
+<li><a href="#2-%E5%9F%BA%E4%BA%8E%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8E%BB%E4%B8%AD%E4%BB%8B%E4%BF%A1%E4%BB%BB%E6%9C%BA%E5%88%B6">2 基于区块链技术的去中介信任机制</a></li>
+<li><a href="#3-%E5%BA%94%E7%94%A8%E5%8F%8A%E6%A1%88%E4%BE%8B">3 应用及案例</a></li>
+<li><a href="#4-%E7%BB%93%E6%9D%9F%E8%AF%AD">4 结束语</a></li>
+<li><a href="#5-%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE">5 参考文献</a></li>
+</ul>
+
+</div>
+    </div>
+	
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/flfqbit" title="github"><i class="fa fa-github"></i></a>
+
+    
+			   
+<a href="fenghao2821@gmail.com" title="envelope"><i class="fa fa-envelope"></i></a>
+
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.write("Copyright © "+year+" " + "飞来飞去-区块链学习笔记");
+		</script>
+		
+		
+	  
+      </div>
+
+    </div>
+
+<script>
+new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
+console.clear();
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+
+</html>
