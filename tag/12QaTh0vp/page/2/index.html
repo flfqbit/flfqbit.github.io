@@ -1,1572 +1,1063 @@
-<!DOCTYPE html>
+
 <html>
-  <head>
-      <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="Gridea静态个人博客">
+<head lang="zh">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="telephone=no" name="format-detection"/>
+<meta name="renderer" content="webkit">
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
-<meta name="theme-color" content="#000">
+<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
 <title>飞来飞去-区块链学习笔记</title>
-<link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1582543049762">
-<link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
-
-<link rel="stylesheet" href="/media/css/gemini.css">
-
-<link rel="stylesheet" href="/media/fonts/font-awesome.css">
-<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
-<link href="/media/hljs/styles/androidstudio.css" rel="stylesheet">  
-
-<script src="/media/hljs/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.ui.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"></script>
+<link href="https://flfqbit.github.io/styles/main.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.css"/>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/katex.min.js"></script>
+<script src="//cdn.bootcss.com/KaTeX/0.10.2/contrib/auto-render.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/jquery.pjax.min.js"></script>
+<script type="text/javascript" src="https://flfqbit.github.io/media/scripts/basic.js"></script>
+<script type="text/javascript" src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script async type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/lightgallery/1.6.12/js/lightgallery.min.js"></script>
+<script src="https://cdn.bootcss.com/tocbot/4.8.1/tocbot.js"></script>
 
   </head>
+
   <body>
-    <div class="head-top-line"></div>
-    <div class="header-box">
-      
-<div class=" gemini">
-  <header class="header bg-color ">
-    <div class="blog-header box-shadow-wrapper bg-color " id="header">
-      <div class="nav-toggle" id="nav_toggle">
-        <div class="toggle-box">
-          <div class="line line-top"></div>
-          <div class="line line-center"></div>
-          <div class="line line-bottom"></div>
-        </div>
-      </div>
-      <div class="site-meta">       
-        <div class="site-title">
-          
-            <a href="/" class="brand">
-              <span>飞来飞去-区块链学习笔记</span>
-            </a>  
-          
-        </div>
-        
-      </div>
-      <nav class="site-nav" id="site_nav">
-        <ul id="nav_ul">
-          
-            <li class="nav-item ">
-              
-                <a href="/">
-                  <i class="fa fa-home"></i> 首页
-                </a>
-              
-            </li>
-          
-            <li class="nav-item ">
-              
-                <a href="https://flfqbit.github.io/tag/12QaTh0vp/">
-                  <i class="fa fa-globe"></i> 阅读随笔
-                </a>
-              
-            </li>
-          
-            <li class="nav-item ">
-              
-                <a href="https://flfqbit.github.io/tag/tkwMj61kn/">
-                  <i class="fa fa-globe"></i> 资料整理
-                </a>
-              
-            </li>
-          
-            <li class="nav-item ">
-              
-                <a href="/archives">
-                  <i class="fa fa-archive"></i> 归档
-                </a>
-              
-            </li>
-          
-            <li class="nav-item ">
-              
-                <a href="/post/about">
-                  <i class="fa fa-user"></i> 关于
-                </a>
-              
-            </li>
-          
-          <li class="nav-item">
-            <a>
-              <i class="fa fa-search"></i> 搜索
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-</div>
-
-<script type="text/javascript"> 
- 
-  let showNav = true;
-
-  let navToggle = document.querySelector('#nav_toggle'),
-  siteNav = document.querySelector('#site_nav');
-  
-  function navClick() {
-    let sideBar = document.querySelector('.sidebar');
-    let navUl = document.querySelector('#nav_ul');
-    navToggle.classList.toggle('nav-toggle-active');
-    siteNav.classList.toggle('nav-menu-active');
-    if (siteNav.classList.contains('nav-menu-active')) {
-      siteNav.style = "height: " + (navUl.children.length * 42) +"px !important";
-    } else {
-      siteNav.style = "";
-    }
-  }
-
-  navToggle.addEventListener('click',navClick);  
-</script>
-    </div>
-    <div class="main-continer">
-      
-      <div class="section-layout  gemini">
-        <div class="section-layout-wrapper">
-          <div class="sidebar">
-    
-<div class="sidebar-wrapper box-shadow-wrapper bg-color">
-  <div class="sidebar-item">
-    <img class="site-author-image right-motion" src="https://flfqbit.github.io/images/avatar.png"/>
-    <p class="site-author-name">飞来飞去-区块链学习笔记</p>
-    <p class="site-description right-motion">这个人很懒，什么都不想写...</p>
-  </div>
-  <div class="sidebar-item side-item-stat right-motion">
-    <div class="sidebar-item-box">
-      <a href="/archives/">
-        
-        <span class="site-item-stat-count">90</span>
-        <span class="site-item-stat-name">文章</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="">
-        <span class="site-item-stat-count">4</span>
-        <span class="site-item-stat-name">分类</span>
-      </a>
-    </div>
-    <div class="sidebar-item-box">
-      <a href="/tags/">
-        <span class="site-item-stat-count">4</span>
-        <span class="site-item-stat-name">标签</span>
-      </a>
-    </div>
-  </div>
-  
-    
-      <div class="sidebar-item" style="border-top: 1px dotted #ccc; margin-top: 10px;">
-      </div>
-    
-  
-  
-
-
-</div>
-</div>
-            <div class="section-box tag-line">
-              <div class="box-shadow-wrapper">
-                <div class="bg-color">
-                  <section class="section posts-expand">
-                    <div class="padding-wrapper">
-  <div class="tag-timeline-box">
-    <div class="tag-timeline-wrapper">
-      <div class="tag-timeline-title">
-        <h2>
-          阅读随笔
-          <small>标签</small>
-        </h2>
-      </div>
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/78wen-zhang-zhuan-zai-qian-tan-qu-kuai-lian-ji-zhu-de-qu-zhong-jie-xin-ren-ji-zhi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[78][文章转载]浅谈区块链技术的去中介信任机制</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/77yi-tai-fang-shu-ju-zi-duan-inputjie-xi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[77]以太坊数据字段（input）解析</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/76xi-zhu-xi-guan-yu-qu-kuai-lian-ji-zhu-de-jiang-hua/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[76]习主席关于区块链技术的讲话</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/75ge-chi-jian-zheng-gai-nian-jie-xi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[75]隔离见证概念解析</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/74qu-kuai-lian-shu-zi-huo-bi-li-shi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[74]区块链数字货币历史</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/73qu-kuai-lian-zai-leng-lian-wu-liu-zhong-de-ying-yong/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[73]区块链在冷链物流中的应用</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/722-yue-dai-yue-du-wen-zhang-mu-lu/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[72]2月待阅读文章目录</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/71qu-kuai-lian-ji-zhu-fa-zhan-yu-chan-ye-rong-he-chuang-xin-qu-shi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[71]区块链技术发展与产业融合创新趋势</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/70qu-kuai-lian-ke-pu-zi-liao-sou-ji-mian-xiang-fei-ji-zhu-ren-yuan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[70]区块链科普资料搜集-面向非技术人员</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/69lun-wen-wen-ding-dai-bi-yan-jiu-jin-zhan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[69][论文]稳定代币研究进展</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/68da-ka-lun-dao-zhi-chang-tan-qu-kuai-lian-zong-yu-heng-nei-rong-zheng-li/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[68]大咖论道之畅谈区块链“纵与横” -内容整理</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/67qu-kuai-lian-fa-zhan-guo-cheng-zhi-de-yan-jiu-de-an-quan-wen-ti/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[67]区块链发展过程值得研究的安全问题</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/66neng-yuan-qu-kuai-lian-xing-ye-yan-jiu-bao-gao/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[66]能源+区块链行业研究报告</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/65ccf-qu-kuai-lian-zhuan-wei-hui-qu-kuai-lian-guan-jian-ji-zhu-yan-jiu-jin-zhan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[65]CCF区块链专委会-区块链关键技术研究进展。</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/64jin-qi-chong-yao-bi-du-de-qu-kuai-lian-wen-xian/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[64]近期重要必读的区块链文献</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/63qu-kuai-lian-wang-luo-kong-zhi-fang-mian-de-yan-jiu-nei-rong/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[63]区块链网络控制方面的研究内容</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/62bi-te-bi-he-yi-tai-fang-wang-luo-gui-mo/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[62]比特币和以太坊网络规模</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/61gartner-ji-zhu-cheng-shou-du-qu-xian-qu-kuai-lian/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[61]gartner技术成熟度曲线-区块链</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/60bi-te-bi-xi-tong-de-zi-wo-diao-jie-ji-zhi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-23
-                    <small>[60]比特币系统的自我调节机制</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/59qu-kuai-lian-xiang-guan-de-wen-ti/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[59]区块链相关的问题</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/58guo-jia-shi-bu-men-lian-he-fa-wen-tan-suo-qu-kuai-lian-deng-xin-ji-zhu-ti-sheng-an-quan-fang-hu-shui-ping/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[58]国家十部门联合发文：探索区块链等新技术提升安全防护水平</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/57zhong-guo-ji-suan-ji-xue-hui-tong-xun-2019-nian-7-yue-tu-ling-he-mi-ma-an-quan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[57]中国计算机学会通讯-2019年7月-“图灵和密码安全”</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/56dai-kuan-dui-qu-kuai-lian-an-quan-de-ying-xiang/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[56]带宽对区块链安全的影响</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/55wang-luo-yin-bi-xin-dao/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[55]网络隐蔽信道</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/54qu-kuai-lian-gong-shi-ji-zhi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[54]区块链共识机制</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/53qu-kuai-lian-an-quan-shi-gu-an-li-owasp-qu-kuai-lian-an-quan-top-10-2019_rc1/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[53]区块链安全事故案例-OWASP区块链安全TOP 10 2019_RC1</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/52bi-te-bi-de-yun-ying-ji-gou-shi-shui/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[52]比特币的运营机构是谁？</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/51qu-kuai-lian-wen-ding-bi-zi-liao-zheng-li/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[51]区块链稳定币-资料整理</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/50qu-kuai-lian-wen-ding-bi-jian-guan-ji-zhu/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[50]区块链稳定币-监管技术</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/49qu-kuai-lian-shu-ju-cun-chu-xiang-guan-zi-liao/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[49]区块链数据存储相关资料</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/48qu-kuai-lian-yu-wang-luo-kong-jian-an-quan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[48]区块链与网络空间安全</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/47qu-kuai-lian-wen-ding-bi-xiang-guan-zi-liao/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[47]区块链稳定币相关资料</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/46qu-kuai-lian-yu-da-shu-ju-feng-kong/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[46]区块链与大数据风控</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/45qu-kuai-lian-yu-ren-gong-zhi-neng/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[45]区块链与人工智能</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/44wen-xian-yue-du-ji-lu-qu-kuai-lian-jin-rong-jian-guan-zhi-jiao-yi-te-zheng-fen-xi-he-shen-fen-shi-bie/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[44][文献阅读记录]区块链金融监管之交易特征分析和身份识别</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/43facebook-qu-kuai-lian-xiang-guan-xin-xi-hui-zong/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[43]facebook 区块链相关信息汇总</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/42ma-yi-jin-fu-qu-kuai-lian-jing-sai-huo-dong-su-ji/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[42]蚂蚁金服区块链竞赛活动速记</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/41op_return-can-shu-yue-du-ji-lu/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[41]OP_RETURN参数阅读记录</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/40yi-ge-cheng-gong-de-qu-kuai-lian-chuang-ye-gong-si-an-li-chainsecurity/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[40]一个成功的区块链创业公司案例-chainsecurity</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/39zheng-ce-hui-zong-shu-zi-huo-bi-jian-guan-zheng-ce/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[39][政策汇总]数字货币监管政策</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/38zheng-ce-hui-zong-zhi-chi-qu-kuai-lian-xing-ye-de-xiang-guan-zheng-ce/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[38][政策汇总]支持区块链行业的相关政策</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/37han-dong-you-nuan-yang-cai-zheng-zi-jin-dui-qu-kuai-lian-qi-ye-de-bu-zhu-zheng-ce/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[37]【寒冬有暖阳】财政资金对区块链企业的补助政策</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/36qu-kuai-lian-zai-jun-shi-ling-yu-de-ying-yong/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[36]区块链在军事领域的应用</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/35diao-cha-bao-gao-jian-shu-de-qu-kuai-lian-chang-shi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[35][调查报告]简书的区块链尝试</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/34lun-wen-hui-zong-qu-kuai-lian-an-quan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[34][论文汇总]区块链安全</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/33jian-shu-ri-huo-250-wan-nei-rong-she-qu-de-qu-kuai-lian-zhi-lu/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[33]简书（日活250万内容社区）的区块链之路</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/32ecc-suan-fa-de-an-quan-xing/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[32]ECC算法的安全性</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/31qu-kuai-lian-duan-zi-guan-yu-qu-kuai-lian-de-you-qu-shu-zi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[31][区块链段子]关于区块链的有趣数字</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/30wu-kong-wen-da-qu-kuai-lian-shi-ru-he-cong-10-tui-jin-zhi-3/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[30][悟空问答]区块链是如何从1.0推进至3</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/29wu-kong-wen-da-qu-kuai-zhang-hao-bei-hou-de-fei-dui-cheng-jia-mi-suan-fa/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[29][悟空问答]区块账号背后的非对称加密算法</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/28zheng-gao-qi-shi-jie-du-ieeeacm-iwqos19ccf-b-lei-hui-yi-blockchain-for-qos/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[28][征稿启事解读]-IEEEACM IWQoS&#39;19（CCF B类会议）-BLOCKCHAIN FOR QOS</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/27xin-wen-jie-du-han-dong-you-nuan-yang-xue-zhu-zu-zhi-zha-dui-qu-kuai-lian/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[27][新闻解读]寒冬有暖阳-学术组织扎堆区块链</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/26ke-yan-xiang-mu-jie-du-han-dong-you-nuan-yang-qu-kuai-lian-ke-yan-xiang-mu-chi-xu-zeng-jia/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[26][科研项目解读]寒冬有暖阳-区块链科研项目持续增加</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/25shu-ji-jie-du-qu-kuai-lian-ji-zhu-you-na-xie-ying-yong-chang-jing/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[25][书籍解读]区块链技术有哪些应用场景？</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/24xin-wen-jie-du-han-dong-you-nuan-yang-hu-lian-wang-ju-tou-bu-ju-qu-kuai-lian/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[24][新闻解读]寒冬有暖阳-互联网巨头布局区块链</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/23wen-zhang-jie-du-han-dong-you-nuan-yang-zhu-liu-mei-ti-chi-xu-fa-sheng-qu-kuai-lian/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[23][文章解读]寒冬有暖阳-主流媒体持续发声区块链</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/22lun-wen-zheng-li-infocom_2018_-qu-kuai-lian-lun-wen/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[22][论文整理]INFOCOM_2018_区块链论文</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/21shen-ji-bao-gao-jie-du-shou-pi-shou-zheng-fu-jian-guan-de-wen-ding-bi-gusdpaxjin-zhan-guan-cha/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[21][审计报告解读]首批受政府监管的稳定币（GUSD,PAX）进展观察</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/20wen-zhang-jie-du-qu-kuai-lian-ji-zhu-ru-he-luo-di-guan-jian-shi-yi-lai-qu-zhong-jie-xin-ren-de-he-xin-you-shi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[20][文章解读]区块链技术如何落地？关键是依赖去中介信任的核心优势</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/19lun-wen-jie-du-qu-kuai-lian-shu-ju-fen-xi-ling-yu-jin-zhan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[19][论文解读]区块链数据分析领域进展</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/18wen-zhang-jie-du-qu-kuai-lian-gao-duan-ren-cai-shi-zhi-na-xie-ren/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[18][文章解读]区块链高端人才是指哪些人？</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/17ke-yan-xiang-mu-jie-du-han-dong-you-nuan-yang-guo-jia-chong-dian-yan-fa-ji-hua-zi-zhu-qu-kuai-lian-xiang-mu/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[17][科研项目解读]寒冬有暖阳国家重点研发计划资助区块链项目</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/16wen-zhang-jie-du-han-dong-you-nuan-yang-xue-zhu-jing-ying-ru-ju-qu-kuai-lian-xing-ye/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[16][文章解读]寒冬有暖阳-学术精英入局区块链行业</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/15lun-wen-jie-du-qu-kuai-lian-shu-ju-fen-xi-xian-zhuang-fen-xi-he-tiao-zhan-ji-suan-ji-yan-jiu-yu-fa-zhan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[15][论文解读]区块链数据分析：现状、分析和挑战-计算机研究与发展</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/14zheng-gao-qi-shi-jie-du-ieee-acm-iwqos19-cfpccf-c-lei-hui-yi-qu-kuai-lian-he-an-quan-ji-chu-she-shi/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[14][征稿启事解读]-IEEE-ACM IWQoS&#39;19 CFP（CCF C类会议）-区块链和安全基础设施</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/13wen-zhang-jie-du-zi-ran-qi-kan-liang-zi-ji-suan-ji-shi-qu-kuai-lian-an-quan-mian-lin-wei-xie/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[13][文章解读]自然期刊-量子计算机使区块链安全面临威胁</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/12wen-zhang-jie-du-cong-liang-pian-wen-zhang-kan-qu-kuai-lian-de-han-dong-he-xi-wang/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[12][文章解读]从两篇文章看区块链的寒冬和希望</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/11lun-wen-zheng-li-infocom_2019_-qu-kuai-lian-lun-wen/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[11][论文整理]INFOCOM_2019_区块链论文</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/10lun-wen-su-du-lesslessji-suan-ji-yan-jiu-yu-fa-zhan-greatergreater-jin-qi-qu-kuai-lian-lun-wen-jie-du/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[10][论文速读]《计算机研究与发展》近期区块链论文解读</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/9wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-8-fang-fan-an-quan-lou-dong-cu-jin-shi-ji-ying-yong/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[9][文章解读]网信办旗下杂志区块链组稿8-防范安全漏洞 促进实际应用</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/8wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-7-jia-kuai-yan-zhi-qu-kuai-lian-xiang-guan-biao-zhun/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[8][文章解读]网信办旗下杂志区块链组稿7-加快研制区块链相关标准</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/7wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-6-qu-kuai-lian-de-wei-lai-ying-yong-fang-xiang/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[7][文章解读]网信办旗下杂志区块链组稿6-区块链的未来应用方向</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/6wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-5-qu-kuai-lian-zai-shi-ti-jing-ji-zhong-de-luo-di/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[6][文章解读]网信办旗下杂志区块链组稿5-区块链在实体经济中的落地</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/5wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-4-qu-kuai-lian-jin-rong-ca-chu-zhi-hui-huo-hua/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[5][文章解读]网信办旗下杂志区块链组稿4-“区块链+金融”擦出智慧火花</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/4wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-3-mi-ma-xue-shi-qu-kuai-lian-de-xin-ren-zhi-yuan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[4][文章解读]网信办旗下杂志区块链组稿3-密码学是区块链的信任之源</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/3wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-2-qu-kuai-lian-ji-zhu-chu-yu-zao-qi-jie-duan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[3][文章解读]网信办旗下杂志区块链组稿2-区块链技术处于早期阶段</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/2wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-1-qu-kuai-lian-fa-zhan-shi-yi-ci-chang-pao/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[2][文章解读]网信办旗下杂志区块链组稿1-区块链发展是一次长跑</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-          
-            <a href="https://flfqbit.github.io/post/1bao-gao-jie-du-zhong-guo-jin-rong-wen-ding-bao-gao-2018-jia-mi-zi-chan-xiang-guan-ling-yu-feng-xian-ji-fang-fan/">
-              <div class="motion-warpper">
-                <div class="tag-post-node">
-                  <h1>
-                    02-22
-                    <small>[1][报告解读]中国金融稳定报告2018-加密资产相关领域风险及防范</small>
-                  </h1>
-                </div>  
-              </div>
-            </a>
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-        
-          
-        
-      
-    </div>
-  </div>
-</div>
-                  </section>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer-box">
-  <footer class="footer">
-    <div class="copyright">
-      © 2019-2020 <i class="fa fa-heart"></i> HsxyHao
-    </div>
-    <div class="poweredby">
-      
-    </div>
-  </footer>
-  
-  
-  <div class="gemini back-to-top" id="back_to_top">
-    <i class="fa fa-arrow-up"></i>
-    
-    <span class="scrollpercent">
-      <span id="back_to_top_text">0</span>%
-    </span>
-    
-  </div>
-  
-  
-  
-</div>
+    <div class="header">
+      <div class="logo_title">
+		  
+        <div class="title animated fadeInDown"><img id="img1" alt="logo" style="display:inline-block;" src="https://flfqbit.github.io/images/avatar.png"/>
 <script>
-
-  let sideBarOpen = 'sidebar-open';
-  let body = document.body;
-  let back2Top = document.querySelector('#back_to_top'),
-  back2TopText = document.querySelector('#back_to_top_text'),
-  drawerBox = document.querySelector('#drawer_box'),
-  rightSideBar = document.querySelector('.sidebar'),
-  viewport = document.querySelector('body');
-
-  function scrollAnimation(currentY, targetY) {
-   
-    let needScrollTop = targetY - currentY
-    let _currentY = currentY
-    setTimeout(() => {
-      const dist = Math.ceil(needScrollTop / 10)
-      _currentY += dist
-      window.scrollTo(_currentY, currentY)
-      if (needScrollTop > 10 || needScrollTop < -10) {
-        scrollAnimation(_currentY, targetY)
-      } else {
-        window.scrollTo(_currentY, targetY)
-      }
-    }, 1)
-  }
-
-  back2Top.addEventListener("click", function(e) {
-    scrollAnimation(document.scrollingElement.scrollTop, 0);
-    e.stopPropagation();
-    return false;
-  });
-  
-  window.addEventListener('scroll', function(e) {
-    let percent = document.scrollingElement.scrollTop / (document.scrollingElement.scrollHeight - document.scrollingElement.clientHeight) * 100;
-    if (percent > 1 && !back2Top.classList.contains('back-top-active')) {
-      back2Top.classList.add('back-top-active');
-    }
-    if (percent == 0) {
-      back2Top.classList.remove('back-top-active');
-    }
-    if (back2TopText) {
-      back2TopText.textContent = Math.floor(percent);
-    }
-  });
-
-  
-  let hasCacu = false;
-  window.onresize = function() {
-    if (window.width > 991) {
-      calcuHeight();
-    } else {
-      hasCacu = false;
-    }
-  }
-
-  function calcuHeight() {
-    // 动态调整站点概览高度
-    if (!hasCacu && back2Top.classList.contains('pisces') || back2Top.classList.contains('gemini')) {
-      let sideBar = document.querySelector('.sidebar');
-      let navUl = document.querySelector('#site_nav');
-      sideBar.style = 'margin-top:' + (navUl.offsetHeight + navUl.offsetTop + 15) + 'px;';
-      hasCacu = true;
-    }
-  }
-  calcuHeight();
-  
-  let open = false, MOTION_TIME = 300, RIGHT_MOVE_DIS = '320px';
-
-  if (drawerBox) {
-    let rightMotions = document.querySelectorAll('.right-motion');
-    let right = drawerBox.classList.contains('right');
-
-    let transitionDir = right ? "transition.slideRightIn" : "transition.slideLeftIn";
-
-    let openProp, closeProp;
-    if (right) {
-      openProp = {
-        paddingRight: RIGHT_MOVE_DIS 
-      };
-      closeProp = {
-        paddingRight: '0px'
-      };
-    } else {
-      openProp = {
-        paddingLeft: RIGHT_MOVE_DIS 
-      };
-      closeProp = {
-        paddingLeft: '0px'
-      };
-    }
-
-    drawerBox.onclick = function() {
-      open = !open;
-      window.Velocity(rightSideBar, 'stop');
-      window.Velocity(viewport, 'stop');
-      window.Velocity(rightMotions, 'stop');
-      if (open) {
-        window.Velocity(rightSideBar, {
-          width: RIGHT_MOVE_DIS
-        }, {
-          duration: MOTION_TIME,
-          begin: function() {
-            window.Velocity(rightMotions, transitionDir,{ });
-          }
-        })
-        window.Velocity(viewport, openProp,{
-          duration: MOTION_TIME
-        });
-      } else {
-        window.Velocity(rightSideBar, {
-          width: '0px'
-        }, {
-          duration: MOTION_TIME,
-          begin: function() {
-            window.Velocity(rightMotions, {
-              opacity: 0
-            });
-          }
-        })
-        window.Velocity(viewport, closeProp ,{
-          duration: MOTION_TIME
-        });
-      }
-      for (let i = 0; i < drawerBox.children.length; i++) {
-        drawerBox.children[i].classList.toggle('muse-line');
-      }
-      drawerBox.classList.toggle(sideBarOpen);
-    }
-  }
-
-  // 代码高亮
-  hljs.initHighlightingOnLoad();
-
+var r = 0;
+    window.onload = function(){
+        var current = 0;
+        document.getElementById('img1').onclick = function(){
+            current = (current+90)%360;
+            this.style.transform = 'rotate('+current+'deg)';
+        }
+    };
 </script>
+
+          <h1 title="飞来飞去-区块链学习笔记" class="weaklink"><a  href="/">飞来飞去-区块链学习笔记</a>
+
+          </h1>
+	  
+
+          <div class="navbar weaklink">
+            <div class="normal_nav">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+		
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+  </li>
+  
+ 
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+  </li>
+  
+ 
+ <li>
+
+      </ul>
+	  
+
+      <div class="clear clear_nav_inline_end"></div>
     </div>
-  </body>
-  <script src="/media/js/motion.js"></script>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+            </div>
+			
+			<div class="hamberger"><i class="fa fa-bars"></i>
+<i class="fa fa-times"></i>
+
+			</div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hidden_nav animated fadeInDown">
+
+<div class="bitcron_nav_container">
+
+
+  <div class="bitcron_nav">
+    <div class="mixed_site_nav_wrap site_nav_wrap">
+      <ul class="mixed_site_nav site_nav sm sm-base">
+	
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/" class="selected active current nav__item" >首页</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/12QaTh0vp/" class="selected active current nav__item" >阅读随笔</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="https://flfqbit.github.io/tag/tkwMj61kn/" class="selected active current nav__item" >资料整理</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/archives" class="selected active current nav__item" >归档</a>
+
+  </li>
+
+
+  <li><a id="d2ef19af68cc211e98f8a0242ac110003" href="/post/about" class="selected active current nav__item" >关于</a>
+
+  </li>
+
+
+
+
+      </ul>
+
+      <div class="clear clear_nav_inline_end"></div>
+    </div>
+
+  </div>
+
+
+
+  <div class="clear clear_nav_end"></div>
+
+</div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <div class="main" id="pjax-container">
+      <div class="main-inner">
+
+<div class="content">
+
+
+
+
+
+
+  <div class="post_list" >
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/28zheng-gao-qi-shi-jie-du-ieeeacm-iwqos19ccf-b-lei-hui-yi-blockchain-for-qos/">[28][征稿启事解读]-IEEEACM IWQoS&#39;19（CCF B类会议）-BLOCKCHAIN FOR QOS</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/27xin-wen-jie-du-han-dong-you-nuan-yang-xue-zhu-zu-zhi-zha-dui-qu-kuai-lian/">[27][新闻解读]寒冬有暖阳-学术组织扎堆区块链</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/26ke-yan-xiang-mu-jie-du-han-dong-you-nuan-yang-qu-kuai-lian-ke-yan-xiang-mu-chi-xu-zeng-jia/">[26][科研项目解读]寒冬有暖阳-区块链科研项目持续增加</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/25shu-ji-jie-du-qu-kuai-lian-ji-zhu-you-na-xie-ying-yong-chang-jing/">[25][书籍解读]区块链技术有哪些应用场景？</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/24xin-wen-jie-du-han-dong-you-nuan-yang-hu-lian-wang-ju-tou-bu-ju-qu-kuai-lian/">[24][新闻解读]寒冬有暖阳-互联网巨头布局区块链</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/23wen-zhang-jie-du-han-dong-you-nuan-yang-zhu-liu-mei-ti-chi-xu-fa-sheng-qu-kuai-lian/">[23][文章解读]寒冬有暖阳-主流媒体持续发声区块链</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/22lun-wen-zheng-li-infocom_2018_-qu-kuai-lian-lun-wen/">[22][论文整理]INFOCOM_2018_区块链论文</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/21shen-ji-bao-gao-jie-du-shou-pi-shou-zheng-fu-jian-guan-de-wen-ding-bi-gusdpaxjin-zhan-guan-cha/">[21][审计报告解读]首批受政府监管的稳定币（GUSD,PAX）进展观察</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/20wen-zhang-jie-du-qu-kuai-lian-ji-zhu-ru-he-luo-di-guan-jian-shi-yi-lai-qu-zhong-jie-xin-ren-de-he-xin-you-shi/">[20][文章解读]区块链技术如何落地？关键是依赖去中介信任的核心优势</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/19lun-wen-jie-du-qu-kuai-lian-shu-ju-fen-xi-ling-yu-jin-zhan/">[19][论文解读]区块链数据分析领域进展</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/18wen-zhang-jie-du-qu-kuai-lian-gao-duan-ren-cai-shi-zhi-na-xie-ren/">[18][文章解读]区块链高端人才是指哪些人？</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/17ke-yan-xiang-mu-jie-du-han-dong-you-nuan-yang-guo-jia-chong-dian-yan-fa-ji-hua-zi-zhu-qu-kuai-lian-xiang-mu/">[17][科研项目解读]寒冬有暖阳国家重点研发计划资助区块链项目</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/16wen-zhang-jie-du-han-dong-you-nuan-yang-xue-zhu-jing-ying-ru-ju-qu-kuai-lian-xing-ye/">[16][文章解读]寒冬有暖阳-学术精英入局区块链行业</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/15lun-wen-jie-du-qu-kuai-lian-shu-ju-fen-xi-xian-zhuang-fen-xi-he-tiao-zhan-ji-suan-ji-yan-jiu-yu-fa-zhan/">[15][论文解读]区块链数据分析：现状、分析和挑战-计算机研究与发展</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/14zheng-gao-qi-shi-jie-du-ieee-acm-iwqos19-cfpccf-c-lei-hui-yi-qu-kuai-lian-he-an-quan-ji-chu-she-shi/">[14][征稿启事解读]-IEEE-ACM IWQoS&#39;19 CFP（CCF C类会议）-区块链和安全基础设施</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/13wen-zhang-jie-du-zi-ran-qi-kan-liang-zi-ji-suan-ji-shi-qu-kuai-lian-an-quan-mian-lin-wei-xie/">[13][文章解读]自然期刊-量子计算机使区块链安全面临威胁</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/12wen-zhang-jie-du-cong-liang-pian-wen-zhang-kan-qu-kuai-lian-de-han-dong-he-xi-wang/">[12][文章解读]从两篇文章看区块链的寒冬和希望</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/11lun-wen-zheng-li-infocom_2019_-qu-kuai-lian-lun-wen/">[11][论文整理]INFOCOM_2019_区块链论文</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/10lun-wen-su-du-lesslessji-suan-ji-yan-jiu-yu-fa-zhan-greatergreater-jin-qi-qu-kuai-lian-lun-wen-jie-du/">[10][论文速读]《计算机研究与发展》近期区块链论文解读</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/9wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-8-fang-fan-an-quan-lou-dong-cu-jin-shi-ji-ying-yong/">[9][文章解读]网信办旗下杂志区块链组稿8-防范安全漏洞 促进实际应用</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/8wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-7-jia-kuai-yan-zhi-qu-kuai-lian-xiang-guan-biao-zhun/">[8][文章解读]网信办旗下杂志区块链组稿7-加快研制区块链相关标准</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/7wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-6-qu-kuai-lian-de-wei-lai-ying-yong-fang-xiang/">[7][文章解读]网信办旗下杂志区块链组稿6-区块链的未来应用方向</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/6wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-5-qu-kuai-lian-zai-shi-ti-jing-ji-zhong-de-luo-di/">[6][文章解读]网信办旗下杂志区块链组稿5-区块链在实体经济中的落地</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/5wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-4-qu-kuai-lian-jin-rong-ca-chu-zhi-hui-huo-hua/">[5][文章解读]网信办旗下杂志区块链组稿4-“区块链+金融”擦出智慧火花</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/4wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-3-mi-ma-xue-shi-qu-kuai-lian-de-xin-ren-zhi-yuan/">[4][文章解读]网信办旗下杂志区块链组稿3-密码学是区块链的信任之源</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/3wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-2-qu-kuai-lian-ji-zhu-chu-yu-zao-qi-jie-duan/">[3][文章解读]网信办旗下杂志区块链组稿2-区块链技术处于早期阶段</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/2wen-zhang-jie-du-wang-xin-ban-qi-xia-za-zhi-qu-kuai-lian-zu-gao-1-qu-kuai-lian-fa-zhan-shi-yi-ci-chang-pao/">[2][文章解读]网信办旗下杂志区块链组稿1-区块链发展是一次长跑</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+
+	
+<div class="post">
+  <div class="post_title weaklink">
+    <h2><a href="https://flfqbit.github.io/post/1bao-gao-jie-du-zhong-guo-jin-rong-wen-ding-bao-gao-2018-jia-mi-zi-chan-xiang-guan-ling-yu-feng-xian-ji-fang-fan/">[1][报告解读]中国金融稳定报告2018-加密资产相关领域风险及防范</a>
+    </h2>
+  </div>
+  <div class="post_content markdown"><div class="p_part"><p></p></div></div>
+  <div class="post_footer">
+    <div class="info weaklink"><i class="fa fa-clock-o"></i>
+<span class="date_info">2020-02-22</span>
+
+<i class="fa fa-bookmark-o"></i>
+	
+<span class="tags_info weaklink">
+	
+	<a href="https://flfqbit.github.io/tag/12QaTh0vp/" class="tag">阅读随笔</a>
+
+
+
+</span>
+
+
+    </div>
+
+  </div>
+
+</div>
+	
+	
+
+<div class="paginator pager pagination" >
+	
+
+
+	  <a href="https://flfqbit.github.io/tag/12QaTh0vp"  class="btn pre newer-posts newer_posts"> Newer Posts </a>
+			
+
+
+    <div style="clear:both;height:0;"></div>
+  </div>
+
+</div>
+
+
+
+  </div>
+</div>
+
+
+
+      </div>
+    </div>
+
+   <div class="footer">
+<div class="site_footer_wrap"><div class="site_footer">
+
+      <div class="mysocials"><div class="my_socials">
+		   
+			   
+    
+			   
+    
+			   
+    
+			   
+<a href="https://github.com/flfqbit" title="github"><i class="fa fa-github"></i></a>
+
+    
+			   
+<a href="fenghao2821@gmail.com" title="envelope"><i class="fa fa-envelope"></i></a>
+
+    
+			   
+    
+</div>
+      </div>
+
+      <div class="copyright" id="copyright">
+	  <script>
+		var date=new Date;
+		var year=date.getFullYear(); 
+		document.write("Copyright © "+year+" " + "飞来飞去-区块链学习笔记");
+		</script>
+		
+		
+	  
+      </div>
+
+    </div>
+
+<script>
+new Darkmode({label: '🌓',backgroundColor: '#f7f7f7',time: '0.5s'}).showWidget();
+console.clear();
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script>
+hljs.initHighlightingOnLoad();
+</script>
+
+
+</body>
+
 </html>
