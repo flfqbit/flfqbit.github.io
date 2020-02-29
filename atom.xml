@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-02-29T10:34:29.769Z</updated>
+    <updated>2020-02-29T10:35:26.651Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -16,9 +16,14 @@
         <link href="https://flfqbit.github.io/post/82lun-wen-yue-du/">
         </link>
         <updated>2020-02-29T09:38:31.000Z</updated>
+        <summary type="html"><![CDATA[<p>usenx2019-Tracing Transactions Across Cryptocurrency Ledgers.pdf<br>
+概述：关于跨账本（比特币、以太坊、EOS）交易追踪技术</p>
+<p>论文发表在USENIX2019期刊。这是信息安全类顶级期刊，具有很高的学术价值。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>usenx2019-Tracing Transactions Across Cryptocurrency Ledgers.pdf<br>
 概述：关于跨账本（比特币、以太坊、EOS）交易追踪技术</p>
 <p>论文发表在USENIX2019期刊。这是信息安全类顶级期刊，具有很高的学术价值。</p>
+<!-- more -->
 <p>[1 Introduction]<br>
 加密货币的假名机制没有实现匿名需求。不仅是比特币存在交易追踪的问题，即使是以匿名为主要优势的dash,Monet,zcash也存在被追踪的风险。<br>
 犯罪份子必须通过交易所才能获得收益，目前大多数追踪技术都依赖于获取交易所中的账号信息。当前交易所普遍实现了KYC/AML政策，犯罪分子会泄漏他们的身份信息。此外，传统的交易所面临被黑客攻击、加密货币丢失等风险。<br>
