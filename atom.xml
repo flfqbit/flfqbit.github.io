@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-02-27T14:23:01.072Z</updated>
+    <updated>2020-02-29T09:17:34.609Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -10,6 +10,83 @@
     <logo>https://flfqbit.github.io/images/avatar.png</logo>
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[[12][资料整理]数字货币账号关联分析]]></title>
+        <id>https://flfqbit.github.io/post/122/</id>
+        <link href="https://flfqbit.github.io/post/122/">
+        </link>
+        <updated>2020-02-29T08:55:23.000Z</updated>
+        <summary type="html"><![CDATA[<p>相对传统账号体系（例如银行卡），比特币等数字货币采用的账号具有更强的匿名性，这使得数字货币被广泛应用于洗钱、病毒勒索、暗网交易等灰色产业。<br>
+对数字货币账号的关联分析有很高的商业价值，美国FBI、美国税务局等政府机构已经开始大额采购此类关联分析服务，是区块链领域较好的落地实践业务。<br>
+本文记录“数字货币账号关联分析”相关的论文、资源、企业信息。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>相对传统账号体系（例如银行卡），比特币等数字货币采用的账号具有更强的匿名性，这使得数字货币被广泛应用于洗钱、病毒勒索、暗网交易等灰色产业。<br>
+对数字货币账号的关联分析有很高的商业价值，美国FBI、美国税务局等政府机构已经开始大额采购此类关联分析服务，是区块链领域较好的落地实践业务。<br>
+本文记录“数字货币账号关联分析”相关的论文、资源、企业信息。</p>
+<!-- more -->
+<p>[1]BitIodine<br>
+作者：Michele Spagnuolo, Federico Maggi, and Stefano Zanero<br>
+概述：详细介绍了比特币地址分析的方法，包括具体的架构、表结构和运行流程。基础算法是比较通用的“同一交易”“找零地址”。论文中用设计工具“BitIodine”对“丝绸之路”（暗网）网站相关的比特币地址进行分析。</p>
+<p>[学术论文]BitIodine: Extracting Intelligence from the Bitcoin Network<br>
+[硕士毕业论文]BitIodine: Extracting Intelligence from the Bitcoin Network<br>
+[作者blog]https://miki.it/<br>
+-作者在blog上提供了“BitIodine”的开源代码，github,Rust<br>
+[github]https://github.com/mikispag/bitiodine<br>
+BitIodine (GitHub, paper) - Rust Bitcoin blockchain parser with clustering capabilities, allowing to group together addresses in ownership clusters.</p>
+<p>[2]BitIodine</p>
+<p>[3]11</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[81][文章转载]国内关于比特币政策]]></title>
+        <id>https://flfqbit.github.io/post/81wen-zhang-zhuan-zai-guo-nei-guan-yu-bi-te-bi-zheng-ce/</id>
+        <link href="https://flfqbit.github.io/post/81wen-zhang-zhuan-zai-guo-nei-guan-yu-bi-te-bi-zheng-ce/">
+        </link>
+        <updated>2020-02-27T18:06:34.000Z</updated>
+        <content type="html"><![CDATA[<p>http://www.chinairn.com/news/20190515/164346893.shtml<br>
+比特币在中国合法吗？中国比特币政策2019</p>
+<p>2013年12月5日人民银行等五部委发布关于防范比特币风险的通知(《中国人民银行 工业和信息化部 中国银行业监督管理委员会 中国证券监督管理委员会 中国保险监督管理委员会关于防范比特币风险的通知》银发〔2013〕289号，以下简称“《通知》”)。</p>
+<ul>
+<li>比特币不是由货币当局发行，“不具有法偿性与强制性等货币属性”，并不是真正意义的货币。</li>
+<li>比特币是一种特定的虚拟商品</li>
+<li>“不具有与货币等同的法律地位”</li>
+<li>“不能且不应作为货币在市场上流通使用”</li>
+<li>“但是，比特币交易作为一种互联网上的商品买卖行为，普通民众在自担风险的前提下拥有参与的自由。”</li>
+</ul>
+<p>2017年9月4日下发的《中国人民银行、中央网信办、工业和信息化部、工商总局、银监会、证监会、保监会关于防范代币发行融资风险的公告》文件精神，中国境内所有的数字货币交易所已经于去年10月前全部暂停交易。所有的ICO项目也将逐一清退。</p>
+<ul>
+<li>中国境内所有的数字货币交易所已经于去年10月前全部暂停交易</li>
+<li>所有的ICO项目也将逐一清退</li>
+</ul>
+<p>2019年4月23日，中国银保监会发布消息表示，密切关注民间贷款利率以打击非法集资。继续防范互联网金融风险。所有ICO平台和比特币交易已经安全退出中国市场。</p>
+<ul>
+<li>所有ICO平台和比特币交易已经安全退出中国市场</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[[11][资料整理]Chainalysis]]></title>
+        <id>https://flfqbit.github.io/post/1/</id>
+        <link href="https://flfqbit.github.io/post/1/">
+        </link>
+        <updated>2020-02-27T14:26:24.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>[1][文章转载]IRS、FBI、SEC等美国机构订购区块链分析服务，打击加密货币犯罪<br>
+http://www.ctoutiao.com/601414.html<br>
+美国移民和海关执法局（ICE）是Chainalysis最大的客户之一。自2015年以来，ICE向这家公司订购了多项比特币检测服。国税局（IRS）对比特币持有者也表现出越来越大的兴趣，当IRS给Coinbase（美国知名加密货币交易平台）发传票，让其交出客户个人信息时，这一点变得更加明显。联邦调查局（FBI）也是Chainalysis的大客户，尽管大家认为FBI应该有自己的专门分析部门。<br>
+美国缉毒局（DEA）、财政服务局（BFS）、证券交易委员会（SEC）和商品期货交易委员会（CFTC）也在使用Chainalysis服务。这些美国机构都在使用该公司的工具来侦查各种不同的活动，如洗钱、黑网使用、人口贩卖、ICO和诈骗等。</p>
+<p>[2][文章转载]区块链分析公司融资总额达上亿美元，美国政府机构区块链分析支出近三年增长三倍<br>
+https://www.chainnews.com/articles/346459676575.htm<br>
+到目前为止，区块链分析公司融资总额为 1.07 亿美元<br>
+几乎所有处理加密货币业务的合规企业都在使用区块链分析业务，同时政府机构也在使用这项服务。<br>
+迄今为止，美国政府机构已与区块链分析公司签订了价值共计近 1000 万美元的采购订单及合同<br>
+IRS、ICE 和 FBI 在区块链分析服务方面的支出占总数的近 85％</p>
+<hr>
+<p>-更新时间：20200227<br>
+-更新内容：添加2个数据<br>
+-数据个数：2</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[10][资料整理]区块链共识机制]]></title>
         <id>https://flfqbit.github.io/post/10zi-liao-zheng-li-qu-kuai-lian-gong-shi-ji-zhi/</id>
@@ -458,143 +535,6 @@ https://baike.baidu.com/item/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6/4162457?fromti
 <p>未升级节点无法验证交易的问题解决方案：<br>
 （1）大多数节点对不涉及自己的交易并不是很关心这个签名数据，可以不验证；<br>
 （2）少数节点需要验证时，可以向其他节点请求验证。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[74]区块链数字货币历史]]></title>
-        <id>https://flfqbit.github.io/post/74qu-kuai-lian-shu-zi-huo-bi-li-shi/</id>
-        <link href="https://flfqbit.github.io/post/74qu-kuai-lian-shu-zi-huo-bi-li-shi/">
-        </link>
-        <updated>2020-02-22T16:09:49.000Z</updated>
-        <content type="html"><![CDATA[<p><a href="https://www.walian.cn/news/10367.html">https://www.walian.cn/news/10367.html</a><br>
-密码学激荡40年：“特币白皮书”之前的重要历史与人物<br>
-这篇文章内容最完整。</p>
-<p>#Ecash<br>
-<a href="https://baijiahao.baidu.com/s?id=1617848464234990804&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1617848464234990804&amp;wfr=spider&amp;for=pc</a></p>
-<blockquote>
-<p>大卫 · 乔姆和他于1990年成立的 DigiCash 公司一起登上了历史舞台。起初，他们只专注于所谓的智能卡，通过智能卡，他们建立了收费、打印机使用等的电子支付系统。<br>
-但他们生产的真正具有革命性的东西并非此物。在1993年，eCash来到了这个世界。</p>
-</blockquote>
-<p>1993年，eCash来到了这个世界</p>
-<blockquote>
-<p>DigiCash 很快找到了一些大牌合作伙伴在现实中测试他们的 eCash。1995年与在圣路易斯马克吐温银行合作，1996年与德意志银行合作，随后其他许多银行也纷纷效仿。</p>
-</blockquote>
-<blockquote>
-<p>最终， DigiCash 及其革命性的 eCash 不得不在1998年宣布破产。</p>
-</blockquote>
-<p><a href="https://www.sohu.com/a/191478072_785858">https://www.sohu.com/a/191478072_785858</a><br>
-区块链简史：1976—2017</p>
-<blockquote>
-<p>到了1998年，密码学货币的完整思想终于破茧而出，戴伟（Wei Dai）、尼克·萨博同时提出密码学货币的概念。其中戴伟的B-Money被称为比特币的精神先驱，而尼克·萨博的Bitgold提纲和中本聪的比特币论文里列出的特性非常接近，以至于有人曾经怀疑萨博就是中本聪。有趣的是，这距离后来比特币的诞生又是整整10年时间。</p>
-</blockquote>
-<blockquote>
-<p>中本聪在2008年11月的时候发表了著名的论文《比特币：点对点的电子现金系统》，2009年1月紧接着用他第一版的软件挖掘出了创始区块，包含着这句：“The Times 03/Jan/2009 Chancellor on brink of second bailout forbanks.”，像魔咒一样开启了比特币的时代。</p>
-</blockquote>
-<p>D. Chaum. Blind signatures for untraceable payments. In D. Chaum, R.L. Rivest, and A.T. Sherman, editors, Advances in Cryptology-CRYPTO ‘82, pages 199–203, New York, 1983. Plenum Press.</p>
-<p>1983年发表相关论文</p>
-<p>通过查阅百度学术等网络资料，这篇文章最早是与1982年发表。</p>
-<p><a href="https://www.walian.cn/news/10367.html">https://www.walian.cn/news/10367.html</a></p>
-<blockquote>
-<p>1998年11月，同样是在在密码朋克邮件列表中，戴维发布了B-money白皮书。这是一种匿名的、分布式的电子加密货币系统，强调点对点的交易和不可更改的交易记录。<br>
-B-money是第一种真正意义上的数字加密货币，比特币的去中心化的结算架构、匿名交易、点对点网络，在B-money中已经全部出现，不过它没有真正进入应用领域。<br>
-在比特币白皮书中，第一个被引用的资料是B-money；在以太坊中，ETH的最小单位被命名为Wei，以示对戴伟的敬意。</p>
-</blockquote>
-<p>&quot;B-money是第一种真正意义上的数字加密货币&quot;<br>
-&quot;在比特币白皮书中，第一个被引用的资料是B-money；在以太坊中，ETH的最小单位被命名为Wei，以示对戴伟的敬意。&quot;</p>
-<blockquote>
-<p>2005年，BitTtorrent实现基于 Kademlia 协议的分布式哈希表技术，eMule 也实现了基于 Kademlia的 类似技术。以太坊使用Kademlia作为分布式网络的底层算法。</p>
-</blockquote>
-<p>&quot;以太坊使用Kademlia作为分布式网络的底层算法。&quot;</p>
-<blockquote>
-<p>2004年，Ryan Fugger开发出去中心化货币支付协议Ripplepay，它是Ripple协议的前身。Ryan最初的想法是革新传统交易模式，构建可通过全球网络为用户提供安全快捷支付服务的系统。<br>
-2012年，Chris Larsen 与 Jed McCaleb 向 Ryan 提出数字货币的理念，随后三人共同成立了OpenCoin，开发新的支付协议Ripple，它是一个实时结算系统和货币兑换与汇款网络，基于分布式开源互联网协议、共识总账和原生货币XRP。</p>
-</blockquote>
-<p>&quot;去中心化货币支付协议Ripplepay，它是Ripple协议的前身&quot;</p>
-<blockquote>
-<p>2005 年，Hal Finney设计出了RPoW（Reusable Proofs of Work ，可复用工作量证明），RPoW是PoW的前身。 Finney将Adam Back的哈希现金机制完善成一种可重复利用的工作量证明，并用于数字货币实验中。<br>
-Hal Finney 是一位密码学先锋，PGP（Pretty Good Privacy）计划的核心参与者，PGP旨在使世界各地的人们能够以除接收者之外的任何人都无法阅读的方式进行加密通信。<br>
-Finney是唯一一个立刻关注中本聪提出比特币想法的人，他在Bitcoin发布的当天就下载了，是除中本聪外第一个运行Bitcoin的人，此外，Finney也是第一笔比特币交易的收款人。</p>
-</blockquote>
-<p>&quot;RPoW是PoW的前身&quot;<br>
-“Hal Finney 是一位密码学先锋，PGP（Pretty Good Privacy）计划的核心参与者，”<br>
-“Finney也是第一笔比特币交易的收款人。”</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[73]区块链在冷链物流中的应用]]></title>
-        <id>https://flfqbit.github.io/post/73qu-kuai-lian-zai-leng-lian-wu-liu-zhong-de-ying-yong/</id>
-        <link href="https://flfqbit.github.io/post/73qu-kuai-lian-zai-leng-lian-wu-liu-zhong-de-ying-yong/">
-        </link>
-        <updated>2020-02-22T16:09:32.000Z</updated>
-        <content type="html"><![CDATA[<p>冷链物流本质上属于溯源领域的应用。利用区块链数据公开共享、安全可靠的特性保护冷链过程中的数据，以及提升自动化支付水平。</p>
-<p>但是，根据和实际使用冷链物流的用户（基因测序企业）沟通，发现与实际需求有出入。<br>
-#业务背景：<br>
-企业A（基因测序企业）主要采用顺丰的冷链物流服务，运送货物是生物样本（疫苗、试剂），有国内业务，也有跨国业务，每年运送货物数量约为10万量级。<br>
-#业务流程：</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[72]2月待阅读文章目录]]></title>
-        <id>https://flfqbit.github.io/post/722-yue-dai-yue-du-wen-zhang-mu-lu/</id>
-        <link href="https://flfqbit.github.io/post/722-yue-dai-yue-du-wen-zhang-mu-lu/">
-        </link>
-        <updated>2020-02-22T16:09:09.000Z</updated>
-        <content type="html"><![CDATA[<p>此文章记录2月份将阅读分析的区块链文章。</p>
-<h1 id="1-tracing-transactions-across-cryptocurrency-ledgers">1 Tracing Transactions Across Cryptocurrency Ledgers</h1>
-<p>期刊名称：usenix<br>
-发表时间：2019</p>
-<blockquote>
-<p>Abstract<br>
-One of the defining features of a cryptocurrency is that its ledger, containing all transactions that have ever taken place, is globally visible. As one consequence of this degree of transparency, a long line of recent research has demonstrated that—even in cryptocurrencies that are specifically designed to improve anonymity—it is often possible to track money as it changes hands, and in some cases to de-anonymize users entirely. With the recent proliferation of alternative cryptocurrencies, however, it becomes relevant to ask not only whether or not money can be traced as it moves within the ledger of a single cryptocurrency, but if it can in fact be traced as it moves across ledgers. This is especially pertinent given the rise in popularity of automated trading platforms such as ShapeShift, which make it effortless to carry out such cross-currency trades. In this paper, we use data scraped from ShapeShift over a thirteen-month period and the data from eight different blockchains to explore this question. Beyond developing new heuristics and creating new types of links across cryptocurrency ledgers, we also identify various patterns of cross-currency trades and of the general usage of these platforms, with the ultimate goal of understanding whether they serve a criminal or a profit-driven agenda.</p>
-</blockquote>
-<p>“even in cryptocurrencies that are specifically designed to improve anonymity—it is often possible to track money as it changes hands, and in some cases to de-anonymize users entirely.”<br>
-加密货币能够被追踪，在某些情况下能够使用户完全去匿名。</p>
-<p>“not only whether or not money can be traced as it moves within the ledger of a single cryptocurrency, but if it can in fact be traced as it moves across ledgers”<br>
-不仅能够实现当个账本的追踪，而且能够实现跨账本的追踪。</p>
-<p>“This is especially pertinent given the rise in popularity of automated trading platforms such as ShapeShift, which make it effortless to carry out such cross-currency trades”<br>
-“考虑到ShapeShift等自动交易平台越来越受欢迎，这一点尤其重要，因为它们使得进行这种跨货币交易变得轻而易举。”</p>
-<p>“Beyond developing new heuristics and creating new types of links across cryptocurrency ledgers, we also identify various patterns of cross-currency trades and of the general usage of these platforms, with the ultimate goal of understanding whether they serve a criminal or a profit-driven agenda.”<br>
-“除了开发新的启发式方法和创建跨加密货币账本的新型链接外，我们还确定了各种跨货币交易模式和这些平台的一般用法，最终目的是了解它们是为犯罪还是为利润驱动的议程服务。”</p>
-<p>这篇论文描述了“加密货币追踪”领域的新进展-分析跨账本之间的加密货币追踪。<br>
-“单个账本中的加密货币追踪”已经有很多研究，典型的启发式算法“heuristics”没有太多的挖掘之处（算法固定，准确率低，实用性较差）。<br>
-作者提出了一个新的研究思路：分析跨账本之间的货币追踪。这个思路抓住了当前加密货币场景的典型业务（不同加密货币之间的兑换）和实际的应用需求（打击犯罪）。</p>
-<p>表1 分析我之前的思路和这篇文章的差距</p>
-<table>
-<thead>
-<tr>
-<th>序号</th>
-<th>以前的论文</th>
-<th>当前论文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>技术</td>
-<td>heuristics</td>
-<td>heuristics,links,patterns</td>
-</tr>
-<tr>
-<td>目的</td>
-<td>de-anonymize</td>
-<td>criminal</td>
-</tr>
-<tr>
-<td>数据</td>
-<td>全部账本</td>
-<td>13个月</td>
-</tr>
-</tbody>
-</table>
-<p>我之前也在此方向做了多篇论文，但是没有取得较好的效果（学术和实用性）。<br>
-技术层面，我将重点关注在启发式算法（heuristics）上，由于这种算法准确率不高、角度太小，很难做出新的改进，所以陷入死胡同。后来，将注意力转移到网络层溯源了。这篇论文不光采用heuristics，还加入了跨账本关联技术links，以及交易模式patterns的研究，扩展了研究空间。</p>
-<p>目的层面，我将研究点聚焦在去匿名de-anonymize，这个点很有意义，但是难度太大，最后做出来的研究并不能取得较好的去匿名效果。这篇论文将关注点放在交易模式识别和犯罪活动检测上，这对准确性的要求降低，提升了实用价值，更贴近实际需求。</p>
-<p>数据层面，我之前的研究在考虑数据处理能力上（全部数据太大）浪费了很多时间，实际上从论文研究上并不需要全部数据。作者利用爬虫爬取了一个程序13月的数据，有效规避了”数据量大“这个边缘问题，从而能够将精力集中在核心问题上。</p>
-<p>这篇文章将在2月阅读，了解以下内容：<br>
-（1）heuristics算法有何进展？<br>
-（2）跨账本关联是如何实现的？<br>
-（3）交易模式有哪些？<br>
-（4）ShapeShift的数据如何获取?<br>
-（5）把加密货币追踪的论文整理一下。</p>
 ]]></content>
     </entry>
 </feed>
