@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-02-29T10:28:22.464Z</updated>
+    <updated>2020-02-29T10:34:29.769Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
     <entry>
-        <title type="html"><![CDATA[[82][论文阅读]]]></title>
+        <title type="html"><![CDATA[[82][论文阅读]跨账本区块链账号追踪]]></title>
         <id>https://flfqbit.github.io/post/82lun-wen-yue-du/</id>
         <link href="https://flfqbit.github.io/post/82lun-wen-yue-du/">
         </link>
@@ -182,10 +182,14 @@ BitIodine (GitHub, paper) - Rust Bitcoin blockchain parser with clustering capab
 <p>[6]以太坊数据解析工具<br>
 概述：整理以太坊账本解析工具。<br>
 [官方工具]本地启动以太坊geth，开rpc接口，通过以太坊客户端自带的rpc进行数据解析</p>
+<p>[7]跨账本区块链账号追踪<br>
+概述：跨账本追踪对于数字货币监管有重要意义，能够解决实际的追踪难题。<br>
+[学术论文]usenx2019-Tracing Transactions Across Cryptocurrency Ledgers<br>
+[阅读记录]https://flfqbit.github.io/post/82lun-wen-yue-du/</p>
 <hr>
 <p>-更新时间：20200229<br>
--更新内容：添加3个数据<br>
--数据个数：3</p>
+-更新内容：添加7个数据<br>
+-数据个数：7</p>
 ]]></content>
     </entry>
     <entry>
