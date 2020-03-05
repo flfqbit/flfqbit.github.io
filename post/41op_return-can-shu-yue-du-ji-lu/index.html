@@ -7,7 +7,7 @@
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#000">
 <title>[41]OP_RETURN参数阅读记录 | 飞来飞去-区块链学习笔记</title>
-<link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1582973009409">
+<link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1583409996135">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -137,9 +137,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body gemini" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://flfqbit.github.io/images/avatar.png"/>
@@ -177,6 +185,183 @@
 
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#opreturn%E5%8F%82%E6%95%B0%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2%E5%92%8C%E6%9C%AA%E6%9D%A5%E5%B1%95%E6%9C%9B">opreturn参数的发展历史和未来展望</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E8%84%9A%E6%9C%AC%E4%BB%8B%E7%BB%8D-1">比特币脚本介绍 1</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E8%84%9A%E6%9C%AC%E4%BB%8B%E7%BB%8D-2">比特币脚本介绍 2</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81%E8%84%9A%E6%9C%AC%E4%BB%8B%E7%BB%8D-3">比特币脚本介绍 3</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81op_return%E6%A0%BC%E5%BC%8F%E8%AF%B4%E6%98%8E">比特币op_return格式说明</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81op_return%E5%8F%82%E6%95%B0%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E7%BD%91%E7%AB%991">比特币op_return参数数据统计网站1</a></li>
+<li><a href="#%E6%AF%94%E7%89%B9%E5%B8%81op_return%E5%8F%82%E6%95%B0%E6%95%B0%E6%8D%AE%E7%BB%9F%E8%AE%A1%E7%BD%91%E7%AB%992">比特币op_return参数数据统计网站2</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -290,51 +475,98 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>4分钟</span>
+      <span>6分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>735<span class="pc-show">字数</span></span>
+      <span>1236<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>https://bitzuma.com/posts/op-return-and-the-future-of-bitcoin/<br>
+                <h1 id="opreturn参数的发展历史和未来展望">opreturn参数的发展历史和未来展望</h1>
+<p>https://bitzuma.com/posts/op-return-and-the-future-of-bitcoin/<br>
 描述了opreturn参数的发展历史和未来展望</p>
+<blockquote>
 <p>Validation scripts offer an obvious method for encoding application-specific data, but other techniques have been used. For example,?one scheme?stored data by writing it into two payment addresses.<br>
 历史上曾经有提议，将数据存储在地址中</p>
+</blockquote>
+<blockquote>
 <p>A more serious concern stems from the need to keep application-specific data within the unspent transaction output (UTXO) set. The UTXO set contains references to all spendable coins, and so should be kept small to ensure fast transaction validation. Embedding application data into addresses or challenge scripts forces each full node to add a reference to the UTXO set.<br>
 UTXO数据集需要尽量小，以便提高交易验证效率。<br>
 将数据内嵌在地址或脚本中，将使得所有全节点维护的UTXO数据集中增加引用数量。<br>
 这句话的核心是，将数据存储在地址和签名中的行为，有可能使这笔交易成为不可执行的交易，即永久性增加UTXO的数据，这将对整个系统的验证效率产生潜在威胁。</p>
-<p>challenge scripts 猜测是指交易输出信息中的数据，用于存储脚本的。</p>
+</blockquote>
+<h1 id="比特币脚本介绍-1">比特币脚本介绍 1</h1>
 <p>https://davidederosa.com/basic-blockchain-programming/scripts-in-transaction-processing/<br>
 介绍比特币的脚本</p>
-<p>比特币的输入和输出中都有脚本<br>
-output script<br>
--the amount of bitcoins to transfer<br>
--a script<br>
-input script<br>
--an outpoint reference to the previous transaction output	(oupoint &lt;tx1, output&gt;)<br>
--a script</p>
-<p>UTXO (unspent transaction output)数据集被矿工维护，以便能够快速验证交易合法性，防止双花现象。</p>
+<blockquote>
 <p>Although stored in the block chain,?OP_RETURN?bytes are excluded from the UTXO set, conserving a scarce resource. As a side effect, an output using an?OP_RETURN?challenge script becomes unspendable. For this reason, the value of an?OP_RETURN?output is usually set to 0.</p>
-<p>OP_RETURN不属于UTXO数据集。<br>
+</blockquote>
+<p>UTXO (unspent transaction output)数据集被矿工维护，以便能够快速验证交易合法性，防止双花现象。<br>
+OP_RETURN不属于UTXO数据集。<br>
 OP_RETURN脚本存储在一个output中，金额为0。</p>
+<blockquote>
 <p>However, a 40 byte sequence more than suffices to encode an identifier such as a hash value. This value can uniquely represent any digital document, from an image, to a poem, to an abstract data structure. Embedded hash values in turn offer a method to link the block chain to other data stores such as?distributed hash tables.<br>
 40字节足够存储1个哈希值。这个哈希值可以唯一代表任意一个数字文件，从图片到文字到数据结构。<br>
 内嵌的哈希值可以将区块链连接到任意存储文件。</p>
-<p>The?Bitcoin Core 0.9.0 release notes?attempted to clarify the purpose of?OP_RETURN:<br>
-0.9.0版本正式定义了op_return参数</p>
-<p>Stealth addresses offer another example of?OP_RETURN?in action. This scheme enables payments to be received without publicly revealing the receiver’s public key or address. Data needed to make this system work are encoded within a call to?OP_RETURN. In essence, Bitcoin does double duty as a secure messaging protocol.</p>
-<p>Transactions using?OP_RETURN?can be monitored via?Coin Secrets.<br>
-http://coinsecrets.org/ 这个网站专门记录比特币op_return参数中存储的数据。<br>
+</blockquote>
+<blockquote>
+<p>The Bitcoin Core 0.9.0 release notes?attempted to clarify the purpose of?OP_RETURN:</p>
+</blockquote>
+<p>0.9.0版本正式定义了op_return参数</p>
+<h1 id="比特币脚本介绍-2">比特币脚本介绍 2</h1>
+<p>https://bitzuma.com/posts/op-return-and-the-future-of-bitcoin/<br>
+这篇文章介绍op_return很详细。</p>
+<h1 id="比特币脚本介绍-3">比特币脚本介绍 3</h1>
+<p>https://bitcoin.org/en/release/v0.12.0#relay-any-sequence-of-pushdatas-in-opreturn-outputs-now-allowed</p>
+<blockquote>
+<p>Relay: Any sequence of pushdatas in OP_RETURN outputs now allowed<br>
+Previously OP_RETURN outputs with a payload were only relayed and mined if they had a single pushdata. This restriction has been lifted to allow any combination of data pushes and numeric constant opcodes (OP_1 to OP_16) after the OP_RETURN. The limit on OP_RETURN output size is now applied to the entire serialized scriptPubKey, 83 bytes by default. (the previous 80 byte default plus three bytes overhead)</p>
+</blockquote>
+<ul>
+<li>默认长度是83字节</li>
+<li>比特币协议V0.12.0，去除了长度限制，目前op_return长度的上限是scriptPubKey的长度限制？</li>
+</ul>
+<h1 id="比特币op_return格式说明">比特币op_return格式说明</h1>
+<p>长度上限83B，前3个字节为固定参数（前2个字节为标志，第3个字节存储），后面的为自定义内容。<br>
+固定格式：</p>
+<ul>
+<li>6a 4c <a href="%5B80/255%5D">50/ff</a>  xxxx</li>
+<li>“6a 4c”是固定标注，</li>
+<li>第3个字节存储自定义内容的长度</li>
+<li>50是16进制，代表十进制80，表示自定义内容的长度是80</li>
+<li>op_return自定义内容的长度是由用户自行定义，根据“op_return数据统计网站-长度统计”，长度为20和80 的比例最高</li>
+<li>可疑的情况是，在testnet中，第3个字节可以设置为ff，代表十进制255，实验测试可以存储超过80 的数据。</li>
+<li>[op_return数据统计网站-长度统计]https://opreturn.org/op-return-sizes/</li>
+<li>[长度为255的交易testnet]https://live.blockcypher.com/btc-testnet/tx/1da4803e97df8aa21f117eab735b76111537c5a04db6549b627ddbfd6561f2f1/#</li>
+</ul>
+<p>op_return自定义内容的特征</p>
+<ul>
+<li>前3个字节有一定规律，有“op_return数据统计网站-protocls”专门统计分类情况。有两类情况占主要比例。</li>
+<li>[op_return数据统计网站-protocls]https://opreturn.org/op-return-protocols/</li>
+</ul>
+<p>op_return参数在输出脚本中的比例</p>
+<ul>
+<li>从“op_return数据统计网站-脚本比例”上的数据，可以看出op_return的比例远小于1%，与我原来印象10%，差距巨大。需要调研此问题。</li>
+<li>[op_return数据统计网站-脚本比例]https://btc.com/stats/script?time_range=all&amp;latest_block=620227&amp;static_type=amount_stats</li>
+</ul>
+<h1 id="比特币op_return参数数据统计网站1">比特币op_return参数数据统计网站1</h1>
+<p>http://coinsecrets.org/<br>
+这个网站专门记录比特币op_return参数中存储的数据。<br>
 http://api.coinsecrets.org/block/353197?where?353197?is a bitcoin block number.<br>
-这个网站提供的API参数可以查看每个区块中存储的opreturn数据。<br>
-之后介绍op_return时，可以引用这里的数据。</p>
-<p>https://bitzuma.com/posts/op-return-and-the-future-of-bitcoin/ 这篇文章介绍op_return很详细。</p>
+这个网站提供的API参数可以查看每个区块中存储的opreturn数据。</p>
+<h1 id="比特币op_return参数数据统计网站2">比特币op_return参数数据统计网站2</h1>
+<p>https://opreturn.org/<br>
+此网站提供8种数据，包括每月数据，协议，大小，脚本类型、隔离见证等，值得深入研究。</p>
+<hr>
+<p>-更新时间：20200305<br>
+-更新内容：补充了统计网站，介绍3等内容，完善格式。<br>
+-下一步要补充op_return参数在各次协议升级中的变化</p>
+<p>-更新时间：20190807<br>
+-更新内容：原始文章</p>
 
               </div>
               <div class="post-footer">
