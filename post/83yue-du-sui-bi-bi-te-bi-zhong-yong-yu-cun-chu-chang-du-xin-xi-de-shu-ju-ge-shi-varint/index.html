@@ -6,7 +6,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#000">
-<title>[47]区块链稳定币相关资料 | 飞来飞去-区块链学习笔记</title>
+<title>[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint | 飞来飞去-区块链学习笔记</title>
 <link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1583543813636">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
@@ -25,7 +25,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="[47]区块链稳定币相关资料" />
+    <meta name="description" content="[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint" />
     <meta name="keywords" content="阅读随笔" />
   </head>
   <body>
@@ -262,8 +262,8 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://flfqbit.github.io/post/47qu-kuai-lian-wen-ding-bi-xiang-guan-zi-liao/">
-      [47]区块链稳定币相关资料
+    <a class="post-title-link" href="https://flfqbit.github.io/post/83yue-du-sui-bi-bi-te-bi-zhong-yong-yu-cun-chu-chang-du-xin-xi-de-shu-ju-ge-shi-varint/">
+      [83][阅读随笔]比特币中用于存储长度信息的数据格式Varint
     </a>
   </h1>
   <div class="post-meta">
@@ -271,7 +271,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-02-22</span>
+      <span>2020-03-06</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -290,23 +290,32 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>1分钟</span>
+      <span>2分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>120<span class="pc-show">字数</span></span>
+      <span>493<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>USDT深陷信任沼泽，其他稳定币也不过半斤八两<br>
-https://www.8btc.com/article/380437</p>
-<p>《PAX和GUSD的折扣补贴战：市场机遇还是利益驱使？》<br>
-https://www.coingogo.com/news/24038<br>
-这篇文章主要介绍了稳定币PAX和GUSD(首个受政府监管的稳定币)采用折扣策略吸引用户参与稳定币交易的事件。</p>
-<p>稳定币本身的赎回政策采用固定价格机制，即与美元1:1兑换</p>
+                <p>本文来源于网页资料<br>
+[数值压缩存储方法Varint]https://www.cnblogs.com/smark/archive/2012/05/03/2480034.html</p>
+<blockquote>
+<p>在编写网络通讯的时候我们经常需要把一些数据存储到byte[]中然后再发送出去，数值则是我们经常处理的数据成员。发越少的东西意味着使用更少的IO和带宽 ，所以对传输数据进行压缩也是件非常重要的事情。接下来提到的就是一种基于数字存储的方式在大多数情况下可以节省数值存储空间。</p>
+</blockquote>
+<blockquote>
+<p>Varint 是一种紧凑的表示数字的方法。它用一个或多个字节来表示一个数字，值越小的数字使用越少的字节数。这能减少用来表示数字的字节数。比如对于 int32 类型的数字，一般需要 4 个 byte 来表示。但是采用 Varint，对于很小的 int32 类型的数字，则可以用 1 个 byte 来表示。当然凡事都有好的也有不好的一面，采用 Varint 表示法，大的数字则需要 5 个 byte 来表示。从统计的角度来说，一般不会所有的消息中的数字都是大数，因此大多数情况下，采用 Varint 后，可以用更少的字节数来表示数字信息。下面就详细介绍一下 Varint。</p>
+</blockquote>
+<blockquote>
+<p>Varint 中的每个 byte 的最高位 bit 有特殊的含义，如果该位为 1，表示后续的 byte 也是该数字的一部分，如果该位为 0，则结束。其他的 7 个 bit 都用来表示数字。因此小于 128 的数字都可以用一个 byte 表示。大于 128 的数字，比如 300，会用两个字节来表示：1010 1100 0000 0010</p>
+</blockquote>
+<p><img src="https://flfqbit.github.io/post-images/1583505331699.jpg" alt="" loading="lazy"><br>
+图1 结构示意图</p>
+<p>原文后面附有具体代码，请看原文<br>
+[数值压缩存储方法Varint]https://www.cnblogs.com/smark/archive/2012/05/03/2480034.html</p>
 
               </div>
               <div class="post-footer">
@@ -317,7 +326,7 @@ https://www.coingogo.com/news/24038<br>
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://flfqbit.github.io/post/47qu-kuai-lian-wen-ding-bi-xiang-guan-zi-liao/" title="[47]区块链稳定币相关资料">[47]区块链稳定币相关资料</a>
+      <a href="https://flfqbit.github.io/post/83yue-du-sui-bi-bi-te-bi-zhong-yong-yu-cun-chu-chang-du-xin-xi-de-shu-ju-ge-shi-varint/" title="[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint">[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -332,15 +341,11 @@ https://www.coingogo.com/news/24038<br>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="[48]区块链与网络空间安全" href="https://flfqbit.github.io/post/48qu-kuai-lian-yu-wang-luo-kong-jian-an-quan/">[48]区块链与网络空间安全</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="[48]区块链与网络空间安全" href="https://flfqbit.github.io/post/48qu-kuai-lian-yu-wang-luo-kong-jian-an-quan/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="[46]区块链与大数据风控" href="https://flfqbit.github.io/post/46qu-kuai-lian-yu-da-shu-ju-feng-kong/">[46]区块链与大数据风控</a>
-        <a class="nav-mobile-next" title="[46]区块链与大数据风控" href="https://flfqbit.github.io/post/46qu-kuai-lian-yu-da-shu-ju-feng-kong/">下一篇</a>
+        <a class="nav-pc-next" title="[82][论文阅读]跨账本区块链账号追踪" href="https://flfqbit.github.io/post/82lun-wen-yue-du/">[82][论文阅读]跨账本区块链账号追踪</a>
+        <a class="nav-mobile-next" title="[82][论文阅读]跨账本区块链账号追踪" href="https://flfqbit.github.io/post/82lun-wen-yue-du/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
