@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-03-07T04:14:49.368Z</updated>
+    <updated>2020-03-10T17:16:34.349Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -10,6 +10,40 @@
     <logo>https://flfqbit.github.io/images/avatar.png</logo>
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[[83][阅读随笔]区块链领域的院士专家]]></title>
+        <id>https://flfqbit.github.io/post/83yue-du-sui-bi-qu-kuai-lian-ling-yu-de-yuan-shi-zhuan-jia/</id>
+        <link href="https://flfqbit.github.io/post/83yue-du-sui-bi-qu-kuai-lian-ling-yu-de-yuan-shi-zhuan-jia/">
+        </link>
+        <updated>2020-03-07T04:55:26.000Z</updated>
+        <content type="html"><![CDATA[<p>本文来自于网页资料<br>
+题目：中国区块链的“最强大脑” ：21位两院院士参与实践与研究<br>
+链接：https://blog.csdn.net/PlusFo_/article/details/91822420</p>
+<blockquote>
+<p>中国科学院院士有很多在进行区块链方向的探索。在各地举行的正规区块链大会、新兴科技会议区块链分论坛上，常可见到院士的身影。互链脉搏不完全统计，共<strong>21</strong>位两院院士有参与区块链研究、实践活动。</p>
+</blockquote>
+<blockquote>
+<p>云晓春，国家计算机网络与信息安全管理中心副主任、总工程师，在第二届数字中国建设峰会网络科技论坛上指出“区块链的发展存在着大量的想象空间，但目前，区块链仍面临着巨大的安全挑战，尚缺乏大规模应用的基础条件。此番表态直至区块链当下要害，说明他对区块链研究已有时日。”</p>
+</blockquote>
+<p>郑纬民，清华大学计算机系教授，2018年7月，清华大学计算机系与北京阿尔山金融科技有限公司共同组建的区块链技术联合研究中心成立。清华大学计算机系教授郑纬民担任研究中心学术委员会委员。</p>
+<p>陈纯，浙江大学计算机科学与技术学院教授，区块链行业准独角兽企业趣链科技的董事长；</p>
+<p>王恩东，浪潮集团首席科学家、高效能服务器和存储技术国家重点实验室主任，曾在第十届中国云计算大会上，谈及“区块链使质量信息的传递更透明。并列举将区块链技术应用到质量监管场景中的案例，介绍浪潮集团基于区块链技术的“质量链”平台。”</p>
+<p>沈昌祥，海军计算技术研究所总工程师，研究的便是可信计算与区块链安全。他曾在中国区块链技术和产业发展论坛成立大会上，提出新的可信技术来解决区块链安全是根本的出路；在2018年数博会的“区块链”论坛上发表主题演讲，同样提出只有可信计算才能保障区块链安全。</p>
+<p>邬贺铨，电信科学技术研究院顾问、中国互联网协会理事长，关注的是区块链与工业互联网。他曾于2019年4月发文指出，区块链与物联网和第三方机构结合赋能工业互联网；在2019数博会上，就区块链在数据安全中的运用发表看法，并提出物联网＋区块链可解决中小微企业贷款难问题。</p>
+<p>侯立安，火箭军后勤科学技术研究所所长，重视区块链的应用。曾在2018首届区块链食品安全质量溯源高峰论坛上表示，区块链对食品安全具有重要战略意义。</p>
+<p>陈晓红，全国政协委员，连续两年针对区块链议题提出提案。2018年时，提出关于促进区块链技术健康发展的五点建议；2019年，从区块链应用的角度再次提案。提出运用区块链等技术手段推动大数据生态监测管理信息化平台建设；引入区块链技术进行电池溯源，建立动力蓄电池强制回收利用制度；人工智能和区块链结合形成的去中心化云计算将成为下一代IT基础设施。</p>
+<p>姚期智，清华大学教授，参与创立了区块链项目 Conflux，该项目曾获得 3500 万美元融资，估值超过 4 亿美元；并且他曾撰写两篇关于区块链的论文：《扩展中本聪共识至上千交易每秒》、《对几种比特币费用设计的激励分析》。</p>
+<p>王小云，清华大学教授，重点研究的是区块链的密码学基础与哈希算法，并曾做《比特币与区块链密码技术与思考》报告。</p>
+<p>张平文，北京大学教授，曾出席区块链院士高峰论坛暨星沙区块链产业园项目签约仪式，并提出区块链等新一代信息技术是应用数学发展的绝佳机遇；</p>
+<p>郑志明，北京航空航天大学教授，是蓝石区块链实验室首席科学家。曾在2018可信区块链峰会上，做《区块链技术与发展》主题演讲，提到区块链将取代互联网底层基础协议，并呼吁加强我国国家主权区块链基础平台的研发。</p>
+<p>何积丰，华东师范大学教授，曾出席中国区块链技术和产业发展论坛第三届区块链开发大会，并作主题报告，表示区块链的应用范围超乎大家的想象，但区块链离成熟还很远；</p>
+<p>徐宗本，西安交通大学教授，2019年3月时，撰文指出区块链技术是当前大数据技术的热点方向之一；</p>
+<p>陈国良，深圳大学教授，曾在演讲中表示，区块链有望成为新的经济增长点，并在2018年4月，为“深圳大学区块链技术研究中心”揭牌。</p>
+<p>郑建华，解放军保密委员会技术安全研究所研究员，中国区块链生态联盟理事长，在出席中国区块链技术产业生态大会时，曾指出区块链技术应用应重视技术内涵。</p>
+<p>戴浩，中国工程院院士、军事科学院系统工程研究院某研究所研究员，曾在区块链创新应用大会上指出：区块链是<strong>下一代互联网的核心技术</strong>。</p>
+<p>张首晟，已故的中科院外籍院士，据投中网数据显示，张首晟创办的丹华资本在区块链技术、区块链应用和数字货币领域共计投资事件金额达到约 1.88 亿元。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint]]></title>
         <id>https://flfqbit.github.io/post/83yue-du-sui-bi-bi-te-bi-zhong-yong-yu-cun-chu-chang-du-xin-xi-de-shu-ju-ge-shi-varint/</id>
@@ -452,120 +486,6 @@ Libra和DCEP的竞争不仅是两种技术产品的竞争，也是以美元为�
 <p>附<br>
 <img src="https://flfqbit.github.io/post-images/1582473180900.PNG" alt="图4 银行跨国转账手续费和时间" loading="lazy"><br>
 图4 银行跨国转账手续费和时间</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[77]以太坊数据字段（input）解析]]></title>
-        <id>https://flfqbit.github.io/post/77yi-tai-fang-shu-ju-zi-duan-inputjie-xi/</id>
-        <link href="https://flfqbit.github.io/post/77yi-tai-fang-shu-ju-zi-duan-inputjie-xi/">
-        </link>
-        <updated>2020-02-22T16:11:10.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-背景">1 背景</h1>
-<p>以太坊系统中默认存储数据的字段的是“input”。<br>
-“input”字段的内容是由用户（创建以太坊交易的人）自行写入，没有固定格式。<br>
-调研显示，“input”字段常见格式类型包括：“ascii”，“utf8”，以及一些变种（utf8,每两个字符之间用\x隔断）。<br>
-本文总结针对以太坊数据字段（input）的解析方法。</p>
-<h1 id="2-提纲">2 提纲：</h1>
-<p>(1)了解互联网行业常用的编码格式(完成)<br>
-(2)统计以太坊数据存储参数常用的格式类型<br>
-(3)设计解析方案<br>
-(4)编写解析程序</p>
-<h1 id="3-内容">3 内容</h1>
-<h2 id="31-了解互联网行业常用的编码格式">3.1 了解互联网行业常用的编码格式</h2>
-<p>2机制(hex)<br>
-16机制(hex)<br>
-ascii<br>
-utf8<br>
-unicode</p>
-<p>1 Byte（B） = 8 bit</p>
-<p>ASCII编码	1B</p>
-<p>GB2312编码</p>
-<p>Unicode编码	2B-4B</p>
-<p>UTF-8编码 1B-6B</p>
-<p>unicode和ascii是一种编码方式，而UTF-8，UTF-16等是一种存储方式，在存储和传输上节约空间、提高性能的一种编码形式。<br>
-在计算机内存中，统一使用Unicode编码，当需要保存到硬盘或者需要传输的时候，就转换为UTF-8编码。</p>
-<p>从存储层面看，字符常用的格式是UTF8</p>
-<p>存储层面</p>
-<h3 id="311-存储容量单位">3.1.1 存储容量单位</h3>
-<p>（1）位（Bit）<br>
--计算机数据存储基础单位，包含1位的二进制数</p>
-<p>（2）字节（Byte）<br>
--最常用的字节是八位的字节，即它包含八位的二进制数<br>
--也可以写为二位的十六机制数</p>
-<h3 id="312-数据表示方法">3.1.2 数据表示方法</h3>
-<p>（1）二进制（binary）<br>
--逢2进1，[0-1]</p>
-<p>（1）16进制（Hexadecimal）<br>
--逢16进1，[0-9-A-F]<br>
--编程语言，使用字首“0x”，例如“0x5A3”。<br>
--转义序列，使用字首“\x”，例如“\x1abf4”。</p>
-<h3 id="312-数据符合集合">3.1.2 数据符合集合</h3>
-<p>（1）ASCII<br>
--英文字符<br>
--1B,128个。高位置0，后7位用于编码，常见的符号和英文字符。</p>
-<p>（2）GB2312<br>
--英文字符+中文字符<br>
--2B，“区字节”+“位字节”</p>
-<p>（3）GBK<br>
--英文字符+中文字符<br>
--1B-2B。英文使用单字节编码，完全兼容ASCII字符编码，中文部分采用双字节编码。<br>
--GBK 向下与 GB 2312 编码兼容，向上支持 ISO 10646.1国际标准。</p>
-<p>（4）Unicode（统一码、万国码、单一码）<br>
--英文字符+中文字符+日文+韩文+其他<br>
--2B-4B。原有的英文编码从单字节变成双字节，只需要把高字节全部填为0就可以。<br>
--转义序列，使用字首“u”，例如“uCA”。</p>
-<h3 id="312-数据编码方法">3.1.2 数据编码方法</h3>
-<p>（1）UTF-8<br>
--1B-4B<br>
--UTF-8是一种编码方式，根据字符在Unicode字符集中的序号，将字符集分成4种，分别采用1B-4B存储。<br>
--编码方法（Unicode -&gt; UTF-8）</p>
-<table>
-<thead>
-<tr>
-<th>序号范围</th>
-<th>编码方法</th>
-<th>十六进制特征</th>
-<th>（字符，unicode,utf8）</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>000000-00007F</td>
-<td>0XXX XXXX</td>
-<td>[0-7]*</td>
-<td>(a,\u61 ,0x61)</td>
-</tr>
-<tr>
-<td>000080-0007FF</td>
-<td>110xxxxx 10xxxxxx</td>
-<td>[C-D]* [8-B]*</td>
-<td>(ê,\uCA ,0xC38A)</td>
-</tr>
-<tr>
-<td>000800-00FFFF</td>
-<td>1110xxxx 10xxxxxx 10xxxxxx</td>
-<td>E* [8-B]* [8-B]*</td>
-<td>(叶,\u53f6 ,\xE58FB6)</td>
-</tr>
-<tr>
-<td>010000-10FFFF</td>
-<td>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</td>
-<td>F* [8-B]*  [8-B]* [8-B]*</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<p>编码例子：<br>
-\uCA -&gt;\xC3 8A， 过程如下：<br>
-\uCA(1100 1010)处于0080 ~07FF之间，从上文中的转换表可知对其编码需要2bytes，即两个字节，其对 应 UTF-8格式为： 110X XXXX10XX XXXX。从此格式中可以看到，对其编码还需要11位，而uCA(1100 1010)仅有8位，这时需要在其二进制数前补0凑成11位: 000 1100 1010, 依次填入110X XXXX 10XX XXXX的空位中， 即得 1100 0011 1000 1010（C38A）。</p>
-<h1 id="文献">文献</h1>
-<p>[16进制]<br>
-https://baike.baidu.com/item/%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6/4162457?fromtitle=16%E8%BF%9B%E5%88%B6&amp;fromid=8541382&amp;fr=aladdin<br>
-[ASCII]https://baike.baidu.com/item/ASCII<br>
-[ASCII、Unicode和UTF-8等常见字符编码格式介绍]https://www.cnblogs.com/Ladylittleleaf/p/9633993.html<br>
-[UTF-8]https://baike.baidu.com/item/UTF-8<br>
-[Unicode]https://baike.baidu.com/item/Unicode<br>
-[汉字编码]https://bianma.supfree.net/chaye.asp?id=53F6</p>
 ]]></content>
     </entry>
 </feed>
