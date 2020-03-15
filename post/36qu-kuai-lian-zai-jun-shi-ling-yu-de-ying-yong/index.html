@@ -7,7 +7,7 @@
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#000">
 <title>[36]区块链在军事领域的应用 | 飞来飞去-区块链学习笔记</title>
-<link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1583860590639">
+<link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1584238105702">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -137,9 +137,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body gemini" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://flfqbit.github.io/images/avatar.png"/>
@@ -177,6 +185,185 @@
 
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#guardtime">Guardtime</a></li>
+<li><a href="#remme">REMME</a></li>
+<li><a href="#simba-chain">Simba Chain</a>
+<ul>
+<li><a href="#%E6%8A%80%E6%9C%AF%E6%9E%B6%E6%9E%84">技术架构</a></li>
+<li><a href="#%E7%BE%8E%E5%9B%BD%E6%B5%B7%E5%86%9B%E7%A9%BA%E6%88%98%E4%B8%AD%E5%BF%83">美国海军空战中心</a></li>
+<li><a href="#%E7%BE%8E%E5%9B%BD%E7%A9%BA%E5%86%9B">美国空军</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -290,12 +477,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>3分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>362<span class="pc-show">字数</span></span>
+      <span>606<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
@@ -306,13 +493,24 @@
 <p>区块链的突出优势，能够在军事领域发挥重大作用。<br>
 <img src="https://upload-images.jianshu.io/upload_images/4794066-1ed70f8654b6f176.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图2 区块链在军事领域的作用" loading="lazy"></p>
 <figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/4794066-4a6b75c9d627c940.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3 美国国防部高级研究计划局（DARPA）" loading="lazy"></figure>
+<h1 id="guardtime">Guardtime</h1>
 <p>  根据美国国防部的需求，美国国防部高级研究计划局（DARPA)正在研究利用区块链技术创建一个安全的消息传输与交易平台，使任何人在任何地方都能够安全的发送信息。<br>
   DARPA向Guardtime（爱沙利亚区块链公司)授予了180万美元的合同，用于构建其区块链无钥签名基础设施KSI。用于保护关键武器系统的安全性，检测和对抗高持续性威胁（APT）<br>
 <img src="https://upload-images.jianshu.io/upload_images/4794066-149eb55d6b950868.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图3 传统的PKI/CA与基于区块链的KSI" loading="lazy"></p>
+<h1 id="remme">REMME</h1>
 <p>REMME项目的目标是通过创建没有任何密码的唯一身份验证系统来解决此问题。基于密码学和分布式分类器技术（DLT），该解决方案设计为过时，同时为普通用户保留了便利性。<br>
 官网：<a href="https://remme.io/">https://remme.io/</a><br>
 介绍：<a href="https://www.zuocoin.com/a/news/experience/2018/1030/3289.html">https://www.zuocoin.com/a/news/experience/2018/1030/3289.html</a><br>
 <a href="https://zhuanlan.zhihu.com/p/33449702">https://zhuanlan.zhihu.com/p/33449702</a></p>
+<h1 id="simba-chain">Simba Chain</h1>
+<h2 id="技术架构">技术架构</h2>
+<p>该通信平台使用Microsoft的Azure云平台构建，适用于陆地和水域运营，可实现安全的数据交换。</p>
+<h2 id="美国海军空战中心">美国海军空战中心</h2>
+<p>美国海军空战中心（美国海军在加利福尼亚州的一个研究小组）已向区块链软件初创公司Simba Chain提供近1000万美元，以启动安全消息传递平台的建设。<br>
+[美国海军在区块链下注950万美元以保证信息安全]https://www.5186.net/article-show-id-43467</p>
+<h2 id="美国空军">美国空军</h2>
+<p>Simba Chain对美国军事工作并不陌生。该初创公司于2019年8月开始为美国空军构建基于区块链的供应链解决方案。<br>
+Simba Chain官方博客写到，作为前SBIR合同的一部分，Simba Chain在当前的DoD平台上工作，构建并测试基于区块链的通信系统。第三阶段为解决方案的完整部署。</p>
 <p>相关文献：<br>
 [1]廉 蔺, 朱启超, 赵 炤. 区块链技术及其潜在的军事价值[J]. 国防科技, 2016, 37(2).<br>
 [2]DARPA and Advancing Cybersecurity Infrastructure With Blockchain. URL:https://www.nasdaq.com/article/darpa-and-advancing-cybersecurity-infrastructure-with-blockchain-cm783507</p>
