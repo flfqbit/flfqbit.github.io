@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-03-24T12:09:05.486Z</updated>
+    <updated>2020-03-24T12:16:14.258Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -10,6 +10,33 @@
     <logo>https://flfqbit.github.io/images/avatar.png</logo>
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[[13][资料整理]比特币、以太坊开发资源]]></title>
+        <id>https://flfqbit.github.io/post/13zi-liao-zheng-li-bi-te-bi-yi-tai-fang-kai-fa-zi-yuan/</id>
+        <link href="https://flfqbit.github.io/post/13zi-liao-zheng-li-bi-te-bi-yi-tai-fang-kai-fa-zi-yuan/">
+        </link>
+        <updated>2020-03-24T12:09:40.000Z</updated>
+        <summary type="html"><![CDATA[<p>记录比特币、以太坊程序开发中常用的资源</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>记录比特币、以太坊程序开发中常用的资源</p>
+<!-- more -->
+<h1 id="1bitcoin-api-开发接口">[1]Bitcoin API 开发接口</h1>
+<p>此网站提供bitcoin的API服务，可以进行数据查询、交易发送等常规操作。<br>
+API调用需要注册token，网站提供免费token和付费升级的token。<br>
+[网站链接]https://accounts.blockcypher.com/</p>
+<h1 id="2bitcocoin-faucet-测试币水龙头">[2]Bitcocoin faucet  测试币水龙头</h1>
+<p>可以获得bitcoin testnet的测试币。</p>
+<p>https://coinfaucet.eu/en/btc-testnet/<br>
+https://testnet.help/en/btcfaucet/testnet/（20200324测试可用）<br>
+https://testnet-faucet.mempool.co/</p>
+<h1 id="3ethereum-api-开发接口">[3]Ethereum API 开发接口</h1>
+<h1 id="4ethereum-faucet-测试币水龙头">[4]Ethereum faucet  测试币水龙头</h1>
+<hr>
+<p>-更新时间：20200324<br>
+-更新内容：添加4个数据<br>
+-数据个数：4</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[83][阅读随笔]区块链领域的院士专家]]></title>
         <id>https://flfqbit.github.io/post/83yue-du-sui-bi-qu-kuai-lian-ling-yu-de-yuan-shi-zhuan-jia/</id>
@@ -467,60 +494,6 @@ Libra和DCEP的竞争不仅是两种技术产品的竞争，也是以美元为�
 在第一轮交锋中，Facebook的社交业务在全世界范围内占主要份额，但是在移动支付领域进展缓慢；中国的互联网企业在移动支付企业快速发展，几乎覆盖了全部中国人口。但是，在向其他国家发展时面临很大阻力。<br>
 在第二轮交锋中，Facebook推出Libra项目，计划向全球超过20亿固有用户（使用facebook服务用户）提供支付业务，以对抗中国支付企业的发展。但是Libra项目在美国受到严格的政策制约，进展不明；中国的DCEP项目从2014年开始研究，在Libra项目推出之后，DCEP项目的进展被加快，有望在2020年开展试点运行。</p>
 <p>这两个项目是数字货币行业最具有颠覆性和代表性的项目，他们的竞争和发展将促进数字货币行业得到更多关注。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[78][文章转载]浅谈区块链技术的去中介信任机制]]></title>
-        <id>https://flfqbit.github.io/post/78wen-zhang-zhuan-zai-qian-tan-qu-kuai-lian-ji-zhu-de-qu-zhong-jie-xin-ren-ji-zhi/</id>
-        <link href="https://flfqbit.github.io/post/78wen-zhang-zhuan-zai-qian-tan-qu-kuai-lian-ji-zhu-de-qu-zhong-jie-xin-ren-ji-zhi/">
-        </link>
-        <updated>2020-02-23T15:36:20.000Z</updated>
-        <content type="html"><![CDATA[<p>文章转载URL: https://mp.weixin.qq.com/s/osDV0FCKm-WVGKOZNK5p0w</p>
-<p>浅谈区块链技术的去中介信任机制<br>
-原创 祝烈煌 中国保密协会科学技术分会 2018-12-06</p>
-<h1 id="1-前言">1 前言</h1>
-<p>基于中介的信任机制是人类社会交往及商业活动广泛使用的信任机制。通过选定合适的中介机构，两个互不信任的用户能够实现有效互动，解决违规、抵赖等问题。这种机制实现简单，一直是广泛使用的信任机制，然而基于中介的信任机制存在流程复杂、成本高、中介不可信等多种问题，制约了信任机制的适用场景。随着物联网、人工智能等新技术的发展，信任的场景将从人与人的交互扩展到人与机器、机器与机器的更广阔场景，传统的基于中介的信任机制很难满足性能、成本、安全等要求，将成为信息化社会进一步发展的瓶颈。</p>
-<p>基于中介的信任机制是一种成熟的信任模型，在现代社会被广泛使用。但是这种机制面临成本高、中心依赖等问题。如果能够不依靠中介机构实现信任，将能够重塑信任模型，简化交互过程，降低交互成本，从根本上提升社会交互效率[1-2]。</p>
-<p>区块链技术的出现使得去中介信任机制成为可能。2008年，随着中本聪发表《一种点对点的电子现金系统》[3]，一种不需要依赖第三方机构的可信数字货币系统“比特币”走上历史舞台。截止到2018年11月，比特币系统已经稳定运行10年，市值超过1100亿美元，每天约产生25万笔交易，成为世界范围内具有较高公信力的数字货币。比特币系统没有任何政府背书，也没有中心化的实体机构负责网络维护、交易审计等工作，它的成功运行宣告了一种无需中介的信任机制具备了现实可操作性。</p>
-<p>受到比特币系统的启发，从比特币底层技术中抽取、衍生的区块链技术成为去中介信任机制的热点研究技术。区块链技术不仅仅聚焦在数字货币领域，而是迅速扩展到金融、物联网、医疗等众多行业，被认为是解决各个行业普遍存在的中介问题，提升交互效率的革命性技术[4]。</p>
-<p>目前区块链技术在性能、扩展性和安全性方面还存在待解决问题，但是其具备的去中介信任的特点为信任场景提供了一种新的解决方案，将在众多行业发挥重要作用。</p>
-<h1 id="2-基于区块链技术的去中介信任机制">2 基于区块链技术的去中介信任机制</h1>
-<p>基于中介的信任机制建立在对中介机构的信任之上，中介机构将承担事前担保、事中协调、事后追责等功能。只要中介机构公正可信，就能够避免交互过程出现的大部分纠纷。</p>
-<p><img src="https://flfqbit.github.io/post-images/1582473116013.png" alt="图1 基于区块链技术的去中介信任机制" loading="lazy"><br>
-图1 基于区块链技术的去中介信任机制</p>
-<p>如何在不依赖中介机构的情况下，让互不信任的双方实现可信交互，是区块链技术解决的难题。区块链技术通过将P2P网络、非对称加密、共识机制等多种已有技术巧妙组合，实现了一套去中介的信任机制，如图1所示。这套机制的核心在于：</p>
-<p>首先，在任意时间点，不同用户在区块链系统中看到的数据初始状态是一致可信的，这使得双方有了继续沟通的基础。区块链采用P2P技术搭建分布式网络，任意用户都可以从不同数据源获取区块链数据，而且区块链存储数据的账本采用哈希链结构，任意用户都可以轻易验证数据的准确性。这两个特点使得交互双方能够在没有第三方参与的情况下对初始状态达成一致。</p>
-<p>其次，用户通过区块链系统进行的每一次交互操作都将由分布式节点协同处理，这使得双方的沟通过程透明公正。区块链中每一个操作都将由所有参与节点独立验证，并在共识机制的作用下通过协同验证达成数据多数一致性，杜绝了个别节点违规操作的可能性。同时，每一个操作内容都将包含发起者的数字签名，杜绝了伪造和抵赖的可能性。</p>
-<p>最后，用户通过区块链系统进行的交互操作将永久记录在分布式账本中可靠保存，这使得双方的沟通内容支持长效的事后审计和追责。区块链账本采用分布式冗余存储机制和基于散列函数的链式结构保证数据完整性，试图窜改数据的攻击者必须具备接近全网整体的算力能力，并且耗费账本建立过程的等价资源，这使得篡改攻击成为不理智、不可行的行为。</p>
-<p>区块链技术采用多种机制使数据在初始状态、操作过程和操作记录阶段都保持透明可信，能够让互不信任的双方相信区块链账本具有可信特征，从而在此基础上开展各种实际业务。由于区块链账本是由分布式节点自发维护，不依赖单一用户或者单一机构，因此实现了无需第三方中介的信任机制。</p>
-<h1 id="3-应用及案例">3 应用及案例</h1>
-<p>去中介信任能够显著简化交互流程，提高交互效率，在众多领域都能够发挥作用。区块链技术在我国一直受到学术界、企业界的重点关注，目前以及出现了一批落地项目。</p>
-<p>人民银行的法定数字货币项目是区块链技术在货币领域的重要应用[5]。人民银行在2014年成立发行数字货币的专门研究小组，论证央行发行数字货币的可行性，2016年成立数字货币研究所，启动了基于区块链和数字货币的数字票据交易平台原型研发工作，2017年中国人民银行推动的基于区块链的数字票据交易平台测试成功，法定数字货币形态、总体架构、应用架构、数据架构和技术架构等设计工作正在快速开展。通过利用区块链技术开发法定数字货币，能够减少货币运营中的诸多中间环节,降低发行成本，提高经济效益。同时，数字法币将解决传统法币在发行之后难以监管的难题，实现更加有效的货币监管和更加智能的货币政策。中央银行发行零售端数字货币, 对于健全社会支付体系、维护金融稳定以及加强央行的货币地位, 具有重大而深远的意义。</p>
-<p>2018年6月5日，阿里巴巴公司旗下的香港版支付宝Alipay HK上线基于区块链的电子钱包跨境汇款服务[6]。首笔汇款业务从香港转账到菲律宾，耗时仅3秒。如图2所示，在此项业务出现之前，从香港到菲律宾的转账需要经过众多中介机构的繁琐操作，通常需要花费几天不等的时间。通过采用区块链技术，原来的中介机构不再需要单独承担转账业务，只需要作为区块链中的一个节点，并行参与记账即可，从而将转账过程精简为两个步骤，显著降低时间成本和经济成本。</p>
-<p><img src="https://flfqbit.github.io/post-images/1582473129698.png" alt="图2 区块链跨境支付应用" loading="lazy"><br>
-图2 区块链跨境支付应用</p>
-<p>2018年8月，腾讯公司在深圳推出全国首张区块链电子发票，能够实现发票开具、流转、报销等全流程业务[7]。区块链电子发票本质上是利用区块链技术将发票开具与线上支付相结合，实现“交易数据即发票”，减少传统发票业务中的发票开具、发票流转、发票报销等中介机构，从而有效解决开具发票填写不实、不开、少开等问题，保障税款及时、足额入库。通过减少中介环节，税务总局能够实时监控发票开具、流转、报销全流程的状态，对发票实现全方位管理。</p>
-<p>2017年5月，布比公司在贵阳发布了旗下首款“区块链+供应链金融”产品——壹诺供应链金融平台[8]，并与中金支付、贵阳银行等多家资方、核心企业及供应商开展合作。 如图3所示，在传统供应链体系中，由于核心企业信用无法跨级传递、体系内消息无法共享，很难找到合适的中介机构为供应链末端的中小企业提供融资担保。通过采用区块链技术，可以实现可拆分、可流转和可融资的付款承诺，从而将核心企业的信用传递至多级供应商，在没有中介的情况下使中小企业和融资机构达成信任共识，缓解融资难问题。</p>
-<p><img src="https://flfqbit.github.io/post-images/1582473156759.png" alt="图3 区块链供应链应用" loading="lazy"><br>
-图3 区块链供应链应用</p>
-<p>除了上述3种落地应用之外，区块链技术在溯源追踪、医疗数据共享、绿色能源等领域也有大量落地或者正在落地的应用案例[9-11]。纵观区块链落地应用，可以发现区块链技术的最大优势在于能够在没有中介或者减少中介的条件下实现有效信任，不仅能够降低成本，提高交互效率，而且还能够扁平化管理流程，使垂直管理成为可能。</p>
-<h1 id="4-结束语">4 结束语</h1>
-<p>随着区块链技术在多个行业逐渐落地，我国在区块链技术和区块链应用研究上已进入国际第一方阵。未来，区块链将不仅仅是一种数字货币技术，而是信息互联网向价值互联网转移的重要推手，将成为越来多领域中信任机制的关键技术，成为保障未来信息社会可信交互的重要基础之一。</p>
-<h1 id="5-参考文献">5 参考文献</h1>
-<p>[1]黄晓艳.区块链创建信任——访中国工程院院士陈纯. 高科技与产业化,2017<br>
-[2] 秦谊.区块链重塑信任 . 《新经济》 2017<br>
-[3] Nakamoto, S.: Bitcoin: A peer-to-peer electronic cash system, https://bitcoin.org/bitcoin.pdf,2008<br>
-[4] 袁勇 ， 王飞跃 . 区块链技术发展现状与展望. 《自动化学报》,2016<br>
-[5]姚前 .理解央行数字货币 一个系统性框架. 中国科学:信息科学 , 2017<br>
-[6]严凯，费子。马云的区块链“阳谋” . 2018中国企业家, 2018<br>
-[7]新华网. 深圳开出区块链电子发票, 2018<br>
-[8]张明裕.布比区块链：区块链在供应链金融领域的应用之道. https://baijiahao.baidu.com/s?id=1602693894434032717&amp;wfr=spider&amp;for=pc,2018<br>
-[9]Meng Li, Liehuang Zhu(*), Xiaodong Lin, Efficient and Privacy-preserving Carpooling using Blockchain-assisted Vehicular Fog Computing, IEEE Internet of Things Journal, 2018<br>
-[10] Feng Gao, Liehuang Zhu, Meng Shen, Kashif Sharif, Zhiguo Wan, and Kui Ren. Blockchain-based Privacy-Preserving Payment Mechanism for Vehicle-to-Grid Networks [J]. IEEE Network Magazine, 2018<br>
-[11]Liehuang Zhu, Yulu Wu, Keke Gai, Kim-Kwang Raymond Choo, Controllable and Trustworthy Blockchain-based Cloud Data Management, Future Generation Computer Systems, 2018</p>
-<p>附<br>
-<img src="https://flfqbit.github.io/post-images/1582473180900.PNG" alt="图4 银行跨国转账手续费和时间" loading="lazy"><br>
-图4 银行跨国转账手续费和时间</p>
 ]]></content>
     </entry>
 </feed>
