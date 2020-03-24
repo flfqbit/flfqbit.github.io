@@ -7,7 +7,7 @@
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#f1f3f5">
 <title>[12][资料整理]数字货币账号关联分析 | 飞来飞去-区块链学习笔记</title>
-<link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1585050747834">
+<link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1585051742063">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/mist.css">
@@ -135,9 +135,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper  right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body mist" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper ">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://flfqbit.github.io/images/avatar.png"/>
@@ -183,6 +191,187 @@
 
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number compress" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#1bitiodine">[1]BitIodine</a></li>
+<li><a href="#2chainalysis%E5%8C%BA%E5%9D%97%E9%93%BE%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%85%AC%E5%8F%B8">[2]Chainalysis（区块链数据分析公司）</a></li>
+<li><a href="#3walletexplorer%E6%AF%94%E7%89%B9%E5%B8%81%E5%9C%B0%E5%9D%80%E6%A0%87%E6%B3%A8%E7%BD%91%E7%AB%99">[3]walletexplorer（比特币地址标注网站）</a></li>
+<li><a href="#4bitnodes%E6%AF%94%E7%89%B9%E5%B8%81%E5%9C%B0%E5%9D%80%E6%BA%AF%E6%BA%90">[4]bitnodes（比特币地址溯源）</a></li>
+<li><a href="#5%E6%AF%94%E7%89%B9%E5%B8%81%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%B7%A5%E5%85%B7">[5]比特币数据解析工具</a></li>
+<li><a href="#6%E4%BB%A5%E5%A4%AA%E5%9D%8A%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90%E5%B7%A5%E5%85%B7">[6]以太坊数据解析工具</a></li>
+<li><a href="#7%E8%B7%A8%E8%B4%A6%E6%9C%AC%E5%8C%BA%E5%9D%97%E9%93%BE%E8%B4%A6%E5%8F%B7%E8%BF%BD%E8%B8%AA">[7]跨账本区块链账号追踪</a></li>
+<li><a href="#8%E7%BE%8E%E5%9B%BD%E6%94%BF%E5%BA%9C%E5%AF%B9%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E8%BA%AB%E4%BB%BD%E8%BF%BD%E8%B8%AA%E6%A1%88%E4%BE%8B">[8]美国政府对比特币的身份追踪案例</a></li>
+<li><a href="#9%E5%9B%BD%E5%86%85%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E8%BF%BD%E8%B8%AA%E5%B7%A5%E5%85%B7">[9]国内数字货币追踪工具</a></li>
+<li><a href="#10peckshield-%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F%E4%B8%93%E6%A0%8F">[10]PeckShield 安全团队专栏</a></li>
+<li><a href="#11%E5%8C%BA%E5%9D%97%E9%93%BE%E6%95%B0%E5%AD%97%E8%B5%84%E4%BA%A7%E8%BF%BD%E8%B8%AA%E8%A1%8C%E4%B8%9A%E5%8F%91%E5%B1%95%E6%83%85%E5%86%B5">[11]区块链数字资产追踪行业发展情况</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -296,12 +485,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>6分钟</span>
+      <span>7分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1558<span class="pc-show">字数</span></span>
+      <span>1743<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
@@ -311,8 +500,8 @@
 对数字货币账号的关联分析有很高的商业价值，美国FBI、美国税务局等政府机构已经开始大额采购此类关联分析服务，是区块链领域较好的落地实践业务。<br>
 本文记录“数字货币账号关联分析”相关的论文、资源、企业信息。</p>
 <!-- more -->
-<p>[1]BitIodine<br>
-作者：Michele Spagnuolo, Federico Maggi, and Stefano Zanero<br>
+<h1 id="1bitiodine">[1]BitIodine</h1>
+<p>作者：Michele Spagnuolo, Federico Maggi, and Stefano Zanero<br>
 概述：详细介绍了比特币地址分析的方法，包括具体的架构、表结构和运行流程。基础算法是比较通用的“同一交易”“找零地址”。论文中用设计工具“BitIodine”对“丝绸之路”（暗网）网站相关的比特币地址进行分析。</p>
 <p>[学术论文]BitIodine: Extracting Intelligence from the Bitcoin Network<br>
 [硕士毕业论文]BitIodine: Extracting Intelligence from the Bitcoin Network<br>
@@ -320,44 +509,51 @@
 -作者在blog上提供了“BitIodine”的开源代码，github,Rust<br>
 [github]https://github.com/mikispag/bitiodine<br>
 BitIodine (GitHub, paper) - Rust Bitcoin blockchain parser with clustering capabilities, allowing to group together addresses in ownership clusters.</p>
-<p>[2]Chainalysis（区块链数据分析公司）<br>
-概述：Chainalysis是目前在区块链数据分析领域最出名的公司之一，得到了美国FBI，美国国税局的大额数据分析订单。这个专题专门搜集Chainalysis公司相关的新闻。<br>
+<h1 id="2chainalysis区块链数据分析公司">[2]Chainalysis（区块链数据分析公司）</h1>
+<p>概述：Chainalysis是目前在区块链数据分析领域最出名的公司之一，得到了美国FBI，美国国税局的大额数据分析订单。这个专题专门搜集Chainalysis公司相关的新闻。<br>
 [专题链接]https://flfqbit.github.io/post/1/</p>
-<p>[3]walletexplorer（比特币地址标注网站）<br>
-概述：专门提供区块连账号关系分析服务的网站。（已更新到2020/0227）<br>
+<h1 id="3walletexplorer比特币地址标注网站">[3]walletexplorer（比特币地址标注网站）</h1>
+<p>概述：专门提供区块连账号关系分析服务的网站。（已更新到2020/0227）<br>
 此网站的作者后来加入了Chainalysis公司。<br>
 [网站链接]https://www.walletexplorer.com/</p>
-<p>[4]bitnodes（比特币地址溯源）<br>
-概述：专门提供比特币节点分布信息的网站。网站提供了开源的节点信息探测工具。此工具可以用于追踪比特币交易传播路径，从而推测比特币地址对应的用户IP信息。<br>
+<h1 id="4bitnodes比特币地址溯源">[4]bitnodes（比特币地址溯源）</h1>
+<p>概述：专门提供比特币节点分布信息的网站。网站提供了开源的节点信息探测工具。此工具可以用于追踪比特币交易传播路径，从而推测比特币地址对应的用户IP信息。<br>
 [网站链接]https://bitnodes.io/<br>
 [github]https://github.com/ayeowch/bitnodes</p>
-<p>[5]比特币数据解析工具<br>
-概述：整理比特币账本解析工具。<br>
+<h1 id="5比特币数据解析工具">[5]比特币数据解析工具</h1>
+<p>概述：整理比特币账本解析工具。<br>
 [github]https://github.com/alecalve/python-bitcoin-blockchain-parser</p>
-<p>[6]以太坊数据解析工具<br>
-概述：整理以太坊账本解析工具。<br>
+<h1 id="6以太坊数据解析工具">[6]以太坊数据解析工具</h1>
+<p>概述：整理以太坊账本解析工具。<br>
 [官方工具]本地启动以太坊geth，开rpc接口，通过以太坊客户端自带的rpc进行数据解析</p>
-<p>[7]跨账本区块链账号追踪<br>
-概述：跨账本追踪对于数字货币监管有重要意义，能够解决实际的追踪难题。<br>
+<h1 id="7跨账本区块链账号追踪">[7]跨账本区块链账号追踪</h1>
+<p>概述：跨账本追踪对于数字货币监管有重要意义，能够解决实际的追踪难题。<br>
 [学术论文]usenx2019-Tracing Transactions Across Cryptocurrency Ledgers<br>
 [阅读记录]https://flfqbit.github.io/post/82lun-wen-yue-du/</p>
-<p>[8]美国政府对比特币的身份追踪案例<br>
-概述：2020年03月02日，美国司法部以阴谋洗钱和无证经营汇款为由，对名为田寅寅和李家东两位中国人发起了公诉，并冻结了他们的全部资产。理由是，他们二人在2017年12月至2019年04月期间，帮助朝鲜政府下辖黑客组织 Lazarus Group 提供了价值超1亿美元的洗币服务。<br>
-由于美国司法部并没有公布被盗交易所的名称和地址以及田和李涉案的关键细节，区块链安全公司 PeckShield 第一时间介入追踪研究分析，基于美国司法部仅公布的20个地址向上追溯、取证并以可视化图文方式还原整个案件的来龙去脉。<br>
-[新闻链接]解密：美国司法部起诉中国OTC承兑商洗钱案件.https://www.chainnews.com/articles/690057268556.htm<br>
+<h1 id="8美国政府对比特币的身份追踪案例">[8]美国政府对比特币的身份追踪案例</h1>
+<blockquote>
+<p>概述：2020年03月02日，美国司法部以阴谋洗钱和无证经营汇款为由，对名为田寅寅和李家东两位中国人发起了公诉，并冻结了他们的全部资产。理由是，他们二人在2017年12月至2019年04月期间，帮助朝鲜政府下辖黑客组织 Lazarus Group 提供了价值超1亿美元的洗币服务。<br>
+由于美国司法部并没有公布被盗交易所的名称和地址以及田和李涉案的关键细节，区块链安全公司 PeckShield 第一时间介入追踪研究分析，基于美国司法部仅公布的20个地址向上追溯、取证并以可视化图文方式还原整个案件的来龙去脉。</p>
+</blockquote>
+<p>[新闻链接]解密：美国司法部起诉中国OTC承兑商洗钱案件.https://www.chainnews.com/articles/690057268556.htm<br>
 [源头新闻]Two Chinese Nationals Charged with Laundering Over $100 Million in Cryptocurrency From Exchange Hack.https://www.justice.gov/opa/pr/two-chinese-nationals-charged-laundering-over-100-million-cryptocurrency-exchange-hack</p>
-<p>[9]国内数字货币追踪工具<br>
-02 月 11 日，FCoin 交易所发出 4 小时停机维护公告。在之后的数天内，又分别以系统漏洞、关键人员失联、系统和数据受损等理由，拖延搪塞来自投资者的恐慌质疑。<br>
+<h1 id="9国内数字货币追踪工具">[9]国内数字货币追踪工具</h1>
+<blockquote>
+<p>02 月 11 日，FCoin 交易所发出 4 小时停机维护公告。在之后的数天内，又分别以系统漏洞、关键人员失联、系统和数据受损等理由，拖延搪塞来自投资者的恐慌质疑。<br>
 基于此，PeckShield 安全团队旗下可视化数字资产追踪系统 CoinHolmes，针对 FCoin 交易所涉及的相关地址展开了定向追踪和剖析。<br>
 此文章是<strong>PeckShield 安全团队</strong>利用旗下<strong>可视化数字资产追踪系统 CoinHolmes</strong>进行数字货币追踪的有一个案例。目前此工具已经对外提供使用，可以作为研究工具。<br>
-<strong>CoinHolmes 链上追踪系统囊括了数十个交易所，超 6,000 万地址标签，涉及 BTC、ETH、USDT 等多种主流数字资产。</strong><br>
-[新闻链接]链上数据拆解 FCoin 资产流向：鼎盛时期便已显颓势？.https://www.chainnews.com/articles/161277841665.htm<br>
+<strong>CoinHolmes 链上追踪系统囊括了数十个交易所，超 6,000 万地址标签，涉及 BTC、ETH、USDT 等多种主流数字资产。</strong></p>
+</blockquote>
+<p>经实际测试，CoinHolmes能够提供有限服务，公开版本限制了查询的时间“20200222-20200324”，大约是一个月的时间间隔。猜测更长时间的检测需要耗费较多资源，需要获得授权才能使用。<br>
+从功能上看，主要提供了“关系图”、“交易表格”两种展示形式，支持“时间区间”、“深度”、“单项交易、同级交易”、“交易金额”参数。<br>
+从对外说明看，系统的核心优势是累积了“数十个交易所”、“ 6,000 万地址标签”的数据。相对于“etherscan”等区块链浏览器，具有更集中的数据资源。</p>
+<p>[新闻链接]链上数据拆解 FCoin 资产流向：鼎盛时期便已显颓势？.https://www.chainnews.com/articles/161277841665.htm<br>
 [工具链接]COINHOLMES.https://coinholmes.com/trace.html</p>
-<p>[9]PeckShield 安全团队专栏<br>
-PeckShield在“chainnews”网站上的专栏，发布关于“数字资产合规”、“数字资产追踪”等研究内容。<br>
+<h1 id="10peckshield-安全团队专栏">[10]PeckShield 安全团队专栏</h1>
+<p>PeckShield在“chainnews”网站上的专栏，发布关于“数字资产合规”、“数字资产追踪”等研究内容。<br>
 [专栏地址]https://www.chainnews.com/u/861613259165.htm</p>
-<p>[9]区块链数字资产追踪行业发展情况<br>
-典型公司：Chainalysis（美国的区块链数据分析公司）<br>
+<h1 id="11区块链数字资产追踪行业发展情况">[11]区块链数字资产追踪行业发展情况</h1>
+<p>典型公司：Chainalysis（美国的区块链数据分析公司）<br>
 主要业务：针对数字货币的异常交易检测、异常资金追踪、用户身份识别。<br>
 主要客户：联邦调查局（FBI），美国移民和海关执法局（ICE），美国国税局（IRS），美国缉毒局（DEA）、财政服务局（BFS）、证券交易委员会（SEC）和商品期货交易委员会（CFTC）<br>
 <img src="https://flfqbit.github.io/post-images/1585050650055.png" alt="" loading="lazy"><br>
@@ -367,6 +563,9 @@ PeckShield在“chainnews”网站上的专栏，发布关于“数字资产合�
 <p>[新闻链接]区块链分析公司融资总额达上亿美元，美国政府机构区块链分析支出近三年增长三倍.https://www.chainnews.com/articles/346459676575.htm<br>
 [新闻链接]区块链分析公司Chainalysis累积从美国政府获得1000万美元订单.https://www.360kuai.com/pc/9aca99c5dfdfc0feb?cota=3&amp;kuai_so=1&amp;sign=360_57c3bbd1&amp;refer_scene=so_1</p>
 <hr>
+<p>-更新时间：20200324<br>
+-更新内容：添加4个数据<br>
+-数据个数：11</p>
 <p>-更新时间：20200229<br>
 -更新内容：添加7个数据<br>
 -数据个数：7</p>
