@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-03-26T02:27:54.244Z</updated>
+    <updated>2020-03-26T02:47:19.356Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -305,7 +305,9 @@ same addr: 两笔交易的输入地址和接收地址相同。</p>
 对数字货币账号的关联分析有很高的商业价值，美国FBI、美国税务局等政府机构已经开始大额采购此类关联分析服务，是区块链领域较好的落地实践业务。<br>
 本文记录“数字货币账号关联分析”相关的论文、资源、企业信息。</p>
 <!-- more -->
-<h1 id="1bitiodine">[1]BitIodine</h1>
+<h1 id="1-学术资源">1 学术资源</h1>
+<p>论文、开源资料、专家教授</p>
+<h2 id="1bitiodine论文">[1]BitIodine（论文）</h2>
 <p>作者：Michele Spagnuolo, Federico Maggi, and Stefano Zanero<br>
 概述：详细介绍了比特币地址分析的方法，包括具体的架构、表结构和运行流程。基础算法是比较通用的“同一交易”“找零地址”。论文中用设计工具“BitIodine”对“丝绸之路”（暗网）网站相关的比特币地址进行分析。</p>
 <p>[学术论文]BitIodine: Extracting Intelligence from the Bitcoin Network<br>
@@ -314,59 +316,32 @@ same addr: 两笔交易的输入地址和接收地址相同。</p>
 -作者在blog上提供了“BitIodine”的开源代码，github,Rust<br>
 [github]https://github.com/mikispag/bitiodine<br>
 BitIodine (GitHub, paper) - Rust Bitcoin blockchain parser with clustering capabilities, allowing to group together addresses in ownership clusters.</p>
-<h1 id="2chainalysis区块链数据分析公司">[2]Chainalysis（区块链数据分析公司）</h1>
-<p>概述：Chainalysis是目前在区块链数据分析领域最出名的公司之一，得到了美国FBI，美国国税局的大额数据分析订单。这个专题专门搜集Chainalysis公司相关的新闻。<br>
-[专题链接]https://flfqbit.github.io/post/1/</p>
-<h1 id="3walletexplorer比特币地址标注网站">[3]walletexplorer（比特币地址标注网站）</h1>
-<p>概述：专门提供区块连账号关系分析服务的网站。（已更新到2020/0227）<br>
-此网站的作者后来加入了Chainalysis公司。<br>
-[网站链接]https://www.walletexplorer.com/</p>
-<h1 id="4bitnodes比特币地址溯源">[4]bitnodes（比特币地址溯源）</h1>
-<p>概述：专门提供比特币节点分布信息的网站。网站提供了开源的节点信息探测工具。此工具可以用于追踪比特币交易传播路径，从而推测比特币地址对应的用户IP信息。<br>
-[网站链接]https://bitnodes.io/<br>
-[github]https://github.com/ayeowch/bitnodes</p>
-<h1 id="5跨账本区块链账号追踪论文">[5]跨账本区块链账号追踪论文</h1>
+<h2 id="2跨账本区块链账号追踪论文">[2]跨账本区块链账号追踪（论文）</h2>
 <p>概述：跨账本追踪对于数字货币监管有重要意义，能够解决实际的追踪难题。<br>
 这篇2019年的信息安全领域顶刊（usenx）论文介绍了跨链交易（btc,eth,zcash等）的识别、分析技术。<br>
 [学术论文]usenx2019-Tracing Transactions Across Cryptocurrency Ledgers<br>
 [阅读记录]https://flfqbit.github.io/post/82lun-wen-yue-du/</p>
-<h1 id="8杭州派盾信安科技有限公司区块链数据分析公司">[8]杭州派盾信安科技有限公司（区块链数据分析公司）</h1>
-<p>蒋旭宪博士（前360安全首席科学家）创办的区块链安全公司，上线运行了“数字货币资产追踪”系统-CoinHolmes。已经实现了“交易可视化展示”、“资金流向追踪”等基本业务。<br>
-从PeckShield发布的“区块链资产追踪案例分析”文章看，具有较强的实用性。</p>
-<p>[工具链接]COINHOLMES.https://coinholmes.com/trace.html<br>
-[专栏地址]https://www.chainnews.com/u/861613259165.htm<br>
-[新闻链接]解密：美国司法部起诉中国OTC承兑商洗钱案件.https://www.chainnews.com/articles/690057268556.htm<br>
-[源头新闻]Two Chinese Nationals Charged with Laundering Over $100 Million in Cryptocurrency From Exchange Hack.https://www.justice.gov/opa/pr/two-chinese-nationals-charged-laundering-over-100-million-cryptocurrency-exchange-hack<br>
-[新闻链接]链上数据拆解 FCoin 资产流向：鼎盛时期便已显颓势？.https://www.chainnews.com/articles/161277841665.htm</p>
-<h1 id="8美国政府对比特币的身份追踪案例">[8]美国政府对比特币的身份追踪案例</h1>
-<blockquote>
-<p>概述：2020年03月02日，美国司法部以阴谋洗钱和无证经营汇款为由，对名为田寅寅和李家东两位中国人发起了公诉，并冻结了他们的全部资产。理由是，他们二人在2017年12月至2019年04月期间，帮助朝鲜政府下辖黑客组织 Lazarus通过区块连数字货币进行洗钱超过1亿美元。<br>
-[学术论文]usenx2019-Tracing Transactions Across Cryptocurrency Ledgers<br>
-[阅读记录]https://flfqbit.github.io/post/82lun-wen-yue-du/</p>
-</blockquote>
-<h1 id="8美国政府对比特币的身份追踪案例-2">[8]美国政府对比特币的身份追踪案例</h1>
-<blockquote>
-<p>概述：2020年03月02日，美国司法部以阴谋洗钱和无证经营汇款为由，对名为田寅寅和李家东两位中国人发起了公诉，并冻结了他们的全部资产。理由是，他们二人在2017年12月至2019年04月期间，帮助朝鲜政府下辖黑客组织 Lazarus Group 提供了价值超1亿美元的洗币服务。<br>
-由于美国司法部并没有公布被盗交易所的名称和地址以及田和李涉案的关键细节，区块链安全公司 PeckShield 第一时间介入追踪研究分析，基于美国司法部仅公布的20个地址向上追溯、取证并以可视化图文方式还原整个案件的来龙去脉。</p>
-</blockquote>
-<p>[新闻链接]解密：美国司法部起诉中国OTC承兑商洗钱案件.https://www.chainnews.com/articles/690057268556.htm<br>
-[源头新闻]Two Chinese Nationals Charged with Laundering Over $100 Million in Cryptocurrency From Exchange Hack.https://www.justice.gov/opa/pr/two-chinese-nationals-charged-laundering-over-100-million-cryptocurrency-exchange-hack</p>
-<h1 id="9国内数字货币追踪工具">[9]国内数字货币追踪工具</h1>
-<blockquote>
-<p>02 月 11 日，FCoin 交易所发出 4 小时停机维护公告。在之后的数天内，又分别以系统漏洞、关键人员失联、系统和数据受损等理由，拖延搪塞来自投资者的恐慌质疑。<br>
-基于此，PeckShield 安全团队旗下可视化数字资产追踪系统 CoinHolmes，针对 FCoin 交易所涉及的相关地址展开了定向追踪和剖析。<br>
-此文章是<strong>PeckShield 安全团队</strong>利用旗下<strong>可视化数字资产追踪系统 CoinHolmes</strong>进行数字货币追踪的有一个案例。目前此工具已经对外提供使用，可以作为研究工具。<br>
-<strong>CoinHolmes 链上追踪系统囊括了数十个交易所，超 6,000 万地址标签，涉及 BTC、ETH、USDT 等多种主流数字资产。</strong></p>
-</blockquote>
-<p>经实际测试，CoinHolmes能够提供有限服务，公开版本限制了查询的时间“20200222-20200324”，大约是一个月的时间间隔。猜测更长时间的检测需要耗费较多资源，需要获得授权才能使用。<br>
-从功能上看，主要提供了“关系图”、“交易表格”两种展示形式，支持“时间区间”、“深度”、“单项交易、同级交易”、“交易金额”参数。<br>
-从对外说明看，系统的核心优势是累积了“数十个交易所”、“ 6,000 万地址标签”的数据。相对于“etherscan”等区块链浏览器，具有更集中的数据资源。</p>
-<p>[新闻链接]链上数据拆解 FCoin 资产流向：鼎盛时期便已显颓势？.https://www.chainnews.com/articles/161277841665.htm<br>
-[工具链接]COINHOLMES.https://coinholmes.com/trace.html</p>
-<h1 id="10peckshield-安全团队专栏">[10]PeckShield 安全团队专栏</h1>
-<p>PeckShield在“chainnews”网站上的专栏，发布关于“数字资产合规”、“数字资产追踪”等研究内容。<br>
-[专栏地址]https://www.chainnews.com/u/861613259165.htm</p>
-<h1 id="11区块链数字资产追踪行业发展情况">[11]区块链数字资产追踪行业发展情况</h1>
+<h2 id="3inpluslab-xblock学术资源共享平台">[3]InPlusLab-XBlock（学术资源共享平台）</h2>
+<p>XBlock是一个旨在助力区块链良性发展和数据研究的数据集共享平台。本平台目前分享了包括比特币、以太坊和EOS在内的三大平台的多层次各角度数据以及InPlusLab在此领域的相关科研工作。<br>
+InPlusLab：中山大学区块链与智能金融研究中心。<br>
+负责人：郑子彬（优青，青年珠江学者，IEEE高级会员）</p>
+<ul>
+<li>研究领域：区块链异常交易检测（6篇论文）、区块链账号网络画像（1篇）、区块链交易追踪（1篇）</li>
+<li>特点：发表论文较多；公布了较多区块链数据集。</li>
+<li>代表论文：<br>
+[1]区块链数据分析：现状、分析和挑战，计算机研究与发展，2018<br>
+[2]Detecting Ponzi Schemes on Ethereum: Towards Healthier Blockchain Technology，the 2018 World Wide Web Conference. 2018.<br>
+[论文列表] http://xblock.pro/papers/#JYMSSB</li>
+</ul>
+<h2 id="4区块链数据分析现状-分析和挑战论文">[4]区块链数据分析：现状、分析和挑战（论文）</h2>
+<p>概述：跨账本追踪对于数字货币监管有重要意义，能够解决实际的追踪难题。<br>
+这篇2019年的信息安全领域顶刊（usenx）论文介绍了跨链交易（btc,eth,zcash等）的识别、分析技术。</p>
+<p>[1]郑子彬，区块链数据分析：现状、分析和挑战，计算机研究与发展，2018<br>
+[2][阅读随笔]https://flfqbit.github.io/post/15lun-wen-jie-du-qu-kuai-lian-shu-ju-fen-xi-xian-zhuang-fen-xi-he-tiao-zhan-ji-suan-ji-yan-jiu-yu-fa-zhan/</p>
+<!-- more -->
+<h1 id="2-企业资源">2 企业资源</h1>
+<p>公司、产品</p>
+<h2 id="1区块链数字资产追踪行业发展情况">[1]区块链数字资产追踪行业发展情况</h2>
 <p>典型公司：Chainalysis（美国的区块链数据分析公司）<br>
 主要业务：针对数字货币的异常交易检测、异常资金追踪、用户身份识别。<br>
 主要客户：联邦调查局（FBI），美国移民和海关执法局（ICE），美国国税局（IRS），美国缉毒局（DEA）、财政服务局（BFS）、证券交易委员会（SEC）和商品期货交易委员会（CFTC）<br>
@@ -376,7 +351,32 @@ BitIodine (GitHub, paper) - Rust Bitcoin blockchain parser with clustering capab
 图2 chainalysis与美国政府机构签订了超过900万美元的资产追踪合同</p>
 <p>[新闻链接]区块链分析公司融资总额达上亿美元，美国政府机构区块链分析支出近三年增长三倍.https://www.chainnews.com/articles/346459676575.htm<br>
 [新闻链接]区块链分析公司Chainalysis累积从美国政府获得1000万美元订单.https://www.360kuai.com/pc/9aca99c5dfdfc0feb?cota=3&amp;kuai_so=1&amp;sign=360_57c3bbd1&amp;refer_scene=so_1</p>
+<h2 id="2chainalysis区块链数据分析公司国外">[2]Chainalysis（区块链数据分析公司）（国外）</h2>
+<p>概述：Chainalysis是目前在区块链数据分析领域最出名的公司之一，得到了美国FBI，美国国税局的大额数据分析订单。这个专题专门搜集Chainalysis公司相关的新闻。<br>
+[专题链接]https://flfqbit.github.io/post/1/</p>
+<h2 id="3peckshield-coinholmes区块链数据分析公司国内">[3]PeckShield-CoinHolmes（区块链数据分析公司）（国内）</h2>
+<p>蒋旭宪博士（前360安全首席科学家）创办的区块链安全公司(杭州派盾信安科技有限公司)，上线运行了“数字货币资产追踪”系统-CoinHolmes。已经实现了“交易可视化展示”、“资金流向追踪”等基本业务。</p>
+<ul>
+<li>从PeckShield发布的“区块链资产追踪案例分析”文章看，具有较强的实用性。</li>
+<li>经实际测试，CoinHolmes能够提供有限服务，公开版本限制了查询的时间“20200222-20200324”，大约是一个月的时间间隔。猜测更长时间的检测需要耗费较多资源，需要获得授权才能使用。</li>
+<li>从功能上看，主要提供了“关系图”、“交易表格”两种展示形式，支持“时间区间”、“深度”、“单项交易、同级交易”、“交易金额”参数。</li>
+<li>从对外说明看，系统的核心优势是累积了“数十个交易所”、“ 6,000 万地址标签”的数据。相对于“etherscan”等区块链浏览器，具有更集中的数据资源。</li>
+</ul>
+<p>[工具链接]COINHOLMES.https://coinholmes.com/trace.html<br>
+[专栏地址]https://www.chainnews.com/u/861613259165.htm<br>
+[专题链接]https://flfqbit.github.io/post/asd/</p>
+<h1 id="4walletexplorer比特币地址标注网站">[4]walletexplorer（比特币地址标注网站）</h1>
+<p>概述：专门提供区块连账号关系分析服务的网站。（已更新到2020/0227）<br>
+此网站的作者后来加入了Chainalysis公司。<br>
+[网站链接]https://www.walletexplorer.com/</p>
+<h1 id="5bitnodes比特币地址溯源">[5]bitnodes（比特币地址溯源）</h1>
+<p>概述：专门提供比特币节点分布信息的网站。网站提供了开源的节点信息探测工具。此工具可以用于追踪比特币交易传播路径，从而推测比特币地址对应的用户IP信息。<br>
+[网站链接]https://bitnodes.io/<br>
+[github]https://github.com/ayeowch/bitnodes</p>
 <hr>
+<p>-更新时间：20200326<br>
+-更新内容：内容优化<br>
+-数据个数：3+5=8</p>
 <p>-更新时间：20200324<br>
 -更新内容：添加4个数据<br>
 -数据个数：11</p>
