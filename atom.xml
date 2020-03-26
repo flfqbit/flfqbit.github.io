@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-03-26T02:47:19.356Z</updated>
+    <updated>2020-03-26T02:50:16.304Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -334,9 +334,8 @@ InPlusLab：中山大学区块链与智能金融研究中心。<br>
 [论文列表] http://xblock.pro/papers/#JYMSSB</li>
 </ul>
 <h2 id="4区块链数据分析现状-分析和挑战论文">[4]区块链数据分析：现状、分析和挑战（论文）</h2>
-<p>概述：跨账本追踪对于数字货币监管有重要意义，能够解决实际的追踪难题。<br>
-这篇2019年的信息安全领域顶刊（usenx）论文介绍了跨链交易（btc,eth,zcash等）的识别、分析技术。</p>
-<p>[1]郑子彬，区块链数据分析：现状、分析和挑战，计算机研究与发展，2018<br>
+<p>2018年，《计算机研究与发展》期刊在第55卷9期发表了一篇区块链论文“区块链数据分析：现状、分析和挑战-计算机研究与发展”，这篇论文是由中山大学的陈伟利,郑子彬编写，主要介绍了区块链数据分析领域的进展。包括：实体识别，隐私泄露风险分析，网络画像，网络可视化，市场效应分析，交易模式识别，非法行为监测与分析。</p>
+<p>[1]郑子彬，区块链数据分析：现状、分析和挑战，计算机研究与发展，2018，官网链接：http://crad.ict.ac.cn/CN/abstract/abstract3762.shtml<br>
 [2][阅读随笔]https://flfqbit.github.io/post/15lun-wen-jie-du-qu-kuai-lian-shu-ju-fen-xi-xian-zhuang-fen-xi-he-tiao-zhan-ji-suan-ji-yan-jiu-yu-fa-zhan/</p>
 <!-- more -->
 <h1 id="2-企业资源">2 企业资源</h1>
