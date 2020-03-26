@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-03-24T12:16:14.258Z</updated>
+    <updated>2020-03-26T02:27:54.244Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -10,6 +10,56 @@
     <logo>https://flfqbit.github.io/images/avatar.png</logo>
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）]]></title>
+        <id>https://flfqbit.github.io/post/asd/</id>
+        <link href="https://flfqbit.github.io/post/asd/">
+        </link>
+        <updated>2020-03-26T02:21:32.000Z</updated>
+        <summary type="html"><![CDATA[<p>蒋旭宪博士（前360安全首席科学家）创办的区块链安全公司，上线运行了“数字货币资产追踪”系统-CoinHolmes。已经实现了“交易可视化展示”、“资金流向追踪”等基本业务。<br>
+从PeckShield发布的“区块链资产追踪案例分析”文章看，具有较强的实用性。<br>
+本文记录PeckShield公司的CoinHolmes产品的发展状态。<br>
+[工具链接]COINHOLMES.https://coinholmes.com/trace.html<br>
+[专栏地址]https://www.chainnews.com/u/861613259165.htm</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>蒋旭宪博士（前360安全首席科学家）创办的区块链安全公司，上线运行了“数字货币资产追踪”系统-CoinHolmes。已经实现了“交易可视化展示”、“资金流向追踪”等基本业务。<br>
+从PeckShield发布的“区块链资产追踪案例分析”文章看，具有较强的实用性。<br>
+本文记录PeckShield公司的CoinHolmes产品的发展状态。<br>
+[工具链接]COINHOLMES.https://coinholmes.com/trace.html<br>
+[专栏地址]https://www.chainnews.com/u/861613259165.htm</p>
+<!-- more -->
+<h1 id="1peckshield-安全团队专栏">[1]PeckShield 安全团队专栏</h1>
+<p>PeckShield在“chainnews”网站上的专栏，发布关于“数字资产合规”、“数字资产追踪”等研究内容。<br>
+[专栏地址]https://www.chainnews.com/u/861613259165.htm</p>
+<h1 id="2国内数字货币追踪工具">[2]国内数字货币追踪工具</h1>
+<blockquote>
+<p><strong>CoinHolmes 链上追踪系统囊括了数十个交易所，超 6,000 万地址标签，涉及 BTC、ETH、USDT 等多种主流数字资产。</strong></p>
+</blockquote>
+<p>经实际测试，CoinHolmes能够提供有限服务，公开版本限制了查询的时间“20200222-20200324”，大约是一个月的时间间隔。猜测更长时间的检测需要耗费较多资源，需要获得授权才能使用。<br>
+从功能上看，主要提供了“关系图”、“交易表格”两种展示形式，支持“时间区间”、“深度”、“单项交易、同级交易”、“交易金额”参数。<br>
+从对外说明看，系统的核心优势是累积了“数十个交易所”、“ 6,000 万地址标签”的数据。相对于“etherscan”等区块链浏览器，具有更集中的数据资源。</p>
+<p>[工具链接]COINHOLMES.https://coinholmes.com/trace.html</p>
+<h1 id="3美国政府对比特币的身份追踪案例">[3]美国政府对比特币的身份追踪案例</h1>
+<blockquote>
+<p>概述：2020年03月02日，美国司法部以阴谋洗钱和无证经营汇款为由，对名为田寅寅和李家东两位中国人发起了公诉，并冻结了他们的全部资产。理由是，他们二人在2017年12月至2019年04月期间，帮助朝鲜政府下辖黑客组织 Lazarus Group 提供了价值超1亿美元的洗币服务。<br>
+由于美国司法部并没有公布被盗交易所的名称和地址以及田和李涉案的关键细节，区块链安全公司 PeckShield 第一时间介入追踪研究分析，基于美国司法部仅公布的20个地址向上追溯、取证并以可视化图文方式还原整个案件的来龙去脉。</p>
+</blockquote>
+<p>[新闻链接]解密：美国司法部起诉中国OTC承兑商洗钱案件.https://www.chainnews.com/articles/690057268556.htm<br>
+[源头新闻]Two Chinese Nationals Charged with Laundering Over $100 Million in Cryptocurrency From Exchange Hack.https://www.justice.gov/opa/pr/two-chinese-nationals-charged-laundering-over-100-million-cryptocurrency-exchange-hack</p>
+<h1 id="4链上数据拆解-fcoin-资产流向">[4]链上数据拆解 FCoin 资产流向</h1>
+<blockquote>
+<p>02 月 11 日，FCoin 交易所发出 4 小时停机维护公告。在之后的数天内，又分别以系统漏洞、关键人员失联、系统和数据受损等理由，拖延搪塞来自投资者的恐慌质疑。<br>
+基于此，PeckShield 安全团队旗下可视化数字资产追踪系统 CoinHolmes，针对 FCoin 交易所涉及的相关地址展开了定向追踪和剖析。<br>
+此文章是<strong>PeckShield 安全团队</strong>利用旗下<strong>可视化数字资产追踪系统 CoinHolmes</strong>进行数字货币追踪的有一个案例。目前此工具已经对外提供使用，可以作为研究工具。<br>
+<strong>CoinHolmes 链上追踪系统囊括了数十个交易所，超 6,000 万地址标签，涉及 BTC、ETH、USDT 等多种主流数字资产。</strong></p>
+</blockquote>
+<p>[新闻链接]链上数据拆解 FCoin 资产流向：鼎盛时期便已显颓势？.https://www.chainnews.com/articles/161277841665.htm</p>
+<hr>
+<p>-更新时间：20200326<br>
+-更新内容：添加4个数据<br>
+-数据个数：4</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[13][资料整理]比特币、以太坊开发资源]]></title>
         <id>https://flfqbit.github.io/post/13zi-liao-zheng-li-bi-te-bi-yi-tai-fang-kai-fa-zi-yuan/</id>
@@ -31,7 +81,17 @@ https://testnet.help/en/btcfaucet/testnet/（20200324测试可用）<br>
 https://testnet-faucet.mempool.co/</p>
 <h1 id="3ethereum-api-开发接口">[3]Ethereum API 开发接口</h1>
 <h1 id="4ethereum-faucet-测试币水龙头">[4]Ethereum faucet  测试币水龙头</h1>
+<p>https://faucet.metamask.io/</p>
+<h1 id="5比特币数据解析工具">[5]比特币数据解析工具</h1>
+<p>概述：整理比特币账本解析工具。<br>
+[github]https://github.com/alecalve/python-bitcoin-blockchain-parser</p>
+<h1 id="6以太坊数据解析工具">[6]以太坊数据解析工具</h1>
+<p>概述：整理以太坊账本解析工具。<br>
+[官方工具]本地启动以太坊geth，开rpc接口，通过以太坊客户端自带的rpc进行数据解析</p>
 <hr>
+<p>-更新时间：20200326<br>
+-更新内容：添加2个数据<br>
+-数据个数：6</p>
 <p>-更新时间：20200324<br>
 -更新内容：添加4个数据<br>
 -数据个数：4</p>
@@ -232,7 +292,7 @@ same addr: 两笔交易的输入地址和接收地址相同。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[[12][资料整理]数字货币账号关联分析]]></title>
+        <title type="html"><![CDATA[[12][资料整理]数字货币资产追踪领域资源]]></title>
         <id>https://flfqbit.github.io/post/122/</id>
         <link href="https://flfqbit.github.io/post/122/">
         </link>
@@ -265,17 +325,26 @@ BitIodine (GitHub, paper) - Rust Bitcoin blockchain parser with clustering capab
 <p>概述：专门提供比特币节点分布信息的网站。网站提供了开源的节点信息探测工具。此工具可以用于追踪比特币交易传播路径，从而推测比特币地址对应的用户IP信息。<br>
 [网站链接]https://bitnodes.io/<br>
 [github]https://github.com/ayeowch/bitnodes</p>
-<h1 id="5比特币数据解析工具">[5]比特币数据解析工具</h1>
-<p>概述：整理比特币账本解析工具。<br>
-[github]https://github.com/alecalve/python-bitcoin-blockchain-parser</p>
-<h1 id="6以太坊数据解析工具">[6]以太坊数据解析工具</h1>
-<p>概述：整理以太坊账本解析工具。<br>
-[官方工具]本地启动以太坊geth，开rpc接口，通过以太坊客户端自带的rpc进行数据解析</p>
-<h1 id="7跨账本区块链账号追踪">[7]跨账本区块链账号追踪</h1>
+<h1 id="5跨账本区块链账号追踪论文">[5]跨账本区块链账号追踪论文</h1>
 <p>概述：跨账本追踪对于数字货币监管有重要意义，能够解决实际的追踪难题。<br>
+这篇2019年的信息安全领域顶刊（usenx）论文介绍了跨链交易（btc,eth,zcash等）的识别、分析技术。<br>
 [学术论文]usenx2019-Tracing Transactions Across Cryptocurrency Ledgers<br>
 [阅读记录]https://flfqbit.github.io/post/82lun-wen-yue-du/</p>
+<h1 id="8杭州派盾信安科技有限公司区块链数据分析公司">[8]杭州派盾信安科技有限公司（区块链数据分析公司）</h1>
+<p>蒋旭宪博士（前360安全首席科学家）创办的区块链安全公司，上线运行了“数字货币资产追踪”系统-CoinHolmes。已经实现了“交易可视化展示”、“资金流向追踪”等基本业务。<br>
+从PeckShield发布的“区块链资产追踪案例分析”文章看，具有较强的实用性。</p>
+<p>[工具链接]COINHOLMES.https://coinholmes.com/trace.html<br>
+[专栏地址]https://www.chainnews.com/u/861613259165.htm<br>
+[新闻链接]解密：美国司法部起诉中国OTC承兑商洗钱案件.https://www.chainnews.com/articles/690057268556.htm<br>
+[源头新闻]Two Chinese Nationals Charged with Laundering Over $100 Million in Cryptocurrency From Exchange Hack.https://www.justice.gov/opa/pr/two-chinese-nationals-charged-laundering-over-100-million-cryptocurrency-exchange-hack<br>
+[新闻链接]链上数据拆解 FCoin 资产流向：鼎盛时期便已显颓势？.https://www.chainnews.com/articles/161277841665.htm</p>
 <h1 id="8美国政府对比特币的身份追踪案例">[8]美国政府对比特币的身份追踪案例</h1>
+<blockquote>
+<p>概述：2020年03月02日，美国司法部以阴谋洗钱和无证经营汇款为由，对名为田寅寅和李家东两位中国人发起了公诉，并冻结了他们的全部资产。理由是，他们二人在2017年12月至2019年04月期间，帮助朝鲜政府下辖黑客组织 Lazarus通过区块连数字货币进行洗钱超过1亿美元。<br>
+[学术论文]usenx2019-Tracing Transactions Across Cryptocurrency Ledgers<br>
+[阅读记录]https://flfqbit.github.io/post/82lun-wen-yue-du/</p>
+</blockquote>
+<h1 id="8美国政府对比特币的身份追踪案例-2">[8]美国政府对比特币的身份追踪案例</h1>
 <blockquote>
 <p>概述：2020年03月02日，美国司法部以阴谋洗钱和无证经营汇款为由，对名为田寅寅和李家东两位中国人发起了公诉，并冻结了他们的全部资产。理由是，他们二人在2017年12月至2019年04月期间，帮助朝鲜政府下辖黑客组织 Lazarus Group 提供了价值超1亿美元的洗币服务。<br>
 由于美国司法部并没有公布被盗交易所的名称和地址以及田和李涉案的关键细节，区块链安全公司 PeckShield 第一时间介入追踪研究分析，基于美国司法部仅公布的20个地址向上追溯、取证并以可视化图文方式还原整个案件的来龙去脉。</p>
@@ -441,59 +510,6 @@ Harn L, Lin C Y, Wu T C. Structured multisignature algorithms[J]. IEE Proceeding
 链接：https://www.jianshu.com/p/fe85ed259934<br>
 来源：简书<br>
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[79]麻省理工科技评论2020全球十大突破性技术]]></title>
-        <id>https://flfqbit.github.io/post/79ma-sheng-li-gong-ke-ji-ping-lun-2020-quan-qiu-shi-da-tu-po-xing-ji-zhu/</id>
-        <link href="https://flfqbit.github.io/post/79ma-sheng-li-gong-ke-ji-ping-lun-2020-quan-qiu-shi-da-tu-po-xing-ji-zhu/">
-        </link>
-        <updated>2020-02-26T09:13:20.000Z</updated>
-        <summary type="html"><![CDATA[<p>2020 年《麻省理工科技评论》将“数字货币”列入全球十大突破性技术榜单。本次列入的主要原因是Facebook的Libra项目和中国的DCEP项目。这两个项目将有望使“数字货币”摆脱“犯罪”、“洗钱”、“传销”等固有的负面形象，真正走向主流人群的视野，成为影响主流金融市场的核心技术。</p>
-<p>题目:<br>
-权威发布：《麻省理工科技评论》2020年“全球十大突破性技术”<br>
-URL:<br>
-https://mp.weixin.qq.com/s/3vDtcoT6QOLgUAyjWCAJcw</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>2020 年《麻省理工科技评论》将“数字货币”列入全球十大突破性技术榜单。本次列入的主要原因是Facebook的Libra项目和中国的DCEP项目。这两个项目将有望使“数字货币”摆脱“犯罪”、“洗钱”、“传销”等固有的负面形象，真正走向主流人群的视野，成为影响主流金融市场的核心技术。</p>
-<p>题目:<br>
-权威发布：《麻省理工科技评论》2020年“全球十大突破性技术”<br>
-URL:<br>
-https://mp.weixin.qq.com/s/3vDtcoT6QOLgUAyjWCAJcw</p>
-<!-- more -->
-<h1 id="背景">背景</h1>
-<blockquote>
-<p>自 2001 年起，《麻省理工科技评论》每年都会评选出当年的“十大突破性技术”，这份在全球科技领域举足轻重的榜单曾精准预测了脑机接口、智能手表、癌症基因疗法、深度学习等诸多热门技术的崛起。当然，与其说是“预测”，不如说是《麻省理工科技评论》站在全球科技最前沿，目睹了科技创新的百年变迁后的一种沉淀，是对科研迈向产业的可行性分析，是对技术商业化及影响力的研判。</p>
-</blockquote>
-<blockquote>
-<p>说实话，如果我们真的能精准预测哪些新技术会取得成功，我们不会将其公开，而是会建立基金去投资它们。这是风险投资家每天都在做的事情，而且成功者寥寥无几。但是，作为一个未来学家，未来主义的意义不在于猜测未来，而是为了挑战人们现有想象，这样未来到来时，我们才不会措手不及。</p>
-</blockquote>
-<blockquote>
-<p>2020 年《麻省理工科技评论》全球十大突破性技术榜单包括：防黑互联网、超个性化药物、数字货币、抗衰老药物、人工智能发现分子、超级星座卫星、量子优越性、微型人工智能、差分隐私、气候变化归因共 10 大突破性技术。</p>
-</blockquote>
-<h1 id="数字货币">数字货币</h1>
-<blockquote>
-<p>重大意义：随着实体货币使用频率的下降，没有中介的交易自由也随之减少。与此同时，数字货币技术可以用来分裂全球的金融体系。<br>
-主要研究者：中国人民银行、Facebook<br>
-成熟期：2020 年<br>
-2019 年 6 月，Facebook 推出了一款名为 “Libra” 的“全球数字货币”。此举立刻遭到强烈抵制，“Libra”可能永远不会被启动，至少不会像最初设想的那样启动。<br>
-但它仍然产生了影响：在 Facebook 宣布这一消息后的几天内，中国人民银行的一位官员暗示，将会加速自身数字货币的开发。如今，中国有望成为世界上第一个发布其货币数字版本的经济体，以替代实体货币。<br>
-中国显然考虑到了 Libra 的潜在冲击：它可能加强美国在全球金融体系中不成比例的权力，而这种权力源于美元作为全球事实上的储备货币的角色。有部分人推测中国将会在国际上推行其数字货币。<br>
-现在，Facebook 的 “Libra” 宣传已颇具政治意味。2019 年 10 月，Facebook 的 CEO 马克 · 扎克伯格（Mark Zuckerberg）向美国国会承诺，Libra“将扩大美国的金融领导地位，以及美国在世界范围内的民主价值观影响和监督能力”。数字货币的战争已经打响。</p>
-</blockquote>
-<p>值得关注的要点：<br>
-（1）成熟期：2020年。相比其他9项技术大部分有3-5年的成熟期，编辑对“数字货币”的观点更为直接，认为将在2020年成熟。这一大胆预测，展示了当前数字货币领域快速的发展和可靠前景预期。</p>
-<p>相比Libra，中国的DCEP在政策监管方面有更多优势，DCEP是由中国人民银行推行的，这预示着只要人民银行决定推出DCEP，各项政策、实验场地、推进方案都会得到全力支持，借助中国巨大的金融市场和顶尖的移动支付技术，DCEP有望得到迅速的推广。<br>
-[相关新闻]央行数字货币DCEP试点项目4大行参与 将在深圳、苏州等地落地（http://www.mpaypass.com.cn/news/201912/09101505.html）<br>
-[相关新闻]上市公司广电运通董秘透露支持DCEP的ATM机正在研发中(https://dceplog.com/grgbanking-dcep-atm.html)</p>
-<p>值得关注的是，不同与facebook的Libra项目，DCEP本质上是有中国人民银行一家机构承办的，并不符合传统数字货币、“稳定币”的特点，DCEP发言人甚至介绍“没有采用区块连技术”。所以，DCEP如何解决跨国界公信力问题，解决传统法币模式存在的缺陷，是值得关注的事情。</p>
-<p>[相关新闻]浅析DCEP和LIBRA的不同(https://www.jinse.com/blockchain/463894.html)<br>
-[相关新闻]央行数字货币DCEP无关区块链？(https://www.wanbizu.com/jingyan/20200213197782.html)</p>
-<p>（2）Libra和DCEP的竞争和促进<br>
-Libra和DCEP的竞争不仅是两种技术产品的竞争，也是以美元为世界储备货币的现有经济体系与人民币国际化趋势的正面交锋。<br>
-在第一轮交锋中，Facebook的社交业务在全世界范围内占主要份额，但是在移动支付领域进展缓慢；中国的互联网企业在移动支付企业快速发展，几乎覆盖了全部中国人口。但是，在向其他国家发展时面临很大阻力。<br>
-在第二轮交锋中，Facebook推出Libra项目，计划向全球超过20亿固有用户（使用facebook服务用户）提供支付业务，以对抗中国支付企业的发展。但是Libra项目在美国受到严格的政策制约，进展不明；中国的DCEP项目从2014年开始研究，在Libra项目推出之后，DCEP项目的进展被加快，有望在2020年开展试点运行。</p>
-<p>这两个项目是数字货币行业最具有颠覆性和代表性的项目，他们的竞争和发展将促进数字货币行业得到更多关注。</p>
 ]]></content>
     </entry>
 </feed>

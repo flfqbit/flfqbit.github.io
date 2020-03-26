@@ -6,7 +6,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#f1f3f5">
-<title>[81][文章转载]国内关于比特币政策 | 飞来飞去-区块链学习笔记</title>
+<title>[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司） | 飞来飞去-区块链学习笔记</title>
 <link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1585189666192">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
@@ -25,8 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="[81][文章转载]国内关于比特币政策" />
-    <meta name="keywords" content="阅读随笔" />
+    <meta name="description" content="[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -135,9 +135,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper  right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body mist" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper ">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://flfqbit.github.io/images/avatar.png"/>
@@ -183,6 +191,180 @@
 
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number compress" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#1peckshield-%E5%AE%89%E5%85%A8%E5%9B%A2%E9%98%9F%E4%B8%93%E6%A0%8F">[1]PeckShield 安全团队专栏</a></li>
+<li><a href="#2%E5%9B%BD%E5%86%85%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E8%BF%BD%E8%B8%AA%E5%B7%A5%E5%85%B7">[2]国内数字货币追踪工具</a></li>
+<li><a href="#3%E7%BE%8E%E5%9B%BD%E6%94%BF%E5%BA%9C%E5%AF%B9%E6%AF%94%E7%89%B9%E5%B8%81%E7%9A%84%E8%BA%AB%E4%BB%BD%E8%BF%BD%E8%B8%AA%E6%A1%88%E4%BE%8B">[3]美国政府对比特币的身份追踪案例</a></li>
+<li><a href="#4%E9%93%BE%E4%B8%8A%E6%95%B0%E6%8D%AE%E6%8B%86%E8%A7%A3-fcoin-%E8%B5%84%E4%BA%A7%E6%B5%81%E5%90%91">[4]链上数据拆解 FCoin 资产流向</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -268,8 +450,8 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://flfqbit.github.io/post/81wen-zhang-zhuan-zai-guo-nei-guan-yu-bi-te-bi-zheng-ce/">
-      [81][文章转载]国内关于比特币政策
+    <a class="post-title-link" href="https://flfqbit.github.io/post/asd/">
+      [83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）
     </a>
   </h1>
   <div class="post-meta">
@@ -277,55 +459,59 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-02-28</span>
+      <span>2020-03-26</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://flfqbit.github.io/tag/12QaTh0vp/">
-              <span>阅读随笔</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>4分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>466<span class="pc-show">字数</span></span>
+      <span>947<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>http://www.chinairn.com/news/20190515/164346893.shtml<br>
-比特币在中国合法吗？中国比特币政策2019</p>
-<p>2013年12月5日人民银行等五部委发布关于防范比特币风险的通知(《中国人民银行 工业和信息化部 中国银行业监督管理委员会 中国证券监督管理委员会 中国保险监督管理委员会关于防范比特币风险的通知》银发〔2013〕289号，以下简称“《通知》”)。</p>
-<ul>
-<li>比特币不是由货币当局发行，“不具有法偿性与强制性等货币属性”，并不是真正意义的货币。</li>
-<li>比特币是一种特定的虚拟商品</li>
-<li>“不具有与货币等同的法律地位”</li>
-<li>“不能且不应作为货币在市场上流通使用”</li>
-<li>“但是，比特币交易作为一种互联网上的商品买卖行为，普通民众在自担风险的前提下拥有参与的自由。”</li>
-</ul>
-<p>2017年9月4日下发的《中国人民银行、中央网信办、工业和信息化部、工商总局、银监会、证监会、保监会关于防范代币发行融资风险的公告》文件精神，中国境内所有的数字货币交易所已经于去年10月前全部暂停交易。所有的ICO项目也将逐一清退。</p>
-<ul>
-<li>中国境内所有的数字货币交易所已经于去年10月前全部暂停交易</li>
-<li>所有的ICO项目也将逐一清退</li>
-</ul>
-<p>2019年4月23日，中国银保监会发布消息表示，密切关注民间贷款利率以打击非法集资。继续防范互联网金融风险。所有ICO平台和比特币交易已经安全退出中国市场。</p>
-<ul>
-<li>所有ICO平台和比特币交易已经安全退出中国市场</li>
-</ul>
+                <p>蒋旭宪博士（前360安全首席科学家）创办的区块链安全公司，上线运行了“数字货币资产追踪”系统-CoinHolmes。已经实现了“交易可视化展示”、“资金流向追踪”等基本业务。<br>
+从PeckShield发布的“区块链资产追踪案例分析”文章看，具有较强的实用性。<br>
+本文记录PeckShield公司的CoinHolmes产品的发展状态。<br>
+[工具链接]COINHOLMES.https://coinholmes.com/trace.html<br>
+[专栏地址]https://www.chainnews.com/u/861613259165.htm</p>
+<!-- more -->
+<h1 id="1peckshield-安全团队专栏">[1]PeckShield 安全团队专栏</h1>
+<p>PeckShield在“chainnews”网站上的专栏，发布关于“数字资产合规”、“数字资产追踪”等研究内容。<br>
+[专栏地址]https://www.chainnews.com/u/861613259165.htm</p>
+<h1 id="2国内数字货币追踪工具">[2]国内数字货币追踪工具</h1>
+<blockquote>
+<p><strong>CoinHolmes 链上追踪系统囊括了数十个交易所，超 6,000 万地址标签，涉及 BTC、ETH、USDT 等多种主流数字资产。</strong></p>
+</blockquote>
+<p>经实际测试，CoinHolmes能够提供有限服务，公开版本限制了查询的时间“20200222-20200324”，大约是一个月的时间间隔。猜测更长时间的检测需要耗费较多资源，需要获得授权才能使用。<br>
+从功能上看，主要提供了“关系图”、“交易表格”两种展示形式，支持“时间区间”、“深度”、“单项交易、同级交易”、“交易金额”参数。<br>
+从对外说明看，系统的核心优势是累积了“数十个交易所”、“ 6,000 万地址标签”的数据。相对于“etherscan”等区块链浏览器，具有更集中的数据资源。</p>
+<p>[工具链接]COINHOLMES.https://coinholmes.com/trace.html</p>
+<h1 id="3美国政府对比特币的身份追踪案例">[3]美国政府对比特币的身份追踪案例</h1>
+<blockquote>
+<p>概述：2020年03月02日，美国司法部以阴谋洗钱和无证经营汇款为由，对名为田寅寅和李家东两位中国人发起了公诉，并冻结了他们的全部资产。理由是，他们二人在2017年12月至2019年04月期间，帮助朝鲜政府下辖黑客组织 Lazarus Group 提供了价值超1亿美元的洗币服务。<br>
+由于美国司法部并没有公布被盗交易所的名称和地址以及田和李涉案的关键细节，区块链安全公司 PeckShield 第一时间介入追踪研究分析，基于美国司法部仅公布的20个地址向上追溯、取证并以可视化图文方式还原整个案件的来龙去脉。</p>
+</blockquote>
+<p>[新闻链接]解密：美国司法部起诉中国OTC承兑商洗钱案件.https://www.chainnews.com/articles/690057268556.htm<br>
+[源头新闻]Two Chinese Nationals Charged with Laundering Over $100 Million in Cryptocurrency From Exchange Hack.https://www.justice.gov/opa/pr/two-chinese-nationals-charged-laundering-over-100-million-cryptocurrency-exchange-hack</p>
+<h1 id="4链上数据拆解-fcoin-资产流向">[4]链上数据拆解 FCoin 资产流向</h1>
+<blockquote>
+<p>02 月 11 日，FCoin 交易所发出 4 小时停机维护公告。在之后的数天内，又分别以系统漏洞、关键人员失联、系统和数据受损等理由，拖延搪塞来自投资者的恐慌质疑。<br>
+基于此，PeckShield 安全团队旗下可视化数字资产追踪系统 CoinHolmes，针对 FCoin 交易所涉及的相关地址展开了定向追踪和剖析。<br>
+此文章是<strong>PeckShield 安全团队</strong>利用旗下<strong>可视化数字资产追踪系统 CoinHolmes</strong>进行数字货币追踪的有一个案例。目前此工具已经对外提供使用，可以作为研究工具。<br>
+<strong>CoinHolmes 链上追踪系统囊括了数十个交易所，超 6,000 万地址标签，涉及 BTC、ETH、USDT 等多种主流数字资产。</strong></p>
+</blockquote>
+<p>[新闻链接]链上数据拆解 FCoin 资产流向：鼎盛时期便已显颓势？.https://www.chainnews.com/articles/161277841665.htm</p>
+<hr>
+<p>-更新时间：20200326<br>
+-更新内容：添加4个数据<br>
+-数据个数：4</p>
 
               </div>
               <div class="post-footer">
@@ -336,7 +522,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://flfqbit.github.io/post/81wen-zhang-zhuan-zai-guo-nei-guan-yu-bi-te-bi-zheng-ce/" title="[81][文章转载]国内关于比特币政策">[81][文章转载]国内关于比特币政策</a>
+      <a href="https://flfqbit.github.io/post/asd/" title="[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）">[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -345,21 +531,15 @@
   </ul>
   <div class="tags">
     
-      <a href="https://flfqbit.github.io/tag/12QaTh0vp/"># 阅读随笔</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="[12][资料整理]数字货币资产追踪领域资源" href="https://flfqbit.github.io/post/122/">[12][资料整理]数字货币资产追踪领域资源</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="[12][资料整理]数字货币资产追踪领域资源" href="https://flfqbit.github.io/post/122/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="[11][资料整理]Chainalysis" href="https://flfqbit.github.io/post/1/">[11][资料整理]Chainalysis</a>
-        <a class="nav-mobile-next" title="[11][资料整理]Chainalysis" href="https://flfqbit.github.io/post/1/">下一篇</a>
+        <a class="nav-pc-next" title="[13][资料整理]比特币、以太坊开发资源" href="https://flfqbit.github.io/post/13zi-liao-zheng-li-bi-te-bi-yi-tai-fang-kai-fa-zi-yuan/">[13][资料整理]比特币、以太坊开发资源</a>
+        <a class="nav-mobile-next" title="[13][资料整理]比特币、以太坊开发资源" href="https://flfqbit.github.io/post/13zi-liao-zheng-li-bi-te-bi-yi-tai-fang-kai-fa-zi-yuan/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
