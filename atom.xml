@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-03-26T02:50:16.304Z</updated>
+    <updated>2020-03-26T02:52:49.947Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -364,11 +364,11 @@ InPlusLab：中山大学区块链与智能金融研究中心。<br>
 <p>[工具链接]COINHOLMES.https://coinholmes.com/trace.html<br>
 [专栏地址]https://www.chainnews.com/u/861613259165.htm<br>
 [专题链接]https://flfqbit.github.io/post/asd/</p>
-<h1 id="4walletexplorer比特币地址标注网站">[4]walletexplorer（比特币地址标注网站）</h1>
+<h2 id="4walletexplorer比特币地址标注网站">[4]walletexplorer（比特币地址标注网站）</h2>
 <p>概述：专门提供区块连账号关系分析服务的网站。（已更新到2020/0227）<br>
 此网站的作者后来加入了Chainalysis公司。<br>
 [网站链接]https://www.walletexplorer.com/</p>
-<h1 id="5bitnodes比特币地址溯源">[5]bitnodes（比特币地址溯源）</h1>
+<h2 id="5bitnodes比特币地址溯源">[5]bitnodes（比特币地址溯源）</h2>
 <p>概述：专门提供比特币节点分布信息的网站。网站提供了开源的节点信息探测工具。此工具可以用于追踪比特币交易传播路径，从而推测比特币地址对应的用户IP信息。<br>
 [网站链接]https://bitnodes.io/<br>
 [github]https://github.com/ayeowch/bitnodes</p>
