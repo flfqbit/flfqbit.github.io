@@ -6,7 +6,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#f1f3f5">
-<title>[39][政策汇总]数字货币监管政策 | 飞来飞去-区块链学习笔记</title>
+<title>[84][阅读随笔][区块链技术本质] | 飞来飞去-区块链学习笔记</title>
 <link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1585646479061">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
@@ -25,7 +25,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="[39][政策汇总]数字货币监管政策" />
+    <meta name="description" content="[84][阅读随笔][区块链技术本质]" />
     <meta name="keywords" content="阅读随笔" />
   </head>
   <body>
@@ -135,9 +135,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper  right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body mist" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper ">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://flfqbit.github.io/images/avatar.png"/>
@@ -183,6 +191,177 @@
 
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number compress" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E5%8C%BA%E5%9D%97%E8%BF%9E%E7%9A%84%E6%8A%80%E6%9C%AF%E6%9C%AC%E8%B4%A8">区块连的技术本质</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -268,8 +447,8 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://flfqbit.github.io/post/39zheng-ce-hui-zong-shu-zi-huo-bi-jian-guan-zheng-ce/">
-      [39][政策汇总]数字货币监管政策
+    <a class="post-title-link" href="https://flfqbit.github.io/post/Jpm35mHGH/">
+      [84][阅读随笔][区块链技术本质]
     </a>
   </h1>
   <div class="post-meta">
@@ -277,7 +456,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-02-22</span>
+      <span>2020-03-31</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -296,40 +475,53 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>4分钟</span>
+      <span>3分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1089<span class="pc-show">字数</span></span>
+      <span>750<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>2017年9月7日，北京市互联网金融风险专项整治工作领导小组办公室发布《关于配合开展虚拟货币交易平台清理整顿工作的通知》（下称《通知》）。《通知》要求，<strong>各平台立即停止法定货币与虚拟货币之间的兑换业务</strong>；<strong>各平台不得为虚拟货币提供定价、信息中介等服务</strong>。根据央行等七部委发布的《关于防范代币发行融资风险的公告》等文件，<strong>要求代币发行融资交易平台以及虚拟货币交易平台必须做出全面清理整顿工作</strong>。</p>
+                <p>2020年CCF内刊第3期“特约专稿”-《区块链到底有什么了不起》- 王嘉平</p>
+<h1 id="区块连的技术本质">区块连的技术本质</h1>
 <blockquote>
-<p>《关于防范代币发行融资风险的公告》<br>
-中国证监会官网链接：<br>
-http://www.csrc.gov.cn/pub/newsite/zjhxwfb/xwdd/201709/t20170904_323047.html</p>
+<p>在区块链技术出现以前，大部分计算机技术都专注于如何完成计算任务，如何提高效率、降低成本、扩大规模。如果坚持从这个角度去看区块链技术，你会发现<strong>区块链效率低下，成本高昂</strong>，似乎找不到什么亮点</p>
 </blockquote>
-<p>2018年1月，央行营业管理部（支付结算处）下发《关于开展为非法虚拟货币交易提供支付服务自查整改工作的通知》，针对虚拟货币交易支付结算服务提出监管要求，<strong>明确严禁为虚拟货币交易提供服务，并采取有效措施防止支付通道用于虚拟货币交易</strong>。</p>
 <blockquote>
-<p>《关于开展为非法虚拟货币交易提供支付服务自查整改工作的通知》：<br>
-http://www.mpaypass.com.cn/Download/201801/19105448.html?_d_id=c9bbddebb539b3765e473f0f343fc7</p>
+<p>还有一部分计算机技术专注于计算任务的数据安全性和访问控制。但是如果我们从安全角度去看区块链技术，你会发现区块链技术本身也<strong>只是利用了非对称加密体系实现访问控制</strong>。除此之外，区块链技术并没有发明什么独特的密码学技术。</p>
 </blockquote>
-<p>2018年8月，中国人民银行发布“关于防范以“虚拟货币”“区块链”名义进行非法集资的风险提示”。警示公众，一些不法分子打着“金融创新”“区块链”的旗号，通过发行所谓“虚拟货币”“虚拟资产”“数字资产”等方式吸收资金，侵害公众合法权益。此类活动并非真正基于区块链技术，而是炒作区块链概念行非法集资、传销、诈骗之实。请广大公众理性看待区块链，不要盲目相信天花乱坠的承诺，树立正确的货币观念和投资理念，切实提高风险意识；对发现的违法犯罪线索，可积极向有关部门举报反映。</p>
 <blockquote>
-<p>中国人民银行官网链接：<br>
-http://www.pbc.gov.cn/rmyh/105208/3609899/index.html</p>
+<p>区块链技术核心关注的是一个计算系统的自动化监管和治理。</p>
 </blockquote>
-<p>2018年8月，中国互联网金融举报信息平台互联网金融<strong>举报范围中新增“代币发行融资”这一举报类型</strong>。具体举报原因包括：从事法定货币与代币、“虚拟货币”相互之间的<strong>兑换业务</strong>；买卖或作为中央对手方买卖代币或“虚拟货币”；为代币或“虚拟货币”<strong>提供定价、信息中介等服务</strong>等。</p>
 <blockquote>
-<p>中国互联网金融举报信息平台官网链接：<br>
-https://jubao.nifa.org.cn/ipnifa/range.html</p>
+<p>这个关注点并不是计算机系统一开始就有的。单机软件时代，整个计算系统都在用户掌控之中，此关注点则毫无意义。在互联网初期的通讯和内容分发时代，虽然计算过程已经有一部分交给了他人掌管的服务器，但是我们对计算结果和行为有确信的判断能力，或者计算结果即使背离了我们的预期，通常也无关痛痒，所以这个关注点在当时也不是什么大事。</p>
 </blockquote>
-<p>自2017年银监会大力开展“三三四十”专项治理工作以来，防风险、强监管一直是金融监管的主旋律，**“实质重于形式”和“穿透式监管”**两大监管原则贯穿始终。这两大监管原则既有联系又有区别，两者目标都是加强风险识别、评估、控制。“实质重于形式”原则更侧重于监管的根本理念，它强调的是银行各业务的根本属性，按照业务的本源暴露银行本应该承担的风险，并将其置于监管之下。“穿透式监管”原则更侧重于操作层面，向上穿透识别最终投资者，向下穿透识别底层资产，是实现“实质重于形式”监管理念的手段。</p>
-<p>“穿透式监管”与“实质重于形式”两大监管原则落实到同业业务上，主要针对多层嵌套隐匿实际风险承担的情况，防范实际应由商业银行承担的信用风险。“穿透式监管”与“实质重于形式”两大监管原则落实到理财业务上，主要针对其它业务与理财业务人为混同的情况，防范风险交叉传染；落实到表外业务上，主要针对表内业务与表外业务人为混同的情况，防范表内外风险传染；落实到银信通道业务上，主要针对通道业务实质被隐匿的情况，防范业务风险未暴露的风险。</p>
+<blockquote>
+<p>当下两大局面决定了对一个大规模面向公众服务的计算系统的监管和治理是一<br>
+个关乎国计民生的大事。</p>
+</blockquote>
+<ul>
+<li>
+<ol>
+<li>用户对计算服务系统给出的结果无法有效判断其正确性和合理性，无力甄别获取到的信息是否经过了别有用心的筛选和排序。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>计算服务系统可以直接触及和覆盖比例很高的社会人群，并且承载了人们的社交关系、经济资产、物理身份、信誉征信等关键社会性元素。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>区块链技术使得我们可以以<strong>更高的效率、更低的成本</strong>对大规模计算服务系统进行<strong>全自动的监管和治理</strong>，从而保障其背后映射的实际意义和价值不被恶意操纵和利用，同时也使制度化的监管和治理实施得更广，穿透得更深，定位得更精准。</p>
+</blockquote>
+<blockquote>
+<p><strong>一个开放的分布式计算系统如何被有效地监管和治理，并且自证清白，正是区块链技术所攻克的难题</strong>。区块链的核心是<strong>将计算执行过程同特定的物理计算设备分离</strong>，从根本上避免了计算过程被单一的控制方掌控，让所有人或者一定范围的人都可以监管此计算系统。</p>
+</blockquote>
 
               </div>
               <div class="post-footer">
@@ -340,7 +532,7 @@ https://jubao.nifa.org.cn/ipnifa/range.html</p>
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://flfqbit.github.io/post/39zheng-ce-hui-zong-shu-zi-huo-bi-jian-guan-zheng-ce/" title="[39][政策汇总]数字货币监管政策">[39][政策汇总]数字货币监管政策</a>
+      <a href="https://flfqbit.github.io/post/Jpm35mHGH/" title="[84][阅读随笔][区块链技术本质]">[84][阅读随笔][区块链技术本质]</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -355,15 +547,11 @@ https://jubao.nifa.org.cn/ipnifa/range.html</p>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="[40]一个成功的区块链创业公司案例-chainsecurity" href="https://flfqbit.github.io/post/40yi-ge-cheng-gong-de-qu-kuai-lian-chuang-ye-gong-si-an-li-chainsecurity/">[40]一个成功的区块链创业公司案例-chainsecurity</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="[40]一个成功的区块链创业公司案例-chainsecurity" href="https://flfqbit.github.io/post/40yi-ge-cheng-gong-de-qu-kuai-lian-chuang-ye-gong-si-an-li-chainsecurity/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="[38][政策汇总]支持区块链行业的相关政策" href="https://flfqbit.github.io/post/38zheng-ce-hui-zong-zhi-chi-qu-kuai-lian-xing-ye-de-xiang-guan-zheng-ce/">[38][政策汇总]支持区块链行业的相关政策</a>
-        <a class="nav-mobile-next" title="[38][政策汇总]支持区块链行业的相关政策" href="https://flfqbit.github.io/post/38zheng-ce-hui-zong-zhi-chi-qu-kuai-lian-xing-ye-de-xiang-guan-zheng-ce/">下一篇</a>
+        <a class="nav-pc-next" title="[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）" href="https://flfqbit.github.io/post/asd/">[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）</a>
+        <a class="nav-mobile-next" title="[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）" href="https://flfqbit.github.io/post/asd/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

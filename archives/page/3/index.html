@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8"/>
+      <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#f1f3f5">
-<title>[81][文章转载]国内关于比特币政策 | 飞来飞去-区块链学习笔记</title>
+<title>飞来飞去-区块链学习笔记</title>
 <link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1585646479061">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
@@ -25,8 +25,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="[81][文章转载]国内关于比特币政策" />
-    <meta name="keywords" content="阅读随笔" />
+      <meta name="description" content="记录区块链行业重点文章，前沿技术">
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -61,7 +60,7 @@
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
           
-            <li class="nav-item ">
+            <li class="nav-item nav-item-active">
               
                 <a href="/archives">
                   <i class="fa fa-archive"></i> 首页
@@ -128,16 +127,10 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout mist bg-color">
+      <div class="section-layout bg-color mist">
         <div class="section-layout-wrapper">
-          
-
-<div class="sidebar">
-    <div class="sidebar-box box-shadow-wrapper  right-motion" id="sidebar">
-      
-      <div class="sidebar-body mist" id="sidebar_body">
-        
-          
+          <div class="sidebar">
+    
 <div class="sidebar-wrapper box-shadow-wrapper ">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://flfqbit.github.io/images/avatar.png"/>
@@ -183,211 +176,75 @@
 
 
 </div>
-        
-      </div>
-    </div>
 </div>
-<script>
-  const SIDEBAR_TITLE_ACTIVE = 'sidebar-title-active';
-  const SIDEBAR_BODY_ACTIVE = 'sidebar-body-active';
-  const SLIDE_UP_IN = 'slide-up-in';
-
-  let sidebar = document.querySelector('#sidebar'),
-  tocSideBar = document.querySelector('#tocSideBar'),
-  metaSideBar = document.querySelector('#metaSideBar'),
-  postToc = document.querySelector('#post_toc'),
-  postSiteMeta = document.querySelector('#post_side_meta'),
-  sidebarTitle = document.querySelector('.sidebar-title'),
-  sidebarBody = document.querySelector('#sidebar_body');
-
-  tocSideBar && tocSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  metaSideBar && metaSideBar.addEventListener('click', (e) => {
-    toggleSidebar(e);
-  });
-
-  function toggleSidebar(e) {
-    let currentTitle = document.querySelector("."+SIDEBAR_TITLE_ACTIVE);
-    if (currentTitle == e.srcElement) {
-      return ;
-    }
-    let current, showElement, hideElement;
-    if (e.srcElement == metaSideBar) {
-      showElement = postSiteMeta;
-      hideElement = postToc;
-    } else if (e.srcElement == tocSideBar){
-      showElement = postToc;
-      hideElement = postSiteMeta;
-    }
-    currentTitle.classList.remove(SIDEBAR_TITLE_ACTIVE);
-    e.srcElement.classList.add(SIDEBAR_TITLE_ACTIVE);
-
-    window.Velocity(hideElement, 'stop');
-    window.Velocity(hideElement, 'transition.slideUpOut', {
-      display: 'none',
-      duration: 200,
-      complete: function () {
-        window.Velocity(showElement, 'transition.slideDownIn', {
-          duration: 200
-        });
-      }
-    })
-    hideElement.classList.remove(SIDEBAR_BODY_ACTIVE);
-    showElement.classList.add(SIDEBAR_BODY_ACTIVE);
-  }
-
-  postToc.addEventListener('transitionend', function() {
-    this.classList.remove(SLIDE_UP_IN);
-  });
-
-
-  if (sidebarBody.classList.contains('pisces') || sidebarBody.classList.contains('gemini')) {
-    let hasFix = false;
-    let scrollEl = document.querySelector('.main-continer');
-    let limitTop = document.querySelector('#nav_ul').children.length * 42 + 162;
-    window.addEventListener('scroll', function(e) {
-    if (document.scrollingElement.scrollTop >= limitTop) {
-      if (!hasFix) {
-        sidebar.classList.add('sidebar-fixed');
-        hasFix = true;
-      }
-    } else {
-      if (hasFix) {
-        sidebar.classList.remove('sidebar-fixed');
-        hasFix = false;
-      }
-    }
-  });
-  }
-  
-</script>
           <div class="section-box box-shadow-wrapper">
-            <div class="section bg-color post post-page">
-              <div class="article-box">
-    <header class="post-header">
-  <h1 class="post-title">
-    <a class="post-title-link" href="https://flfqbit.github.io/post/81wen-zhang-zhuan-zai-guo-nei-guan-yu-bi-te-bi-zheng-ce/">
-      [81][文章转载]国内关于比特币政策
-    </a>
-  </h1>
-  <div class="post-meta">
+            <section class="section archives-section bg-color posts-expand">
+              
+
+<div class="bg-color">
+  <div class="archive-timeline-box">
+    <div class="archive-timeline-title">
+      
+        <h2>非常好！目前共计101篇日志，继续努力！</h2>
+      
+    </div>
     
-    <span class="meta-item pc-show">
-      <i class="fa fa-calendar-o"></i>
-      <span>发布于</span>
-      <span>2020-02-28</span>
-      <span class="post-meta-divider pc-show">|</span>
-    </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
+      
+      
+        <div class="node-title">
+          <h2 class="tag-year">2018</h2>
+        </div>    
         
-          
-            <a href="https://flfqbit.github.io/tag/12QaTh0vp/">
-              <span>阅读随笔</span>
+      
+      <a href="https://flfqbit.github.io/post/hello-gridea/">
+        <div class="motion-warpper tag-archive-node">
+          <div class="tag-node">
+            <h1>
+              12-12
+              <small>Hello Gridea</small>
+            </h1>
+          </div>  
+      </div>
+      </a>
+    
+  </div>
+  
+<div class="page bg-color">
+  <ul class="pagination-ul">
+    
+      <li class="pagination-dir">
+        <a href="https://flfqbit.github.io/archives/page/2/">
+          <i class="fa fa-angle-left"></i>
+        </a>
+      </li>
+    
+    
+      
+        <li class="pagination-li ">
+            <a href="/archives/page/../">
+              1
             </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
+        </li>
+      
+        <li class="pagination-li ">
+            <a href="/archives/page/2">
+              2
+            </a>
+        </li>
+      
+        <li class="pagination-li pagination-active">
+            <a href="/archives/page/3">
+              3
+            </a>
+        </li>
+      
     
-    <span class="meta-item">
-      <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
-    </span>
-    <span class="meta-item">
-      <span class="post-meta-divider">|</span>
-      <i class="fa fa-file-word-o"></i>
-      <span>466<span class="pc-show">字数</span></span>
-    </span>
-  </div>
-</header>
-</div>
-              <div class="post-body next-md-body" id="post_body">
-                <p>http://www.chinairn.com/news/20190515/164346893.shtml<br>
-比特币在中国合法吗？中国比特币政策2019</p>
-<p>2013年12月5日人民银行等五部委发布关于防范比特币风险的通知(《中国人民银行 工业和信息化部 中国银行业监督管理委员会 中国证券监督管理委员会 中国保险监督管理委员会关于防范比特币风险的通知》银发〔2013〕289号，以下简称“《通知》”)。</p>
-<ul>
-<li>比特币不是由货币当局发行，“不具有法偿性与强制性等货币属性”，并不是真正意义的货币。</li>
-<li>比特币是一种特定的虚拟商品</li>
-<li>“不具有与货币等同的法律地位”</li>
-<li>“不能且不应作为货币在市场上流通使用”</li>
-<li>“但是，比特币交易作为一种互联网上的商品买卖行为，普通民众在自担风险的前提下拥有参与的自由。”</li>
-</ul>
-<p>2017年9月4日下发的《中国人民银行、中央网信办、工业和信息化部、工商总局、银监会、证监会、保监会关于防范代币发行融资风险的公告》文件精神，中国境内所有的数字货币交易所已经于去年10月前全部暂停交易。所有的ICO项目也将逐一清退。</p>
-<ul>
-<li>中国境内所有的数字货币交易所已经于去年10月前全部暂停交易</li>
-<li>所有的ICO项目也将逐一清退</li>
-</ul>
-<p>2019年4月23日，中国银保监会发布消息表示，密切关注民间贷款利率以打击非法集资。继续防范互联网金融风险。所有ICO平台和比特币交易已经安全退出中国市场。</p>
-<ul>
-<li>所有ICO平台和比特币交易已经安全退出中国市场</li>
-</ul>
-
-              </div>
-              <div class="post-footer">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      飞来飞去-区块链学习笔记
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="https://flfqbit.github.io/post/81wen-zhang-zhuan-zai-guo-nei-guan-yu-bi-te-bi-zheng-ce/" title="[81][文章转载]国内关于比特币政策">[81][文章转载]国内关于比特币政策</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，转载请注明出处！
-    </li>
+    
   </ul>
-  <div class="tags">
-    
-      <a href="https://flfqbit.github.io/tag/12QaTh0vp/"># 阅读随笔</a>
-    
-  </div>
-  <div class="nav">
-    <div class="nav-prev">
-      
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="[12][资料整理]数字货币资产追踪领域资源" href="https://flfqbit.github.io/post/122/">[12][资料整理]数字货币资产追踪领域资源</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="[12][资料整理]数字货币资产追踪领域资源" href="https://flfqbit.github.io/post/122/">上一篇</a>
-      
-    </div>
-    <div class="nav-next">
-      
-        <a class="nav-pc-next" title="[11][资料整理]Chainalysis" href="https://flfqbit.github.io/post/1/">[11][资料整理]Chainalysis</a>
-        <a class="nav-mobile-next" title="[11][资料整理]Chainalysis" href="https://flfqbit.github.io/post/1/">下一篇</a>
-        <i class="fa fa-chevron-right"></i>
-      
-    </div>
-  </div>
 </div>
-              
-                
-                  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+</div>
 
-<div id="gitalk-container"></div>
-
-<script>
-  var gitalk = new Gitalk({
-    clientID: '0ac1a4e5b9459ff911f2',
-    clientSecret: 'e30abb85f53e52321e943390daa3bac6008f1877',
-    repo: 'flfqbit.github.io',
-    owner: 'flfqbit',
-    admin: ['flfqbit'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-  gitalk.render('gitalk-container')
-</script>
-                
-                
-              
-            </div>
+            </section>
           </div>
         </div>
       </div>

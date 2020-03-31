@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-03-26T02:52:49.947Z</updated>
+    <updated>2020-03-31T09:21:26.004Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -10,6 +10,50 @@
     <logo>https://flfqbit.github.io/images/avatar.png</logo>
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[[84][阅读随笔][区块链技术本质]]]></title>
+        <id>https://flfqbit.github.io/post/Jpm35mHGH/</id>
+        <link href="https://flfqbit.github.io/post/Jpm35mHGH/">
+        </link>
+        <updated>2020-03-31T09:05:28.000Z</updated>
+        <content type="html"><![CDATA[<p>2020年CCF内刊第3期“特约专稿”-《区块链到底有什么了不起》- 王嘉平</p>
+<h1 id="区块连的技术本质">区块连的技术本质</h1>
+<blockquote>
+<p>在区块链技术出现以前，大部分计算机技术都专注于如何完成计算任务，如何提高效率、降低成本、扩大规模。如果坚持从这个角度去看区块链技术，你会发现<strong>区块链效率低下，成本高昂</strong>，似乎找不到什么亮点</p>
+</blockquote>
+<blockquote>
+<p>还有一部分计算机技术专注于计算任务的数据安全性和访问控制。但是如果我们从安全角度去看区块链技术，你会发现区块链技术本身也<strong>只是利用了非对称加密体系实现访问控制</strong>。除此之外，区块链技术并没有发明什么独特的密码学技术。</p>
+</blockquote>
+<blockquote>
+<p>区块链技术核心关注的是一个计算系统的自动化监管和治理。</p>
+</blockquote>
+<blockquote>
+<p>这个关注点并不是计算机系统一开始就有的。单机软件时代，整个计算系统都在用户掌控之中，此关注点则毫无意义。在互联网初期的通讯和内容分发时代，虽然计算过程已经有一部分交给了他人掌管的服务器，但是我们对计算结果和行为有确信的判断能力，或者计算结果即使背离了我们的预期，通常也无关痛痒，所以这个关注点在当时也不是什么大事。</p>
+</blockquote>
+<blockquote>
+<p>当下两大局面决定了对一个大规模面向公众服务的计算系统的监管和治理是一<br>
+个关乎国计民生的大事。</p>
+</blockquote>
+<ul>
+<li>
+<ol>
+<li>用户对计算服务系统给出的结果无法有效判断其正确性和合理性，无力甄别获取到的信息是否经过了别有用心的筛选和排序。</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>计算服务系统可以直接触及和覆盖比例很高的社会人群，并且承载了人们的社交关系、经济资产、物理身份、信誉征信等关键社会性元素。</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>区块链技术使得我们可以以<strong>更高的效率、更低的成本</strong>对大规模计算服务系统进行<strong>全自动的监管和治理</strong>，从而保障其背后映射的实际意义和价值不被恶意操纵和利用，同时也使制度化的监管和治理实施得更广，穿透得更深，定位得更精准。</p>
+</blockquote>
+<blockquote>
+<p><strong>一个开放的分布式计算系统如何被有效地监管和治理，并且自证清白，正是区块链技术所攻克的难题</strong>。区块链的核心是<strong>将计算执行过程同特定的物理计算设备分离</strong>，从根本上避免了计算过程被单一的控制方掌控，让所有人或者一定范围的人都可以监管此计算系统。</p>
+</blockquote>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[83][阅读随笔]PeckShield-CoinHolmes（区块链数据分析公司）]]></title>
         <id>https://flfqbit.github.io/post/asd/</id>
@@ -451,64 +495,6 @@ IRS、ICE 和 FBI 在区块链分析服务方面的支出占总数的近 85％</
 <p>-更新时间：20200227<br>
 -更新内容：添加1个数据<br>
 -数据个数：1</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[80][文章转载]数字签名、多重签名、代理签名历史及相关论文]]></title>
-        <id>https://flfqbit.github.io/post/80wen-zhang-zhuan-zai-shu-zi-qian-ming-duo-chong-qian-ming-dai-li-qian-ming-li-shi-ji-xiang-guan-lun-wen/</id>
-        <link href="https://flfqbit.github.io/post/80wen-zhang-zhuan-zai-shu-zi-qian-ming-duo-chong-qian-ming-dai-li-qian-ming-li-shi-ji-xiang-guan-lun-wen/">
-        </link>
-        <updated>2020-02-26T10:36:37.000Z</updated>
-        <summary type="html"><![CDATA[<p>比较详细的介绍数字签名的发展历史，列举了具体的论文出处。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>比较详细的介绍数字签名的发展历史，列举了具体的论文出处。</p>
-<!-- more -->
-<p>数字签名<br>
-1976年，Diffie和Hellman首次提出数字签名的概念<br>
-Diffie W, Hellman M E. New directions in cryptography[J]. IEEE Transactions on Information Theory, 1976, 22(6):644-654.</p>
-<p>1978年，Rivest、Shamir与Adleman提出基于大整数分解难题的签名算法<br>
-Rivest R L. A method for obtaining digital signatures and public-key cryptosystems[J]. Communications of the Acm, 1978, 26(2):96-99.</p>
-<p>1985年，ElGamal基于离散对数问题设计了密码及其签名体制，许多其他签名体制基于该体制衍生出来，如Schnor签名体制<br>
-Elgamal T. A Publi—Key Cryptosystem and Signature Scheme Based on Discrete Logarithms. IEEE Transactions on Information Theory 31(4): 469-472[J]. IEEE Transactions on Information Theory, 1985, 31(4):469-472.</p>
-<p>Schnorr C P. Efficient signature generation by smart cards[J]. Journal of Cryptology, 1991, 4(3):161-174.</p>
-<p>1987年，Koblitz和Miler两人分别提出椭圆曲线公钥密码体制<br>
-Koblitz N. Elliptic curve cryptosystems[J]. Mathematics of Computation, 1987, 48(177):203-209.</p>
-<p>1992年，Vanstone基于椭圆曲线公钥密码体制首先提出椭圆曲线数字签名算法ECDSA<br>
-Rivest, Ronald L, Hellman, Martin E, Anderson, John C,等. Responses to NIST's proposal[J]. Communications of the Acm, 1992, 35(7):41-54.</p>
-<p>多重数字签名<br>
-1983年，多重数字签名概念由Itakura和Nakamura首次提出<br>
-Itakura K. A public-key cryptosystem suitable for digital multisignatures[J]. Nec Research &amp; Development, 1983, 71(71):474-480.</p>
-<p>Harn先后于1989年和1994年提出一种基于RSA的多重数字签名方案和一种安全的ELGamal型数字签名方案，并根据这两个方案设计了一种广播多重数字签名方案<br>
-Harn L, Kresler T. New scheme for digital multisignatures[J]. Electronics Letters, 1989, 25(15):1002-1003.</p>
-<p>Yen S M, Laih C S. New digital signature scheme based on discrete logarithm[J]. Electronics Letters, 2002, 29(12):1120-1121.</p>
-<p>1995年，提出基于Meta-ElGamal的多重签名方案<br>
-Horster P, Michels M, Petersen H. Meta-Multisignature schemes based on the discrete logarithm problem[M]// Information Security — the Next Decade. Springer US, 1995.</p>
-<p>1996年，设计出两种多重数字签名方案，即有序多重数字签名和广播多重数字签名，它是基于大数分解困难问题的<br>
-Wu T C, Chou S L, Wu T S. Two ID-based multisignature protocols for sequential and broadcasting architectures[J]. Computer Communications, 1996, 19(9–10):851-856.</p>
-<p>2001年，形式化定义了多重数字签名<br>
-Micali S, Ohta K, Reyzin L. Accountable-subgroup multisignatures:extended abstract[C]// CCS. 2000:245--254.</p>
-<p>2004年，提出一种基于ElGamal密码体制的结构化多重签名算法<br>
-Harn L, Lin C Y, Wu T C. Structured multisignature algorithms[J]. IEE Proceedings - Computers and Digital Techniques, 2004, 151(3):231-234.</p>
-<p>1997年，祁明 、肖国镇等人在MR型签名和ELGamal型签名方案的基础上，提出了三个具有特殊次序的多重签名方案<br>
-祁明, 肖国镇. 具有特殊次序的多重签名[J]. 计算机工程, 1997(6):22-24.</p>
-<p>1999年，谭凯军等人构造了一种广播多重数字签名，该方案基于美国数字签名标准DSA<br>
-谭凯军, 诸鸿文, 顾尚杰. 基于数字签名方案DSS/DSA的几种应用方案[J]. 计算机研究与发展, 1999, 36(5):632-637.</p>
-<p>1999年，构造了出一种基于ELGamal型的广播多重数字签名和有序多重数字签名方案<br>
-李子臣, 杨义先. ElGamal多重数字签名方案[J]. 北京邮电大学学报, 1999, 22(2):30-34.</p>
-<p>2003年，张建红、韦永壮和王育民设计出基于RSA和哈希函数求乘法逆的困难性问题的两种多重数字签名方案<br>
-张键红, 王继林, 王育民. 一种多重签密模型及其应用[J]. 西安电子科技大学学报(自然科学版), 2004, 31(3):462-464.</p>
-<p>代理签名<br>
-1996年，Mambo，Usuda和Okamoto首先提出了这个代理签名的概念，它的主要意思是授权人（原始签名者）由于某种原因不能行使签名权利时，可以授权给指定的代理人代替自己行使签名权利。签名者在不把自己的私钥给代理人的前提条件下，指定代理人代替自己签名</p>
-<p>2001年，Lee等结合前人的一些研究成果，并且从不同角度分析了前人方案潜在的安全问题，提出了比较完善的代理签名方案，并且将结果用于可移动代理和自代理签名</p>
-<p>2002年，K.Shum等在Lee的方案基础上提出了保护代理人身份的方案，它通过一个匿名中心使得代理人身份对外不可见，在必要情况下可由匿名中心揭示代理者的身份，如此一来，在应用可移动代理时，将进一步隐藏代理点可查询的轨迹，阻止对代理店进行恶意攻击</p>
-<p>为了避免单独的代理签名者过大的权利，Kim，Zhang等人引入了（t，n）门限代理签名方案，将代理签名的权利分散给了n个人，当其中至少有t个人合作时，可以产生合法的代理签名</p>
-<p>2005年，谷利泽等提出了具有匿名性可追踪性的代理签名方案，验证者在验证时只能确认代理签名而无法确定代理签名人的身份，如果出现争议，验证人可通过原始签名人揭示代理签名人的身份，这个方案并不需要第三方的参与</p>
-<p>2006年，柳菊霞指出谷利泽的匿名代理签名方案的不安全性，它不能抵抗原始签名人伪造攻击和公钥替换攻击，并给出了一个改进的匿名代理签名方案</p>
-<p>2008年，黄奕芝，王常吉提出了代理门限环签名的概念，代理门限环签名同时具有代理签名和门限环签名的优点，在存在多类投票人的电子投票系统中非常有用</p>
-<p>作者：November_Chopin<br>
-链接：https://www.jianshu.com/p/fe85ed259934<br>
-来源：简书<br>
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 ]]></content>
     </entry>
 </feed>
