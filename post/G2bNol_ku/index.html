@@ -6,7 +6,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#f1f3f5">
-<title>[29][悟空问答]区块账号背后的非对称加密算法 | 飞来飞去-区块链学习笔记</title>
+<title>[85][阅读随笔]新华社漫画介绍区块链 | 飞来飞去-区块链学习笔记</title>
 <link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1585713629643">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
@@ -25,8 +25,8 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="[29][悟空问答]区块账号背后的非对称加密算法" />
-    <meta name="keywords" content="阅读随笔" />
+    <meta name="description" content="[85][阅读随笔]新华社漫画介绍区块链" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -268,8 +268,8 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://flfqbit.github.io/post/29wu-kong-wen-da-qu-kuai-zhang-hao-bei-hou-de-fei-dui-cheng-jia-mi-suan-fa/">
-      [29][悟空问答]区块账号背后的非对称加密算法
+    <a class="post-title-link" href="https://flfqbit.github.io/post/G2bNol_ku/">
+      [85][阅读随笔]新华社漫画介绍区块链
     </a>
   </h1>
   <div class="post-meta">
@@ -277,151 +277,35 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-02-22</span>
+      <span>2020-03-31</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://flfqbit.github.io/tag/12QaTh0vp/">
-              <span>阅读随笔</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
-    
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>10分钟</span>
+      <span>2分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>2444<span class="pc-show">字数</span></span>
+      <span>297<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>  今天在今日头条的问答栏目回答了一个问题：<br>
-  &quot;在密码学里，是如何重新定义私有财产的？&quot;<br>
-  我的答复是：<br>
-  “目前区块链技术的典型应用是数字货币应用，包括比特币、以太坊，以及其他的多种多样的“数字货币”。这些“数字货币”虽然不被认可为货币，但是通常被认为是有价值的虚拟资产（私人财产）。<br>
-  如何证明一个比特币是某个人的私有资产了？简单理解，每一个比特币都隶属于一个“区块链账号”，拥有此“区块链账号”对应密钥的用户就可以使用这个比特币。这种机制类似于银行卡和银行卡对应的密码，持有密码的人可以取出银行卡中的钱。不同之处在于，银行卡的账号和密码是保存在银行的中心服务器上，验证身份时只需要用户输入的密码和数据库中的密码匹配即可。但是在比特币等区块链系统中，不存在中心化机构，即没有地方存储账号和密码的对应关系。这种情况下，如何验证资产所属的身份？<br>
-  这里就是用了密码学中的“非对称加密”技术和“数字签名”技术。比特币的账号本质上是由“非对称加密”算法生成的“公钥”，此账号对应的“密码”是“公钥”对应的“私钥”。验证资产所属身份的方法是：验证者利用公开的“公钥”去验证资产所有者提供的、对应特定比特币的数字签名。只要签名正确，即认可用户是此比特币的所有者。这种模式，不需要验证者知道账号对应的私钥，因此能够从根本上保证私有财产的所有权（传统银行模式中，银行可以冻结任意账号的资金，用户的私有财产的所有权是受限制的）。”<br>
-  上述答复中涉及了区块链账号背后的非对称加密算法和数字签名算法。这里重点介绍目前大多数区块链系统采用的ECC非对称加密算法和ECDSA数字签名算法。<br>
-  <strong>ECC算法</strong>：是目前广泛使用的非对称加密算法（另外一种著名的非对称加密算法RSA，由于安全性较弱，已经逐渐淘汰了）。“非对称”是指此算法中加密和解密所用的密钥不同。此算法中的密钥是成对出现的，即（公钥，私钥）。公钥加密、私钥解密；私钥加密，公钥解密。通常情况下，用户的公钥是公开的，用于代表用户的数字身份；私钥是由用户私密保存，可以用于证明用户对特定公钥的所有权。正式基于这种特征，区块链技术采用ECC算法作为区块链账号的生成技术。我们通常看到的比特币账号、以太坊账号就是在ECC算法生成公钥的基础上，经过格式转换得到的。用户如果想使用某个比特币账号中的比特币资产，就必须使用账号对应的私钥进行身份验证操作。所以，比特币资产的所有权全部依赖于私钥信息，一旦私钥丢失或泄露，用户将永久丧失对应比特币资产的所有权。据报道，比特币系统中已经有20%的比特币的密钥永久丢失，这些资产将成为永久锁定的冰冻资产。<br>
-  <strong>ECDSA算法</strong>:是一种数字签名算法。主要用途是，用户利用私钥对特定数据进行签名，得到签名信息（一种密码学操作）；验证者利用此用户公布的公钥验证签名信息和特定数据是否匹配，如果匹配，就证明用户对公钥具有所有权。数字签名算法在互联网中广泛使用，包括HTTPS协议，银行卡U盾等等。数字签名算法通常用于身份认证和数据完整性认证。在区块链中，用户发起的每笔交易都包含用户的数字签名，网络中的验证节点通过验证签名信息，判断用户是否有权利发起这笔交易。<br>
-<img src="https://upload-images.jianshu.io/upload_images/4794066-c0167245dc731b1a.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="图1 数字签名算法" loading="lazy"></p>
-<p>  为了更详细介绍ECC算法和ECDSA签名算法，将通过一段代码演示密钥生成过程和签名、验证过程。</p>
-<pre><code>func generateNewPK() (string, error)  {
-	var err error
-	//（1）根据randKey长度，使用相应的加密椭圆参数
-	length := len([]byte(randKey))
-	if length &lt; 224/8 {
-		fmt.Println(&quot;The length of Rand Key is too small, Crypt init failed, Please reset it again !&quot;)
-		return &quot;&quot;, err
-	}
-	if length &gt;= 256/8+8 {
-		curve = *bitelliptic.S256()
-	} else if length &gt;= 224/8+8 {
-		fmt.Println(&quot;Rand length =&quot;, length, &quot;Using 244 level !&quot;)
-		curve = *bitelliptic.S224()
-	}
-	//（2）创建密匙对
-	//私钥是随机生成的
-	prk, err = bitecdsa.GenerateKey(&amp;curve, rand.Reader)
-	if err != nil {
-		fmt.Println(&quot;Crypt init fail,&quot;, err, &quot; need = &quot;, curve.BitSize)
-		return &quot;&quot;, err
-	}
-	//（3）公钥是基于私钥生成的
-	puk = prk.PublicKey
-
-	//ECC中的公钥分为两个部分，通常将部分拼接在一起
-	return puk.X.String()+puk.Y.String(), nil
-}
-</code></pre>
-<p>  上述代码的功能是生成一个基于ECC算法的密钥对（puk,prk），其中“puk”代表公钥，”prk”代表私钥。<br>
-  代码中的第（1）个提示，用于解释此处需要根据参数的长度选择相应的“椭圆曲线参数”。（椭圆曲线是ECC算法依赖的数学基础）。不同的椭圆曲线参数将得到不同的效果的加密算法。比特币等数字货币通常采用256位的椭圆曲线。<br>
-  代码中的第（2）个提示，展示了私钥”prk”的生成过程，可以看到”prk”是利用 ”bitecdsa.GenerateKey”函数，在两个参数(&amp;curve, rand.Reader)的作用下生成的。”bitecdsa”是一个实现了ECDSA算法的开源代码，”GenerateKey”是其中用于生成密钥对的函数；”&amp;curve”是在上部分代码中生成的椭圆曲线；”rand.Reader”是一个随机数。<br>
-  代码中的第（3）个提示展示了，公钥”puk”是有私钥”prk”生成的。<br>
-上述代码与比特币、以太坊中负责账号生成的代码基本一致。区别在于，上述代码只是得到了公钥和私钥。在比特币等区块链系统中，区块链账号是在公钥的基础上进一步加工获得。</p>
-<pre><code>func Sign_t(text string) (string, error) {
-	//（1）签名过程
-        //输入包括：随机数，私钥，待签名数据
-	//输出包括2个参数，r 和 s 。都是签名信息的中间数据
-        r, s, err := bitecdsa.Sign(rand.Reader, prk, []byte(text))
-	if err != nil {
-		return &quot;&quot;, err
-	}
-	rt, err := r.MarshalText()
-	if err != nil {
-		return &quot;&quot;, err
-	}
-	st, err := s.MarshalText()
-	if err != nil {
-		return &quot;&quot;, err
-	}
-	var b bytes.Buffer
-	w := gzip.NewWriter(&amp;b)
-
-	//（2）生成最终的签名信息
-        //输入是r 和 s的格式变换版本 rt 和 st
-       //输出是签名信息 b
-	defer w.Close()
-	_, err = w.Write([]byte(string(rt) + &quot;+&quot; + string(st)))
-	if err != nil {
-		return &quot;&quot;, err
-	}
-	w.Flush()
-
-	return hex.EncodeToString(b.Bytes()), nil
-}
-</code></pre>
-<p>  代码中的第（1）个提示，介绍了签名函数的结构。”bitecdsa.Sign”是ECDSA开源代码的签名函数。输入包括：随机数，私钥”prk”，待签名数据；输出包括2个参数，r 和 s ，这是签名信息的中间数据。<br>
-  代码中的第（2）个提示，介绍最终版签名信息的生成过程。</p>
-<pre><code>func Verify_t(testString string, signString string) (bool, error) {
-	byterun, err := hex.DecodeString(signString)
-	if err != nil {
-		return false, err
-	}
-	//（1）解密出验证所需的两个参数 rint, sint
-	rint, sint, err := getSign_t(byterun)
-	if err != nil {
-		return false, err
-	}
-	//（2）验证签名是否正确
-        //输入包括：公钥、待签名字符串、从签名信息中提取的两个参数”&amp;rint, &amp;sint”
-	result := bitecdsa.Verify(&amp;puk, []byte(testString), &amp;rint, &amp;sint)
-	return result, nil
-}
-</code></pre>
-<p>  代码中的第（1）个提示，介绍了从签名信息中提取出验证所需的两个参数”&amp;rint, &amp;sint”<br>
-  代码中的第（2）个提示，介绍验证签名的过程。”bitecdsa.Verify”是ECDSA开源代码的验证签名的函数。输入包括：公钥，待签名字符串、从签名信息中提取的两个参数”&amp;rint, &amp;sint”。<br>
-  从上述3个代码基本上可以了解所谓的区块链账号生成、区块链交易签名、区块链签名验证的底层逻辑。<br>
-  此处重点介绍的是第一段代码中的这句代码：<br>
-  “curve = *bitelliptic.S256()”<br>
-  这句代码的含义是利用ECDSA开源代码获取“S256”的椭圆曲线参数。通过代码跳转，查看S256()的代码如下：</p>
-<pre><code>func initS256() {
-	// （1）See SEC 2 section 2.7.1
-	secp256k1 = new(BitCurve)
-	secp256k1.P, _ = new(big.Int).SetString(&quot;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F&quot;, 16)
-	secp256k1.N, _ = new(big.Int).SetString(&quot;FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141&quot;, 16)
-	secp256k1.B, _ = new(big.Int).SetString(&quot;0000000000000000000000000000000000000000000000000000000000000007&quot;, 16)
-	secp256k1.Gx, _ = new(big.Int).SetString(&quot;79BE667EF9DCBBAC55A06295CE870B07029BFCDB2DCE28D959F2815B16F81798&quot;, 16)
-	secp256k1.Gy, _ = new(big.Int).SetString(&quot;483ADA7726A3C4655DA4FBFC0E1108A8FD17B448A68554199C47D08FFB10D4B8&quot;, 16)
-
-	secp256k1.BitSize = 256
-}
-</code></pre>
-<p>  如代码所示，椭圆曲线的参数主要是5个（P,N,B,GX,GY）。这5个参数定位了椭圆曲线的基本特征，决定了上层加密算法的具体操作过程。<br>
-  代码中的第（1）个提示，介绍了此椭圆曲线参数来自于“ SEC 2 section 2.7.1”，这是由Certicom（成立于1998年的密码团体）发布的加密算法参数推荐文档，目前已经被美国国家安全局（National Security Agency，简写为NSA）等众多政府、企业机构认可。<br>
-文档链接：http://www.secg.org/sec2-v2.pdf</p>
+                <p>https://finance.sina.cn/blockchain/2019-11-11/detail-iicezuev8662356.d.html<br>
+http://www.bj.xinhuanet.com/zt2019/2019jrqyfh/jjqkl/2019-11/19/c_1125250269.htm<br>
+2019年11月9日，新华社官方公众号推送文章《这是一个很难很难很难的问题……但我看懂了！》，以漫画形式普及区块链，目前该文章阅读量10万+，点赞量1.8万。</p>
+<p>这个漫画的优势在于：</p>
+<ul>
+<li>首先给出了一个简单的定义“超级安全的区块链数据”，让人有了模糊的出事印象。<br>
+然后，用一个很普遍的社会问题“就医数据不共享”，介绍了为什么需要区块链。<br>
+在介绍这个例子时，展示了“区块+链”的核心概念。</li>
+<li>然后，对例子进行延伸，深入介绍区块连技术的特点“更安全”、“防篡改”、“隐私保护”。这种结合实际案例介绍技术特点的方式，让人更理解技术特点内涵。</li>
+<li>最后，扩展介绍了区块链在其他领域的应用前景。介绍时不纠结技术细节，而是突出为什么要使用区块连技术。</li>
+</ul>
+<p>所以，科普文章一定要注意案例的选择。</p>
 
               </div>
               <div class="post-footer">
@@ -432,7 +316,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://flfqbit.github.io/post/29wu-kong-wen-da-qu-kuai-zhang-hao-bei-hou-de-fei-dui-cheng-jia-mi-suan-fa/" title="[29][悟空问答]区块账号背后的非对称加密算法">[29][悟空问答]区块账号背后的非对称加密算法</a>
+      <a href="https://flfqbit.github.io/post/G2bNol_ku/" title="[85][阅读随笔]新华社漫画介绍区块链">[85][阅读随笔]新华社漫画介绍区块链</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -441,21 +325,15 @@
   </ul>
   <div class="tags">
     
-      <a href="https://flfqbit.github.io/tag/12QaTh0vp/"># 阅读随笔</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="[30][悟空问答]区块链是如何从1.0推进至3" href="https://flfqbit.github.io/post/30wu-kong-wen-da-qu-kuai-lian-shi-ru-he-cong-10-tui-jin-zhi-3/">[30][悟空问答]区块链是如何从1.0推进至3</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="[30][悟空问答]区块链是如何从1.0推进至3" href="https://flfqbit.github.io/post/30wu-kong-wen-da-qu-kuai-lian-shi-ru-he-cong-10-tui-jin-zhi-3/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="[28][征稿启事解读]-IEEEACM IWQoS&#39;19（CCF B类会议）-BLOCKCHAIN FOR QOS" href="https://flfqbit.github.io/post/28zheng-gao-qi-shi-jie-du-ieeeacm-iwqos19ccf-b-lei-hui-yi-blockchain-for-qos/">[28][征稿启事解读]-IEEEACM IWQoS&#39;19（CCF B类会议）-BLOCKCHAIN FOR QOS</a>
-        <a class="nav-mobile-next" title="[28][征稿启事解读]-IEEEACM IWQoS&#39;19（CCF B类会议）-BLOCKCHAIN FOR QOS" href="https://flfqbit.github.io/post/28zheng-gao-qi-shi-jie-du-ieeeacm-iwqos19ccf-b-lei-hui-yi-blockchain-for-qos/">下一篇</a>
+        <a class="nav-pc-next" title="[84][阅读随笔]区块链技术本质-计算系统的自动化监管和治理" href="https://flfqbit.github.io/post/Jpm35mHGH/">[84][阅读随笔]区块链技术本质-计算系统的自动化监管和治理</a>
+        <a class="nav-mobile-next" title="[84][阅读随笔]区块链技术本质-计算系统的自动化监管和治理" href="https://flfqbit.github.io/post/Jpm35mHGH/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

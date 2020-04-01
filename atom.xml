@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-03-31T09:22:11.632Z</updated>
+    <updated>2020-04-01T04:00:58.634Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -10,6 +10,26 @@
     <logo>https://flfqbit.github.io/images/avatar.png</logo>
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[[85][阅读随笔]新华社漫画介绍区块链]]></title>
+        <id>https://flfqbit.github.io/post/G2bNol_ku/</id>
+        <link href="https://flfqbit.github.io/post/G2bNol_ku/">
+        </link>
+        <updated>2020-03-31T10:03:29.000Z</updated>
+        <content type="html"><![CDATA[<p>https://finance.sina.cn/blockchain/2019-11-11/detail-iicezuev8662356.d.html<br>
+http://www.bj.xinhuanet.com/zt2019/2019jrqyfh/jjqkl/2019-11/19/c_1125250269.htm<br>
+2019年11月9日，新华社官方公众号推送文章《这是一个很难很难很难的问题……但我看懂了！》，以漫画形式普及区块链，目前该文章阅读量10万+，点赞量1.8万。</p>
+<p>这个漫画的优势在于：</p>
+<ul>
+<li>首先给出了一个简单的定义“超级安全的区块链数据”，让人有了模糊的出事印象。<br>
+然后，用一个很普遍的社会问题“就医数据不共享”，介绍了为什么需要区块链。<br>
+在介绍这个例子时，展示了“区块+链”的核心概念。</li>
+<li>然后，对例子进行延伸，深入介绍区块连技术的特点“更安全”、“防篡改”、“隐私保护”。这种结合实际案例介绍技术特点的方式，让人更理解技术特点内涵。</li>
+<li>最后，扩展介绍了区块链在其他领域的应用前景。介绍时不纠结技术细节，而是突出为什么要使用区块连技术。</li>
+</ul>
+<p>所以，科普文章一定要注意案例的选择。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[84][阅读随笔]区块链技术本质-计算系统的自动化监管和治理]]></title>
         <id>https://flfqbit.github.io/post/Jpm35mHGH/</id>
@@ -412,10 +432,15 @@ InPlusLab：中山大学区块链与智能金融研究中心。<br>
 <p>概述：专门提供区块连账号关系分析服务的网站。（已更新到2020/0227）<br>
 此网站的作者后来加入了Chainalysis公司。<br>
 [网站链接]https://www.walletexplorer.com/</p>
-<h2 id="5bitnodes比特币地址溯源">[5]bitnodes（比特币地址溯源）</h2>
+<h2 id="5bitnodes比特币地址网络溯源">[5]bitnodes（比特币地址网络溯源）</h2>
 <p>概述：专门提供比特币节点分布信息的网站。网站提供了开源的节点信息探测工具。此工具可以用于追踪比特币交易传播路径，从而推测比特币地址对应的用户IP信息。<br>
 [网站链接]https://bitnodes.io/<br>
 [github]https://github.com/ayeowch/bitnodes</p>
+<h2 id="5chaininfo比特币链上数据分析">[5]chain.info（比特币链上数据分析）</h2>
+<p>概述：专门提供比特币相关的数据分析。包括：大额交易监测、交易所账号数据、富豪榜数据、比特币资金数据图形化展示、指定地址数据查询。<br>
+网站提供API服务，能够查询账号标签数据。<br>
+[网站链接]https://chain.info/<br>
+[网站API链接]https://chain.info/api</p>
 <hr>
 <p>-更新时间：20200326<br>
 -更新内容：内容优化<br>
@@ -476,25 +501,6 @@ IRS、ICE 和 FBI 在区块链分析服务方面的支出占总数的近 85％</
 <p>-更新时间：20200227<br>
 -更新内容：添加2个数据<br>
 -数据个数：2</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[10][资料整理]区块链共识机制]]></title>
-        <id>https://flfqbit.github.io/post/10zi-liao-zheng-li-qu-kuai-lian-gong-shi-ji-zhi/</id>
-        <link href="https://flfqbit.github.io/post/10zi-liao-zheng-li-qu-kuai-lian-gong-shi-ji-zhi/">
-        </link>
-        <updated>2020-02-26T18:47:51.000Z</updated>
-        <summary type="html"><![CDATA[<p>共识机制是区块链底层的核心技术，与区块链系统的性能、安全性、扩展性密切相关。区块链共识机制发展快速，已经成为区块链技术创新的热点。本文将记录共识机制相关的重点文章。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>共识机制是区块链底层的核心技术，与区块链系统的性能、安全性、扩展性密切相关。区块链共识机制发展快速，已经成为区块链技术创新的热点。本文将记录共识机制相关的重点文章。</p>
-<!-- more -->
-<p>[1]区块链共识算法的发展现状与展望<br>
-作者：袁勇，自动化学报<br>
-概述：对共识机制的发展历史介绍的最为详细，有助于了解共识机制的发展过程。</p>
-<hr>
-<p>-更新时间：20200227<br>
--更新内容：添加1个数据<br>
--数据个数：1</p>
 ]]></content>
     </entry>
 </feed>
