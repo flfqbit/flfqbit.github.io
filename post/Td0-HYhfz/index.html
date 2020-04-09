@@ -6,7 +6,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="记录区块链行业重点文章，前沿技术">
 <meta name="theme-color" content="#f1f3f5">
-<title>[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint | 飞来飞去-区块链学习笔记</title>
+<title>[86][阅读随笔]区块链安全监管技术研究综述 | 飞来飞去-区块链学习笔记</title>
 <link rel="shortcut icon" href="https://flfqbit.github.io/favicon.ico?v=1586448459320">
 <link rel="stylesheet" href="https://flfqbit.github.io/styles/main.css">
 
@@ -25,7 +25,7 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
     onload="renderMathInElement(document.body);"></script>
 
-    <meta name="description" content="[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint" />
+    <meta name="description" content="[86][阅读随笔]区块链安全监管技术研究综述" />
     <meta name="keywords" content="阅读随笔" />
   </head>
   <body>
@@ -135,9 +135,17 @@
 <div class="sidebar">
     <div class="sidebar-box box-shadow-wrapper  right-motion" id="sidebar">
       
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
       <div class="sidebar-body mist" id="sidebar_body">
         
-          
+          <div class="post-side-meta" id="post_side_meta">
+            
 <div class="sidebar-wrapper box-shadow-wrapper ">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="https://flfqbit.github.io/images/avatar.png"/>
@@ -183,6 +191,177 @@
 
 
 </div>
+          </div>
+          <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+            <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number compress" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#12-%E5%8C%BA%E5%9D%97%E9%93%BE%E5%AE%89%E5%85%A8%E7%9B%91%E7%AE%A1%E9%97%AE%E9%A2%98%E7%9A%84%E6%8A%80%E6%9C%AF%E6%9C%AC%E6%BA%90">１．２　区块链安全监管问题的技术本源</a></li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    lList.push(elem);
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+addTocNumber(tocContent, '');
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+          </div>
         
       </div>
     </div>
@@ -268,8 +447,8 @@
               <div class="article-box">
     <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://flfqbit.github.io/post/83yue-du-sui-bi-bi-te-bi-zhong-yong-yu-cun-chu-chang-du-xin-xi-de-shu-ju-ge-shi-varint/">
-      [83][阅读随笔]比特币中用于存储长度信息的数据格式Varint
+    <a class="post-title-link" href="https://flfqbit.github.io/post/Td0-HYhfz/">
+      [86][阅读随笔]区块链安全监管技术研究综述
     </a>
   </h1>
   <div class="post-meta">
@@ -277,7 +456,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-03-06</span>
+      <span>2020-04-09</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -296,32 +475,100 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>7分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>493<span class="pc-show">字数</span></span>
+      <span>1994<span class="pc-show">字数</span></span>
     </span>
   </div>
 </header>
 </div>
               <div class="post-body next-md-body" id="post_body">
-                <p>本文来源于网页资料<br>
-[数值压缩存储方法Varint]https://www.cnblogs.com/smark/archive/2012/05/03/2480034.html</p>
+                <p>论文信息<br>
+[论文题目]区块链安全监管技术研究综述<br>
+[作者信息]洪学海，汪　洋，廖方宇<br>
+[期刊名称]中国科学基金<br>
+[专刊名称]Vol. 34(1), 2020 专题一：区块链技术及应用<br>
+[专刊链接]http://www.nsfc.gov.cn/csc/20345/20348/articlelist/2020/article_list_202001a.html<br>
+[论文链接]http://www.nsfc.gov.cn/csc/20345/20348/pdf/2020/202001-18-24.pdf</p>
 <blockquote>
-<p>在编写网络通讯的时候我们经常需要把一些数据存储到byte[]中然后再发送出去，数值则是我们经常处理的数据成员。发越少的东西意味着使用更少的IO和带宽 ，所以对传输数据进行压缩也是件非常重要的事情。接下来提到的就是一种基于数字存储的方式在大多数情况下可以节省数值存储空间。</p>
+<p>［摘　要］　区块链的安全监管技术已经成为区块链技术及应用研究的重要发展方向之一。本文从<br>
+区块链的技术特点及其产生安全与监管问题的本源、区块链安全事件频发带来的监管技术发展以<br>
+及区块链安全监管技术未来的主要研究方向三个方面进行了综述，重点阐述了区块链节点的追踪<br>
+与可视化、公链的主动发现与探测、联盟链的穿透式监管和以链治链四个方向的技术研究进展<br>
+情况。</p>
+</blockquote>
+<p>本文研究的三个方面：</p>
+<ul>
+<li>安全与监管问题的本源</li>
+<li>监管技术发展</li>
+<li>监管技术未来的主要研究方向</li>
+</ul>
+<p>重点介绍的4个方向</p>
+<ul>
+<li>区块链节点的追踪与可视化</li>
+<li>公链的主动发现与探测</li>
+<li>联盟链的穿透式监管</li>
+<li>以链治链</li>
+</ul>
+<p>比较奇怪的是，本文竟然不介绍交易数据的追踪和可视化，而是侧重节点的追踪与可视化。<br>
+“穿透式监管”和“以链治链”是区块连监管领域的热词，值得深入看看名词解释。</p>
+<h1 id="12-区块链安全监管问题的技术本源">１．２　区块链安全监管问题的技术本源</h1>
+<blockquote>
+<p>导致全球区块链安全事件的原因包括两个方面：一方面是其共识机制、私钥管理、智能合约等存在的技术局限性所面临的安全问题；另一方面，区块链去中心、自治化的特点给现有网络和数据安全监管手段带来了新的挑战。</p>
+</blockquote>
+<p>区块链安全问题的两个源头：</p>
+<ul>
+<li>共识机制、私钥管理、智能合约等存在的技术局限性所面临的安全问题；</li>
+<li>区块链去中心、自治化的特点给现有网络和数据安全监管手段带来了新的挑战。</li>
+</ul>
+<p>第一个源头实际上是在说“区块链本身面临的安全问题”<br>
+第二个源头实际上是在说“对区块链进行监管面临的问题”</p>
+<p>论文对第一个源头进行了较为详细的描述，基于“中国信息通信研究院与中国通信标准化协会近日联合发布的《区块链安全白皮书》”，从“存储层”、“协议层”、“扩展层”、“应用层”四个角度进行扩展介绍。</p>
+<p>论文对第二个源头没有扩展描述，这是非常可惜的。区块连监管，到底监管什么？目前的监管机制为什么不起作用？区块链在监管方面存在什么优势和缺陷。这几个问题是非常重要，却没有说清楚的内容。</p>
+<blockquote>
+<p>中国工程院陈纯院士在２０１９ＣＣＦ区块链技术大会上发表了《联盟区块链关键技术与区块链的监管挑<br>
+战》主题演讲，提出了区块链监管的挑战和技术发展趋势。有：（１）区块链节点的追踪与可视化；（２）公链发现、探测与异常发现；（３）联盟链穿透式监管技术；（４）以链治链。</p>
+</blockquote>
+<p>这四个点是陈纯院士在《联盟区块链关键技术与区块链的监管挑战》中介绍的，值得进一步查看。</p>
+<p>##２．１　区块链节点的追踪与可视化研究进展</p>
+<blockquote>
+<p>区块链节点的追踪和可视化就是要查清一个区块链中的各类节点的网络地址、账户地址和交易等情况，并用动态的可视化方法展现各类节点的网络地址、账户地址和交易信息的情况，方便管理者对一个区块链的参与者进行有效的管理。</p>
+</blockquote>
+<p>论文提到的”节点追踪与可视化“实际上是指以节点为基础的”网络地址“”账号地址“”交易情况“的追踪和可视化。核心目的是对”区块链的参与者进行有效的管理“。</p>
+<p>本小节后面介绍的内容并没有把上述含义有效扩展。介绍的文献参考意义不大。这部分内容最好直接看原文（《联盟区块链关键技术与区块链的监管挑战》）</p>
+<p>##２．２　公链的发现、探测与异常发现研究进展</p>
+<blockquote>
+<p>公链的主动发现、探测就是如何在网络中发现一个在运行的公有链。<br>
+如何在网络流量中识别出区块链流量？针对特定的区块链流量，可以按照”标志位“来做简单的识别，因为比特币等区块链系统在网络层是不加密的。</p>
 </blockquote>
 <blockquote>
-<p>Varint 是一种紧凑的表示数字的方法。它用一个或多个字节来表示一个数字，值越小的数字使用越少的字节数。这能减少用来表示数字的字节数。比如对于 int32 类型的数字，一般需要 4 个 byte 来表示。但是采用 Varint，对于很小的 int32 类型的数字，则可以用 1 个 byte 来表示。当然凡事都有好的也有不好的一面，采用 Varint 表示法，大的数字则需要 5 个 byte 来表示。从统计的角度来说，一般不会所有的消息中的数字都是大数，因此大多数情况下，采用 Varint 后，可以用更少的字节数来表示数字信息。下面就详细介绍一下 Varint。</p>
+<p>对于公链的主动发现和探测，本文作者查阅了大量的文献，没有查阅到有专门针对这个问题研究的文章。</p>
 </blockquote>
+<p>##２．３　联盟链的穿透式监管技术研究进展</p>
 <blockquote>
-<p>Varint 中的每个 byte 的最高位 bit 有特殊的含义，如果该位为 1，表示后续的 byte 也是该数字的一部分，如果该位为 0，则结束。其他的 7 个 bit 都用来表示数字。因此小于 128 的数字都可以用一个 byte 表示。大于 128 的数字，比如 300，会用两个字节来表示：1010 1100 0000 0010</p>
+<p>本文认为联盟链“穿透式监管”是借用金融领域“穿透式监管”的概念，对联盟链中参与各方的各种行为的本质进行监管，以应对监管对数据的真实性、准确性和甄别业务性质等方面的要求。因此，联盟链穿透式监管的表现形式是一种功能监管、行为监管。</p>
 </blockquote>
-<p><img src="https://flfqbit.github.io/post-images/1583505331699.jpg" alt="" loading="lazy"><br>
-图1 结构示意图</p>
-<p>原文后面附有具体代码，请看原文<br>
-[数值压缩存储方法Varint]https://www.cnblogs.com/smark/archive/2012/05/03/2480034.html</p>
+<p>论文中还是没有把”穿透式监管“的具体形式说清楚。<br>
+”穿透式监管“在金融领域是有明确指代的，即不管形式，而是注重实质。不管上层应用怎么宣传，关键看是否存在非法吸储、非法集资等行为（此概念在之前一份资料上看到过，找时间补充这份文献）。<br>
+那么，区块链中的”穿透式监管“是指什么？区块链中，什么是”形式“，什么是”实质“？这些概念还不清楚。</p>
+<p>”联盟链穿透式监管的表现形式是一种功能监管、行为监管。“<br>
+文中对穿透式监管的定义还不够清晰。对哪些功能进行监管？对哪些行为进行监管？缺少更加详细的介绍。</p>
+<p>”，本文认为联盟链的穿透，一般是穿透网关节点，依赖于网络ＴＣＰ协议和Ｐ２Ｐ协议，联盟链的穿透可以通过ＴＣＰ“打洞”和Ｐ２Ｐ“穿透”来实现。“<br>
+文中在介绍例子时提到了自己的看法，这种穿透还是不清楚。打洞和穿透的目的是什么？</p>
+<p>##２．４　“以链治链”研究进展</p>
+<blockquote>
+<p>“以链治链”就是用区块链的技术治理区块链及其应用。在现实中，以链治链可分为链上治理和链下治理。链上治理与链下治理的区别在于，在链上治理协议中，参与者需要采取行动才能参与治理过程。而链下治理中，大部分人可能并不知道也无法影响治理过程，一个比较著名的链下治理的例子就是比特币区块大小的争论。</p>
+</blockquote>
+<p>链上治理：基于区块链协议的治理<br>
+链下治理：围绕区块链社区活动的治理</p>
+<blockquote>
+<p>目前还没有一个标准的“以链治链”的体系结构和技术过程标准化的途径。</p>
+</blockquote>
+<p>阅读体会，本文起到了一个文献介绍的作用，对”区块链监管“的相关文献进行了简介，有助于进一步的分析。<br>
+关于”穿透式监管“、”以链治链“等概念还需要进一步阅读文献，提炼总结。</p>
 
               </div>
               <div class="post-footer">
@@ -332,7 +579,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://flfqbit.github.io/post/83yue-du-sui-bi-bi-te-bi-zhong-yong-yu-cun-chu-chang-du-xin-xi-de-shu-ju-ge-shi-varint/" title="[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint">[83][阅读随笔]比特币中用于存储长度信息的数据格式Varint</a>
+      <a href="https://flfqbit.github.io/post/Td0-HYhfz/" title="[86][阅读随笔]区块链安全监管技术研究综述">[86][阅读随笔]区块链安全监管技术研究综述</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -347,15 +594,11 @@
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="[83][阅读随笔]区块链领域的院士专家" href="https://flfqbit.github.io/post/83yue-du-sui-bi-qu-kuai-lian-ling-yu-de-yuan-shi-zhuan-jia/">[83][阅读随笔]区块链领域的院士专家</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="[83][阅读随笔]区块链领域的院士专家" href="https://flfqbit.github.io/post/83yue-du-sui-bi-qu-kuai-lian-ling-yu-de-yuan-shi-zhuan-jia/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="[82][论文阅读]跨账本区块链账号追踪" href="https://flfqbit.github.io/post/82lun-wen-yue-du/">[82][论文阅读]跨账本区块链账号追踪</a>
-        <a class="nav-mobile-next" title="[82][论文阅读]跨账本区块链账号追踪" href="https://flfqbit.github.io/post/82lun-wen-yue-du/">下一篇</a>
+        <a class="nav-pc-next" title="[85][阅读随笔]新华社漫画介绍区块链" href="https://flfqbit.github.io/post/G2bNol_ku/">[85][阅读随笔]新华社漫画介绍区块链</a>
+        <a class="nav-mobile-next" title="[85][阅读随笔]新华社漫画介绍区块链" href="https://flfqbit.github.io/post/G2bNol_ku/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
