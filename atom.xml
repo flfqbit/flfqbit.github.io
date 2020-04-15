@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-04-09T16:07:44.679Z</updated>
+    <updated>2020-04-15T01:52:19.313Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -527,12 +527,24 @@ InPlusLab：中山大学区块链与智能金融研究中心。<br>
 <p>概述：专门提供比特币节点分布信息的网站。网站提供了开源的节点信息探测工具。此工具可以用于追踪比特币交易传播路径，从而推测比特币地址对应的用户IP信息。<br>
 [网站链接]https://bitnodes.io/<br>
 [github]https://github.com/ayeowch/bitnodes</p>
-<h2 id="5chaininfo比特币链上数据分析">[5]chain.info（比特币链上数据分析）</h2>
+<h2 id="6chaininfo比特币链上数据分析">[6]chain.info（比特币链上数据分析）</h2>
 <p>概述：专门提供比特币相关的数据分析。包括：大额交易监测、交易所账号数据、富豪榜数据、比特币资金数据图形化展示、指定地址数据查询。<br>
 网站提供API服务，能够查询账号标签数据。<br>
 [网站链接]https://chain.info/<br>
 [网站API链接]https://chain.info/api</p>
+<h2 id="7文章转载火币推出链上分析工具监控非法加密货币活动">[7][文章转载]火币推出链上分析工具，监控非法加密货币活动</h2>
+<p>https://www.toutiao.com/i6815410983721239048<br>
+[待寻找]工具链接暂未找到，找时间去火币官网搜索。</p>
+<ul>
+<li>Huobi （HT） Global已推出一个用于监控非法加密货币交易的链上分析工具，名为<strong>Star Atlas</strong>，此工具可以与类似的工具配合使用。<br>
+-“Star Atlas是一个链上监控工具，用于监控加密货币交易，以识别和侦察犯罪行为，比如欺诈、金钱、洗钱和其他有问题的活动等等。”</li>
+<li>Star Altas维持着一个很大的地址数据库。”</li>
+<li>火币正在考虑与加密货币域的其他公司合作，比如Chainalysis和CryptoCompare。据Ciara Sun表示，火币与加密货币领域的其他公司之间存在协同效应。该公司积累了大量亚洲地区的数据，而其他公司可能有更多西方国家的数据。</li>
+</ul>
 <hr>
+<p>-更新时间：20200415<br>
+-更新内容：添加1个数据<br>
+-数据个数：4+7=11</p>
 <p>-更新时间：20200326<br>
 -更新内容：内容优化<br>
 -数据个数：3+5=8</p>
