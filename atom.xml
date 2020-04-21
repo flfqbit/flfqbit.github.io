@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://flfqbit.github.io</id>
     <title>飞来飞去-区块链学习笔记</title>
-    <updated>2020-04-15T01:52:19.313Z</updated>
+    <updated>2020-04-21T12:59:46.264Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://flfqbit.github.io"/>
     <link rel="self" href="https://flfqbit.github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://flfqbit.github.io/images/avatar.png</logo>
     <icon>https://flfqbit.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 飞来飞去-区块链学习笔记</rights>
+    <entry>
+        <title type="html"><![CDATA[[13][资料整理]DCEP]]></title>
+        <id>https://flfqbit.github.io/post/omynocJIN/</id>
+        <link href="https://flfqbit.github.io/post/omynocJIN/">
+        </link>
+        <updated>2020-04-16T15:29:59.000Z</updated>
+        <content type="html"><![CDATA[<p>DCEP中国人民银行法定数字货币，消息很早就出现，一直处于试验阶段，未见庐山真面目。<br>
+2020年4月15日，陆续看到了一些实际信息。<br>
+本文将记录DCEP的进展。</p>
+<p>#DCEP概念<br>
+DCEP（Digital Currency Electronic Payment），是中国人民银行研发的电子货币，是DIGICCY（数字货币）的一种。DCEP的完整字面意思就是数字货币电子支付，在扫码支付横行天下之际，DCEP因具有无限法偿性的法律地位特性，被认为是唯一的现金终结者。<br>
+央行数字货币替代M0，其功能和属性与纸币相似，只不过形态是数字化的。<br>
+而支付宝、微信支付等第三方互联网支付，走的是商业银行存款货币结算，属于M1和M2级别的数字化，不具有M0级别法律效力，更不可能取代M0。</p>
+<ul>
+<li>M0：一般指的是流通中的现金</li>
+<li>M1 ：一般包括 M0 + 各单位的活期存款，</li>
+<li>M2：包括 M1 + 居民储蓄存款 + 单位定期存款 + 单位其他存款 + 证券公司客户保证金。</li>
+</ul>
+<p>#[1]央行数字货币在<strong>深圳、雄安、成都、苏州</strong>四个试点城市测试。<br>
+据《财经》记者了解，由人民银行牵头，工、农、中、建四大国有商业银行，中国移动、中国电信、中国联通三大电信运营商共同参与的央行法定数字货币试点项目有望在深圳、苏州等地落地。<br>
+上述接近试点项目组人士表示，本次试点（深圳法定数字货币试点）计划分为两个阶段，今年底是一个阶段，在小范围场景封闭试点，明年为第二个阶段，在深圳大范围推广。<br>
+如果试点工作进展顺利，中国央行法定数字货币将取得实质性进展，可谓真正的呼之欲出.</p>
+<p>[法定数字货币试水]http://magazine.caijing.com.cn/20191209/4632010.shtml</p>
+<p>#[2]苏州相城区将用数字货币（DC/EP）发交通补贴<br>
+据《科创板日报》报道，苏州相城区是央行数字货币的重要试点地区。苏州相城区各区级机关和企事业单位，工资通过工农中建四大国有银行代发的工作人员，将在4月份完成央行数字货币（DC/EP）数字钱包的安装工作。5月，其工资中的交通补贴的50%将以数字货币的形式发放。</p>
+<p>[告别纸币，人民币史无前例大升级！安全便捷不输支付宝和微信]https://finance.ifeng.com/c/7vinhv6jnLE</p>
+<hr>
+<p>-更新时间：20200416<br>
+-更新内容：添加2个数据<br>
+-数据个数：2</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[86][阅读随笔]区块链安全监管技术研究综述]]></title>
         <id>https://flfqbit.github.io/post/Td0-HYhfz/</id>
@@ -243,7 +275,13 @@ https://testnet-faucet.mempool.co/</p>
 <h1 id="6以太坊数据解析工具">[6]以太坊数据解析工具</h1>
 <p>概述：整理以太坊账本解析工具。<br>
 [官方工具]本地启动以太坊geth，开rpc接口，通过以太坊客户端自带的rpc进行数据解析</p>
+<h1 id="7比特币客户端版本升级介绍">[7]比特币客户端版本升级介绍</h1>
+<p>概述：官方管理的比特币客户端版本升级介绍。<br>
+[链接]https://bitcoincore.org/en/releases/</p>
 <hr>
+<p>-更新时间：20200419<br>
+-更新内容：添加1个数据<br>
+-数据个数：7</p>
 <p>-更新时间：20200326<br>
 -更新内容：添加2个数据<br>
 -数据个数：6</p>
@@ -554,33 +592,6 @@ InPlusLab：中山大学区块链与智能金融研究中心。<br>
 <p>-更新时间：20200229<br>
 -更新内容：添加7个数据<br>
 -数据个数：7</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[81][文章转载]国内关于比特币政策]]></title>
-        <id>https://flfqbit.github.io/post/81wen-zhang-zhuan-zai-guo-nei-guan-yu-bi-te-bi-zheng-ce/</id>
-        <link href="https://flfqbit.github.io/post/81wen-zhang-zhuan-zai-guo-nei-guan-yu-bi-te-bi-zheng-ce/">
-        </link>
-        <updated>2020-02-27T18:06:34.000Z</updated>
-        <content type="html"><![CDATA[<p>http://www.chinairn.com/news/20190515/164346893.shtml<br>
-比特币在中国合法吗？中国比特币政策2019</p>
-<p>2013年12月5日人民银行等五部委发布关于防范比特币风险的通知(《中国人民银行 工业和信息化部 中国银行业监督管理委员会 中国证券监督管理委员会 中国保险监督管理委员会关于防范比特币风险的通知》银发〔2013〕289号，以下简称“《通知》”)。</p>
-<ul>
-<li>比特币不是由货币当局发行，“不具有法偿性与强制性等货币属性”，并不是真正意义的货币。</li>
-<li>比特币是一种特定的虚拟商品</li>
-<li>“不具有与货币等同的法律地位”</li>
-<li>“不能且不应作为货币在市场上流通使用”</li>
-<li>“但是，比特币交易作为一种互联网上的商品买卖行为，普通民众在自担风险的前提下拥有参与的自由。”</li>
-</ul>
-<p>2017年9月4日下发的《中国人民银行、中央网信办、工业和信息化部、工商总局、银监会、证监会、保监会关于防范代币发行融资风险的公告》文件精神，中国境内所有的数字货币交易所已经于去年10月前全部暂停交易。所有的ICO项目也将逐一清退。</p>
-<ul>
-<li>中国境内所有的数字货币交易所已经于去年10月前全部暂停交易</li>
-<li>所有的ICO项目也将逐一清退</li>
-</ul>
-<p>2019年4月23日，中国银保监会发布消息表示，密切关注民间贷款利率以打击非法集资。继续防范互联网金融风险。所有ICO平台和比特币交易已经安全退出中国市场。</p>
-<ul>
-<li>所有ICO平台和比特币交易已经安全退出中国市场</li>
-</ul>
 ]]></content>
     </entry>
 </feed>
