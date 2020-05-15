@@ -2,7 +2,7 @@
 A blog for notes of blockchain
 
 #错误处理日志
-- 20200515  
+## 20200515  
 - Gridea在同步时报错，无法正常同步。采用了更换token等方法依然无法解决。  
 - 退而求其次，采用github desktop的方式，手动更新Gridea生成的输出文件“E:\blog\Gridea\output”。然而，github desktop也显示push 错误，错误信息是
 time pout。猜测是使用VPN的原因。  
